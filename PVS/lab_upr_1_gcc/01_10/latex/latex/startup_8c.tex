@@ -1,0 +1,170 @@
+\hypertarget{startup_8c}{\section{startup.\-c File Reference}
+\label{startup_8c}\index{startup.\-c@{startup.\-c}}
+}
+{\ttfamily \#include \char`\"{}startup.\-h\char`\"{}}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{startup_8c_a6288eba0f8e8ad3ab1544ad731eb7667}{main} (void)
+\begin{DoxyCompactList}\small\item\em The main entry of the application. This function initializes a G\-P\-I\-O and a U\-A\-R\-T, then outputs a message over the U\-A\-R\-T and starts blinking the diode. \end{DoxyCompactList}\item 
+\hyperlink{startup_8c_aecbe1114ed66771d67c81cbf241f5396}{\-\_\-\-\_\-attribute\-\_\-\-\_\-} ((section(\char`\"{}.vector\-\_\-table\char`\"{})))
+\item 
+void \hyperlink{startup_8c_aa2ec4fae88da86b9bd1be360dfa159b8}{nmi\-\_\-handler} (void)
+\item 
+void \hyperlink{startup_8c_a80b8e496817c48aab711bab6cb8a148d}{hard\-\_\-fault\-\_\-handler} (void)
+\item 
+void \hyperlink{startup_8c_a291b6baa172cdfff1b7f482b65d69541}{mem\-\_\-manage\-\_\-handler} (void)
+\item 
+void \hyperlink{startup_8c_af4d707547ba21a4d3d8736ee61596793}{bus\-\_\-fault\-\_\-handler} (void)
+\item 
+void \hyperlink{startup_8c_a1067f6c47008a60e7a83df95277532a3}{usage\-\_\-fault\-\_\-handler} (void)
+\item 
+void \hyperlink{startup_8c_abf256fc581d7addf59ffa2b8c32f7259}{svc\-\_\-handler} (void)
+\item 
+void \hyperlink{startup_8c_abce038481ae4addeee86e2a618f55dd3}{debug\-\_\-mon\-\_\-handler} (void)
+\item 
+void \hyperlink{startup_8c_a67568f5888add6e301f5fb0208d11611}{pend\-\_\-sv\-\_\-handler} (void)
+\item 
+void \hyperlink{startup_8c_aa1e1847264876da69b8d6f092a6519c2}{systick\-\_\-handler} (void)
+\item 
+void \hyperlink{startup_8c_a61402748430fc964933139a61ab8cde8}{default\-\_\-handler} (void)
+\item 
+void \hyperlink{startup_8c_ab6f9dd2f8d080cf7cdf92705862892ba}{reset\-\_\-handler} (void)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+uint32\-\_\-t \hyperlink{startup_8c_a69247aef56f755ef3b08265060dea50f}{\-\_\-estack}
+\item 
+uint32\-\_\-t \hyperlink{startup_8c_afaf3fd4cdb8df3477e7bd68743f0c999}{\-\_\-sdata\-\_\-lma}
+\item 
+uint32\-\_\-t \hyperlink{startup_8c_a61687bc10bffbfec9c6fd33bddff3094}{\-\_\-sdata}
+\item 
+uint32\-\_\-t \hyperlink{startup_8c_a1fc4a71c31f5b048d3b1b7b2d10684d1}{\-\_\-edata}
+\item 
+uint32\-\_\-t \hyperlink{startup_8c_adcc3ae1cacdf95ad88f01dd26f589175}{\-\_\-sbss}
+\item 
+uint32\-\_\-t \hyperlink{startup_8c_a580f44faf8ff886796f2114d0de12c77}{\-\_\-ebss}
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{startup_8c_aecbe1114ed66771d67c81cbf241f5396}{\index{startup.\-c@{startup.\-c}!\-\_\-\-\_\-attribute\-\_\-\-\_\-@{\-\_\-\-\_\-attribute\-\_\-\-\_\-}}
+\index{\-\_\-\-\_\-attribute\-\_\-\-\_\-@{\-\_\-\-\_\-attribute\-\_\-\-\_\-}!startup.c@{startup.\-c}}
+\subsubsection[{\-\_\-\-\_\-attribute\-\_\-\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}\-\_\-\-\_\-attribute\-\_\-\-\_\- (
+\begin{DoxyParamCaption}
+\item[{(section(\char`\"{}.vector\-\_\-table\char`\"{}))}]{}
+\end{DoxyParamCaption}
+)}}\label{startup_8c_aecbe1114ed66771d67c81cbf241f5396}
+\hypertarget{startup_8c_af4d707547ba21a4d3d8736ee61596793}{\index{startup.\-c@{startup.\-c}!bus\-\_\-fault\-\_\-handler@{bus\-\_\-fault\-\_\-handler}}
+\index{bus\-\_\-fault\-\_\-handler@{bus\-\_\-fault\-\_\-handler}!startup.c@{startup.\-c}}
+\subsubsection[{bus\-\_\-fault\-\_\-handler}]{\setlength{\rightskip}{0pt plus 5cm}void bus\-\_\-fault\-\_\-handler (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{startup_8c_af4d707547ba21a4d3d8736ee61596793}
+\hypertarget{startup_8c_abce038481ae4addeee86e2a618f55dd3}{\index{startup.\-c@{startup.\-c}!debug\-\_\-mon\-\_\-handler@{debug\-\_\-mon\-\_\-handler}}
+\index{debug\-\_\-mon\-\_\-handler@{debug\-\_\-mon\-\_\-handler}!startup.c@{startup.\-c}}
+\subsubsection[{debug\-\_\-mon\-\_\-handler}]{\setlength{\rightskip}{0pt plus 5cm}void debug\-\_\-mon\-\_\-handler (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{startup_8c_abce038481ae4addeee86e2a618f55dd3}
+\hypertarget{startup_8c_a61402748430fc964933139a61ab8cde8}{\index{startup.\-c@{startup.\-c}!default\-\_\-handler@{default\-\_\-handler}}
+\index{default\-\_\-handler@{default\-\_\-handler}!startup.c@{startup.\-c}}
+\subsubsection[{default\-\_\-handler}]{\setlength{\rightskip}{0pt plus 5cm}void default\-\_\-handler (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{startup_8c_a61402748430fc964933139a61ab8cde8}
+\hypertarget{startup_8c_a80b8e496817c48aab711bab6cb8a148d}{\index{startup.\-c@{startup.\-c}!hard\-\_\-fault\-\_\-handler@{hard\-\_\-fault\-\_\-handler}}
+\index{hard\-\_\-fault\-\_\-handler@{hard\-\_\-fault\-\_\-handler}!startup.c@{startup.\-c}}
+\subsubsection[{hard\-\_\-fault\-\_\-handler}]{\setlength{\rightskip}{0pt plus 5cm}void hard\-\_\-fault\-\_\-handler (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{startup_8c_a80b8e496817c48aab711bab6cb8a148d}
+\hypertarget{startup_8c_a6288eba0f8e8ad3ab1544ad731eb7667}{\index{startup.\-c@{startup.\-c}!main@{main}}
+\index{main@{main}!startup.c@{startup.\-c}}
+\subsubsection[{main}]{\setlength{\rightskip}{0pt plus 5cm}void main (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{startup_8c_a6288eba0f8e8ad3ab1544ad731eb7667}
+
+
+The main entry of the application. This function initializes a G\-P\-I\-O and a U\-A\-R\-T, then outputs a message over the U\-A\-R\-T and starts blinking the diode. 
+
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\hypertarget{startup_8c_a291b6baa172cdfff1b7f482b65d69541}{\index{startup.\-c@{startup.\-c}!mem\-\_\-manage\-\_\-handler@{mem\-\_\-manage\-\_\-handler}}
+\index{mem\-\_\-manage\-\_\-handler@{mem\-\_\-manage\-\_\-handler}!startup.c@{startup.\-c}}
+\subsubsection[{mem\-\_\-manage\-\_\-handler}]{\setlength{\rightskip}{0pt plus 5cm}void mem\-\_\-manage\-\_\-handler (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{startup_8c_a291b6baa172cdfff1b7f482b65d69541}
+\hypertarget{startup_8c_aa2ec4fae88da86b9bd1be360dfa159b8}{\index{startup.\-c@{startup.\-c}!nmi\-\_\-handler@{nmi\-\_\-handler}}
+\index{nmi\-\_\-handler@{nmi\-\_\-handler}!startup.c@{startup.\-c}}
+\subsubsection[{nmi\-\_\-handler}]{\setlength{\rightskip}{0pt plus 5cm}void nmi\-\_\-handler (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{startup_8c_aa2ec4fae88da86b9bd1be360dfa159b8}
+\hypertarget{startup_8c_a67568f5888add6e301f5fb0208d11611}{\index{startup.\-c@{startup.\-c}!pend\-\_\-sv\-\_\-handler@{pend\-\_\-sv\-\_\-handler}}
+\index{pend\-\_\-sv\-\_\-handler@{pend\-\_\-sv\-\_\-handler}!startup.c@{startup.\-c}}
+\subsubsection[{pend\-\_\-sv\-\_\-handler}]{\setlength{\rightskip}{0pt plus 5cm}void pend\-\_\-sv\-\_\-handler (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{startup_8c_a67568f5888add6e301f5fb0208d11611}
+\hypertarget{startup_8c_ab6f9dd2f8d080cf7cdf92705862892ba}{\index{startup.\-c@{startup.\-c}!reset\-\_\-handler@{reset\-\_\-handler}}
+\index{reset\-\_\-handler@{reset\-\_\-handler}!startup.c@{startup.\-c}}
+\subsubsection[{reset\-\_\-handler}]{\setlength{\rightskip}{0pt plus 5cm}void reset\-\_\-handler (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{startup_8c_ab6f9dd2f8d080cf7cdf92705862892ba}
+\hypertarget{startup_8c_abf256fc581d7addf59ffa2b8c32f7259}{\index{startup.\-c@{startup.\-c}!svc\-\_\-handler@{svc\-\_\-handler}}
+\index{svc\-\_\-handler@{svc\-\_\-handler}!startup.c@{startup.\-c}}
+\subsubsection[{svc\-\_\-handler}]{\setlength{\rightskip}{0pt plus 5cm}void svc\-\_\-handler (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{startup_8c_abf256fc581d7addf59ffa2b8c32f7259}
+\hypertarget{startup_8c_aa1e1847264876da69b8d6f092a6519c2}{\index{startup.\-c@{startup.\-c}!systick\-\_\-handler@{systick\-\_\-handler}}
+\index{systick\-\_\-handler@{systick\-\_\-handler}!startup.c@{startup.\-c}}
+\subsubsection[{systick\-\_\-handler}]{\setlength{\rightskip}{0pt plus 5cm}void systick\-\_\-handler (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{startup_8c_aa1e1847264876da69b8d6f092a6519c2}
+\hypertarget{startup_8c_a1067f6c47008a60e7a83df95277532a3}{\index{startup.\-c@{startup.\-c}!usage\-\_\-fault\-\_\-handler@{usage\-\_\-fault\-\_\-handler}}
+\index{usage\-\_\-fault\-\_\-handler@{usage\-\_\-fault\-\_\-handler}!startup.c@{startup.\-c}}
+\subsubsection[{usage\-\_\-fault\-\_\-handler}]{\setlength{\rightskip}{0pt plus 5cm}void usage\-\_\-fault\-\_\-handler (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{startup_8c_a1067f6c47008a60e7a83df95277532a3}
+
+
+\subsection{Variable Documentation}
+\hypertarget{startup_8c_a580f44faf8ff886796f2114d0de12c77}{\index{startup.\-c@{startup.\-c}!\-\_\-ebss@{\-\_\-ebss}}
+\index{\-\_\-ebss@{\-\_\-ebss}!startup.c@{startup.\-c}}
+\subsubsection[{\-\_\-ebss}]{\setlength{\rightskip}{0pt plus 5cm}uint32\-\_\-t \-\_\-ebss}}\label{startup_8c_a580f44faf8ff886796f2114d0de12c77}
+\hypertarget{startup_8c_a1fc4a71c31f5b048d3b1b7b2d10684d1}{\index{startup.\-c@{startup.\-c}!\-\_\-edata@{\-\_\-edata}}
+\index{\-\_\-edata@{\-\_\-edata}!startup.c@{startup.\-c}}
+\subsubsection[{\-\_\-edata}]{\setlength{\rightskip}{0pt plus 5cm}uint32\-\_\-t \-\_\-edata}}\label{startup_8c_a1fc4a71c31f5b048d3b1b7b2d10684d1}
+\hypertarget{startup_8c_a69247aef56f755ef3b08265060dea50f}{\index{startup.\-c@{startup.\-c}!\-\_\-estack@{\-\_\-estack}}
+\index{\-\_\-estack@{\-\_\-estack}!startup.c@{startup.\-c}}
+\subsubsection[{\-\_\-estack}]{\setlength{\rightskip}{0pt plus 5cm}uint32\-\_\-t \-\_\-estack}}\label{startup_8c_a69247aef56f755ef3b08265060dea50f}
+\hypertarget{startup_8c_adcc3ae1cacdf95ad88f01dd26f589175}{\index{startup.\-c@{startup.\-c}!\-\_\-sbss@{\-\_\-sbss}}
+\index{\-\_\-sbss@{\-\_\-sbss}!startup.c@{startup.\-c}}
+\subsubsection[{\-\_\-sbss}]{\setlength{\rightskip}{0pt plus 5cm}uint32\-\_\-t \-\_\-sbss}}\label{startup_8c_adcc3ae1cacdf95ad88f01dd26f589175}
+\hypertarget{startup_8c_a61687bc10bffbfec9c6fd33bddff3094}{\index{startup.\-c@{startup.\-c}!\-\_\-sdata@{\-\_\-sdata}}
+\index{\-\_\-sdata@{\-\_\-sdata}!startup.c@{startup.\-c}}
+\subsubsection[{\-\_\-sdata}]{\setlength{\rightskip}{0pt plus 5cm}uint32\-\_\-t \-\_\-sdata}}\label{startup_8c_a61687bc10bffbfec9c6fd33bddff3094}
+\hypertarget{startup_8c_afaf3fd4cdb8df3477e7bd68743f0c999}{\index{startup.\-c@{startup.\-c}!\-\_\-sdata\-\_\-lma@{\-\_\-sdata\-\_\-lma}}
+\index{\-\_\-sdata\-\_\-lma@{\-\_\-sdata\-\_\-lma}!startup.c@{startup.\-c}}
+\subsubsection[{\-\_\-sdata\-\_\-lma}]{\setlength{\rightskip}{0pt plus 5cm}uint32\-\_\-t \-\_\-sdata\-\_\-lma}}\label{startup_8c_afaf3fd4cdb8df3477e7bd68743f0c999}

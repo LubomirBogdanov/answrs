@@ -1,0 +1,470 @@
+\hypertarget{lkc__proto_8h}{\section{menuconfig/lkc\-\_\-proto.h File Reference}
+\label{lkc__proto_8h}\index{menuconfig/lkc\-\_\-proto.\-h@{menuconfig/lkc\-\_\-proto.\-h}}
+}
+{\ttfamily \#include $<$stdarg.\-h$>$}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{lkc__proto_8h_aa6b9a3a958ab23da2be7c310d74ccdbf}{P} (\hyperlink{zconf_8tab_8c_ac7195a235757f024243188b4bbc49b7b}{conf\-\_\-parse}, void,(const char $\ast$name))
+\item 
+\hyperlink{lkc__proto_8h_a6338114d2d6de4e7d7c7c502eb3e9c87}{P} (\hyperlink{confdata_8c_a96a44c7595f00139e413194349651012}{conf\-\_\-read}, int,(const char $\ast$name))
+\item 
+\hyperlink{lkc__proto_8h_a476e04ef90180555fe8fe5c5eab19669}{P} (\hyperlink{confdata_8c_ac944ea542db7963971fb4dfe14675d5d}{conf\-\_\-read\-\_\-simple}, int,(const char $\ast$name, int))
+\item 
+\hyperlink{lkc__proto_8h_adb60aa9ee9ee65d1adcf2f84d7743882}{P} (\hyperlink{confdata_8c_a6c71f8842d7c18b75d151f0e36254e05}{conf\-\_\-write\-\_\-defconfig}, int,(const char $\ast$name))
+\item 
+\hyperlink{lkc__proto_8h_a0ee88103ace696686121e088e2ba3d2d}{P} (\hyperlink{confdata_8c_a616f708f46d54ac8c74461474194914d}{conf\-\_\-write}, int,(const char $\ast$name))
+\item 
+\hyperlink{lkc__proto_8h_a3faac0f3bec3955601c7ff8627bbbabc}{P} (\hyperlink{confdata_8c_a6de9989ca9192699e407122350ecd5df}{conf\-\_\-write\-\_\-autoconf}, int,(const char $\ast$filename))
+\item 
+\hyperlink{lkc__proto_8h_ab5cd2e7222d4728af22ed9d6541f9d17}{P} (\hyperlink{confdata_8c_a53d998ec5d83ac479e15bdc0c1442a5f}{conf\-\_\-get\-\_\-changed}, bool,(void))
+\item 
+\hyperlink{lkc__proto_8h_ad144fcad6c0ee814c8b761292a9f2f7a}{P} (\hyperlink{confdata_8c_a3ed1d6895cc20faf351215d34c6be976}{conf\-\_\-set\-\_\-changed\-\_\-callback}, void,(void($\ast$fn)(void)))
+\item 
+\hyperlink{lkc__proto_8h_aefd6ab8357a0a7c8b02f7ec2e9ba5907}{P} (\hyperlink{confdata_8c_a58d1fa4a1a906fd473560b5758f3a255}{conf\-\_\-set\-\_\-message\-\_\-callback}, void,(void($\ast$fn)(const char $\ast$fmt, va\-\_\-list ap)))
+\item 
+\hyperlink{lkc__proto_8h_af098daf55deb77187cac788f1d7fcc39}{P} (\hyperlink{menu_8c_a5c91f47c0ec0e6b9d5e89dcd2cf2ceba}{rootmenu}, struct \hyperlink{structmenu}{menu},)
+\item 
+\hyperlink{lkc__proto_8h_a8070a10a2ea755f38404f1d713206d34}{P} (\hyperlink{menu_8c_ab5caae305a94ce70313e5e9743759fc3}{menu\-\_\-is\-\_\-visible}, bool,(struct \hyperlink{structmenu}{menu} $\ast$\hyperlink{structmenu}{menu}))
+\item 
+\hyperlink{lkc__proto_8h_a09b187a90f66292e1e4cf9d1de003fbf}{P} (\hyperlink{menu_8c_add504767230c1f9d3a7824509cfe5c2e}{menu\-\_\-has\-\_\-prompt}, bool,(struct \hyperlink{structmenu}{menu} $\ast$\hyperlink{structmenu}{menu}))
+\item 
+\hyperlink{lkc__proto_8h_a2c72f5fda3172de0a257590e839cb529}{P} (\hyperlink{menu_8c_a54dbcc756d7472558fc48ce6920c460b}{menu\-\_\-get\-\_\-prompt}, const char $\ast$,(struct \hyperlink{structmenu}{menu} $\ast$\hyperlink{structmenu}{menu}))
+\item 
+\hyperlink{lkc__proto_8h_af844e1d6928f2be5f878cf0b095f32c6}{P} (\hyperlink{menu_8c_a5342fdc281427c11b3a5c26d45708bc9}{menu\-\_\-get\-\_\-root\-\_\-menu}, struct \hyperlink{structmenu}{menu} $\ast$,(struct \hyperlink{structmenu}{menu} $\ast$\hyperlink{structmenu}{menu}))
+\item 
+\hyperlink{lkc__proto_8h_a9f0e9578340bde6424c5e63540e1d3b9}{P} (\hyperlink{menu_8c_ae3ae6f72fe4978f91b19f8938357cd33}{menu\-\_\-get\-\_\-parent\-\_\-menu}, struct \hyperlink{structmenu}{menu} $\ast$,(struct \hyperlink{structmenu}{menu} $\ast$\hyperlink{structmenu}{menu}))
+\item 
+\hyperlink{lkc__proto_8h_a0d5eabbe528c9f536fe9ebb6d9eb5154}{P} (\hyperlink{menu_8c_a097eceaa1fde1bc3699f8f791d97e2dc}{menu\-\_\-has\-\_\-help}, bool,(struct \hyperlink{structmenu}{menu} $\ast$\hyperlink{structmenu}{menu}))
+\item 
+\hyperlink{lkc__proto_8h_adf2f338c01415ba97a96c4bd6ef766ee}{P} (\hyperlink{menu_8c_aa8ca8e3568b4f264d1bda7d896bf50f1}{menu\-\_\-get\-\_\-help}, const char $\ast$,(struct \hyperlink{structmenu}{menu} $\ast$\hyperlink{structmenu}{menu}))
+\item 
+\hyperlink{lkc__proto_8h_ac6830b7edda89ec40830a3834083b8a0}{P} (\hyperlink{menu_8c_ad8edb6f20c5160776654c13c7de40cc1}{get\-\_\-symbol\-\_\-str}, void,(struct \hyperlink{structgstr}{gstr} $\ast$r, struct \hyperlink{structsymbol}{symbol} $\ast$sym, struct \hyperlink{structlist__head}{list\-\_\-head} $\ast$head))
+\item 
+\hyperlink{lkc__proto_8h_ace0d354a0b9e5e87696190a6c41100d1}{P} (\hyperlink{menu_8c_a47573fdb13bc0bb5df9d09f202db7598}{get\-\_\-relations\-\_\-str}, struct \hyperlink{structgstr}{gstr},(struct \hyperlink{structsymbol}{symbol} $\ast$$\ast$sym\-\_\-arr, struct \hyperlink{structlist__head}{list\-\_\-head} $\ast$head))
+\item 
+\hyperlink{lkc__proto_8h_a65f11c5c1c7fafdc98e7b4e156097c49}{P} (\hyperlink{menu_8c_a14b7099825fe97545a54f2bce2a19b25}{menu\-\_\-get\-\_\-ext\-\_\-help}, void,(struct \hyperlink{structmenu}{menu} $\ast$\hyperlink{structmenu}{menu}, struct \hyperlink{structgstr}{gstr} $\ast$help))
+\item 
+\hyperlink{lkc__proto_8h_ab43f52f53e5e1b76a780d44e5f740a12}{P} (\hyperlink{zconf_8tab_8c_a757692ed09d816ee16b06ed899530e05}{symbol\-\_\-hash}, struct \hyperlink{structsymbol}{symbol} $\ast$,\mbox{[}\hyperlink{expr_8h_aa6a2ebe4ed480217e070130d63754658}{S\-Y\-M\-B\-O\-L\-\_\-\-H\-A\-S\-H\-S\-I\-Z\-E}\mbox{]})
+\item 
+\hyperlink{lkc__proto_8h_abc9b5d2c80042049c1f1294a16a6d7b1}{P} (\hyperlink{symbol_8c_a6e8f335b0246adae0f293fe81beee616}{sym\-\_\-lookup}, struct \hyperlink{structsymbol}{symbol} $\ast$,(const char $\ast$name, int flags))
+\item 
+\hyperlink{lkc__proto_8h_a8234acb8540482411dc3ef7286e6d57e}{P} (\hyperlink{symbol_8c_a1e94e954bdc6de059a7dc97464b49d00}{sym\-\_\-find}, struct \hyperlink{structsymbol}{symbol} $\ast$,(const char $\ast$name))
+\item 
+\hyperlink{lkc__proto_8h_a6b7784dda95f92762497e3ac398b8885}{P} (\hyperlink{symbol_8c_a451ddfef9d44e314e5abc9ecd4f4b7c7}{sym\-\_\-expand\-\_\-string\-\_\-value}, const char $\ast$,(const char $\ast$in))
+\item 
+\hyperlink{lkc__proto_8h_a34a5f8eba7c82ef86ea5ad5b9ae3cd68}{P} (\hyperlink{symbol_8c_a3bbbae4ca14c5cb26953652f3a04447f}{sym\-\_\-escape\-\_\-string\-\_\-value}, const char $\ast$,(const char $\ast$in))
+\item 
+\hyperlink{lkc__proto_8h_a106b80b230d286f9e8eb73d77ea60509}{P} (\hyperlink{symbol_8c_a5abc837666cfccf7f7f702bbd4a172f9}{sym\-\_\-re\-\_\-search}, struct \hyperlink{structsymbol}{symbol} $\ast$$\ast$,(const char $\ast$pattern))
+\item 
+\hyperlink{lkc__proto_8h_a403472fbbfcfdb73e97521bcb66c0d0d}{P} (\hyperlink{symbol_8c_a2118733a50ae6e95ed67da8c2e411ec5}{sym\-\_\-type\-\_\-name}, const char $\ast$,(enum \hyperlink{expr_8h_a9e6705a3296471be728a3b6570b56231}{symbol\-\_\-type} type))
+\item 
+\hyperlink{lkc__proto_8h_a41cc52fcb6012ed70a0adc2a72780643}{P} (\hyperlink{symbol_8c_a46147a1ea607cccc827050a5ebeee381}{sym\-\_\-calc\-\_\-value}, void,(struct \hyperlink{structsymbol}{symbol} $\ast$sym))
+\item 
+\hyperlink{lkc__proto_8h_acee7d9dc9d7d041111afe2ecb04cd377}{P} (\hyperlink{symbol_8c_a7c214c5d5fac15ce51e0be20c33c635f}{sym\-\_\-get\-\_\-type}, enum \hyperlink{expr_8h_a9e6705a3296471be728a3b6570b56231}{symbol\-\_\-type},(struct \hyperlink{structsymbol}{symbol} $\ast$sym))
+\item 
+\hyperlink{lkc__proto_8h_a565b2f21f4ab8e839aeef1c62b80494f}{P} (\hyperlink{symbol_8c_a2ee19b11ebcb285c6a6ed90a458633ad}{sym\-\_\-tristate\-\_\-within\-\_\-range}, bool,(struct \hyperlink{structsymbol}{symbol} $\ast$sym, \hyperlink{expr_8h_af4926743b1e532e0b2ad24161ff942a3}{tristate} tri))
+\item 
+\hyperlink{lkc__proto_8h_a2c4c35db85ac5f3488b79fb9d88f7d8e}{P} (\hyperlink{symbol_8c_abf4a5c0d71c9055b6a043822298df5cd}{sym\-\_\-set\-\_\-tristate\-\_\-value}, bool,(struct \hyperlink{structsymbol}{symbol} $\ast$sym, \hyperlink{expr_8h_af4926743b1e532e0b2ad24161ff942a3}{tristate} tri))
+\item 
+\hyperlink{lkc__proto_8h_acc7a01ae2d6ab1582679ba7092a5453d}{P} (\hyperlink{symbol_8c_af429b09cec9d09182991970e315c0f3e}{sym\-\_\-toggle\-\_\-tristate\-\_\-value}, \hyperlink{expr_8h_af4926743b1e532e0b2ad24161ff942a3}{tristate},(struct \hyperlink{structsymbol}{symbol} $\ast$sym))
+\item 
+\hyperlink{lkc__proto_8h_a24ae1e032a4b37bf814e295f371621e7}{P} (\hyperlink{symbol_8c_a949874153186e49e3a8c88929d27d7a6}{sym\-\_\-string\-\_\-valid}, bool,(struct \hyperlink{structsymbol}{symbol} $\ast$sym, const char $\ast$newval))
+\item 
+\hyperlink{lkc__proto_8h_a1f193eefcc89fd0a2dac4fae3735f503}{P} (\hyperlink{symbol_8c_a4f6e261bd47bf1ccd8f8d45ce565ea60}{sym\-\_\-string\-\_\-within\-\_\-range}, bool,(struct \hyperlink{structsymbol}{symbol} $\ast$sym, const char $\ast$\hyperlink{zconf_8lex_8c_aba03208f197d75b6e355ba9b2ae08ab5}{str}))
+\item 
+\hyperlink{lkc__proto_8h_abc0d4679758c37cf06a50c84dfbc1194}{P} (\hyperlink{symbol_8c_ab66ff9b8ff399c6f1e6e277dc26922c6}{sym\-\_\-set\-\_\-string\-\_\-value}, bool,(struct \hyperlink{structsymbol}{symbol} $\ast$sym, const char $\ast$newval))
+\item 
+\hyperlink{lkc__proto_8h_a503449ee81ed64b921dec4d4a7357c9a}{P} (\hyperlink{symbol_8c_ab26f505514ae4903eee064584ebb6757}{sym\-\_\-is\-\_\-changable}, bool,(struct \hyperlink{structsymbol}{symbol} $\ast$sym))
+\item 
+\hyperlink{lkc__proto_8h_aaab03bbbbcf2ca78d50878a512439eec}{P} (\hyperlink{symbol_8c_a5da4d4ac06ee43c1fa3985f2069f19c6}{sym\-\_\-get\-\_\-choice\-\_\-prop}, struct \hyperlink{structproperty}{property} $\ast$,(struct \hyperlink{structsymbol}{symbol} $\ast$sym))
+\item 
+\hyperlink{lkc__proto_8h_ac2945213359523eb8381e30495e491df}{P} (\hyperlink{symbol_8c_ae8113ee3325b4454a9368c9d943b0908}{sym\-\_\-get\-\_\-default\-\_\-prop}, struct \hyperlink{structproperty}{property} $\ast$,(struct \hyperlink{structsymbol}{symbol} $\ast$sym))
+\item 
+\hyperlink{lkc__proto_8h_a0b3170f7f48e5e1da4b690e9f729ad3c}{P} (\hyperlink{symbol_8c_aacc9c4c5c668461b997862cbbbfb5657}{sym\-\_\-get\-\_\-string\-\_\-value}, const char $\ast$,(struct \hyperlink{structsymbol}{symbol} $\ast$sym))
+\item 
+\hyperlink{lkc__proto_8h_a713bc8243ebc3137cc976aa37df231d7}{P} (\hyperlink{symbol_8c_acea7a02a288bef33737ec24cd7da7c59}{prop\-\_\-get\-\_\-type\-\_\-name}, const char $\ast$,(enum \hyperlink{expr_8h_a403a578df6dfdc7e86f6bca789c523c2}{prop\-\_\-type} type))
+\item 
+\hyperlink{lkc__proto_8h_a6b3f28ce3c772da77aefc0d3410d2cd7}{P} (\hyperlink{expr_8c_a59ebe6f2fc7c059f084eabb6b132d7c8}{expr\-\_\-compare\-\_\-type}, int,(enum \hyperlink{expr_8h_a42f022cdf0b8313a80f367d2739b9c19}{expr\-\_\-type} t1, enum \hyperlink{expr_8h_a42f022cdf0b8313a80f367d2739b9c19}{expr\-\_\-type} t2))
+\item 
+\hyperlink{lkc__proto_8h_a1b56b67898a61b3ffbdc635a5588b3c7}{P} (\hyperlink{expr_8c_a2685a9fd48afd314351a74744ee3d287}{expr\-\_\-print}, void,(struct \hyperlink{structexpr}{expr} $\ast$e, void($\ast$fn)(void $\ast$, struct \hyperlink{structsymbol}{symbol} $\ast$, const char $\ast$), void $\ast$data, int prevtoken))
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{lkc__proto_8h_aa6b9a3a958ab23da2be7c310d74ccdbf}{\index{lkc\-\_\-proto.\-h@{lkc\-\_\-proto.\-h}!P@{P}}
+\index{P@{P}!lkc_proto.h@{lkc\-\_\-proto.\-h}}
+\subsubsection[{P}]{\setlength{\rightskip}{0pt plus 5cm}P (
+\begin{DoxyParamCaption}
+\item[{{\bf conf\-\_\-parse}}]{, }
+\item[{void}]{, }
+\item[{(const char $\ast$name)}]{}
+\end{DoxyParamCaption}
+)}}\label{lkc__proto_8h_aa6b9a3a958ab23da2be7c310d74ccdbf}
+\hypertarget{lkc__proto_8h_a6338114d2d6de4e7d7c7c502eb3e9c87}{\index{lkc\-\_\-proto.\-h@{lkc\-\_\-proto.\-h}!P@{P}}
+\index{P@{P}!lkc_proto.h@{lkc\-\_\-proto.\-h}}
+\subsubsection[{P}]{\setlength{\rightskip}{0pt plus 5cm}P (
+\begin{DoxyParamCaption}
+\item[{{\bf conf\-\_\-read}}]{, }
+\item[{int}]{, }
+\item[{(const char $\ast$name)}]{}
+\end{DoxyParamCaption}
+)}}\label{lkc__proto_8h_a6338114d2d6de4e7d7c7c502eb3e9c87}
+\hypertarget{lkc__proto_8h_a476e04ef90180555fe8fe5c5eab19669}{\index{lkc\-\_\-proto.\-h@{lkc\-\_\-proto.\-h}!P@{P}}
+\index{P@{P}!lkc_proto.h@{lkc\-\_\-proto.\-h}}
+\subsubsection[{P}]{\setlength{\rightskip}{0pt plus 5cm}P (
+\begin{DoxyParamCaption}
+\item[{{\bf conf\-\_\-read\-\_\-simple}}]{, }
+\item[{int}]{, }
+\item[{(const char $\ast$name, int)}]{}
+\end{DoxyParamCaption}
+)}}\label{lkc__proto_8h_a476e04ef90180555fe8fe5c5eab19669}
+\hypertarget{lkc__proto_8h_adb60aa9ee9ee65d1adcf2f84d7743882}{\index{lkc\-\_\-proto.\-h@{lkc\-\_\-proto.\-h}!P@{P}}
+\index{P@{P}!lkc_proto.h@{lkc\-\_\-proto.\-h}}
+\subsubsection[{P}]{\setlength{\rightskip}{0pt plus 5cm}P (
+\begin{DoxyParamCaption}
+\item[{{\bf conf\-\_\-write\-\_\-defconfig}}]{, }
+\item[{int}]{, }
+\item[{(const char $\ast$name)}]{}
+\end{DoxyParamCaption}
+)}}\label{lkc__proto_8h_adb60aa9ee9ee65d1adcf2f84d7743882}
+\hypertarget{lkc__proto_8h_a0ee88103ace696686121e088e2ba3d2d}{\index{lkc\-\_\-proto.\-h@{lkc\-\_\-proto.\-h}!P@{P}}
+\index{P@{P}!lkc_proto.h@{lkc\-\_\-proto.\-h}}
+\subsubsection[{P}]{\setlength{\rightskip}{0pt plus 5cm}P (
+\begin{DoxyParamCaption}
+\item[{{\bf conf\-\_\-write}}]{, }
+\item[{int}]{, }
+\item[{(const char $\ast$name)}]{}
+\end{DoxyParamCaption}
+)}}\label{lkc__proto_8h_a0ee88103ace696686121e088e2ba3d2d}
+\hypertarget{lkc__proto_8h_a3faac0f3bec3955601c7ff8627bbbabc}{\index{lkc\-\_\-proto.\-h@{lkc\-\_\-proto.\-h}!P@{P}}
+\index{P@{P}!lkc_proto.h@{lkc\-\_\-proto.\-h}}
+\subsubsection[{P}]{\setlength{\rightskip}{0pt plus 5cm}P (
+\begin{DoxyParamCaption}
+\item[{{\bf conf\-\_\-write\-\_\-autoconf}}]{, }
+\item[{int}]{, }
+\item[{(const char $\ast$filename)}]{}
+\end{DoxyParamCaption}
+)}}\label{lkc__proto_8h_a3faac0f3bec3955601c7ff8627bbbabc}
+\hypertarget{lkc__proto_8h_ab5cd2e7222d4728af22ed9d6541f9d17}{\index{lkc\-\_\-proto.\-h@{lkc\-\_\-proto.\-h}!P@{P}}
+\index{P@{P}!lkc_proto.h@{lkc\-\_\-proto.\-h}}
+\subsubsection[{P}]{\setlength{\rightskip}{0pt plus 5cm}P (
+\begin{DoxyParamCaption}
+\item[{{\bf conf\-\_\-get\-\_\-changed}}]{, }
+\item[{bool}]{, }
+\item[{(void)}]{}
+\end{DoxyParamCaption}
+)}}\label{lkc__proto_8h_ab5cd2e7222d4728af22ed9d6541f9d17}
+\hypertarget{lkc__proto_8h_ad144fcad6c0ee814c8b761292a9f2f7a}{\index{lkc\-\_\-proto.\-h@{lkc\-\_\-proto.\-h}!P@{P}}
+\index{P@{P}!lkc_proto.h@{lkc\-\_\-proto.\-h}}
+\subsubsection[{P}]{\setlength{\rightskip}{0pt plus 5cm}P (
+\begin{DoxyParamCaption}
+\item[{{\bf conf\-\_\-set\-\_\-changed\-\_\-callback}}]{, }
+\item[{void}]{, }
+\item[{(void($\ast$fn)(void))}]{}
+\end{DoxyParamCaption}
+)}}\label{lkc__proto_8h_ad144fcad6c0ee814c8b761292a9f2f7a}
+\hypertarget{lkc__proto_8h_aefd6ab8357a0a7c8b02f7ec2e9ba5907}{\index{lkc\-\_\-proto.\-h@{lkc\-\_\-proto.\-h}!P@{P}}
+\index{P@{P}!lkc_proto.h@{lkc\-\_\-proto.\-h}}
+\subsubsection[{P}]{\setlength{\rightskip}{0pt plus 5cm}P (
+\begin{DoxyParamCaption}
+\item[{{\bf conf\-\_\-set\-\_\-message\-\_\-callback}}]{, }
+\item[{void}]{, }
+\item[{(void($\ast$fn)(const char $\ast$fmt, va\-\_\-list ap))}]{}
+\end{DoxyParamCaption}
+)}}\label{lkc__proto_8h_aefd6ab8357a0a7c8b02f7ec2e9ba5907}
+\hypertarget{lkc__proto_8h_af098daf55deb77187cac788f1d7fcc39}{\index{lkc\-\_\-proto.\-h@{lkc\-\_\-proto.\-h}!P@{P}}
+\index{P@{P}!lkc_proto.h@{lkc\-\_\-proto.\-h}}
+\subsubsection[{P}]{\setlength{\rightskip}{0pt plus 5cm}P (
+\begin{DoxyParamCaption}
+\item[{{\bf rootmenu}}]{, }
+\item[{struct {\bf menu}}]{}
+\end{DoxyParamCaption}
+)}}\label{lkc__proto_8h_af098daf55deb77187cac788f1d7fcc39}
+\hypertarget{lkc__proto_8h_a8070a10a2ea755f38404f1d713206d34}{\index{lkc\-\_\-proto.\-h@{lkc\-\_\-proto.\-h}!P@{P}}
+\index{P@{P}!lkc_proto.h@{lkc\-\_\-proto.\-h}}
+\subsubsection[{P}]{\setlength{\rightskip}{0pt plus 5cm}P (
+\begin{DoxyParamCaption}
+\item[{{\bf menu\-\_\-is\-\_\-visible}}]{, }
+\item[{bool}]{, }
+\item[{(struct {\bf menu} $\ast${\bf menu})}]{}
+\end{DoxyParamCaption}
+)}}\label{lkc__proto_8h_a8070a10a2ea755f38404f1d713206d34}
+\hypertarget{lkc__proto_8h_a09b187a90f66292e1e4cf9d1de003fbf}{\index{lkc\-\_\-proto.\-h@{lkc\-\_\-proto.\-h}!P@{P}}
+\index{P@{P}!lkc_proto.h@{lkc\-\_\-proto.\-h}}
+\subsubsection[{P}]{\setlength{\rightskip}{0pt plus 5cm}P (
+\begin{DoxyParamCaption}
+\item[{{\bf menu\-\_\-has\-\_\-prompt}}]{, }
+\item[{bool}]{, }
+\item[{(struct {\bf menu} $\ast${\bf menu})}]{}
+\end{DoxyParamCaption}
+)}}\label{lkc__proto_8h_a09b187a90f66292e1e4cf9d1de003fbf}
+\hypertarget{lkc__proto_8h_a2c72f5fda3172de0a257590e839cb529}{\index{lkc\-\_\-proto.\-h@{lkc\-\_\-proto.\-h}!P@{P}}
+\index{P@{P}!lkc_proto.h@{lkc\-\_\-proto.\-h}}
+\subsubsection[{P}]{\setlength{\rightskip}{0pt plus 5cm}P (
+\begin{DoxyParamCaption}
+\item[{{\bf menu\-\_\-get\-\_\-prompt}}]{, }
+\item[{const char $\ast$}]{, }
+\item[{(struct {\bf menu} $\ast${\bf menu})}]{}
+\end{DoxyParamCaption}
+)}}\label{lkc__proto_8h_a2c72f5fda3172de0a257590e839cb529}
+\hypertarget{lkc__proto_8h_af844e1d6928f2be5f878cf0b095f32c6}{\index{lkc\-\_\-proto.\-h@{lkc\-\_\-proto.\-h}!P@{P}}
+\index{P@{P}!lkc_proto.h@{lkc\-\_\-proto.\-h}}
+\subsubsection[{P}]{\setlength{\rightskip}{0pt plus 5cm}P (
+\begin{DoxyParamCaption}
+\item[{{\bf menu\-\_\-get\-\_\-root\-\_\-menu}}]{, }
+\item[{struct {\bf menu} $\ast$}]{, }
+\item[{(struct {\bf menu} $\ast${\bf menu})}]{}
+\end{DoxyParamCaption}
+)}}\label{lkc__proto_8h_af844e1d6928f2be5f878cf0b095f32c6}
+\hypertarget{lkc__proto_8h_a9f0e9578340bde6424c5e63540e1d3b9}{\index{lkc\-\_\-proto.\-h@{lkc\-\_\-proto.\-h}!P@{P}}
+\index{P@{P}!lkc_proto.h@{lkc\-\_\-proto.\-h}}
+\subsubsection[{P}]{\setlength{\rightskip}{0pt plus 5cm}P (
+\begin{DoxyParamCaption}
+\item[{{\bf menu\-\_\-get\-\_\-parent\-\_\-menu}}]{, }
+\item[{struct {\bf menu} $\ast$}]{, }
+\item[{(struct {\bf menu} $\ast${\bf menu})}]{}
+\end{DoxyParamCaption}
+)}}\label{lkc__proto_8h_a9f0e9578340bde6424c5e63540e1d3b9}
+\hypertarget{lkc__proto_8h_a0d5eabbe528c9f536fe9ebb6d9eb5154}{\index{lkc\-\_\-proto.\-h@{lkc\-\_\-proto.\-h}!P@{P}}
+\index{P@{P}!lkc_proto.h@{lkc\-\_\-proto.\-h}}
+\subsubsection[{P}]{\setlength{\rightskip}{0pt plus 5cm}P (
+\begin{DoxyParamCaption}
+\item[{{\bf menu\-\_\-has\-\_\-help}}]{, }
+\item[{bool}]{, }
+\item[{(struct {\bf menu} $\ast${\bf menu})}]{}
+\end{DoxyParamCaption}
+)}}\label{lkc__proto_8h_a0d5eabbe528c9f536fe9ebb6d9eb5154}
+\hypertarget{lkc__proto_8h_adf2f338c01415ba97a96c4bd6ef766ee}{\index{lkc\-\_\-proto.\-h@{lkc\-\_\-proto.\-h}!P@{P}}
+\index{P@{P}!lkc_proto.h@{lkc\-\_\-proto.\-h}}
+\subsubsection[{P}]{\setlength{\rightskip}{0pt plus 5cm}P (
+\begin{DoxyParamCaption}
+\item[{{\bf menu\-\_\-get\-\_\-help}}]{, }
+\item[{const char $\ast$}]{, }
+\item[{(struct {\bf menu} $\ast${\bf menu})}]{}
+\end{DoxyParamCaption}
+)}}\label{lkc__proto_8h_adf2f338c01415ba97a96c4bd6ef766ee}
+\hypertarget{lkc__proto_8h_ac6830b7edda89ec40830a3834083b8a0}{\index{lkc\-\_\-proto.\-h@{lkc\-\_\-proto.\-h}!P@{P}}
+\index{P@{P}!lkc_proto.h@{lkc\-\_\-proto.\-h}}
+\subsubsection[{P}]{\setlength{\rightskip}{0pt plus 5cm}P (
+\begin{DoxyParamCaption}
+\item[{{\bf get\-\_\-symbol\-\_\-str}}]{, }
+\item[{void}]{, }
+\item[{(struct {\bf gstr} $\ast$r, struct {\bf symbol} $\ast$sym, struct {\bf list\-\_\-head} $\ast$head)}]{}
+\end{DoxyParamCaption}
+)}}\label{lkc__proto_8h_ac6830b7edda89ec40830a3834083b8a0}
+\hypertarget{lkc__proto_8h_ace0d354a0b9e5e87696190a6c41100d1}{\index{lkc\-\_\-proto.\-h@{lkc\-\_\-proto.\-h}!P@{P}}
+\index{P@{P}!lkc_proto.h@{lkc\-\_\-proto.\-h}}
+\subsubsection[{P}]{\setlength{\rightskip}{0pt plus 5cm}P (
+\begin{DoxyParamCaption}
+\item[{{\bf get\-\_\-relations\-\_\-str}}]{, }
+\item[{struct {\bf gstr}}]{, }
+\item[{(struct {\bf symbol} $\ast$$\ast$sym\-\_\-arr, struct {\bf list\-\_\-head} $\ast$head)}]{}
+\end{DoxyParamCaption}
+)}}\label{lkc__proto_8h_ace0d354a0b9e5e87696190a6c41100d1}
+\hypertarget{lkc__proto_8h_a65f11c5c1c7fafdc98e7b4e156097c49}{\index{lkc\-\_\-proto.\-h@{lkc\-\_\-proto.\-h}!P@{P}}
+\index{P@{P}!lkc_proto.h@{lkc\-\_\-proto.\-h}}
+\subsubsection[{P}]{\setlength{\rightskip}{0pt plus 5cm}P (
+\begin{DoxyParamCaption}
+\item[{{\bf menu\-\_\-get\-\_\-ext\-\_\-help}}]{, }
+\item[{void}]{, }
+\item[{(struct {\bf menu} $\ast${\bf menu}, struct {\bf gstr} $\ast$help)}]{}
+\end{DoxyParamCaption}
+)}}\label{lkc__proto_8h_a65f11c5c1c7fafdc98e7b4e156097c49}
+\hypertarget{lkc__proto_8h_ab43f52f53e5e1b76a780d44e5f740a12}{\index{lkc\-\_\-proto.\-h@{lkc\-\_\-proto.\-h}!P@{P}}
+\index{P@{P}!lkc_proto.h@{lkc\-\_\-proto.\-h}}
+\subsubsection[{P}]{\setlength{\rightskip}{0pt plus 5cm}P (
+\begin{DoxyParamCaption}
+\item[{{\bf symbol\-\_\-hash}}]{, }
+\item[{struct {\bf symbol} $\ast$}]{}
+\end{DoxyParamCaption}
+)}}\label{lkc__proto_8h_ab43f52f53e5e1b76a780d44e5f740a12}
+\hypertarget{lkc__proto_8h_abc9b5d2c80042049c1f1294a16a6d7b1}{\index{lkc\-\_\-proto.\-h@{lkc\-\_\-proto.\-h}!P@{P}}
+\index{P@{P}!lkc_proto.h@{lkc\-\_\-proto.\-h}}
+\subsubsection[{P}]{\setlength{\rightskip}{0pt plus 5cm}P (
+\begin{DoxyParamCaption}
+\item[{{\bf sym\-\_\-lookup}}]{, }
+\item[{struct {\bf symbol} $\ast$}]{, }
+\item[{(const char $\ast$name, int flags)}]{}
+\end{DoxyParamCaption}
+)}}\label{lkc__proto_8h_abc9b5d2c80042049c1f1294a16a6d7b1}
+\hypertarget{lkc__proto_8h_a8234acb8540482411dc3ef7286e6d57e}{\index{lkc\-\_\-proto.\-h@{lkc\-\_\-proto.\-h}!P@{P}}
+\index{P@{P}!lkc_proto.h@{lkc\-\_\-proto.\-h}}
+\subsubsection[{P}]{\setlength{\rightskip}{0pt plus 5cm}P (
+\begin{DoxyParamCaption}
+\item[{{\bf sym\-\_\-find}}]{, }
+\item[{struct {\bf symbol} $\ast$}]{, }
+\item[{(const char $\ast$name)}]{}
+\end{DoxyParamCaption}
+)}}\label{lkc__proto_8h_a8234acb8540482411dc3ef7286e6d57e}
+\hypertarget{lkc__proto_8h_a6b7784dda95f92762497e3ac398b8885}{\index{lkc\-\_\-proto.\-h@{lkc\-\_\-proto.\-h}!P@{P}}
+\index{P@{P}!lkc_proto.h@{lkc\-\_\-proto.\-h}}
+\subsubsection[{P}]{\setlength{\rightskip}{0pt plus 5cm}P (
+\begin{DoxyParamCaption}
+\item[{{\bf sym\-\_\-expand\-\_\-string\-\_\-value}}]{, }
+\item[{const char $\ast$}]{, }
+\item[{(const char $\ast$in)}]{}
+\end{DoxyParamCaption}
+)}}\label{lkc__proto_8h_a6b7784dda95f92762497e3ac398b8885}
+\hypertarget{lkc__proto_8h_a34a5f8eba7c82ef86ea5ad5b9ae3cd68}{\index{lkc\-\_\-proto.\-h@{lkc\-\_\-proto.\-h}!P@{P}}
+\index{P@{P}!lkc_proto.h@{lkc\-\_\-proto.\-h}}
+\subsubsection[{P}]{\setlength{\rightskip}{0pt plus 5cm}P (
+\begin{DoxyParamCaption}
+\item[{{\bf sym\-\_\-escape\-\_\-string\-\_\-value}}]{, }
+\item[{const char $\ast$}]{, }
+\item[{(const char $\ast$in)}]{}
+\end{DoxyParamCaption}
+)}}\label{lkc__proto_8h_a34a5f8eba7c82ef86ea5ad5b9ae3cd68}
+\hypertarget{lkc__proto_8h_a106b80b230d286f9e8eb73d77ea60509}{\index{lkc\-\_\-proto.\-h@{lkc\-\_\-proto.\-h}!P@{P}}
+\index{P@{P}!lkc_proto.h@{lkc\-\_\-proto.\-h}}
+\subsubsection[{P}]{\setlength{\rightskip}{0pt plus 5cm}P (
+\begin{DoxyParamCaption}
+\item[{{\bf sym\-\_\-re\-\_\-search}}]{, }
+\item[{struct {\bf symbol} $\ast$$\ast$}]{, }
+\item[{(const char $\ast$pattern)}]{}
+\end{DoxyParamCaption}
+)}}\label{lkc__proto_8h_a106b80b230d286f9e8eb73d77ea60509}
+\hypertarget{lkc__proto_8h_a403472fbbfcfdb73e97521bcb66c0d0d}{\index{lkc\-\_\-proto.\-h@{lkc\-\_\-proto.\-h}!P@{P}}
+\index{P@{P}!lkc_proto.h@{lkc\-\_\-proto.\-h}}
+\subsubsection[{P}]{\setlength{\rightskip}{0pt plus 5cm}P (
+\begin{DoxyParamCaption}
+\item[{{\bf sym\-\_\-type\-\_\-name}}]{, }
+\item[{const char $\ast$}]{, }
+\item[{(enum {\bf symbol\-\_\-type} type)}]{}
+\end{DoxyParamCaption}
+)}}\label{lkc__proto_8h_a403472fbbfcfdb73e97521bcb66c0d0d}
+\hypertarget{lkc__proto_8h_a41cc52fcb6012ed70a0adc2a72780643}{\index{lkc\-\_\-proto.\-h@{lkc\-\_\-proto.\-h}!P@{P}}
+\index{P@{P}!lkc_proto.h@{lkc\-\_\-proto.\-h}}
+\subsubsection[{P}]{\setlength{\rightskip}{0pt plus 5cm}P (
+\begin{DoxyParamCaption}
+\item[{{\bf sym\-\_\-calc\-\_\-value}}]{, }
+\item[{void}]{, }
+\item[{(struct {\bf symbol} $\ast$sym)}]{}
+\end{DoxyParamCaption}
+)}}\label{lkc__proto_8h_a41cc52fcb6012ed70a0adc2a72780643}
+\hypertarget{lkc__proto_8h_acee7d9dc9d7d041111afe2ecb04cd377}{\index{lkc\-\_\-proto.\-h@{lkc\-\_\-proto.\-h}!P@{P}}
+\index{P@{P}!lkc_proto.h@{lkc\-\_\-proto.\-h}}
+\subsubsection[{P}]{\setlength{\rightskip}{0pt plus 5cm}P (
+\begin{DoxyParamCaption}
+\item[{{\bf sym\-\_\-get\-\_\-type}}]{, }
+\item[{enum}]{symbol\-\_\-type, }
+\item[{(struct {\bf symbol} $\ast$sym)}]{}
+\end{DoxyParamCaption}
+)}}\label{lkc__proto_8h_acee7d9dc9d7d041111afe2ecb04cd377}
+\hypertarget{lkc__proto_8h_a565b2f21f4ab8e839aeef1c62b80494f}{\index{lkc\-\_\-proto.\-h@{lkc\-\_\-proto.\-h}!P@{P}}
+\index{P@{P}!lkc_proto.h@{lkc\-\_\-proto.\-h}}
+\subsubsection[{P}]{\setlength{\rightskip}{0pt plus 5cm}P (
+\begin{DoxyParamCaption}
+\item[{{\bf sym\-\_\-tristate\-\_\-within\-\_\-range}}]{, }
+\item[{bool}]{, }
+\item[{(struct {\bf symbol} $\ast$sym, {\bf tristate} tri)}]{}
+\end{DoxyParamCaption}
+)}}\label{lkc__proto_8h_a565b2f21f4ab8e839aeef1c62b80494f}
+\hypertarget{lkc__proto_8h_a2c4c35db85ac5f3488b79fb9d88f7d8e}{\index{lkc\-\_\-proto.\-h@{lkc\-\_\-proto.\-h}!P@{P}}
+\index{P@{P}!lkc_proto.h@{lkc\-\_\-proto.\-h}}
+\subsubsection[{P}]{\setlength{\rightskip}{0pt plus 5cm}P (
+\begin{DoxyParamCaption}
+\item[{{\bf sym\-\_\-set\-\_\-tristate\-\_\-value}}]{, }
+\item[{bool}]{, }
+\item[{(struct {\bf symbol} $\ast$sym, {\bf tristate} tri)}]{}
+\end{DoxyParamCaption}
+)}}\label{lkc__proto_8h_a2c4c35db85ac5f3488b79fb9d88f7d8e}
+\hypertarget{lkc__proto_8h_acc7a01ae2d6ab1582679ba7092a5453d}{\index{lkc\-\_\-proto.\-h@{lkc\-\_\-proto.\-h}!P@{P}}
+\index{P@{P}!lkc_proto.h@{lkc\-\_\-proto.\-h}}
+\subsubsection[{P}]{\setlength{\rightskip}{0pt plus 5cm}P (
+\begin{DoxyParamCaption}
+\item[{{\bf sym\-\_\-toggle\-\_\-tristate\-\_\-value}}]{, }
+\item[{{\bf tristate}}]{, }
+\item[{(struct {\bf symbol} $\ast$sym)}]{}
+\end{DoxyParamCaption}
+)}}\label{lkc__proto_8h_acc7a01ae2d6ab1582679ba7092a5453d}
+\hypertarget{lkc__proto_8h_a24ae1e032a4b37bf814e295f371621e7}{\index{lkc\-\_\-proto.\-h@{lkc\-\_\-proto.\-h}!P@{P}}
+\index{P@{P}!lkc_proto.h@{lkc\-\_\-proto.\-h}}
+\subsubsection[{P}]{\setlength{\rightskip}{0pt plus 5cm}P (
+\begin{DoxyParamCaption}
+\item[{{\bf sym\-\_\-string\-\_\-valid}}]{, }
+\item[{bool}]{, }
+\item[{(struct {\bf symbol} $\ast$sym, const char $\ast$newval)}]{}
+\end{DoxyParamCaption}
+)}}\label{lkc__proto_8h_a24ae1e032a4b37bf814e295f371621e7}
+\hypertarget{lkc__proto_8h_a1f193eefcc89fd0a2dac4fae3735f503}{\index{lkc\-\_\-proto.\-h@{lkc\-\_\-proto.\-h}!P@{P}}
+\index{P@{P}!lkc_proto.h@{lkc\-\_\-proto.\-h}}
+\subsubsection[{P}]{\setlength{\rightskip}{0pt plus 5cm}P (
+\begin{DoxyParamCaption}
+\item[{{\bf sym\-\_\-string\-\_\-within\-\_\-range}}]{, }
+\item[{bool}]{, }
+\item[{(struct {\bf symbol} $\ast$sym, const char $\ast${\bf str})}]{}
+\end{DoxyParamCaption}
+)}}\label{lkc__proto_8h_a1f193eefcc89fd0a2dac4fae3735f503}
+\hypertarget{lkc__proto_8h_abc0d4679758c37cf06a50c84dfbc1194}{\index{lkc\-\_\-proto.\-h@{lkc\-\_\-proto.\-h}!P@{P}}
+\index{P@{P}!lkc_proto.h@{lkc\-\_\-proto.\-h}}
+\subsubsection[{P}]{\setlength{\rightskip}{0pt plus 5cm}P (
+\begin{DoxyParamCaption}
+\item[{{\bf sym\-\_\-set\-\_\-string\-\_\-value}}]{, }
+\item[{bool}]{, }
+\item[{(struct {\bf symbol} $\ast$sym, const char $\ast$newval)}]{}
+\end{DoxyParamCaption}
+)}}\label{lkc__proto_8h_abc0d4679758c37cf06a50c84dfbc1194}
+\hypertarget{lkc__proto_8h_a503449ee81ed64b921dec4d4a7357c9a}{\index{lkc\-\_\-proto.\-h@{lkc\-\_\-proto.\-h}!P@{P}}
+\index{P@{P}!lkc_proto.h@{lkc\-\_\-proto.\-h}}
+\subsubsection[{P}]{\setlength{\rightskip}{0pt plus 5cm}P (
+\begin{DoxyParamCaption}
+\item[{{\bf sym\-\_\-is\-\_\-changable}}]{, }
+\item[{bool}]{, }
+\item[{(struct {\bf symbol} $\ast$sym)}]{}
+\end{DoxyParamCaption}
+)}}\label{lkc__proto_8h_a503449ee81ed64b921dec4d4a7357c9a}
+\hypertarget{lkc__proto_8h_aaab03bbbbcf2ca78d50878a512439eec}{\index{lkc\-\_\-proto.\-h@{lkc\-\_\-proto.\-h}!P@{P}}
+\index{P@{P}!lkc_proto.h@{lkc\-\_\-proto.\-h}}
+\subsubsection[{P}]{\setlength{\rightskip}{0pt plus 5cm}P (
+\begin{DoxyParamCaption}
+\item[{{\bf sym\-\_\-get\-\_\-choice\-\_\-prop}}]{, }
+\item[{struct {\bf property} $\ast$}]{, }
+\item[{(struct {\bf symbol} $\ast$sym)}]{}
+\end{DoxyParamCaption}
+)}}\label{lkc__proto_8h_aaab03bbbbcf2ca78d50878a512439eec}
+\hypertarget{lkc__proto_8h_ac2945213359523eb8381e30495e491df}{\index{lkc\-\_\-proto.\-h@{lkc\-\_\-proto.\-h}!P@{P}}
+\index{P@{P}!lkc_proto.h@{lkc\-\_\-proto.\-h}}
+\subsubsection[{P}]{\setlength{\rightskip}{0pt plus 5cm}P (
+\begin{DoxyParamCaption}
+\item[{{\bf sym\-\_\-get\-\_\-default\-\_\-prop}}]{, }
+\item[{struct {\bf property} $\ast$}]{, }
+\item[{(struct {\bf symbol} $\ast$sym)}]{}
+\end{DoxyParamCaption}
+)}}\label{lkc__proto_8h_ac2945213359523eb8381e30495e491df}
+\hypertarget{lkc__proto_8h_a0b3170f7f48e5e1da4b690e9f729ad3c}{\index{lkc\-\_\-proto.\-h@{lkc\-\_\-proto.\-h}!P@{P}}
+\index{P@{P}!lkc_proto.h@{lkc\-\_\-proto.\-h}}
+\subsubsection[{P}]{\setlength{\rightskip}{0pt plus 5cm}P (
+\begin{DoxyParamCaption}
+\item[{{\bf sym\-\_\-get\-\_\-string\-\_\-value}}]{, }
+\item[{const char $\ast$}]{, }
+\item[{(struct {\bf symbol} $\ast$sym)}]{}
+\end{DoxyParamCaption}
+)}}\label{lkc__proto_8h_a0b3170f7f48e5e1da4b690e9f729ad3c}
+\hypertarget{lkc__proto_8h_a713bc8243ebc3137cc976aa37df231d7}{\index{lkc\-\_\-proto.\-h@{lkc\-\_\-proto.\-h}!P@{P}}
+\index{P@{P}!lkc_proto.h@{lkc\-\_\-proto.\-h}}
+\subsubsection[{P}]{\setlength{\rightskip}{0pt plus 5cm}P (
+\begin{DoxyParamCaption}
+\item[{{\bf prop\-\_\-get\-\_\-type\-\_\-name}}]{, }
+\item[{const char $\ast$}]{, }
+\item[{(enum {\bf prop\-\_\-type} type)}]{}
+\end{DoxyParamCaption}
+)}}\label{lkc__proto_8h_a713bc8243ebc3137cc976aa37df231d7}
+\hypertarget{lkc__proto_8h_a6b3f28ce3c772da77aefc0d3410d2cd7}{\index{lkc\-\_\-proto.\-h@{lkc\-\_\-proto.\-h}!P@{P}}
+\index{P@{P}!lkc_proto.h@{lkc\-\_\-proto.\-h}}
+\subsubsection[{P}]{\setlength{\rightskip}{0pt plus 5cm}P (
+\begin{DoxyParamCaption}
+\item[{{\bf expr\-\_\-compare\-\_\-type}}]{, }
+\item[{int}]{, }
+\item[{(enum {\bf expr\-\_\-type} t1, enum {\bf expr\-\_\-type} t2)}]{}
+\end{DoxyParamCaption}
+)}}\label{lkc__proto_8h_a6b3f28ce3c772da77aefc0d3410d2cd7}
+\hypertarget{lkc__proto_8h_a1b56b67898a61b3ffbdc635a5588b3c7}{\index{lkc\-\_\-proto.\-h@{lkc\-\_\-proto.\-h}!P@{P}}
+\index{P@{P}!lkc_proto.h@{lkc\-\_\-proto.\-h}}
+\subsubsection[{P}]{\setlength{\rightskip}{0pt plus 5cm}P (
+\begin{DoxyParamCaption}
+\item[{{\bf expr\-\_\-print}}]{, }
+\item[{void}]{, }
+\item[{(struct {\bf expr} $\ast$e, void($\ast$fn)(void $\ast$, struct {\bf symbol} $\ast$, const char $\ast$), void $\ast$data, int prevtoken)}]{}
+\end{DoxyParamCaption}
+)}}\label{lkc__proto_8h_a1b56b67898a61b3ffbdc635a5588b3c7}

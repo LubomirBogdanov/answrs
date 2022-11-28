@@ -1,0 +1,366 @@
+\hypertarget{symbol_8c}{\section{menuconfig/symbol.c File Reference}
+\label{symbol_8c}\index{menuconfig/symbol.\-c@{menuconfig/symbol.\-c}}
+}
+{\ttfamily \#include $<$ctype.\-h$>$}\\*
+{\ttfamily \#include $<$stdlib.\-h$>$}\\*
+{\ttfamily \#include $<$string.\-h$>$}\\*
+{\ttfamily \#include $<$regex.\-h$>$}\\*
+{\ttfamily \#include $<$sys/utsname.\-h$>$}\\*
+{\ttfamily \#include \char`\"{}lkc.\-h\char`\"{}}\\*
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct {\bfseries dep\-\_\-stack}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{symbol_8c_a19ed882657f55b77c930a586c86265a9}{sym\-\_\-init} (void)
+\item 
+enum \hyperlink{expr_8h_a9e6705a3296471be728a3b6570b56231}{symbol\-\_\-type} \hyperlink{symbol_8c_a7c214c5d5fac15ce51e0be20c33c635f}{sym\-\_\-get\-\_\-type} (struct \hyperlink{structsymbol}{symbol} $\ast$sym)
+\item 
+const char $\ast$ \hyperlink{symbol_8c_a2118733a50ae6e95ed67da8c2e411ec5}{sym\-\_\-type\-\_\-name} (enum \hyperlink{expr_8h_a9e6705a3296471be728a3b6570b56231}{symbol\-\_\-type} type)
+\item 
+struct \hyperlink{structproperty}{property} $\ast$ \hyperlink{symbol_8c_a5da4d4ac06ee43c1fa3985f2069f19c6}{sym\-\_\-get\-\_\-choice\-\_\-prop} (struct \hyperlink{structsymbol}{symbol} $\ast$sym)
+\item 
+struct \hyperlink{structproperty}{property} $\ast$ \hyperlink{symbol_8c_aa3ea11d8b0e8717567acf4b68fe56ed5}{sym\-\_\-get\-\_\-env\-\_\-prop} (struct \hyperlink{structsymbol}{symbol} $\ast$sym)
+\item 
+struct \hyperlink{structproperty}{property} $\ast$ \hyperlink{symbol_8c_ae8113ee3325b4454a9368c9d943b0908}{sym\-\_\-get\-\_\-default\-\_\-prop} (struct \hyperlink{structsymbol}{symbol} $\ast$sym)
+\item 
+struct \hyperlink{structsymbol}{symbol} $\ast$ \hyperlink{symbol_8c_a78b4b2fdb95c888bc68ae5c43223b7cd}{sym\-\_\-choice\-\_\-default} (struct \hyperlink{structsymbol}{symbol} $\ast$sym)
+\item 
+void \hyperlink{symbol_8c_a46147a1ea607cccc827050a5ebeee381}{sym\-\_\-calc\-\_\-value} (struct \hyperlink{structsymbol}{symbol} $\ast$sym)
+\item 
+void \hyperlink{symbol_8c_a378c7ba3a47366514b200fa05846e4f9}{sym\-\_\-clear\-\_\-all\-\_\-valid} (void)
+\item 
+void \hyperlink{symbol_8c_a610c2965c582d2c97f45d1502e8a58f4}{sym\-\_\-set\-\_\-changed} (struct \hyperlink{structsymbol}{symbol} $\ast$sym)
+\item 
+void \hyperlink{symbol_8c_a6d0acd56d626e96a0577e606d4f78374}{sym\-\_\-set\-\_\-all\-\_\-changed} (void)
+\item 
+bool \hyperlink{symbol_8c_a2ee19b11ebcb285c6a6ed90a458633ad}{sym\-\_\-tristate\-\_\-within\-\_\-range} (struct \hyperlink{structsymbol}{symbol} $\ast$sym, \hyperlink{expr_8h_af4926743b1e532e0b2ad24161ff942a3}{tristate} val)
+\item 
+bool \hyperlink{symbol_8c_abf4a5c0d71c9055b6a043822298df5cd}{sym\-\_\-set\-\_\-tristate\-\_\-value} (struct \hyperlink{structsymbol}{symbol} $\ast$sym, \hyperlink{expr_8h_af4926743b1e532e0b2ad24161ff942a3}{tristate} val)
+\item 
+\hyperlink{expr_8h_af4926743b1e532e0b2ad24161ff942a3}{tristate} \hyperlink{symbol_8c_af429b09cec9d09182991970e315c0f3e}{sym\-\_\-toggle\-\_\-tristate\-\_\-value} (struct \hyperlink{structsymbol}{symbol} $\ast$sym)
+\item 
+bool \hyperlink{symbol_8c_a949874153186e49e3a8c88929d27d7a6}{sym\-\_\-string\-\_\-valid} (struct \hyperlink{structsymbol}{symbol} $\ast$sym, const char $\ast$\hyperlink{zconf_8lex_8c_aba03208f197d75b6e355ba9b2ae08ab5}{str})
+\item 
+bool \hyperlink{symbol_8c_a4f6e261bd47bf1ccd8f8d45ce565ea60}{sym\-\_\-string\-\_\-within\-\_\-range} (struct \hyperlink{structsymbol}{symbol} $\ast$sym, const char $\ast$\hyperlink{zconf_8lex_8c_aba03208f197d75b6e355ba9b2ae08ab5}{str})
+\item 
+bool \hyperlink{symbol_8c_ab66ff9b8ff399c6f1e6e277dc26922c6}{sym\-\_\-set\-\_\-string\-\_\-value} (struct \hyperlink{structsymbol}{symbol} $\ast$sym, const char $\ast$newval)
+\item 
+const char $\ast$ \hyperlink{symbol_8c_a905025408d3aa067667921a76f022139}{sym\-\_\-get\-\_\-string\-\_\-default} (struct \hyperlink{structsymbol}{symbol} $\ast$sym)
+\item 
+const char $\ast$ \hyperlink{symbol_8c_aacc9c4c5c668461b997862cbbbfb5657}{sym\-\_\-get\-\_\-string\-\_\-value} (struct \hyperlink{structsymbol}{symbol} $\ast$sym)
+\item 
+bool \hyperlink{symbol_8c_ab26f505514ae4903eee064584ebb6757}{sym\-\_\-is\-\_\-changable} (struct \hyperlink{structsymbol}{symbol} $\ast$sym)
+\item 
+struct \hyperlink{structsymbol}{symbol} $\ast$ \hyperlink{symbol_8c_a6e8f335b0246adae0f293fe81beee616}{sym\-\_\-lookup} (const char $\ast$name, int flags)
+\item 
+struct \hyperlink{structsymbol}{symbol} $\ast$ \hyperlink{symbol_8c_a1e94e954bdc6de059a7dc97464b49d00}{sym\-\_\-find} (const char $\ast$name)
+\item 
+const char $\ast$ \hyperlink{symbol_8c_a451ddfef9d44e314e5abc9ecd4f4b7c7}{sym\-\_\-expand\-\_\-string\-\_\-value} (const char $\ast$in)
+\item 
+const char $\ast$ \hyperlink{symbol_8c_a3bbbae4ca14c5cb26953652f3a04447f}{sym\-\_\-escape\-\_\-string\-\_\-value} (const char $\ast$in)
+\item 
+struct \hyperlink{structsymbol}{symbol} $\ast$$\ast$ \hyperlink{symbol_8c_a5abc837666cfccf7f7f702bbd4a172f9}{sym\-\_\-re\-\_\-search} (const char $\ast$pattern)
+\item 
+struct \hyperlink{structsymbol}{symbol} $\ast$ \hyperlink{symbol_8c_a5ba9e4d5244760b36a497521c899f399}{sym\-\_\-check\-\_\-deps} (struct \hyperlink{structsymbol}{symbol} $\ast$sym)
+\item 
+struct \hyperlink{structproperty}{property} $\ast$ \hyperlink{symbol_8c_a97dfd25c1884d0f467c5773443ac90ef}{prop\-\_\-alloc} (enum \hyperlink{expr_8h_a403a578df6dfdc7e86f6bca789c523c2}{prop\-\_\-type} type, struct \hyperlink{structsymbol}{symbol} $\ast$sym)
+\item 
+struct \hyperlink{structsymbol}{symbol} $\ast$ \hyperlink{symbol_8c_adc57888d34086aabd76bab980de287c9}{prop\-\_\-get\-\_\-symbol} (struct \hyperlink{structproperty}{property} $\ast$prop)
+\item 
+const char $\ast$ \hyperlink{symbol_8c_acea7a02a288bef33737ec24cd7da7c59}{prop\-\_\-get\-\_\-type\-\_\-name} (enum \hyperlink{expr_8h_a403a578df6dfdc7e86f6bca789c523c2}{prop\-\_\-type} type)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structsymbol}{symbol} \hyperlink{symbol_8c_abcc3b2c847656de8645c4302fb955034}{symbol\-\_\-yes}
+\item 
+struct \hyperlink{structsymbol}{symbol} \hyperlink{symbol_8c_a49526edefc369a7ce548089921530503}{symbol\-\_\-mod}
+\item 
+struct \hyperlink{structsymbol}{symbol} \hyperlink{symbol_8c_ac6e0f5d112e7baf46fcc024bb36f0013}{symbol\-\_\-no}
+\item 
+struct \hyperlink{structsymbol}{symbol} \hyperlink{symbol_8c_a265ba68000137c5fda6af62065b4f350}{symbol\-\_\-empty}
+\item 
+struct \hyperlink{structsymbol}{symbol} $\ast$ \hyperlink{symbol_8c_afddde2678f37645efd0e4d71e270874b}{sym\-\_\-defconfig\-\_\-list}
+\item 
+struct \hyperlink{structsymbol}{symbol} $\ast$ \hyperlink{symbol_8c_a51a1f7e2d11e5937c573e9b5f856c5be}{modules\-\_\-sym}
+\item 
+\hyperlink{expr_8h_af4926743b1e532e0b2ad24161ff942a3}{tristate} \hyperlink{symbol_8c_afc664ac96e3dc3fc16ebe00482776070}{modules\-\_\-val}
+\item 
+struct \hyperlink{structexpr}{expr} $\ast$ \hyperlink{symbol_8c_ad0096dbd4845e8008f6bfb86f5675801}{sym\-\_\-env\-\_\-list}
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{symbol_8c_a97dfd25c1884d0f467c5773443ac90ef}{\index{symbol.\-c@{symbol.\-c}!prop\-\_\-alloc@{prop\-\_\-alloc}}
+\index{prop\-\_\-alloc@{prop\-\_\-alloc}!symbol.c@{symbol.\-c}}
+\subsubsection[{prop\-\_\-alloc}]{\setlength{\rightskip}{0pt plus 5cm}struct {\bf property}$\ast$ prop\-\_\-alloc (
+\begin{DoxyParamCaption}
+\item[{enum {\bf prop\-\_\-type}}]{type, }
+\item[{struct {\bf symbol} $\ast$}]{sym}
+\end{DoxyParamCaption}
+)}}\label{symbol_8c_a97dfd25c1884d0f467c5773443ac90ef}
+\hypertarget{symbol_8c_adc57888d34086aabd76bab980de287c9}{\index{symbol.\-c@{symbol.\-c}!prop\-\_\-get\-\_\-symbol@{prop\-\_\-get\-\_\-symbol}}
+\index{prop\-\_\-get\-\_\-symbol@{prop\-\_\-get\-\_\-symbol}!symbol.c@{symbol.\-c}}
+\subsubsection[{prop\-\_\-get\-\_\-symbol}]{\setlength{\rightskip}{0pt plus 5cm}struct {\bf symbol}$\ast$ prop\-\_\-get\-\_\-symbol (
+\begin{DoxyParamCaption}
+\item[{struct {\bf property} $\ast$}]{prop}
+\end{DoxyParamCaption}
+)}}\label{symbol_8c_adc57888d34086aabd76bab980de287c9}
+\hypertarget{symbol_8c_acea7a02a288bef33737ec24cd7da7c59}{\index{symbol.\-c@{symbol.\-c}!prop\-\_\-get\-\_\-type\-\_\-name@{prop\-\_\-get\-\_\-type\-\_\-name}}
+\index{prop\-\_\-get\-\_\-type\-\_\-name@{prop\-\_\-get\-\_\-type\-\_\-name}!symbol.c@{symbol.\-c}}
+\subsubsection[{prop\-\_\-get\-\_\-type\-\_\-name}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ prop\-\_\-get\-\_\-type\-\_\-name (
+\begin{DoxyParamCaption}
+\item[{enum {\bf prop\-\_\-type}}]{type}
+\end{DoxyParamCaption}
+)}}\label{symbol_8c_acea7a02a288bef33737ec24cd7da7c59}
+\hypertarget{symbol_8c_a46147a1ea607cccc827050a5ebeee381}{\index{symbol.\-c@{symbol.\-c}!sym\-\_\-calc\-\_\-value@{sym\-\_\-calc\-\_\-value}}
+\index{sym\-\_\-calc\-\_\-value@{sym\-\_\-calc\-\_\-value}!symbol.c@{symbol.\-c}}
+\subsubsection[{sym\-\_\-calc\-\_\-value}]{\setlength{\rightskip}{0pt plus 5cm}void sym\-\_\-calc\-\_\-value (
+\begin{DoxyParamCaption}
+\item[{struct {\bf symbol} $\ast$}]{sym}
+\end{DoxyParamCaption}
+)}}\label{symbol_8c_a46147a1ea607cccc827050a5ebeee381}
+\hypertarget{symbol_8c_a5ba9e4d5244760b36a497521c899f399}{\index{symbol.\-c@{symbol.\-c}!sym\-\_\-check\-\_\-deps@{sym\-\_\-check\-\_\-deps}}
+\index{sym\-\_\-check\-\_\-deps@{sym\-\_\-check\-\_\-deps}!symbol.c@{symbol.\-c}}
+\subsubsection[{sym\-\_\-check\-\_\-deps}]{\setlength{\rightskip}{0pt plus 5cm}struct {\bf symbol}$\ast$ sym\-\_\-check\-\_\-deps (
+\begin{DoxyParamCaption}
+\item[{struct {\bf symbol} $\ast$}]{sym}
+\end{DoxyParamCaption}
+)}}\label{symbol_8c_a5ba9e4d5244760b36a497521c899f399}
+\hypertarget{symbol_8c_a78b4b2fdb95c888bc68ae5c43223b7cd}{\index{symbol.\-c@{symbol.\-c}!sym\-\_\-choice\-\_\-default@{sym\-\_\-choice\-\_\-default}}
+\index{sym\-\_\-choice\-\_\-default@{sym\-\_\-choice\-\_\-default}!symbol.c@{symbol.\-c}}
+\subsubsection[{sym\-\_\-choice\-\_\-default}]{\setlength{\rightskip}{0pt plus 5cm}struct {\bf symbol}$\ast$ sym\-\_\-choice\-\_\-default (
+\begin{DoxyParamCaption}
+\item[{struct {\bf symbol} $\ast$}]{sym}
+\end{DoxyParamCaption}
+)}}\label{symbol_8c_a78b4b2fdb95c888bc68ae5c43223b7cd}
+\hypertarget{symbol_8c_a378c7ba3a47366514b200fa05846e4f9}{\index{symbol.\-c@{symbol.\-c}!sym\-\_\-clear\-\_\-all\-\_\-valid@{sym\-\_\-clear\-\_\-all\-\_\-valid}}
+\index{sym\-\_\-clear\-\_\-all\-\_\-valid@{sym\-\_\-clear\-\_\-all\-\_\-valid}!symbol.c@{symbol.\-c}}
+\subsubsection[{sym\-\_\-clear\-\_\-all\-\_\-valid}]{\setlength{\rightskip}{0pt plus 5cm}void sym\-\_\-clear\-\_\-all\-\_\-valid (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{symbol_8c_a378c7ba3a47366514b200fa05846e4f9}
+\hypertarget{symbol_8c_a3bbbae4ca14c5cb26953652f3a04447f}{\index{symbol.\-c@{symbol.\-c}!sym\-\_\-escape\-\_\-string\-\_\-value@{sym\-\_\-escape\-\_\-string\-\_\-value}}
+\index{sym\-\_\-escape\-\_\-string\-\_\-value@{sym\-\_\-escape\-\_\-string\-\_\-value}!symbol.c@{symbol.\-c}}
+\subsubsection[{sym\-\_\-escape\-\_\-string\-\_\-value}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ sym\-\_\-escape\-\_\-string\-\_\-value (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{in}
+\end{DoxyParamCaption}
+)}}\label{symbol_8c_a3bbbae4ca14c5cb26953652f3a04447f}
+\hypertarget{symbol_8c_a451ddfef9d44e314e5abc9ecd4f4b7c7}{\index{symbol.\-c@{symbol.\-c}!sym\-\_\-expand\-\_\-string\-\_\-value@{sym\-\_\-expand\-\_\-string\-\_\-value}}
+\index{sym\-\_\-expand\-\_\-string\-\_\-value@{sym\-\_\-expand\-\_\-string\-\_\-value}!symbol.c@{symbol.\-c}}
+\subsubsection[{sym\-\_\-expand\-\_\-string\-\_\-value}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ sym\-\_\-expand\-\_\-string\-\_\-value (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{in}
+\end{DoxyParamCaption}
+)}}\label{symbol_8c_a451ddfef9d44e314e5abc9ecd4f4b7c7}
+\hypertarget{symbol_8c_a1e94e954bdc6de059a7dc97464b49d00}{\index{symbol.\-c@{symbol.\-c}!sym\-\_\-find@{sym\-\_\-find}}
+\index{sym\-\_\-find@{sym\-\_\-find}!symbol.c@{symbol.\-c}}
+\subsubsection[{sym\-\_\-find}]{\setlength{\rightskip}{0pt plus 5cm}struct {\bf symbol}$\ast$ sym\-\_\-find (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{name}
+\end{DoxyParamCaption}
+)}}\label{symbol_8c_a1e94e954bdc6de059a7dc97464b49d00}
+\hypertarget{symbol_8c_a5da4d4ac06ee43c1fa3985f2069f19c6}{\index{symbol.\-c@{symbol.\-c}!sym\-\_\-get\-\_\-choice\-\_\-prop@{sym\-\_\-get\-\_\-choice\-\_\-prop}}
+\index{sym\-\_\-get\-\_\-choice\-\_\-prop@{sym\-\_\-get\-\_\-choice\-\_\-prop}!symbol.c@{symbol.\-c}}
+\subsubsection[{sym\-\_\-get\-\_\-choice\-\_\-prop}]{\setlength{\rightskip}{0pt plus 5cm}struct {\bf property}$\ast$ sym\-\_\-get\-\_\-choice\-\_\-prop (
+\begin{DoxyParamCaption}
+\item[{struct {\bf symbol} $\ast$}]{sym}
+\end{DoxyParamCaption}
+)}}\label{symbol_8c_a5da4d4ac06ee43c1fa3985f2069f19c6}
+\hypertarget{symbol_8c_ae8113ee3325b4454a9368c9d943b0908}{\index{symbol.\-c@{symbol.\-c}!sym\-\_\-get\-\_\-default\-\_\-prop@{sym\-\_\-get\-\_\-default\-\_\-prop}}
+\index{sym\-\_\-get\-\_\-default\-\_\-prop@{sym\-\_\-get\-\_\-default\-\_\-prop}!symbol.c@{symbol.\-c}}
+\subsubsection[{sym\-\_\-get\-\_\-default\-\_\-prop}]{\setlength{\rightskip}{0pt plus 5cm}struct {\bf property}$\ast$ sym\-\_\-get\-\_\-default\-\_\-prop (
+\begin{DoxyParamCaption}
+\item[{struct {\bf symbol} $\ast$}]{sym}
+\end{DoxyParamCaption}
+)}}\label{symbol_8c_ae8113ee3325b4454a9368c9d943b0908}
+\hypertarget{symbol_8c_aa3ea11d8b0e8717567acf4b68fe56ed5}{\index{symbol.\-c@{symbol.\-c}!sym\-\_\-get\-\_\-env\-\_\-prop@{sym\-\_\-get\-\_\-env\-\_\-prop}}
+\index{sym\-\_\-get\-\_\-env\-\_\-prop@{sym\-\_\-get\-\_\-env\-\_\-prop}!symbol.c@{symbol.\-c}}
+\subsubsection[{sym\-\_\-get\-\_\-env\-\_\-prop}]{\setlength{\rightskip}{0pt plus 5cm}struct {\bf property}$\ast$ sym\-\_\-get\-\_\-env\-\_\-prop (
+\begin{DoxyParamCaption}
+\item[{struct {\bf symbol} $\ast$}]{sym}
+\end{DoxyParamCaption}
+)}}\label{symbol_8c_aa3ea11d8b0e8717567acf4b68fe56ed5}
+\hypertarget{symbol_8c_a905025408d3aa067667921a76f022139}{\index{symbol.\-c@{symbol.\-c}!sym\-\_\-get\-\_\-string\-\_\-default@{sym\-\_\-get\-\_\-string\-\_\-default}}
+\index{sym\-\_\-get\-\_\-string\-\_\-default@{sym\-\_\-get\-\_\-string\-\_\-default}!symbol.c@{symbol.\-c}}
+\subsubsection[{sym\-\_\-get\-\_\-string\-\_\-default}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ sym\-\_\-get\-\_\-string\-\_\-default (
+\begin{DoxyParamCaption}
+\item[{struct {\bf symbol} $\ast$}]{sym}
+\end{DoxyParamCaption}
+)}}\label{symbol_8c_a905025408d3aa067667921a76f022139}
+\hypertarget{symbol_8c_aacc9c4c5c668461b997862cbbbfb5657}{\index{symbol.\-c@{symbol.\-c}!sym\-\_\-get\-\_\-string\-\_\-value@{sym\-\_\-get\-\_\-string\-\_\-value}}
+\index{sym\-\_\-get\-\_\-string\-\_\-value@{sym\-\_\-get\-\_\-string\-\_\-value}!symbol.c@{symbol.\-c}}
+\subsubsection[{sym\-\_\-get\-\_\-string\-\_\-value}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ sym\-\_\-get\-\_\-string\-\_\-value (
+\begin{DoxyParamCaption}
+\item[{struct {\bf symbol} $\ast$}]{sym}
+\end{DoxyParamCaption}
+)}}\label{symbol_8c_aacc9c4c5c668461b997862cbbbfb5657}
+\hypertarget{symbol_8c_a7c214c5d5fac15ce51e0be20c33c635f}{\index{symbol.\-c@{symbol.\-c}!sym\-\_\-get\-\_\-type@{sym\-\_\-get\-\_\-type}}
+\index{sym\-\_\-get\-\_\-type@{sym\-\_\-get\-\_\-type}!symbol.c@{symbol.\-c}}
+\subsubsection[{sym\-\_\-get\-\_\-type}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf symbol\-\_\-type} sym\-\_\-get\-\_\-type (
+\begin{DoxyParamCaption}
+\item[{struct {\bf symbol} $\ast$}]{sym}
+\end{DoxyParamCaption}
+)}}\label{symbol_8c_a7c214c5d5fac15ce51e0be20c33c635f}
+\hypertarget{symbol_8c_a19ed882657f55b77c930a586c86265a9}{\index{symbol.\-c@{symbol.\-c}!sym\-\_\-init@{sym\-\_\-init}}
+\index{sym\-\_\-init@{sym\-\_\-init}!symbol.c@{symbol.\-c}}
+\subsubsection[{sym\-\_\-init}]{\setlength{\rightskip}{0pt plus 5cm}void sym\-\_\-init (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{symbol_8c_a19ed882657f55b77c930a586c86265a9}
+\hypertarget{symbol_8c_ab26f505514ae4903eee064584ebb6757}{\index{symbol.\-c@{symbol.\-c}!sym\-\_\-is\-\_\-changable@{sym\-\_\-is\-\_\-changable}}
+\index{sym\-\_\-is\-\_\-changable@{sym\-\_\-is\-\_\-changable}!symbol.c@{symbol.\-c}}
+\subsubsection[{sym\-\_\-is\-\_\-changable}]{\setlength{\rightskip}{0pt plus 5cm}bool sym\-\_\-is\-\_\-changable (
+\begin{DoxyParamCaption}
+\item[{struct {\bf symbol} $\ast$}]{sym}
+\end{DoxyParamCaption}
+)}}\label{symbol_8c_ab26f505514ae4903eee064584ebb6757}
+\hypertarget{symbol_8c_a6e8f335b0246adae0f293fe81beee616}{\index{symbol.\-c@{symbol.\-c}!sym\-\_\-lookup@{sym\-\_\-lookup}}
+\index{sym\-\_\-lookup@{sym\-\_\-lookup}!symbol.c@{symbol.\-c}}
+\subsubsection[{sym\-\_\-lookup}]{\setlength{\rightskip}{0pt plus 5cm}struct {\bf symbol}$\ast$ sym\-\_\-lookup (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{name, }
+\item[{int}]{flags}
+\end{DoxyParamCaption}
+)}}\label{symbol_8c_a6e8f335b0246adae0f293fe81beee616}
+\hypertarget{symbol_8c_a5abc837666cfccf7f7f702bbd4a172f9}{\index{symbol.\-c@{symbol.\-c}!sym\-\_\-re\-\_\-search@{sym\-\_\-re\-\_\-search}}
+\index{sym\-\_\-re\-\_\-search@{sym\-\_\-re\-\_\-search}!symbol.c@{symbol.\-c}}
+\subsubsection[{sym\-\_\-re\-\_\-search}]{\setlength{\rightskip}{0pt plus 5cm}struct {\bf symbol}$\ast$$\ast$ sym\-\_\-re\-\_\-search (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{pattern}
+\end{DoxyParamCaption}
+)}}\label{symbol_8c_a5abc837666cfccf7f7f702bbd4a172f9}
+\hypertarget{symbol_8c_a6d0acd56d626e96a0577e606d4f78374}{\index{symbol.\-c@{symbol.\-c}!sym\-\_\-set\-\_\-all\-\_\-changed@{sym\-\_\-set\-\_\-all\-\_\-changed}}
+\index{sym\-\_\-set\-\_\-all\-\_\-changed@{sym\-\_\-set\-\_\-all\-\_\-changed}!symbol.c@{symbol.\-c}}
+\subsubsection[{sym\-\_\-set\-\_\-all\-\_\-changed}]{\setlength{\rightskip}{0pt plus 5cm}void sym\-\_\-set\-\_\-all\-\_\-changed (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{symbol_8c_a6d0acd56d626e96a0577e606d4f78374}
+\hypertarget{symbol_8c_a610c2965c582d2c97f45d1502e8a58f4}{\index{symbol.\-c@{symbol.\-c}!sym\-\_\-set\-\_\-changed@{sym\-\_\-set\-\_\-changed}}
+\index{sym\-\_\-set\-\_\-changed@{sym\-\_\-set\-\_\-changed}!symbol.c@{symbol.\-c}}
+\subsubsection[{sym\-\_\-set\-\_\-changed}]{\setlength{\rightskip}{0pt plus 5cm}void sym\-\_\-set\-\_\-changed (
+\begin{DoxyParamCaption}
+\item[{struct {\bf symbol} $\ast$}]{sym}
+\end{DoxyParamCaption}
+)}}\label{symbol_8c_a610c2965c582d2c97f45d1502e8a58f4}
+\hypertarget{symbol_8c_ab66ff9b8ff399c6f1e6e277dc26922c6}{\index{symbol.\-c@{symbol.\-c}!sym\-\_\-set\-\_\-string\-\_\-value@{sym\-\_\-set\-\_\-string\-\_\-value}}
+\index{sym\-\_\-set\-\_\-string\-\_\-value@{sym\-\_\-set\-\_\-string\-\_\-value}!symbol.c@{symbol.\-c}}
+\subsubsection[{sym\-\_\-set\-\_\-string\-\_\-value}]{\setlength{\rightskip}{0pt plus 5cm}bool sym\-\_\-set\-\_\-string\-\_\-value (
+\begin{DoxyParamCaption}
+\item[{struct {\bf symbol} $\ast$}]{sym, }
+\item[{const char $\ast$}]{newval}
+\end{DoxyParamCaption}
+)}}\label{symbol_8c_ab66ff9b8ff399c6f1e6e277dc26922c6}
+\hypertarget{symbol_8c_abf4a5c0d71c9055b6a043822298df5cd}{\index{symbol.\-c@{symbol.\-c}!sym\-\_\-set\-\_\-tristate\-\_\-value@{sym\-\_\-set\-\_\-tristate\-\_\-value}}
+\index{sym\-\_\-set\-\_\-tristate\-\_\-value@{sym\-\_\-set\-\_\-tristate\-\_\-value}!symbol.c@{symbol.\-c}}
+\subsubsection[{sym\-\_\-set\-\_\-tristate\-\_\-value}]{\setlength{\rightskip}{0pt plus 5cm}bool sym\-\_\-set\-\_\-tristate\-\_\-value (
+\begin{DoxyParamCaption}
+\item[{struct {\bf symbol} $\ast$}]{sym, }
+\item[{{\bf tristate}}]{val}
+\end{DoxyParamCaption}
+)}}\label{symbol_8c_abf4a5c0d71c9055b6a043822298df5cd}
+\hypertarget{symbol_8c_a949874153186e49e3a8c88929d27d7a6}{\index{symbol.\-c@{symbol.\-c}!sym\-\_\-string\-\_\-valid@{sym\-\_\-string\-\_\-valid}}
+\index{sym\-\_\-string\-\_\-valid@{sym\-\_\-string\-\_\-valid}!symbol.c@{symbol.\-c}}
+\subsubsection[{sym\-\_\-string\-\_\-valid}]{\setlength{\rightskip}{0pt plus 5cm}bool sym\-\_\-string\-\_\-valid (
+\begin{DoxyParamCaption}
+\item[{struct {\bf symbol} $\ast$}]{sym, }
+\item[{const char $\ast$}]{str}
+\end{DoxyParamCaption}
+)}}\label{symbol_8c_a949874153186e49e3a8c88929d27d7a6}
+\hypertarget{symbol_8c_a4f6e261bd47bf1ccd8f8d45ce565ea60}{\index{symbol.\-c@{symbol.\-c}!sym\-\_\-string\-\_\-within\-\_\-range@{sym\-\_\-string\-\_\-within\-\_\-range}}
+\index{sym\-\_\-string\-\_\-within\-\_\-range@{sym\-\_\-string\-\_\-within\-\_\-range}!symbol.c@{symbol.\-c}}
+\subsubsection[{sym\-\_\-string\-\_\-within\-\_\-range}]{\setlength{\rightskip}{0pt plus 5cm}bool sym\-\_\-string\-\_\-within\-\_\-range (
+\begin{DoxyParamCaption}
+\item[{struct {\bf symbol} $\ast$}]{sym, }
+\item[{const char $\ast$}]{str}
+\end{DoxyParamCaption}
+)}}\label{symbol_8c_a4f6e261bd47bf1ccd8f8d45ce565ea60}
+\hypertarget{symbol_8c_af429b09cec9d09182991970e315c0f3e}{\index{symbol.\-c@{symbol.\-c}!sym\-\_\-toggle\-\_\-tristate\-\_\-value@{sym\-\_\-toggle\-\_\-tristate\-\_\-value}}
+\index{sym\-\_\-toggle\-\_\-tristate\-\_\-value@{sym\-\_\-toggle\-\_\-tristate\-\_\-value}!symbol.c@{symbol.\-c}}
+\subsubsection[{sym\-\_\-toggle\-\_\-tristate\-\_\-value}]{\setlength{\rightskip}{0pt plus 5cm}{\bf tristate} sym\-\_\-toggle\-\_\-tristate\-\_\-value (
+\begin{DoxyParamCaption}
+\item[{struct {\bf symbol} $\ast$}]{sym}
+\end{DoxyParamCaption}
+)}}\label{symbol_8c_af429b09cec9d09182991970e315c0f3e}
+\hypertarget{symbol_8c_a2ee19b11ebcb285c6a6ed90a458633ad}{\index{symbol.\-c@{symbol.\-c}!sym\-\_\-tristate\-\_\-within\-\_\-range@{sym\-\_\-tristate\-\_\-within\-\_\-range}}
+\index{sym\-\_\-tristate\-\_\-within\-\_\-range@{sym\-\_\-tristate\-\_\-within\-\_\-range}!symbol.c@{symbol.\-c}}
+\subsubsection[{sym\-\_\-tristate\-\_\-within\-\_\-range}]{\setlength{\rightskip}{0pt plus 5cm}bool sym\-\_\-tristate\-\_\-within\-\_\-range (
+\begin{DoxyParamCaption}
+\item[{struct {\bf symbol} $\ast$}]{sym, }
+\item[{{\bf tristate}}]{val}
+\end{DoxyParamCaption}
+)}}\label{symbol_8c_a2ee19b11ebcb285c6a6ed90a458633ad}
+\hypertarget{symbol_8c_a2118733a50ae6e95ed67da8c2e411ec5}{\index{symbol.\-c@{symbol.\-c}!sym\-\_\-type\-\_\-name@{sym\-\_\-type\-\_\-name}}
+\index{sym\-\_\-type\-\_\-name@{sym\-\_\-type\-\_\-name}!symbol.c@{symbol.\-c}}
+\subsubsection[{sym\-\_\-type\-\_\-name}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ sym\-\_\-type\-\_\-name (
+\begin{DoxyParamCaption}
+\item[{enum {\bf symbol\-\_\-type}}]{type}
+\end{DoxyParamCaption}
+)}}\label{symbol_8c_a2118733a50ae6e95ed67da8c2e411ec5}
+
+
+\subsection{Variable Documentation}
+\hypertarget{symbol_8c_a51a1f7e2d11e5937c573e9b5f856c5be}{\index{symbol.\-c@{symbol.\-c}!modules\-\_\-sym@{modules\-\_\-sym}}
+\index{modules\-\_\-sym@{modules\-\_\-sym}!symbol.c@{symbol.\-c}}
+\subsubsection[{modules\-\_\-sym}]{\setlength{\rightskip}{0pt plus 5cm}struct {\bf symbol}$\ast$ modules\-\_\-sym}}\label{symbol_8c_a51a1f7e2d11e5937c573e9b5f856c5be}
+\hypertarget{symbol_8c_afc664ac96e3dc3fc16ebe00482776070}{\index{symbol.\-c@{symbol.\-c}!modules\-\_\-val@{modules\-\_\-val}}
+\index{modules\-\_\-val@{modules\-\_\-val}!symbol.c@{symbol.\-c}}
+\subsubsection[{modules\-\_\-val}]{\setlength{\rightskip}{0pt plus 5cm}{\bf tristate} modules\-\_\-val}}\label{symbol_8c_afc664ac96e3dc3fc16ebe00482776070}
+\hypertarget{symbol_8c_afddde2678f37645efd0e4d71e270874b}{\index{symbol.\-c@{symbol.\-c}!sym\-\_\-defconfig\-\_\-list@{sym\-\_\-defconfig\-\_\-list}}
+\index{sym\-\_\-defconfig\-\_\-list@{sym\-\_\-defconfig\-\_\-list}!symbol.c@{symbol.\-c}}
+\subsubsection[{sym\-\_\-defconfig\-\_\-list}]{\setlength{\rightskip}{0pt plus 5cm}struct {\bf symbol}$\ast$ sym\-\_\-defconfig\-\_\-list}}\label{symbol_8c_afddde2678f37645efd0e4d71e270874b}
+\hypertarget{symbol_8c_ad0096dbd4845e8008f6bfb86f5675801}{\index{symbol.\-c@{symbol.\-c}!sym\-\_\-env\-\_\-list@{sym\-\_\-env\-\_\-list}}
+\index{sym\-\_\-env\-\_\-list@{sym\-\_\-env\-\_\-list}!symbol.c@{symbol.\-c}}
+\subsubsection[{sym\-\_\-env\-\_\-list}]{\setlength{\rightskip}{0pt plus 5cm}struct {\bf expr}$\ast$ sym\-\_\-env\-\_\-list}}\label{symbol_8c_ad0096dbd4845e8008f6bfb86f5675801}
+\hypertarget{symbol_8c_a265ba68000137c5fda6af62065b4f350}{\index{symbol.\-c@{symbol.\-c}!symbol\-\_\-empty@{symbol\-\_\-empty}}
+\index{symbol\-\_\-empty@{symbol\-\_\-empty}!symbol.c@{symbol.\-c}}
+\subsubsection[{symbol\-\_\-empty}]{\setlength{\rightskip}{0pt plus 5cm}struct {\bf symbol} symbol\-\_\-empty}}\label{symbol_8c_a265ba68000137c5fda6af62065b4f350}
+{\bfseries Initial value\-:}
+\begin{DoxyCode}
+= \{
+    .name = \textcolor{stringliteral}{""},
+    .curr = \{ \textcolor{stringliteral}{""}, \hyperlink{expr_8h_af4926743b1e532e0b2ad24161ff942a3a8fe4a05f1addc1b9a4aae17d7b166646}{no} \},
+    .flags = \hyperlink{expr_8h_a86978adde1691028d7460c40be1c2125}{SYMBOL\_VALID},
+\}
+\end{DoxyCode}
+\hypertarget{symbol_8c_a49526edefc369a7ce548089921530503}{\index{symbol.\-c@{symbol.\-c}!symbol\-\_\-mod@{symbol\-\_\-mod}}
+\index{symbol\-\_\-mod@{symbol\-\_\-mod}!symbol.c@{symbol.\-c}}
+\subsubsection[{symbol\-\_\-mod}]{\setlength{\rightskip}{0pt plus 5cm}struct {\bf symbol} symbol\-\_\-mod}}\label{symbol_8c_a49526edefc369a7ce548089921530503}
+{\bfseries Initial value\-:}
+\begin{DoxyCode}
+= \{
+    .name = \textcolor{stringliteral}{"m"},
+    .curr = \{ \textcolor{stringliteral}{"m"}, \hyperlink{expr_8h_af4926743b1e532e0b2ad24161ff942a3af9d70d5d5a4d7f060fa0024e238161e2}{mod} \},
+    .flags = \hyperlink{expr_8h_a8040dfd309b568d93ee63f4ef15ea922}{SYMBOL\_CONST}|\hyperlink{expr_8h_a86978adde1691028d7460c40be1c2125}{SYMBOL\_VALID},
+\}
+\end{DoxyCode}
+\hypertarget{symbol_8c_ac6e0f5d112e7baf46fcc024bb36f0013}{\index{symbol.\-c@{symbol.\-c}!symbol\-\_\-no@{symbol\-\_\-no}}
+\index{symbol\-\_\-no@{symbol\-\_\-no}!symbol.c@{symbol.\-c}}
+\subsubsection[{symbol\-\_\-no}]{\setlength{\rightskip}{0pt plus 5cm}struct {\bf symbol} symbol\-\_\-no}}\label{symbol_8c_ac6e0f5d112e7baf46fcc024bb36f0013}
+{\bfseries Initial value\-:}
+\begin{DoxyCode}
+= \{
+    .name = \textcolor{stringliteral}{"n"},
+    .curr = \{ \textcolor{stringliteral}{"n"}, \hyperlink{expr_8h_af4926743b1e532e0b2ad24161ff942a3a8fe4a05f1addc1b9a4aae17d7b166646}{no} \},
+    .flags = \hyperlink{expr_8h_a8040dfd309b568d93ee63f4ef15ea922}{SYMBOL\_CONST}|\hyperlink{expr_8h_a86978adde1691028d7460c40be1c2125}{SYMBOL\_VALID},
+\}
+\end{DoxyCode}
+\hypertarget{symbol_8c_abcc3b2c847656de8645c4302fb955034}{\index{symbol.\-c@{symbol.\-c}!symbol\-\_\-yes@{symbol\-\_\-yes}}
+\index{symbol\-\_\-yes@{symbol\-\_\-yes}!symbol.c@{symbol.\-c}}
+\subsubsection[{symbol\-\_\-yes}]{\setlength{\rightskip}{0pt plus 5cm}struct {\bf symbol} symbol\-\_\-yes}}\label{symbol_8c_abcc3b2c847656de8645c4302fb955034}
+{\bfseries Initial value\-:}
+\begin{DoxyCode}
+= \{
+    .name = \textcolor{stringliteral}{"y"},
+    .curr = \{ \textcolor{stringliteral}{"y"}, \hyperlink{expr_8h_af4926743b1e532e0b2ad24161ff942a3aa447884a6b7ce069acc4b7eb98acdb92}{yes} \},
+    .flags = \hyperlink{expr_8h_a8040dfd309b568d93ee63f4ef15ea922}{SYMBOL\_CONST}|\hyperlink{expr_8h_a86978adde1691028d7460c40be1c2125}{SYMBOL\_VALID},
+\}
+\end{DoxyCode}

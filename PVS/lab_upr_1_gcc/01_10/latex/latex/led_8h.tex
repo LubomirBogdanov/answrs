@@ -1,0 +1,102 @@
+\hypertarget{led_8h}{\section{led/led.h File Reference}
+\label{led_8h}\index{led/led.\-h@{led/led.\-h}}
+}
+{\ttfamily \#include $<$stdint.\-h$>$}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{led_8h_a7ec8d6167c0314f014827e2a39462935}{R\-C\-C\-\_\-\-A\-H\-B1\-E\-N\-R\-\_\-\-G\-P\-I\-O\-A\-\_\-\-E\-N}~0x01
+\begin{DoxyCompactList}\small\item\em A bitmask for the G\-P\-I\-O\-\_\-\-E\-N bit. \end{DoxyCompactList}\item 
+\#define \hyperlink{led_8h_a7aba441630ee40403e4e1c1494d23a46}{G\-P\-I\-O\-A\-\_\-\-M\-O\-D\-E\-R\-\_\-\-P\-A12}~0x1000000
+\begin{DoxyCompactList}\small\item\em A bitmask for the M\-O\-D\-E\-R\-\_\-\-P\-A12 bit. \end{DoxyCompactList}\item 
+\#define \hyperlink{led_8h_a68b88088f11f22c4e4f9152142a0bca0}{G\-P\-I\-O\-A\-\_\-\-O\-T\-Y\-P\-E\-R\-\_\-\-P\-A12}~0x1000
+\begin{DoxyCompactList}\small\item\em A bitmask for the O\-T\-Y\-P\-E\-R\-\_\-\-P\-A12 bit. \end{DoxyCompactList}\item 
+\#define \hyperlink{led_8h_a52750f83c928631c78b3d46d34590dd2}{G\-P\-I\-O\-A\-\_\-\-O\-D\-R\-\_\-\-P\-A12}~0x1000
+\begin{DoxyCompactList}\small\item\em A bitmask for the O\-D\-R\-\_\-\-P\-A12 bit. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{led_8h_a7eb4d382bdd4b42c57dbb7154d03ac66}{led\-\_\-init} (void)
+\begin{DoxyCompactList}\small\item\em This function initializes a single pin from a G\-P\-I\-O port where an L\-E\-D is connected. \end{DoxyCompactList}\item 
+void \hyperlink{led_8h_a053c30480e135459f0bb97621e289053}{led\-\_\-set} (void)
+\begin{DoxyCompactList}\small\item\em This function sets a logic high on the respective pin. \end{DoxyCompactList}\item 
+void \hyperlink{led_8h_acc42bb9974f0987487ea0dc1c9abfb85}{led\-\_\-clear} (void)
+\begin{DoxyCompactList}\small\item\em This function clears the respective pin a logic low. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{led_8h_a7aba441630ee40403e4e1c1494d23a46}{\index{led.\-h@{led.\-h}!G\-P\-I\-O\-A\-\_\-\-M\-O\-D\-E\-R\-\_\-\-P\-A12@{G\-P\-I\-O\-A\-\_\-\-M\-O\-D\-E\-R\-\_\-\-P\-A12}}
+\index{G\-P\-I\-O\-A\-\_\-\-M\-O\-D\-E\-R\-\_\-\-P\-A12@{G\-P\-I\-O\-A\-\_\-\-M\-O\-D\-E\-R\-\_\-\-P\-A12}!led.h@{led.\-h}}
+\subsubsection[{G\-P\-I\-O\-A\-\_\-\-M\-O\-D\-E\-R\-\_\-\-P\-A12}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\-P\-I\-O\-A\-\_\-\-M\-O\-D\-E\-R\-\_\-\-P\-A12~0x1000000}}\label{led_8h_a7aba441630ee40403e4e1c1494d23a46}
+
+
+A bitmask for the M\-O\-D\-E\-R\-\_\-\-P\-A12 bit. 
+
+\hypertarget{led_8h_a52750f83c928631c78b3d46d34590dd2}{\index{led.\-h@{led.\-h}!G\-P\-I\-O\-A\-\_\-\-O\-D\-R\-\_\-\-P\-A12@{G\-P\-I\-O\-A\-\_\-\-O\-D\-R\-\_\-\-P\-A12}}
+\index{G\-P\-I\-O\-A\-\_\-\-O\-D\-R\-\_\-\-P\-A12@{G\-P\-I\-O\-A\-\_\-\-O\-D\-R\-\_\-\-P\-A12}!led.h@{led.\-h}}
+\subsubsection[{G\-P\-I\-O\-A\-\_\-\-O\-D\-R\-\_\-\-P\-A12}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\-P\-I\-O\-A\-\_\-\-O\-D\-R\-\_\-\-P\-A12~0x1000}}\label{led_8h_a52750f83c928631c78b3d46d34590dd2}
+
+
+A bitmask for the O\-D\-R\-\_\-\-P\-A12 bit. 
+
+\hypertarget{led_8h_a68b88088f11f22c4e4f9152142a0bca0}{\index{led.\-h@{led.\-h}!G\-P\-I\-O\-A\-\_\-\-O\-T\-Y\-P\-E\-R\-\_\-\-P\-A12@{G\-P\-I\-O\-A\-\_\-\-O\-T\-Y\-P\-E\-R\-\_\-\-P\-A12}}
+\index{G\-P\-I\-O\-A\-\_\-\-O\-T\-Y\-P\-E\-R\-\_\-\-P\-A12@{G\-P\-I\-O\-A\-\_\-\-O\-T\-Y\-P\-E\-R\-\_\-\-P\-A12}!led.h@{led.\-h}}
+\subsubsection[{G\-P\-I\-O\-A\-\_\-\-O\-T\-Y\-P\-E\-R\-\_\-\-P\-A12}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\-P\-I\-O\-A\-\_\-\-O\-T\-Y\-P\-E\-R\-\_\-\-P\-A12~0x1000}}\label{led_8h_a68b88088f11f22c4e4f9152142a0bca0}
+
+
+A bitmask for the O\-T\-Y\-P\-E\-R\-\_\-\-P\-A12 bit. 
+
+\hypertarget{led_8h_a7ec8d6167c0314f014827e2a39462935}{\index{led.\-h@{led.\-h}!R\-C\-C\-\_\-\-A\-H\-B1\-E\-N\-R\-\_\-\-G\-P\-I\-O\-A\-\_\-\-E\-N@{R\-C\-C\-\_\-\-A\-H\-B1\-E\-N\-R\-\_\-\-G\-P\-I\-O\-A\-\_\-\-E\-N}}
+\index{R\-C\-C\-\_\-\-A\-H\-B1\-E\-N\-R\-\_\-\-G\-P\-I\-O\-A\-\_\-\-E\-N@{R\-C\-C\-\_\-\-A\-H\-B1\-E\-N\-R\-\_\-\-G\-P\-I\-O\-A\-\_\-\-E\-N}!led.h@{led.\-h}}
+\subsubsection[{R\-C\-C\-\_\-\-A\-H\-B1\-E\-N\-R\-\_\-\-G\-P\-I\-O\-A\-\_\-\-E\-N}]{\setlength{\rightskip}{0pt plus 5cm}\#define R\-C\-C\-\_\-\-A\-H\-B1\-E\-N\-R\-\_\-\-G\-P\-I\-O\-A\-\_\-\-E\-N~0x01}}\label{led_8h_a7ec8d6167c0314f014827e2a39462935}
+
+
+A bitmask for the G\-P\-I\-O\-\_\-\-E\-N bit. 
+
+
+
+\subsection{Function Documentation}
+\hypertarget{led_8h_acc42bb9974f0987487ea0dc1c9abfb85}{\index{led.\-h@{led.\-h}!led\-\_\-clear@{led\-\_\-clear}}
+\index{led\-\_\-clear@{led\-\_\-clear}!led.h@{led.\-h}}
+\subsubsection[{led\-\_\-clear}]{\setlength{\rightskip}{0pt plus 5cm}void led\-\_\-clear (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{led_8h_acc42bb9974f0987487ea0dc1c9abfb85}
+
+
+This function clears the respective pin a logic low. 
+
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\hypertarget{led_8h_a7eb4d382bdd4b42c57dbb7154d03ac66}{\index{led.\-h@{led.\-h}!led\-\_\-init@{led\-\_\-init}}
+\index{led\-\_\-init@{led\-\_\-init}!led.h@{led.\-h}}
+\subsubsection[{led\-\_\-init}]{\setlength{\rightskip}{0pt plus 5cm}void led\-\_\-init (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{led_8h_a7eb4d382bdd4b42c57dbb7154d03ac66}
+
+
+This function initializes a single pin from a G\-P\-I\-O port where an L\-E\-D is connected. 
+
+To do an init, first the clock to the G\-P\-I\-O module has to be enabled. Second, the respective G\-P\-I\-O has to be configured as an O\-U\-T\-P\-U\-T. Third, the output must be configured to be a push-\/pull. Finally, the G\-P\-I\-O is turn O\-N upon initialization.
+
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\hypertarget{led_8h_a053c30480e135459f0bb97621e289053}{\index{led.\-h@{led.\-h}!led\-\_\-set@{led\-\_\-set}}
+\index{led\-\_\-set@{led\-\_\-set}!led.h@{led.\-h}}
+\subsubsection[{led\-\_\-set}]{\setlength{\rightskip}{0pt plus 5cm}void led\-\_\-set (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{led_8h_a053c30480e135459f0bb97621e289053}
+
+
+This function sets a logic high on the respective pin. 
+
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}

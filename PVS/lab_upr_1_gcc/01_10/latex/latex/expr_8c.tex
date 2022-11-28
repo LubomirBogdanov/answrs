@@ -1,0 +1,323 @@
+\hypertarget{expr_8c}{\section{menuconfig/expr.c File Reference}
+\label{expr_8c}\index{menuconfig/expr.\-c@{menuconfig/expr.\-c}}
+}
+{\ttfamily \#include $<$stdio.\-h$>$}\\*
+{\ttfamily \#include $<$stdlib.\-h$>$}\\*
+{\ttfamily \#include $<$string.\-h$>$}\\*
+{\ttfamily \#include \char`\"{}lkc.\-h\char`\"{}}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{expr_8c_a2d6edc251f9287ba1639303a4e21ffae}{D\-E\-B\-U\-G\-\_\-\-E\-X\-P\-R}~0
+\item 
+\#define \hyperlink{expr_8c_a54066849b19dfd8c8c8d136545e6a5a7}{e1}~($\ast$ep1)
+\item 
+\#define \hyperlink{expr_8c_aeb94089846f9faece66af4aabd2f0875}{e2}~($\ast$ep2)
+\item 
+\#define \hyperlink{expr_8c_a54066849b19dfd8c8c8d136545e6a5a7}{e1}~($\ast$ep1)
+\item 
+\#define \hyperlink{expr_8c_aeb94089846f9faece66af4aabd2f0875}{e2}~($\ast$ep2)
+\item 
+\#define \hyperlink{expr_8c_a54066849b19dfd8c8c8d136545e6a5a7}{e1}~($\ast$ep1)
+\item 
+\#define \hyperlink{expr_8c_aeb94089846f9faece66af4aabd2f0875}{e2}~($\ast$ep2)
+\item 
+\#define \hyperlink{expr_8c_a54066849b19dfd8c8c8d136545e6a5a7}{e1}~($\ast$ep1)
+\item 
+\#define \hyperlink{expr_8c_aeb94089846f9faece66af4aabd2f0875}{e2}~($\ast$ep2)
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structexpr}{expr} $\ast$ \hyperlink{expr_8c_a0778e58824b9508f465da6f103b8fe82}{expr\-\_\-alloc\-\_\-symbol} (struct \hyperlink{structsymbol}{symbol} $\ast$sym)
+\item 
+struct \hyperlink{structexpr}{expr} $\ast$ \hyperlink{expr_8c_a62dc8ceab82195feae7e6589d5d586cb}{expr\-\_\-alloc\-\_\-one} (enum \hyperlink{expr_8h_a42f022cdf0b8313a80f367d2739b9c19}{expr\-\_\-type} type, struct \hyperlink{structexpr}{expr} $\ast$ce)
+\item 
+struct \hyperlink{structexpr}{expr} $\ast$ \hyperlink{expr_8c_ac7950ae0e594f78dc78ec7c7161bf314}{expr\-\_\-alloc\-\_\-two} (enum \hyperlink{expr_8h_a42f022cdf0b8313a80f367d2739b9c19}{expr\-\_\-type} type, struct \hyperlink{structexpr}{expr} $\ast$\hyperlink{expr_8c_a54066849b19dfd8c8c8d136545e6a5a7}{e1}, struct \hyperlink{structexpr}{expr} $\ast$\hyperlink{expr_8c_aeb94089846f9faece66af4aabd2f0875}{e2})
+\item 
+struct \hyperlink{structexpr}{expr} $\ast$ \hyperlink{expr_8c_a5081433c07d02a4ba10fe1560bd0b37b}{expr\-\_\-alloc\-\_\-comp} (enum \hyperlink{expr_8h_a42f022cdf0b8313a80f367d2739b9c19}{expr\-\_\-type} type, struct \hyperlink{structsymbol}{symbol} $\ast$s1, struct \hyperlink{structsymbol}{symbol} $\ast$s2)
+\item 
+struct \hyperlink{structexpr}{expr} $\ast$ \hyperlink{expr_8c_a00b49f1e02e8c5d36d60268cc9e7d7c4}{expr\-\_\-alloc\-\_\-and} (struct \hyperlink{structexpr}{expr} $\ast$\hyperlink{expr_8c_a54066849b19dfd8c8c8d136545e6a5a7}{e1}, struct \hyperlink{structexpr}{expr} $\ast$\hyperlink{expr_8c_aeb94089846f9faece66af4aabd2f0875}{e2})
+\item 
+struct \hyperlink{structexpr}{expr} $\ast$ \hyperlink{expr_8c_a8c2a72de9f22460f34f0ed79464e7b95}{expr\-\_\-alloc\-\_\-or} (struct \hyperlink{structexpr}{expr} $\ast$\hyperlink{expr_8c_a54066849b19dfd8c8c8d136545e6a5a7}{e1}, struct \hyperlink{structexpr}{expr} $\ast$\hyperlink{expr_8c_aeb94089846f9faece66af4aabd2f0875}{e2})
+\item 
+struct \hyperlink{structexpr}{expr} $\ast$ \hyperlink{expr_8c_aaf09ba115074cf6548f636c11053104a}{expr\-\_\-copy} (const struct \hyperlink{structexpr}{expr} $\ast$org)
+\item 
+void \hyperlink{expr_8c_a58696588994c9bc2c840546d4684eeb8}{expr\-\_\-free} (struct \hyperlink{structexpr}{expr} $\ast$e)
+\item 
+void \hyperlink{expr_8c_a57718610c3d0874aac37e293d43e9bea}{expr\-\_\-eliminate\-\_\-eq} (struct \hyperlink{structexpr}{expr} $\ast$$\ast$ep1, struct \hyperlink{structexpr}{expr} $\ast$$\ast$ep2)
+\item 
+int \hyperlink{expr_8c_acbdeff5e36ad1ef7ed788a07f76d9800}{expr\-\_\-eq} (struct \hyperlink{structexpr}{expr} $\ast$\hyperlink{expr_8c_a54066849b19dfd8c8c8d136545e6a5a7}{e1}, struct \hyperlink{structexpr}{expr} $\ast$\hyperlink{expr_8c_aeb94089846f9faece66af4aabd2f0875}{e2})
+\item 
+struct \hyperlink{structexpr}{expr} $\ast$ \hyperlink{expr_8c_ab01edde3153c5a84669726285ac3634b}{expr\-\_\-eliminate\-\_\-yn} (struct \hyperlink{structexpr}{expr} $\ast$e)
+\item 
+struct \hyperlink{structexpr}{expr} $\ast$ \hyperlink{expr_8c_a5645337a4e753eacc5897b19fc778237}{expr\-\_\-trans\-\_\-bool} (struct \hyperlink{structexpr}{expr} $\ast$e)
+\item 
+struct \hyperlink{structexpr}{expr} $\ast$ \hyperlink{expr_8c_ae8debd383afb9a764a7b824a188d7efa}{expr\-\_\-eliminate\-\_\-dups} (struct \hyperlink{structexpr}{expr} $\ast$e)
+\item 
+struct \hyperlink{structexpr}{expr} $\ast$ \hyperlink{expr_8c_a8b22cf6cb9f41b69cc6af2ecf42ee34b}{expr\-\_\-transform} (struct \hyperlink{structexpr}{expr} $\ast$e)
+\item 
+int \hyperlink{expr_8c_a393dd71ecea7229f7b799b010c301183}{expr\-\_\-contains\-\_\-symbol} (struct \hyperlink{structexpr}{expr} $\ast$dep, struct \hyperlink{structsymbol}{symbol} $\ast$sym)
+\item 
+bool \hyperlink{expr_8c_a502fcee2302f6be2b19016ab87779902}{expr\-\_\-depends\-\_\-symbol} (struct \hyperlink{structexpr}{expr} $\ast$dep, struct \hyperlink{structsymbol}{symbol} $\ast$sym)
+\item 
+struct \hyperlink{structexpr}{expr} $\ast$ \hyperlink{expr_8c_a01108a98d875ed208f75873868a75f3c}{expr\-\_\-extract\-\_\-eq\-\_\-and} (struct \hyperlink{structexpr}{expr} $\ast$$\ast$ep1, struct \hyperlink{structexpr}{expr} $\ast$$\ast$ep2)
+\item 
+struct \hyperlink{structexpr}{expr} $\ast$ \hyperlink{expr_8c_a91f19ea347321a72f819e6b1e20f17cd}{expr\-\_\-extract\-\_\-eq\-\_\-or} (struct \hyperlink{structexpr}{expr} $\ast$$\ast$ep1, struct \hyperlink{structexpr}{expr} $\ast$$\ast$ep2)
+\item 
+void \hyperlink{expr_8c_a9c1ce3af68120d33dda4db773c8ef44d}{expr\-\_\-extract\-\_\-eq} (enum \hyperlink{expr_8h_a42f022cdf0b8313a80f367d2739b9c19}{expr\-\_\-type} type, struct \hyperlink{structexpr}{expr} $\ast$$\ast$ep, struct \hyperlink{structexpr}{expr} $\ast$$\ast$ep1, struct \hyperlink{structexpr}{expr} $\ast$$\ast$ep2)
+\item 
+struct \hyperlink{structexpr}{expr} $\ast$ \hyperlink{expr_8c_a4fe39c57a0e50ef7cee5afd3cc8f1ec1}{expr\-\_\-trans\-\_\-compare} (struct \hyperlink{structexpr}{expr} $\ast$e, enum \hyperlink{expr_8h_a42f022cdf0b8313a80f367d2739b9c19}{expr\-\_\-type} type, struct \hyperlink{structsymbol}{symbol} $\ast$sym)
+\item 
+\hyperlink{expr_8h_af4926743b1e532e0b2ad24161ff942a3}{tristate} \hyperlink{expr_8c_ada515d86b7687887dcb09818d175297e}{expr\-\_\-calc\-\_\-value} (struct \hyperlink{structexpr}{expr} $\ast$e)
+\item 
+int \hyperlink{expr_8c_a59ebe6f2fc7c059f084eabb6b132d7c8}{expr\-\_\-compare\-\_\-type} (enum \hyperlink{expr_8h_a42f022cdf0b8313a80f367d2739b9c19}{expr\-\_\-type} t1, enum \hyperlink{expr_8h_a42f022cdf0b8313a80f367d2739b9c19}{expr\-\_\-type} t2)
+\item 
+struct \hyperlink{structexpr}{expr} $\ast$ \hyperlink{expr_8c_aa7e704688d61d72669c0d12904d4d6db}{expr\-\_\-simplify\-\_\-unmet\-\_\-dep} (struct \hyperlink{structexpr}{expr} $\ast$\hyperlink{expr_8c_a54066849b19dfd8c8c8d136545e6a5a7}{e1}, struct \hyperlink{structexpr}{expr} $\ast$\hyperlink{expr_8c_aeb94089846f9faece66af4aabd2f0875}{e2})
+\item 
+void \hyperlink{expr_8c_a2685a9fd48afd314351a74744ee3d287}{expr\-\_\-print} (struct \hyperlink{structexpr}{expr} $\ast$e, void($\ast$fn)(void $\ast$, struct \hyperlink{structsymbol}{symbol} $\ast$, const char $\ast$), void $\ast$data, int prevtoken)
+\item 
+void \hyperlink{expr_8c_aaf833e883e15e99fd75756e3a0ed81e8}{expr\-\_\-fprint} (struct \hyperlink{structexpr}{expr} $\ast$e, F\-I\-L\-E $\ast$out)
+\item 
+void \hyperlink{expr_8c_a3e599bfcd77d596b82ccc67b8edd0221}{expr\-\_\-gstr\-\_\-print} (struct \hyperlink{structexpr}{expr} $\ast$e, struct \hyperlink{structgstr}{gstr} $\ast$gs)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{expr_8c_a2d6edc251f9287ba1639303a4e21ffae}{\index{expr.\-c@{expr.\-c}!D\-E\-B\-U\-G\-\_\-\-E\-X\-P\-R@{D\-E\-B\-U\-G\-\_\-\-E\-X\-P\-R}}
+\index{D\-E\-B\-U\-G\-\_\-\-E\-X\-P\-R@{D\-E\-B\-U\-G\-\_\-\-E\-X\-P\-R}!expr.c@{expr.\-c}}
+\subsubsection[{D\-E\-B\-U\-G\-\_\-\-E\-X\-P\-R}]{\setlength{\rightskip}{0pt plus 5cm}\#define D\-E\-B\-U\-G\-\_\-\-E\-X\-P\-R~0}}\label{expr_8c_a2d6edc251f9287ba1639303a4e21ffae}
+\hypertarget{expr_8c_a54066849b19dfd8c8c8d136545e6a5a7}{\index{expr.\-c@{expr.\-c}!e1@{e1}}
+\index{e1@{e1}!expr.c@{expr.\-c}}
+\subsubsection[{e1}]{\setlength{\rightskip}{0pt plus 5cm}\#define e1~($\ast$ep1)}}\label{expr_8c_a54066849b19dfd8c8c8d136545e6a5a7}
+\hypertarget{expr_8c_a54066849b19dfd8c8c8d136545e6a5a7}{\index{expr.\-c@{expr.\-c}!e1@{e1}}
+\index{e1@{e1}!expr.c@{expr.\-c}}
+\subsubsection[{e1}]{\setlength{\rightskip}{0pt plus 5cm}\#define e1~($\ast$ep1)}}\label{expr_8c_a54066849b19dfd8c8c8d136545e6a5a7}
+\hypertarget{expr_8c_a54066849b19dfd8c8c8d136545e6a5a7}{\index{expr.\-c@{expr.\-c}!e1@{e1}}
+\index{e1@{e1}!expr.c@{expr.\-c}}
+\subsubsection[{e1}]{\setlength{\rightskip}{0pt plus 5cm}\#define e1~($\ast$ep1)}}\label{expr_8c_a54066849b19dfd8c8c8d136545e6a5a7}
+\hypertarget{expr_8c_a54066849b19dfd8c8c8d136545e6a5a7}{\index{expr.\-c@{expr.\-c}!e1@{e1}}
+\index{e1@{e1}!expr.c@{expr.\-c}}
+\subsubsection[{e1}]{\setlength{\rightskip}{0pt plus 5cm}\#define e1~($\ast$ep1)}}\label{expr_8c_a54066849b19dfd8c8c8d136545e6a5a7}
+\hypertarget{expr_8c_aeb94089846f9faece66af4aabd2f0875}{\index{expr.\-c@{expr.\-c}!e2@{e2}}
+\index{e2@{e2}!expr.c@{expr.\-c}}
+\subsubsection[{e2}]{\setlength{\rightskip}{0pt plus 5cm}\#define e2~($\ast$ep2)}}\label{expr_8c_aeb94089846f9faece66af4aabd2f0875}
+\hypertarget{expr_8c_aeb94089846f9faece66af4aabd2f0875}{\index{expr.\-c@{expr.\-c}!e2@{e2}}
+\index{e2@{e2}!expr.c@{expr.\-c}}
+\subsubsection[{e2}]{\setlength{\rightskip}{0pt plus 5cm}\#define e2~($\ast$ep2)}}\label{expr_8c_aeb94089846f9faece66af4aabd2f0875}
+\hypertarget{expr_8c_aeb94089846f9faece66af4aabd2f0875}{\index{expr.\-c@{expr.\-c}!e2@{e2}}
+\index{e2@{e2}!expr.c@{expr.\-c}}
+\subsubsection[{e2}]{\setlength{\rightskip}{0pt plus 5cm}\#define e2~($\ast$ep2)}}\label{expr_8c_aeb94089846f9faece66af4aabd2f0875}
+\hypertarget{expr_8c_aeb94089846f9faece66af4aabd2f0875}{\index{expr.\-c@{expr.\-c}!e2@{e2}}
+\index{e2@{e2}!expr.c@{expr.\-c}}
+\subsubsection[{e2}]{\setlength{\rightskip}{0pt plus 5cm}\#define e2~($\ast$ep2)}}\label{expr_8c_aeb94089846f9faece66af4aabd2f0875}
+
+
+\subsection{Function Documentation}
+\hypertarget{expr_8c_a00b49f1e02e8c5d36d60268cc9e7d7c4}{\index{expr.\-c@{expr.\-c}!expr\-\_\-alloc\-\_\-and@{expr\-\_\-alloc\-\_\-and}}
+\index{expr\-\_\-alloc\-\_\-and@{expr\-\_\-alloc\-\_\-and}!expr.c@{expr.\-c}}
+\subsubsection[{expr\-\_\-alloc\-\_\-and}]{\setlength{\rightskip}{0pt plus 5cm}struct {\bf expr}$\ast$ expr\-\_\-alloc\-\_\-and (
+\begin{DoxyParamCaption}
+\item[{struct {\bf expr} $\ast$}]{e1, }
+\item[{struct {\bf expr} $\ast$}]{e2}
+\end{DoxyParamCaption}
+)}}\label{expr_8c_a00b49f1e02e8c5d36d60268cc9e7d7c4}
+\hypertarget{expr_8c_a5081433c07d02a4ba10fe1560bd0b37b}{\index{expr.\-c@{expr.\-c}!expr\-\_\-alloc\-\_\-comp@{expr\-\_\-alloc\-\_\-comp}}
+\index{expr\-\_\-alloc\-\_\-comp@{expr\-\_\-alloc\-\_\-comp}!expr.c@{expr.\-c}}
+\subsubsection[{expr\-\_\-alloc\-\_\-comp}]{\setlength{\rightskip}{0pt plus 5cm}struct {\bf expr}$\ast$ expr\-\_\-alloc\-\_\-comp (
+\begin{DoxyParamCaption}
+\item[{enum {\bf expr\-\_\-type}}]{type, }
+\item[{struct {\bf symbol} $\ast$}]{s1, }
+\item[{struct {\bf symbol} $\ast$}]{s2}
+\end{DoxyParamCaption}
+)}}\label{expr_8c_a5081433c07d02a4ba10fe1560bd0b37b}
+\hypertarget{expr_8c_a62dc8ceab82195feae7e6589d5d586cb}{\index{expr.\-c@{expr.\-c}!expr\-\_\-alloc\-\_\-one@{expr\-\_\-alloc\-\_\-one}}
+\index{expr\-\_\-alloc\-\_\-one@{expr\-\_\-alloc\-\_\-one}!expr.c@{expr.\-c}}
+\subsubsection[{expr\-\_\-alloc\-\_\-one}]{\setlength{\rightskip}{0pt plus 5cm}struct {\bf expr}$\ast$ expr\-\_\-alloc\-\_\-one (
+\begin{DoxyParamCaption}
+\item[{enum {\bf expr\-\_\-type}}]{type, }
+\item[{struct {\bf expr} $\ast$}]{ce}
+\end{DoxyParamCaption}
+)}}\label{expr_8c_a62dc8ceab82195feae7e6589d5d586cb}
+\hypertarget{expr_8c_a8c2a72de9f22460f34f0ed79464e7b95}{\index{expr.\-c@{expr.\-c}!expr\-\_\-alloc\-\_\-or@{expr\-\_\-alloc\-\_\-or}}
+\index{expr\-\_\-alloc\-\_\-or@{expr\-\_\-alloc\-\_\-or}!expr.c@{expr.\-c}}
+\subsubsection[{expr\-\_\-alloc\-\_\-or}]{\setlength{\rightskip}{0pt plus 5cm}struct {\bf expr}$\ast$ expr\-\_\-alloc\-\_\-or (
+\begin{DoxyParamCaption}
+\item[{struct {\bf expr} $\ast$}]{e1, }
+\item[{struct {\bf expr} $\ast$}]{e2}
+\end{DoxyParamCaption}
+)}}\label{expr_8c_a8c2a72de9f22460f34f0ed79464e7b95}
+\hypertarget{expr_8c_a0778e58824b9508f465da6f103b8fe82}{\index{expr.\-c@{expr.\-c}!expr\-\_\-alloc\-\_\-symbol@{expr\-\_\-alloc\-\_\-symbol}}
+\index{expr\-\_\-alloc\-\_\-symbol@{expr\-\_\-alloc\-\_\-symbol}!expr.c@{expr.\-c}}
+\subsubsection[{expr\-\_\-alloc\-\_\-symbol}]{\setlength{\rightskip}{0pt plus 5cm}struct {\bf expr}$\ast$ expr\-\_\-alloc\-\_\-symbol (
+\begin{DoxyParamCaption}
+\item[{struct {\bf symbol} $\ast$}]{sym}
+\end{DoxyParamCaption}
+)}}\label{expr_8c_a0778e58824b9508f465da6f103b8fe82}
+\hypertarget{expr_8c_ac7950ae0e594f78dc78ec7c7161bf314}{\index{expr.\-c@{expr.\-c}!expr\-\_\-alloc\-\_\-two@{expr\-\_\-alloc\-\_\-two}}
+\index{expr\-\_\-alloc\-\_\-two@{expr\-\_\-alloc\-\_\-two}!expr.c@{expr.\-c}}
+\subsubsection[{expr\-\_\-alloc\-\_\-two}]{\setlength{\rightskip}{0pt plus 5cm}struct {\bf expr}$\ast$ expr\-\_\-alloc\-\_\-two (
+\begin{DoxyParamCaption}
+\item[{enum {\bf expr\-\_\-type}}]{type, }
+\item[{struct {\bf expr} $\ast$}]{e1, }
+\item[{struct {\bf expr} $\ast$}]{e2}
+\end{DoxyParamCaption}
+)}}\label{expr_8c_ac7950ae0e594f78dc78ec7c7161bf314}
+\hypertarget{expr_8c_ada515d86b7687887dcb09818d175297e}{\index{expr.\-c@{expr.\-c}!expr\-\_\-calc\-\_\-value@{expr\-\_\-calc\-\_\-value}}
+\index{expr\-\_\-calc\-\_\-value@{expr\-\_\-calc\-\_\-value}!expr.c@{expr.\-c}}
+\subsubsection[{expr\-\_\-calc\-\_\-value}]{\setlength{\rightskip}{0pt plus 5cm}{\bf tristate} expr\-\_\-calc\-\_\-value (
+\begin{DoxyParamCaption}
+\item[{struct {\bf expr} $\ast$}]{e}
+\end{DoxyParamCaption}
+)}}\label{expr_8c_ada515d86b7687887dcb09818d175297e}
+\hypertarget{expr_8c_a59ebe6f2fc7c059f084eabb6b132d7c8}{\index{expr.\-c@{expr.\-c}!expr\-\_\-compare\-\_\-type@{expr\-\_\-compare\-\_\-type}}
+\index{expr\-\_\-compare\-\_\-type@{expr\-\_\-compare\-\_\-type}!expr.c@{expr.\-c}}
+\subsubsection[{expr\-\_\-compare\-\_\-type}]{\setlength{\rightskip}{0pt plus 5cm}int expr\-\_\-compare\-\_\-type (
+\begin{DoxyParamCaption}
+\item[{enum {\bf expr\-\_\-type}}]{t1, }
+\item[{enum {\bf expr\-\_\-type}}]{t2}
+\end{DoxyParamCaption}
+)}}\label{expr_8c_a59ebe6f2fc7c059f084eabb6b132d7c8}
+\hypertarget{expr_8c_a393dd71ecea7229f7b799b010c301183}{\index{expr.\-c@{expr.\-c}!expr\-\_\-contains\-\_\-symbol@{expr\-\_\-contains\-\_\-symbol}}
+\index{expr\-\_\-contains\-\_\-symbol@{expr\-\_\-contains\-\_\-symbol}!expr.c@{expr.\-c}}
+\subsubsection[{expr\-\_\-contains\-\_\-symbol}]{\setlength{\rightskip}{0pt plus 5cm}int expr\-\_\-contains\-\_\-symbol (
+\begin{DoxyParamCaption}
+\item[{struct {\bf expr} $\ast$}]{dep, }
+\item[{struct {\bf symbol} $\ast$}]{sym}
+\end{DoxyParamCaption}
+)}}\label{expr_8c_a393dd71ecea7229f7b799b010c301183}
+\hypertarget{expr_8c_aaf09ba115074cf6548f636c11053104a}{\index{expr.\-c@{expr.\-c}!expr\-\_\-copy@{expr\-\_\-copy}}
+\index{expr\-\_\-copy@{expr\-\_\-copy}!expr.c@{expr.\-c}}
+\subsubsection[{expr\-\_\-copy}]{\setlength{\rightskip}{0pt plus 5cm}struct {\bf expr}$\ast$ expr\-\_\-copy (
+\begin{DoxyParamCaption}
+\item[{const struct {\bf expr} $\ast$}]{org}
+\end{DoxyParamCaption}
+)}}\label{expr_8c_aaf09ba115074cf6548f636c11053104a}
+\hypertarget{expr_8c_a502fcee2302f6be2b19016ab87779902}{\index{expr.\-c@{expr.\-c}!expr\-\_\-depends\-\_\-symbol@{expr\-\_\-depends\-\_\-symbol}}
+\index{expr\-\_\-depends\-\_\-symbol@{expr\-\_\-depends\-\_\-symbol}!expr.c@{expr.\-c}}
+\subsubsection[{expr\-\_\-depends\-\_\-symbol}]{\setlength{\rightskip}{0pt plus 5cm}bool expr\-\_\-depends\-\_\-symbol (
+\begin{DoxyParamCaption}
+\item[{struct {\bf expr} $\ast$}]{dep, }
+\item[{struct {\bf symbol} $\ast$}]{sym}
+\end{DoxyParamCaption}
+)}}\label{expr_8c_a502fcee2302f6be2b19016ab87779902}
+\hypertarget{expr_8c_ae8debd383afb9a764a7b824a188d7efa}{\index{expr.\-c@{expr.\-c}!expr\-\_\-eliminate\-\_\-dups@{expr\-\_\-eliminate\-\_\-dups}}
+\index{expr\-\_\-eliminate\-\_\-dups@{expr\-\_\-eliminate\-\_\-dups}!expr.c@{expr.\-c}}
+\subsubsection[{expr\-\_\-eliminate\-\_\-dups}]{\setlength{\rightskip}{0pt plus 5cm}struct {\bf expr}$\ast$ expr\-\_\-eliminate\-\_\-dups (
+\begin{DoxyParamCaption}
+\item[{struct {\bf expr} $\ast$}]{e}
+\end{DoxyParamCaption}
+)}}\label{expr_8c_ae8debd383afb9a764a7b824a188d7efa}
+\hypertarget{expr_8c_a57718610c3d0874aac37e293d43e9bea}{\index{expr.\-c@{expr.\-c}!expr\-\_\-eliminate\-\_\-eq@{expr\-\_\-eliminate\-\_\-eq}}
+\index{expr\-\_\-eliminate\-\_\-eq@{expr\-\_\-eliminate\-\_\-eq}!expr.c@{expr.\-c}}
+\subsubsection[{expr\-\_\-eliminate\-\_\-eq}]{\setlength{\rightskip}{0pt plus 5cm}void expr\-\_\-eliminate\-\_\-eq (
+\begin{DoxyParamCaption}
+\item[{struct {\bf expr} $\ast$$\ast$}]{ep1, }
+\item[{struct {\bf expr} $\ast$$\ast$}]{ep2}
+\end{DoxyParamCaption}
+)}}\label{expr_8c_a57718610c3d0874aac37e293d43e9bea}
+\hypertarget{expr_8c_ab01edde3153c5a84669726285ac3634b}{\index{expr.\-c@{expr.\-c}!expr\-\_\-eliminate\-\_\-yn@{expr\-\_\-eliminate\-\_\-yn}}
+\index{expr\-\_\-eliminate\-\_\-yn@{expr\-\_\-eliminate\-\_\-yn}!expr.c@{expr.\-c}}
+\subsubsection[{expr\-\_\-eliminate\-\_\-yn}]{\setlength{\rightskip}{0pt plus 5cm}struct {\bf expr}$\ast$ expr\-\_\-eliminate\-\_\-yn (
+\begin{DoxyParamCaption}
+\item[{struct {\bf expr} $\ast$}]{e}
+\end{DoxyParamCaption}
+)}}\label{expr_8c_ab01edde3153c5a84669726285ac3634b}
+\hypertarget{expr_8c_acbdeff5e36ad1ef7ed788a07f76d9800}{\index{expr.\-c@{expr.\-c}!expr\-\_\-eq@{expr\-\_\-eq}}
+\index{expr\-\_\-eq@{expr\-\_\-eq}!expr.c@{expr.\-c}}
+\subsubsection[{expr\-\_\-eq}]{\setlength{\rightskip}{0pt plus 5cm}int expr\-\_\-eq (
+\begin{DoxyParamCaption}
+\item[{struct {\bf expr} $\ast$}]{e1, }
+\item[{struct {\bf expr} $\ast$}]{e2}
+\end{DoxyParamCaption}
+)}}\label{expr_8c_acbdeff5e36ad1ef7ed788a07f76d9800}
+\hypertarget{expr_8c_a9c1ce3af68120d33dda4db773c8ef44d}{\index{expr.\-c@{expr.\-c}!expr\-\_\-extract\-\_\-eq@{expr\-\_\-extract\-\_\-eq}}
+\index{expr\-\_\-extract\-\_\-eq@{expr\-\_\-extract\-\_\-eq}!expr.c@{expr.\-c}}
+\subsubsection[{expr\-\_\-extract\-\_\-eq}]{\setlength{\rightskip}{0pt plus 5cm}void expr\-\_\-extract\-\_\-eq (
+\begin{DoxyParamCaption}
+\item[{enum {\bf expr\-\_\-type}}]{type, }
+\item[{struct {\bf expr} $\ast$$\ast$}]{ep, }
+\item[{struct {\bf expr} $\ast$$\ast$}]{ep1, }
+\item[{struct {\bf expr} $\ast$$\ast$}]{ep2}
+\end{DoxyParamCaption}
+)}}\label{expr_8c_a9c1ce3af68120d33dda4db773c8ef44d}
+\hypertarget{expr_8c_a01108a98d875ed208f75873868a75f3c}{\index{expr.\-c@{expr.\-c}!expr\-\_\-extract\-\_\-eq\-\_\-and@{expr\-\_\-extract\-\_\-eq\-\_\-and}}
+\index{expr\-\_\-extract\-\_\-eq\-\_\-and@{expr\-\_\-extract\-\_\-eq\-\_\-and}!expr.c@{expr.\-c}}
+\subsubsection[{expr\-\_\-extract\-\_\-eq\-\_\-and}]{\setlength{\rightskip}{0pt plus 5cm}struct {\bf expr}$\ast$ expr\-\_\-extract\-\_\-eq\-\_\-and (
+\begin{DoxyParamCaption}
+\item[{struct {\bf expr} $\ast$$\ast$}]{ep1, }
+\item[{struct {\bf expr} $\ast$$\ast$}]{ep2}
+\end{DoxyParamCaption}
+)}}\label{expr_8c_a01108a98d875ed208f75873868a75f3c}
+\hypertarget{expr_8c_a91f19ea347321a72f819e6b1e20f17cd}{\index{expr.\-c@{expr.\-c}!expr\-\_\-extract\-\_\-eq\-\_\-or@{expr\-\_\-extract\-\_\-eq\-\_\-or}}
+\index{expr\-\_\-extract\-\_\-eq\-\_\-or@{expr\-\_\-extract\-\_\-eq\-\_\-or}!expr.c@{expr.\-c}}
+\subsubsection[{expr\-\_\-extract\-\_\-eq\-\_\-or}]{\setlength{\rightskip}{0pt plus 5cm}struct {\bf expr}$\ast$ expr\-\_\-extract\-\_\-eq\-\_\-or (
+\begin{DoxyParamCaption}
+\item[{struct {\bf expr} $\ast$$\ast$}]{ep1, }
+\item[{struct {\bf expr} $\ast$$\ast$}]{ep2}
+\end{DoxyParamCaption}
+)}}\label{expr_8c_a91f19ea347321a72f819e6b1e20f17cd}
+\hypertarget{expr_8c_aaf833e883e15e99fd75756e3a0ed81e8}{\index{expr.\-c@{expr.\-c}!expr\-\_\-fprint@{expr\-\_\-fprint}}
+\index{expr\-\_\-fprint@{expr\-\_\-fprint}!expr.c@{expr.\-c}}
+\subsubsection[{expr\-\_\-fprint}]{\setlength{\rightskip}{0pt plus 5cm}void expr\-\_\-fprint (
+\begin{DoxyParamCaption}
+\item[{struct {\bf expr} $\ast$}]{e, }
+\item[{F\-I\-L\-E $\ast$}]{out}
+\end{DoxyParamCaption}
+)}}\label{expr_8c_aaf833e883e15e99fd75756e3a0ed81e8}
+\hypertarget{expr_8c_a58696588994c9bc2c840546d4684eeb8}{\index{expr.\-c@{expr.\-c}!expr\-\_\-free@{expr\-\_\-free}}
+\index{expr\-\_\-free@{expr\-\_\-free}!expr.c@{expr.\-c}}
+\subsubsection[{expr\-\_\-free}]{\setlength{\rightskip}{0pt plus 5cm}void expr\-\_\-free (
+\begin{DoxyParamCaption}
+\item[{struct {\bf expr} $\ast$}]{e}
+\end{DoxyParamCaption}
+)}}\label{expr_8c_a58696588994c9bc2c840546d4684eeb8}
+\hypertarget{expr_8c_a3e599bfcd77d596b82ccc67b8edd0221}{\index{expr.\-c@{expr.\-c}!expr\-\_\-gstr\-\_\-print@{expr\-\_\-gstr\-\_\-print}}
+\index{expr\-\_\-gstr\-\_\-print@{expr\-\_\-gstr\-\_\-print}!expr.c@{expr.\-c}}
+\subsubsection[{expr\-\_\-gstr\-\_\-print}]{\setlength{\rightskip}{0pt plus 5cm}void expr\-\_\-gstr\-\_\-print (
+\begin{DoxyParamCaption}
+\item[{struct {\bf expr} $\ast$}]{e, }
+\item[{struct {\bf gstr} $\ast$}]{gs}
+\end{DoxyParamCaption}
+)}}\label{expr_8c_a3e599bfcd77d596b82ccc67b8edd0221}
+\hypertarget{expr_8c_a2685a9fd48afd314351a74744ee3d287}{\index{expr.\-c@{expr.\-c}!expr\-\_\-print@{expr\-\_\-print}}
+\index{expr\-\_\-print@{expr\-\_\-print}!expr.c@{expr.\-c}}
+\subsubsection[{expr\-\_\-print}]{\setlength{\rightskip}{0pt plus 5cm}void expr\-\_\-print (
+\begin{DoxyParamCaption}
+\item[{struct {\bf expr} $\ast$}]{e, }
+\item[{void($\ast$)(void $\ast$, struct {\bf symbol} $\ast$, const char $\ast$)}]{fn, }
+\item[{void $\ast$}]{data, }
+\item[{int}]{prevtoken}
+\end{DoxyParamCaption}
+)}}\label{expr_8c_a2685a9fd48afd314351a74744ee3d287}
+\hypertarget{expr_8c_aa7e704688d61d72669c0d12904d4d6db}{\index{expr.\-c@{expr.\-c}!expr\-\_\-simplify\-\_\-unmet\-\_\-dep@{expr\-\_\-simplify\-\_\-unmet\-\_\-dep}}
+\index{expr\-\_\-simplify\-\_\-unmet\-\_\-dep@{expr\-\_\-simplify\-\_\-unmet\-\_\-dep}!expr.c@{expr.\-c}}
+\subsubsection[{expr\-\_\-simplify\-\_\-unmet\-\_\-dep}]{\setlength{\rightskip}{0pt plus 5cm}struct {\bf expr}$\ast$ expr\-\_\-simplify\-\_\-unmet\-\_\-dep (
+\begin{DoxyParamCaption}
+\item[{struct {\bf expr} $\ast$}]{e1, }
+\item[{struct {\bf expr} $\ast$}]{e2}
+\end{DoxyParamCaption}
+)}}\label{expr_8c_aa7e704688d61d72669c0d12904d4d6db}
+\hypertarget{expr_8c_a5645337a4e753eacc5897b19fc778237}{\index{expr.\-c@{expr.\-c}!expr\-\_\-trans\-\_\-bool@{expr\-\_\-trans\-\_\-bool}}
+\index{expr\-\_\-trans\-\_\-bool@{expr\-\_\-trans\-\_\-bool}!expr.c@{expr.\-c}}
+\subsubsection[{expr\-\_\-trans\-\_\-bool}]{\setlength{\rightskip}{0pt plus 5cm}struct {\bf expr}$\ast$ expr\-\_\-trans\-\_\-bool (
+\begin{DoxyParamCaption}
+\item[{struct {\bf expr} $\ast$}]{e}
+\end{DoxyParamCaption}
+)}}\label{expr_8c_a5645337a4e753eacc5897b19fc778237}
+\hypertarget{expr_8c_a4fe39c57a0e50ef7cee5afd3cc8f1ec1}{\index{expr.\-c@{expr.\-c}!expr\-\_\-trans\-\_\-compare@{expr\-\_\-trans\-\_\-compare}}
+\index{expr\-\_\-trans\-\_\-compare@{expr\-\_\-trans\-\_\-compare}!expr.c@{expr.\-c}}
+\subsubsection[{expr\-\_\-trans\-\_\-compare}]{\setlength{\rightskip}{0pt plus 5cm}struct {\bf expr}$\ast$ expr\-\_\-trans\-\_\-compare (
+\begin{DoxyParamCaption}
+\item[{struct {\bf expr} $\ast$}]{e, }
+\item[{enum {\bf expr\-\_\-type}}]{type, }
+\item[{struct {\bf symbol} $\ast$}]{sym}
+\end{DoxyParamCaption}
+)}}\label{expr_8c_a4fe39c57a0e50ef7cee5afd3cc8f1ec1}
+\hypertarget{expr_8c_a8b22cf6cb9f41b69cc6af2ecf42ee34b}{\index{expr.\-c@{expr.\-c}!expr\-\_\-transform@{expr\-\_\-transform}}
+\index{expr\-\_\-transform@{expr\-\_\-transform}!expr.c@{expr.\-c}}
+\subsubsection[{expr\-\_\-transform}]{\setlength{\rightskip}{0pt plus 5cm}struct {\bf expr}$\ast$ expr\-\_\-transform (
+\begin{DoxyParamCaption}
+\item[{struct {\bf expr} $\ast$}]{e}
+\end{DoxyParamCaption}
+)}}\label{expr_8c_a8b22cf6cb9f41b69cc6af2ecf42ee34b}

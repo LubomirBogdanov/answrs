@@ -1,0 +1,102 @@
+\hypertarget{led_8c}{\section{led/led.c File Reference}
+\label{led_8c}\index{led/led.\-c@{led/led.\-c}}
+}
+{\ttfamily \#include \char`\"{}led.\-h\char`\"{}}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{led_8c_a7eb4d382bdd4b42c57dbb7154d03ac66}{led\-\_\-init} (void)
+\begin{DoxyCompactList}\small\item\em This function initializes a single pin from a G\-P\-I\-O port where an L\-E\-D is connected. \end{DoxyCompactList}\item 
+void \hyperlink{led_8c_a053c30480e135459f0bb97621e289053}{led\-\_\-set} (void)
+\begin{DoxyCompactList}\small\item\em This function sets a logic high on the respective pin. \end{DoxyCompactList}\item 
+void \hyperlink{led_8c_acc42bb9974f0987487ea0dc1c9abfb85}{led\-\_\-clear} (void)
+\begin{DoxyCompactList}\small\item\em This function clears the respective pin a logic low. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+volatile uint32\-\_\-t $\ast$ \hyperlink{led_8c_ab39c9a0ba3facf98a5ba8ea8cfe1839b}{ahb1enr} = (volatile uint32\-\_\-t $\ast$)0x40023830
+\begin{DoxyCompactList}\small\item\em A variable that corresponds to the R\-C\-C\-\_\-\-A\-H\-B1\-E\-N\-R register. \end{DoxyCompactList}\item 
+volatile uint32\-\_\-t $\ast$ \hyperlink{led_8c_adad611b65862233308f5e4476f27629c}{gpio\-\_\-a\-\_\-moder} = (volatile uint32\-\_\-t $\ast$)0x40020000
+\begin{DoxyCompactList}\small\item\em A variable that corresponds to the G\-P\-I\-O\-A\-\_\-\-M\-O\-D\-E\-R register. \end{DoxyCompactList}\item 
+volatile uint32\-\_\-t $\ast$ \hyperlink{led_8c_ad35690fb928a99e7f38beac009d6f5cd}{gpio\-\_\-a\-\_\-otyper} = (volatile uint32\-\_\-t $\ast$)0x40020004
+\begin{DoxyCompactList}\small\item\em A variable that corresponds to the G\-P\-I\-O\-A\-\_\-\-T\-Y\-P\-E\-R register. \end{DoxyCompactList}\item 
+volatile uint32\-\_\-t $\ast$ \hyperlink{led_8c_a01963e38e495df5668e8f0dfd7927b7b}{gpio\-\_\-a\-\_\-odr} = (volatile uint32\-\_\-t $\ast$)0x40020014
+\begin{DoxyCompactList}\small\item\em A variable that corresponds to the G\-P\-I\-O\-A\-\_\-\-O\-D\-R register. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{led_8c_acc42bb9974f0987487ea0dc1c9abfb85}{\index{led.\-c@{led.\-c}!led\-\_\-clear@{led\-\_\-clear}}
+\index{led\-\_\-clear@{led\-\_\-clear}!led.c@{led.\-c}}
+\subsubsection[{led\-\_\-clear}]{\setlength{\rightskip}{0pt plus 5cm}void led\-\_\-clear (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{led_8c_acc42bb9974f0987487ea0dc1c9abfb85}
+
+
+This function clears the respective pin a logic low. 
+
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\hypertarget{led_8c_a7eb4d382bdd4b42c57dbb7154d03ac66}{\index{led.\-c@{led.\-c}!led\-\_\-init@{led\-\_\-init}}
+\index{led\-\_\-init@{led\-\_\-init}!led.c@{led.\-c}}
+\subsubsection[{led\-\_\-init}]{\setlength{\rightskip}{0pt plus 5cm}void led\-\_\-init (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{led_8c_a7eb4d382bdd4b42c57dbb7154d03ac66}
+
+
+This function initializes a single pin from a G\-P\-I\-O port where an L\-E\-D is connected. 
+
+To do an init, first the clock to the G\-P\-I\-O module has to be enabled. Second, the respective G\-P\-I\-O has to be configured as an O\-U\-T\-P\-U\-T. Third, the output must be configured to be a push-\/pull. Finally, the G\-P\-I\-O is turn O\-N upon initialization.
+
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\hypertarget{led_8c_a053c30480e135459f0bb97621e289053}{\index{led.\-c@{led.\-c}!led\-\_\-set@{led\-\_\-set}}
+\index{led\-\_\-set@{led\-\_\-set}!led.c@{led.\-c}}
+\subsubsection[{led\-\_\-set}]{\setlength{\rightskip}{0pt plus 5cm}void led\-\_\-set (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{led_8c_a053c30480e135459f0bb97621e289053}
+
+
+This function sets a logic high on the respective pin. 
+
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+
+
+\subsection{Variable Documentation}
+\hypertarget{led_8c_ab39c9a0ba3facf98a5ba8ea8cfe1839b}{\index{led.\-c@{led.\-c}!ahb1enr@{ahb1enr}}
+\index{ahb1enr@{ahb1enr}!led.c@{led.\-c}}
+\subsubsection[{ahb1enr}]{\setlength{\rightskip}{0pt plus 5cm}ahb1enr = (volatile uint32\-\_\-t $\ast$)0x40023830}}\label{led_8c_ab39c9a0ba3facf98a5ba8ea8cfe1839b}
+
+
+A variable that corresponds to the R\-C\-C\-\_\-\-A\-H\-B1\-E\-N\-R register. 
+
+\hypertarget{led_8c_adad611b65862233308f5e4476f27629c}{\index{led.\-c@{led.\-c}!gpio\-\_\-a\-\_\-moder@{gpio\-\_\-a\-\_\-moder}}
+\index{gpio\-\_\-a\-\_\-moder@{gpio\-\_\-a\-\_\-moder}!led.c@{led.\-c}}
+\subsubsection[{gpio\-\_\-a\-\_\-moder}]{\setlength{\rightskip}{0pt plus 5cm}gpio\-\_\-a\-\_\-moder = (volatile uint32\-\_\-t $\ast$)0x40020000}}\label{led_8c_adad611b65862233308f5e4476f27629c}
+
+
+A variable that corresponds to the G\-P\-I\-O\-A\-\_\-\-M\-O\-D\-E\-R register. 
+
+\hypertarget{led_8c_a01963e38e495df5668e8f0dfd7927b7b}{\index{led.\-c@{led.\-c}!gpio\-\_\-a\-\_\-odr@{gpio\-\_\-a\-\_\-odr}}
+\index{gpio\-\_\-a\-\_\-odr@{gpio\-\_\-a\-\_\-odr}!led.c@{led.\-c}}
+\subsubsection[{gpio\-\_\-a\-\_\-odr}]{\setlength{\rightskip}{0pt plus 5cm}gpio\-\_\-a\-\_\-odr = (volatile uint32\-\_\-t $\ast$)0x40020014}}\label{led_8c_a01963e38e495df5668e8f0dfd7927b7b}
+
+
+A variable that corresponds to the G\-P\-I\-O\-A\-\_\-\-O\-D\-R register. 
+
+\hypertarget{led_8c_ad35690fb928a99e7f38beac009d6f5cd}{\index{led.\-c@{led.\-c}!gpio\-\_\-a\-\_\-otyper@{gpio\-\_\-a\-\_\-otyper}}
+\index{gpio\-\_\-a\-\_\-otyper@{gpio\-\_\-a\-\_\-otyper}!led.c@{led.\-c}}
+\subsubsection[{gpio\-\_\-a\-\_\-otyper}]{\setlength{\rightskip}{0pt plus 5cm}gpio\-\_\-a\-\_\-otyper = (volatile uint32\-\_\-t $\ast$)0x40020004}}\label{led_8c_ad35690fb928a99e7f38beac009d6f5cd}
+
+
+A variable that corresponds to the G\-P\-I\-O\-A\-\_\-\-T\-Y\-P\-E\-R register. 
+

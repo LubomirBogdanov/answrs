@@ -1,0 +1,594 @@
+\hypertarget{lkc_8h}{\section{menuconfig/lkc.h File Reference}
+\label{lkc_8h}\index{menuconfig/lkc.\-h@{menuconfig/lkc.\-h}}
+}
+{\ttfamily \#include \char`\"{}expr.\-h\char`\"{}}\\*
+{\ttfamily \#include $<$libintl.\-h$>$}\\*
+{\ttfamily \#include \char`\"{}lkc\-\_\-proto.\-h\char`\"{}}\\*
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structkconf__id}{kconf\-\_\-id}
+\item 
+struct \hyperlink{structconf__printer}{conf\-\_\-printer}
+\item 
+struct \hyperlink{structgstr}{gstr}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{lkc_8h_ad5ab947559a6b8796a6ab6bfbdb629ed}{P}(name, type, arg)~extern type name arg
+\item 
+\#define \hyperlink{lkc_8h_a448292033623bc343184db264add0d4d}{S\-R\-C\-T\-R\-E\-E}~\char`\"{}srctree\char`\"{}
+\item 
+\#define \hyperlink{lkc_8h_aca8570fb706c81df371b7f9bc454ae03}{P\-A\-C\-K\-A\-G\-E}~\char`\"{}linux\char`\"{}
+\item 
+\#define \hyperlink{lkc_8h_ab2cb7816c01560f1bab8b2dbd94be4c8}{L\-O\-C\-A\-L\-E\-D\-I\-R}~\char`\"{}/usr/share/locale\char`\"{}
+\item 
+\#define \hyperlink{lkc_8h_a421d5046aa43617eec8a0b1176cce89c}{\-\_\-}(text)~gettext(text)
+\item 
+\#define \hyperlink{lkc_8h_ad1b70fefeffa0fab701dadbcc1470538}{N\-\_\-}(text)~(text)
+\item 
+\#define \hyperlink{lkc_8h_ac1d499f0f36ec2bb7a066645289278e5}{C\-O\-N\-F\-I\-G\-\_\-}~\char`\"{}C\-O\-N\-F\-I\-G\-\_\-\char`\"{}
+\item 
+\#define \hyperlink{lkc_8h_aa1cf3d0d7d61cba6030a9f4fe67e7026}{T\-F\-\_\-\-C\-O\-M\-M\-A\-N\-D}~0x0001
+\item 
+\#define \hyperlink{lkc_8h_a072d7614135250f543a716efb267a813}{T\-F\-\_\-\-P\-A\-R\-A\-M}~0x0002
+\item 
+\#define \hyperlink{lkc_8h_a5a33353f998e8ba0140818f11db14ed2}{T\-F\-\_\-\-O\-P\-T\-I\-O\-N}~0x0004
+\item 
+\#define \hyperlink{lkc_8h_a28361a860510062a8755018d7613dc0b}{T\-\_\-\-O\-P\-T\-\_\-\-M\-O\-D\-U\-L\-E\-S}~1
+\item 
+\#define \hyperlink{lkc_8h_a918da57d25facac460fa7ef20fed15d5}{T\-\_\-\-O\-P\-T\-\_\-\-D\-E\-F\-C\-O\-N\-F\-I\-G\-\_\-\-L\-I\-S\-T}~2
+\item 
+\#define \hyperlink{lkc_8h_a9d74e49cfff753ff7954d5d17cf724f8}{T\-\_\-\-O\-P\-T\-\_\-\-E\-N\-V}~3
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{lkc_8h_a48a34c0ae0c0b2681751708f4ba9da30}{conf\-\_\-def\-\_\-mode} \{ \\*
+\hyperlink{lkc_8h_a48a34c0ae0c0b2681751708f4ba9da30a9c162fe7f4915d47aa928c6d91314467}{def\-\_\-default}, 
+\hyperlink{lkc_8h_a48a34c0ae0c0b2681751708f4ba9da30a6f6266267d8222f717dd84d239603051}{def\-\_\-yes}, 
+\hyperlink{lkc_8h_a48a34c0ae0c0b2681751708f4ba9da30aa8c574331afafc553b93de634caedde5}{def\-\_\-mod}, 
+\hyperlink{lkc_8h_a48a34c0ae0c0b2681751708f4ba9da30a66270f49fbdedcc46760674cb02b9688}{def\-\_\-no}, 
+\\*
+\hyperlink{lkc_8h_a48a34c0ae0c0b2681751708f4ba9da30a17b135898696c926fb92cff00c4671d1}{def\-\_\-random}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{lkc_8h_a60fe31d484f483e8fa8549738555b5d6}{zconfparse} (void)
+\item 
+void \hyperlink{lkc_8h_a042f4e8ad522ead566ce7f82c7c5e2b0}{zconfdump} (F\-I\-L\-E $\ast$out)
+\item 
+void \hyperlink{lkc_8h_a21273ce5c169716660aa02e48976c42a}{zconf\-\_\-starthelp} (void)
+\item 
+F\-I\-L\-E $\ast$ \hyperlink{lkc_8h_af67f5971b3091780349654dd1bfaaca0}{zconf\-\_\-fopen} (const char $\ast$name)
+\item 
+void \hyperlink{lkc_8h_aebe9e072a2f47918a058f0afad35a805}{zconf\-\_\-initscan} (const char $\ast$name)
+\item 
+void \hyperlink{lkc_8h_a0bee3b65f4b371a9ee6f1c95d8f3257c}{zconf\-\_\-nextfile} (const char $\ast$name)
+\item 
+int \hyperlink{lkc_8h_a292b6eed8598186692a8a5096cf1cabc}{zconf\-\_\-lineno} (void)
+\item 
+const char $\ast$ \hyperlink{lkc_8h_a4093904abf5c79bea332d5fbf7f43b19}{zconf\-\_\-curname} (void)
+\item 
+const char $\ast$ \hyperlink{lkc_8h_a80476706c539221087b0cfa35c2a5629}{conf\-\_\-get\-\_\-configname} (void)
+\item 
+const char $\ast$ \hyperlink{lkc_8h_a9d2772842b9fe42a04b80a72d529b591}{conf\-\_\-get\-\_\-autoconfig\-\_\-name} (void)
+\item 
+char $\ast$ \hyperlink{lkc_8h_a05e8525f0373cc3454cc34434090fb6c}{conf\-\_\-get\-\_\-default\-\_\-confname} (void)
+\item 
+void \hyperlink{lkc_8h_ab641973ed809a8a4ba5018543bcc3021}{sym\-\_\-set\-\_\-change\-\_\-count} (int count)
+\item 
+void \hyperlink{lkc_8h_a6711fa928bfc671d8f3d0c21a4327e5d}{sym\-\_\-add\-\_\-change\-\_\-count} (int count)
+\item 
+void \hyperlink{lkc_8h_a29515f1a0d8c6a73b5de132285587577}{conf\-\_\-set\-\_\-all\-\_\-new\-\_\-symbols} (enum \hyperlink{lkc_8h_a48a34c0ae0c0b2681751708f4ba9da30}{conf\-\_\-def\-\_\-mode} mode)
+\item 
+void \hyperlink{lkc_8h_a3001a28af74164a9ef95bccb4673c473}{\-\_\-menu\-\_\-init} (void)
+\item 
+void \hyperlink{lkc_8h_ae33743791cc856009700e13f398d19c1}{menu\-\_\-warn} (struct \hyperlink{structmenu}{menu} $\ast$\hyperlink{structmenu}{menu}, const char $\ast$fmt,...)
+\item 
+struct \hyperlink{structmenu}{menu} $\ast$ \hyperlink{lkc_8h_a1a9af8833fd43833ac5a6bdbddb712b9}{menu\-\_\-add\-\_\-menu} (void)
+\item 
+void \hyperlink{lkc_8h_aeb6617baf7e72ffcddd157cec742797b}{menu\-\_\-end\-\_\-menu} (void)
+\item 
+void \hyperlink{lkc_8h_a6121cef3799f8ec05953b86c4feddf18}{menu\-\_\-add\-\_\-entry} (struct \hyperlink{structsymbol}{symbol} $\ast$sym)
+\item 
+void \hyperlink{lkc_8h_acc37454a5d96af0d0a2f5689cb5cae87}{menu\-\_\-end\-\_\-entry} (void)
+\item 
+void \hyperlink{lkc_8h_a250ea7ce223a04e39053df8848f2bbdc}{menu\-\_\-add\-\_\-dep} (struct \hyperlink{structexpr}{expr} $\ast$dep)
+\item 
+void \hyperlink{lkc_8h_af2083dcb11fe974b9659979df2540773}{menu\-\_\-add\-\_\-visibility} (struct \hyperlink{structexpr}{expr} $\ast$dep)
+\item 
+struct \hyperlink{structproperty}{property} $\ast$ \hyperlink{lkc_8h_a849a39af66a573a102b674edeb6e6116}{menu\-\_\-add\-\_\-prop} (enum \hyperlink{expr_8h_a403a578df6dfdc7e86f6bca789c523c2}{prop\-\_\-type} type, char $\ast$prompt, struct \hyperlink{structexpr}{expr} $\ast$\hyperlink{structexpr}{expr}, struct \hyperlink{structexpr}{expr} $\ast$dep)
+\item 
+struct \hyperlink{structproperty}{property} $\ast$ \hyperlink{lkc_8h_a1078256a96c2e0ae441b0827bb572ebd}{menu\-\_\-add\-\_\-prompt} (enum \hyperlink{expr_8h_a403a578df6dfdc7e86f6bca789c523c2}{prop\-\_\-type} type, char $\ast$prompt, struct \hyperlink{structexpr}{expr} $\ast$dep)
+\item 
+void \hyperlink{lkc_8h_a3ebeb8d74ec8acbd1108a5f9eca3f44a}{menu\-\_\-add\-\_\-expr} (enum \hyperlink{expr_8h_a403a578df6dfdc7e86f6bca789c523c2}{prop\-\_\-type} type, struct \hyperlink{structexpr}{expr} $\ast$\hyperlink{structexpr}{expr}, struct \hyperlink{structexpr}{expr} $\ast$dep)
+\item 
+void \hyperlink{lkc_8h_afa845379fe1ec272d09beca383d17664}{menu\-\_\-add\-\_\-symbol} (enum \hyperlink{expr_8h_a403a578df6dfdc7e86f6bca789c523c2}{prop\-\_\-type} type, struct \hyperlink{structsymbol}{symbol} $\ast$sym, struct \hyperlink{structexpr}{expr} $\ast$dep)
+\item 
+void \hyperlink{lkc_8h_a4a98e19a836460181ab822081619f86a}{menu\-\_\-add\-\_\-option} (int token, char $\ast$arg)
+\item 
+void \hyperlink{lkc_8h_a20eeb714831220439ccb755a367a1de7}{menu\-\_\-finalize} (struct \hyperlink{structmenu}{menu} $\ast$parent)
+\item 
+void \hyperlink{lkc_8h_a49ea3e4f17bcdb1619cc36f093c20c2f}{menu\-\_\-set\-\_\-type} (int type)
+\item 
+struct \hyperlink{structfile}{file} $\ast$ \hyperlink{lkc_8h_a9c1ece44c680b0a8c4c806119b1c3de8}{file\-\_\-lookup} (const char $\ast$name)
+\item 
+int \hyperlink{lkc_8h_a9f96480171f1c2075ecf8fbac8d53294}{file\-\_\-write\-\_\-dep} (const char $\ast$name)
+\item 
+struct \hyperlink{structgstr}{gstr} \hyperlink{lkc_8h_a796c007af6fd6641f1c5a3d07e2c866e}{str\-\_\-new} (void)
+\item 
+struct \hyperlink{structgstr}{gstr} \hyperlink{lkc_8h_a13f6b85fb5572533c03c74291ab3bad0}{str\-\_\-assign} (const char $\ast$s)
+\item 
+void \hyperlink{lkc_8h_a3ed63dac73a8fe11bdee708c35212546}{str\-\_\-free} (struct \hyperlink{structgstr}{gstr} $\ast$gs)
+\item 
+void \hyperlink{lkc_8h_a42ddce81fe176a1b263d770a2c18d1aa}{str\-\_\-append} (struct \hyperlink{structgstr}{gstr} $\ast$gs, const char $\ast$s)
+\item 
+void \hyperlink{lkc_8h_a38c58c9025ffc0595b1edc9c68dd1254}{str\-\_\-printf} (struct \hyperlink{structgstr}{gstr} $\ast$gs, const char $\ast$fmt,...)
+\item 
+const char $\ast$ \hyperlink{lkc_8h_a89d3178aceaa1ac836ed51c488def2d1}{str\-\_\-get} (struct \hyperlink{structgstr}{gstr} $\ast$gs)
+\item 
+void \hyperlink{lkc_8h_a19ed882657f55b77c930a586c86265a9}{sym\-\_\-init} (void)
+\item 
+void \hyperlink{lkc_8h_a378c7ba3a47366514b200fa05846e4f9}{sym\-\_\-clear\-\_\-all\-\_\-valid} (void)
+\item 
+void \hyperlink{lkc_8h_a6d0acd56d626e96a0577e606d4f78374}{sym\-\_\-set\-\_\-all\-\_\-changed} (void)
+\item 
+void \hyperlink{lkc_8h_a610c2965c582d2c97f45d1502e8a58f4}{sym\-\_\-set\-\_\-changed} (struct \hyperlink{structsymbol}{symbol} $\ast$sym)
+\item 
+struct \hyperlink{structsymbol}{symbol} $\ast$ \hyperlink{lkc_8h_a78b4b2fdb95c888bc68ae5c43223b7cd}{sym\-\_\-choice\-\_\-default} (struct \hyperlink{structsymbol}{symbol} $\ast$sym)
+\item 
+const char $\ast$ \hyperlink{lkc_8h_a905025408d3aa067667921a76f022139}{sym\-\_\-get\-\_\-string\-\_\-default} (struct \hyperlink{structsymbol}{symbol} $\ast$sym)
+\item 
+struct \hyperlink{structsymbol}{symbol} $\ast$ \hyperlink{lkc_8h_a5ba9e4d5244760b36a497521c899f399}{sym\-\_\-check\-\_\-deps} (struct \hyperlink{structsymbol}{symbol} $\ast$sym)
+\item 
+struct \hyperlink{structproperty}{property} $\ast$ \hyperlink{lkc_8h_a97dfd25c1884d0f467c5773443ac90ef}{prop\-\_\-alloc} (enum \hyperlink{expr_8h_a403a578df6dfdc7e86f6bca789c523c2}{prop\-\_\-type} type, struct \hyperlink{structsymbol}{symbol} $\ast$sym)
+\item 
+struct \hyperlink{structsymbol}{symbol} $\ast$ \hyperlink{lkc_8h_adc57888d34086aabd76bab980de287c9}{prop\-\_\-get\-\_\-symbol} (struct \hyperlink{structproperty}{property} $\ast$prop)
+\item 
+struct \hyperlink{structproperty}{property} $\ast$ \hyperlink{lkc_8h_aa3ea11d8b0e8717567acf4b68fe56ed5}{sym\-\_\-get\-\_\-env\-\_\-prop} (struct \hyperlink{structsymbol}{symbol} $\ast$sym)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{lkc_8h_a199db6ed153767209a09d465be8ed979}{zconfdebug}
+\item 
+struct \hyperlink{structexpr}{expr} $\ast$ \hyperlink{lkc_8h_ad0096dbd4845e8008f6bfb86f5675801}{sym\-\_\-env\-\_\-list}
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{lkc_8h_a421d5046aa43617eec8a0b1176cce89c}{\index{lkc.\-h@{lkc.\-h}!\-\_\-@{\-\_\-}}
+\index{\-\_\-@{\-\_\-}!lkc.h@{lkc.\-h}}
+\subsubsection[{\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}\#define \-\_\-(
+\begin{DoxyParamCaption}
+\item[{}]{text}
+\end{DoxyParamCaption}
+)~gettext(text)}}\label{lkc_8h_a421d5046aa43617eec8a0b1176cce89c}
+\hypertarget{lkc_8h_ac1d499f0f36ec2bb7a066645289278e5}{\index{lkc.\-h@{lkc.\-h}!C\-O\-N\-F\-I\-G\-\_\-@{C\-O\-N\-F\-I\-G\-\_\-}}
+\index{C\-O\-N\-F\-I\-G\-\_\-@{C\-O\-N\-F\-I\-G\-\_\-}!lkc.h@{lkc.\-h}}
+\subsubsection[{C\-O\-N\-F\-I\-G\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\-O\-N\-F\-I\-G\-\_\-~\char`\"{}C\-O\-N\-F\-I\-G\-\_\-\char`\"{}}}\label{lkc_8h_ac1d499f0f36ec2bb7a066645289278e5}
+\hypertarget{lkc_8h_ab2cb7816c01560f1bab8b2dbd94be4c8}{\index{lkc.\-h@{lkc.\-h}!L\-O\-C\-A\-L\-E\-D\-I\-R@{L\-O\-C\-A\-L\-E\-D\-I\-R}}
+\index{L\-O\-C\-A\-L\-E\-D\-I\-R@{L\-O\-C\-A\-L\-E\-D\-I\-R}!lkc.h@{lkc.\-h}}
+\subsubsection[{L\-O\-C\-A\-L\-E\-D\-I\-R}]{\setlength{\rightskip}{0pt plus 5cm}\#define L\-O\-C\-A\-L\-E\-D\-I\-R~\char`\"{}/usr/share/locale\char`\"{}}}\label{lkc_8h_ab2cb7816c01560f1bab8b2dbd94be4c8}
+\hypertarget{lkc_8h_ad1b70fefeffa0fab701dadbcc1470538}{\index{lkc.\-h@{lkc.\-h}!N\-\_\-@{N\-\_\-}}
+\index{N\-\_\-@{N\-\_\-}!lkc.h@{lkc.\-h}}
+\subsubsection[{N\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}\#define N\-\_\-(
+\begin{DoxyParamCaption}
+\item[{}]{text}
+\end{DoxyParamCaption}
+)~(text)}}\label{lkc_8h_ad1b70fefeffa0fab701dadbcc1470538}
+\hypertarget{lkc_8h_ad5ab947559a6b8796a6ab6bfbdb629ed}{\index{lkc.\-h@{lkc.\-h}!P@{P}}
+\index{P@{P}!lkc.h@{lkc.\-h}}
+\subsubsection[{P}]{\setlength{\rightskip}{0pt plus 5cm}\#define P(
+\begin{DoxyParamCaption}
+\item[{}]{name, }
+\item[{}]{type, }
+\item[{}]{arg}
+\end{DoxyParamCaption}
+)~extern type name arg}}\label{lkc_8h_ad5ab947559a6b8796a6ab6bfbdb629ed}
+\hypertarget{lkc_8h_aca8570fb706c81df371b7f9bc454ae03}{\index{lkc.\-h@{lkc.\-h}!P\-A\-C\-K\-A\-G\-E@{P\-A\-C\-K\-A\-G\-E}}
+\index{P\-A\-C\-K\-A\-G\-E@{P\-A\-C\-K\-A\-G\-E}!lkc.h@{lkc.\-h}}
+\subsubsection[{P\-A\-C\-K\-A\-G\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\-A\-C\-K\-A\-G\-E~\char`\"{}linux\char`\"{}}}\label{lkc_8h_aca8570fb706c81df371b7f9bc454ae03}
+\hypertarget{lkc_8h_a448292033623bc343184db264add0d4d}{\index{lkc.\-h@{lkc.\-h}!S\-R\-C\-T\-R\-E\-E@{S\-R\-C\-T\-R\-E\-E}}
+\index{S\-R\-C\-T\-R\-E\-E@{S\-R\-C\-T\-R\-E\-E}!lkc.h@{lkc.\-h}}
+\subsubsection[{S\-R\-C\-T\-R\-E\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\-R\-C\-T\-R\-E\-E~\char`\"{}srctree\char`\"{}}}\label{lkc_8h_a448292033623bc343184db264add0d4d}
+\hypertarget{lkc_8h_a918da57d25facac460fa7ef20fed15d5}{\index{lkc.\-h@{lkc.\-h}!T\-\_\-\-O\-P\-T\-\_\-\-D\-E\-F\-C\-O\-N\-F\-I\-G\-\_\-\-L\-I\-S\-T@{T\-\_\-\-O\-P\-T\-\_\-\-D\-E\-F\-C\-O\-N\-F\-I\-G\-\_\-\-L\-I\-S\-T}}
+\index{T\-\_\-\-O\-P\-T\-\_\-\-D\-E\-F\-C\-O\-N\-F\-I\-G\-\_\-\-L\-I\-S\-T@{T\-\_\-\-O\-P\-T\-\_\-\-D\-E\-F\-C\-O\-N\-F\-I\-G\-\_\-\-L\-I\-S\-T}!lkc.h@{lkc.\-h}}
+\subsubsection[{T\-\_\-\-O\-P\-T\-\_\-\-D\-E\-F\-C\-O\-N\-F\-I\-G\-\_\-\-L\-I\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\-\_\-\-O\-P\-T\-\_\-\-D\-E\-F\-C\-O\-N\-F\-I\-G\-\_\-\-L\-I\-S\-T~2}}\label{lkc_8h_a918da57d25facac460fa7ef20fed15d5}
+\hypertarget{lkc_8h_a9d74e49cfff753ff7954d5d17cf724f8}{\index{lkc.\-h@{lkc.\-h}!T\-\_\-\-O\-P\-T\-\_\-\-E\-N\-V@{T\-\_\-\-O\-P\-T\-\_\-\-E\-N\-V}}
+\index{T\-\_\-\-O\-P\-T\-\_\-\-E\-N\-V@{T\-\_\-\-O\-P\-T\-\_\-\-E\-N\-V}!lkc.h@{lkc.\-h}}
+\subsubsection[{T\-\_\-\-O\-P\-T\-\_\-\-E\-N\-V}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\-\_\-\-O\-P\-T\-\_\-\-E\-N\-V~3}}\label{lkc_8h_a9d74e49cfff753ff7954d5d17cf724f8}
+\hypertarget{lkc_8h_a28361a860510062a8755018d7613dc0b}{\index{lkc.\-h@{lkc.\-h}!T\-\_\-\-O\-P\-T\-\_\-\-M\-O\-D\-U\-L\-E\-S@{T\-\_\-\-O\-P\-T\-\_\-\-M\-O\-D\-U\-L\-E\-S}}
+\index{T\-\_\-\-O\-P\-T\-\_\-\-M\-O\-D\-U\-L\-E\-S@{T\-\_\-\-O\-P\-T\-\_\-\-M\-O\-D\-U\-L\-E\-S}!lkc.h@{lkc.\-h}}
+\subsubsection[{T\-\_\-\-O\-P\-T\-\_\-\-M\-O\-D\-U\-L\-E\-S}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\-\_\-\-O\-P\-T\-\_\-\-M\-O\-D\-U\-L\-E\-S~1}}\label{lkc_8h_a28361a860510062a8755018d7613dc0b}
+\hypertarget{lkc_8h_aa1cf3d0d7d61cba6030a9f4fe67e7026}{\index{lkc.\-h@{lkc.\-h}!T\-F\-\_\-\-C\-O\-M\-M\-A\-N\-D@{T\-F\-\_\-\-C\-O\-M\-M\-A\-N\-D}}
+\index{T\-F\-\_\-\-C\-O\-M\-M\-A\-N\-D@{T\-F\-\_\-\-C\-O\-M\-M\-A\-N\-D}!lkc.h@{lkc.\-h}}
+\subsubsection[{T\-F\-\_\-\-C\-O\-M\-M\-A\-N\-D}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\-F\-\_\-\-C\-O\-M\-M\-A\-N\-D~0x0001}}\label{lkc_8h_aa1cf3d0d7d61cba6030a9f4fe67e7026}
+\hypertarget{lkc_8h_a5a33353f998e8ba0140818f11db14ed2}{\index{lkc.\-h@{lkc.\-h}!T\-F\-\_\-\-O\-P\-T\-I\-O\-N@{T\-F\-\_\-\-O\-P\-T\-I\-O\-N}}
+\index{T\-F\-\_\-\-O\-P\-T\-I\-O\-N@{T\-F\-\_\-\-O\-P\-T\-I\-O\-N}!lkc.h@{lkc.\-h}}
+\subsubsection[{T\-F\-\_\-\-O\-P\-T\-I\-O\-N}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\-F\-\_\-\-O\-P\-T\-I\-O\-N~0x0004}}\label{lkc_8h_a5a33353f998e8ba0140818f11db14ed2}
+\hypertarget{lkc_8h_a072d7614135250f543a716efb267a813}{\index{lkc.\-h@{lkc.\-h}!T\-F\-\_\-\-P\-A\-R\-A\-M@{T\-F\-\_\-\-P\-A\-R\-A\-M}}
+\index{T\-F\-\_\-\-P\-A\-R\-A\-M@{T\-F\-\_\-\-P\-A\-R\-A\-M}!lkc.h@{lkc.\-h}}
+\subsubsection[{T\-F\-\_\-\-P\-A\-R\-A\-M}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\-F\-\_\-\-P\-A\-R\-A\-M~0x0002}}\label{lkc_8h_a072d7614135250f543a716efb267a813}
+
+
+\subsection{Enumeration Type Documentation}
+\hypertarget{lkc_8h_a48a34c0ae0c0b2681751708f4ba9da30}{\index{lkc.\-h@{lkc.\-h}!conf\-\_\-def\-\_\-mode@{conf\-\_\-def\-\_\-mode}}
+\index{conf\-\_\-def\-\_\-mode@{conf\-\_\-def\-\_\-mode}!lkc.h@{lkc.\-h}}
+\subsubsection[{conf\-\_\-def\-\_\-mode}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf conf\-\_\-def\-\_\-mode}}}\label{lkc_8h_a48a34c0ae0c0b2681751708f4ba9da30}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{def\-\_\-default@{def\-\_\-default}!lkc.\-h@{lkc.\-h}}\index{lkc.\-h@{lkc.\-h}!def\-\_\-default@{def\-\_\-default}}\item[{\em 
+\hypertarget{lkc_8h_a48a34c0ae0c0b2681751708f4ba9da30a9c162fe7f4915d47aa928c6d91314467}{def\-\_\-default}\label{lkc_8h_a48a34c0ae0c0b2681751708f4ba9da30a9c162fe7f4915d47aa928c6d91314467}
+}]\index{def\-\_\-yes@{def\-\_\-yes}!lkc.\-h@{lkc.\-h}}\index{lkc.\-h@{lkc.\-h}!def\-\_\-yes@{def\-\_\-yes}}\item[{\em 
+\hypertarget{lkc_8h_a48a34c0ae0c0b2681751708f4ba9da30a6f6266267d8222f717dd84d239603051}{def\-\_\-yes}\label{lkc_8h_a48a34c0ae0c0b2681751708f4ba9da30a6f6266267d8222f717dd84d239603051}
+}]\index{def\-\_\-mod@{def\-\_\-mod}!lkc.\-h@{lkc.\-h}}\index{lkc.\-h@{lkc.\-h}!def\-\_\-mod@{def\-\_\-mod}}\item[{\em 
+\hypertarget{lkc_8h_a48a34c0ae0c0b2681751708f4ba9da30aa8c574331afafc553b93de634caedde5}{def\-\_\-mod}\label{lkc_8h_a48a34c0ae0c0b2681751708f4ba9da30aa8c574331afafc553b93de634caedde5}
+}]\index{def\-\_\-no@{def\-\_\-no}!lkc.\-h@{lkc.\-h}}\index{lkc.\-h@{lkc.\-h}!def\-\_\-no@{def\-\_\-no}}\item[{\em 
+\hypertarget{lkc_8h_a48a34c0ae0c0b2681751708f4ba9da30a66270f49fbdedcc46760674cb02b9688}{def\-\_\-no}\label{lkc_8h_a48a34c0ae0c0b2681751708f4ba9da30a66270f49fbdedcc46760674cb02b9688}
+}]\index{def\-\_\-random@{def\-\_\-random}!lkc.\-h@{lkc.\-h}}\index{lkc.\-h@{lkc.\-h}!def\-\_\-random@{def\-\_\-random}}\item[{\em 
+\hypertarget{lkc_8h_a48a34c0ae0c0b2681751708f4ba9da30a17b135898696c926fb92cff00c4671d1}{def\-\_\-random}\label{lkc_8h_a48a34c0ae0c0b2681751708f4ba9da30a17b135898696c926fb92cff00c4671d1}
+}]\end{description}
+\end{Desc}
+
+
+\subsection{Function Documentation}
+\hypertarget{lkc_8h_a3001a28af74164a9ef95bccb4673c473}{\index{lkc.\-h@{lkc.\-h}!\-\_\-menu\-\_\-init@{\-\_\-menu\-\_\-init}}
+\index{\-\_\-menu\-\_\-init@{\-\_\-menu\-\_\-init}!lkc.h@{lkc.\-h}}
+\subsubsection[{\-\_\-menu\-\_\-init}]{\setlength{\rightskip}{0pt plus 5cm}void \-\_\-menu\-\_\-init (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{lkc_8h_a3001a28af74164a9ef95bccb4673c473}
+\hypertarget{lkc_8h_a9d2772842b9fe42a04b80a72d529b591}{\index{lkc.\-h@{lkc.\-h}!conf\-\_\-get\-\_\-autoconfig\-\_\-name@{conf\-\_\-get\-\_\-autoconfig\-\_\-name}}
+\index{conf\-\_\-get\-\_\-autoconfig\-\_\-name@{conf\-\_\-get\-\_\-autoconfig\-\_\-name}!lkc.h@{lkc.\-h}}
+\subsubsection[{conf\-\_\-get\-\_\-autoconfig\-\_\-name}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ conf\-\_\-get\-\_\-autoconfig\-\_\-name (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{lkc_8h_a9d2772842b9fe42a04b80a72d529b591}
+\hypertarget{lkc_8h_a80476706c539221087b0cfa35c2a5629}{\index{lkc.\-h@{lkc.\-h}!conf\-\_\-get\-\_\-configname@{conf\-\_\-get\-\_\-configname}}
+\index{conf\-\_\-get\-\_\-configname@{conf\-\_\-get\-\_\-configname}!lkc.h@{lkc.\-h}}
+\subsubsection[{conf\-\_\-get\-\_\-configname}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ conf\-\_\-get\-\_\-configname (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{lkc_8h_a80476706c539221087b0cfa35c2a5629}
+\hypertarget{lkc_8h_a05e8525f0373cc3454cc34434090fb6c}{\index{lkc.\-h@{lkc.\-h}!conf\-\_\-get\-\_\-default\-\_\-confname@{conf\-\_\-get\-\_\-default\-\_\-confname}}
+\index{conf\-\_\-get\-\_\-default\-\_\-confname@{conf\-\_\-get\-\_\-default\-\_\-confname}!lkc.h@{lkc.\-h}}
+\subsubsection[{conf\-\_\-get\-\_\-default\-\_\-confname}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ conf\-\_\-get\-\_\-default\-\_\-confname (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{lkc_8h_a05e8525f0373cc3454cc34434090fb6c}
+\hypertarget{lkc_8h_a29515f1a0d8c6a73b5de132285587577}{\index{lkc.\-h@{lkc.\-h}!conf\-\_\-set\-\_\-all\-\_\-new\-\_\-symbols@{conf\-\_\-set\-\_\-all\-\_\-new\-\_\-symbols}}
+\index{conf\-\_\-set\-\_\-all\-\_\-new\-\_\-symbols@{conf\-\_\-set\-\_\-all\-\_\-new\-\_\-symbols}!lkc.h@{lkc.\-h}}
+\subsubsection[{conf\-\_\-set\-\_\-all\-\_\-new\-\_\-symbols}]{\setlength{\rightskip}{0pt plus 5cm}void conf\-\_\-set\-\_\-all\-\_\-new\-\_\-symbols (
+\begin{DoxyParamCaption}
+\item[{enum {\bf conf\-\_\-def\-\_\-mode}}]{mode}
+\end{DoxyParamCaption}
+)}}\label{lkc_8h_a29515f1a0d8c6a73b5de132285587577}
+\hypertarget{lkc_8h_a9c1ece44c680b0a8c4c806119b1c3de8}{\index{lkc.\-h@{lkc.\-h}!file\-\_\-lookup@{file\-\_\-lookup}}
+\index{file\-\_\-lookup@{file\-\_\-lookup}!lkc.h@{lkc.\-h}}
+\subsubsection[{file\-\_\-lookup}]{\setlength{\rightskip}{0pt plus 5cm}struct {\bf file}$\ast$ file\-\_\-lookup (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{name}
+\end{DoxyParamCaption}
+)}}\label{lkc_8h_a9c1ece44c680b0a8c4c806119b1c3de8}
+\hypertarget{lkc_8h_a9f96480171f1c2075ecf8fbac8d53294}{\index{lkc.\-h@{lkc.\-h}!file\-\_\-write\-\_\-dep@{file\-\_\-write\-\_\-dep}}
+\index{file\-\_\-write\-\_\-dep@{file\-\_\-write\-\_\-dep}!lkc.h@{lkc.\-h}}
+\subsubsection[{file\-\_\-write\-\_\-dep}]{\setlength{\rightskip}{0pt plus 5cm}int file\-\_\-write\-\_\-dep (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{name}
+\end{DoxyParamCaption}
+)}}\label{lkc_8h_a9f96480171f1c2075ecf8fbac8d53294}
+\hypertarget{lkc_8h_a250ea7ce223a04e39053df8848f2bbdc}{\index{lkc.\-h@{lkc.\-h}!menu\-\_\-add\-\_\-dep@{menu\-\_\-add\-\_\-dep}}
+\index{menu\-\_\-add\-\_\-dep@{menu\-\_\-add\-\_\-dep}!lkc.h@{lkc.\-h}}
+\subsubsection[{menu\-\_\-add\-\_\-dep}]{\setlength{\rightskip}{0pt plus 5cm}void menu\-\_\-add\-\_\-dep (
+\begin{DoxyParamCaption}
+\item[{struct {\bf expr} $\ast$}]{dep}
+\end{DoxyParamCaption}
+)}}\label{lkc_8h_a250ea7ce223a04e39053df8848f2bbdc}
+\hypertarget{lkc_8h_a6121cef3799f8ec05953b86c4feddf18}{\index{lkc.\-h@{lkc.\-h}!menu\-\_\-add\-\_\-entry@{menu\-\_\-add\-\_\-entry}}
+\index{menu\-\_\-add\-\_\-entry@{menu\-\_\-add\-\_\-entry}!lkc.h@{lkc.\-h}}
+\subsubsection[{menu\-\_\-add\-\_\-entry}]{\setlength{\rightskip}{0pt plus 5cm}void menu\-\_\-add\-\_\-entry (
+\begin{DoxyParamCaption}
+\item[{struct {\bf symbol} $\ast$}]{sym}
+\end{DoxyParamCaption}
+)}}\label{lkc_8h_a6121cef3799f8ec05953b86c4feddf18}
+\hypertarget{lkc_8h_a3ebeb8d74ec8acbd1108a5f9eca3f44a}{\index{lkc.\-h@{lkc.\-h}!menu\-\_\-add\-\_\-expr@{menu\-\_\-add\-\_\-expr}}
+\index{menu\-\_\-add\-\_\-expr@{menu\-\_\-add\-\_\-expr}!lkc.h@{lkc.\-h}}
+\subsubsection[{menu\-\_\-add\-\_\-expr}]{\setlength{\rightskip}{0pt plus 5cm}void menu\-\_\-add\-\_\-expr (
+\begin{DoxyParamCaption}
+\item[{enum {\bf prop\-\_\-type}}]{type, }
+\item[{struct {\bf expr} $\ast$}]{expr, }
+\item[{struct {\bf expr} $\ast$}]{dep}
+\end{DoxyParamCaption}
+)}}\label{lkc_8h_a3ebeb8d74ec8acbd1108a5f9eca3f44a}
+\hypertarget{lkc_8h_a1a9af8833fd43833ac5a6bdbddb712b9}{\index{lkc.\-h@{lkc.\-h}!menu\-\_\-add\-\_\-menu@{menu\-\_\-add\-\_\-menu}}
+\index{menu\-\_\-add\-\_\-menu@{menu\-\_\-add\-\_\-menu}!lkc.h@{lkc.\-h}}
+\subsubsection[{menu\-\_\-add\-\_\-menu}]{\setlength{\rightskip}{0pt plus 5cm}struct {\bf menu}$\ast$ menu\-\_\-add\-\_\-menu (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{lkc_8h_a1a9af8833fd43833ac5a6bdbddb712b9}
+\hypertarget{lkc_8h_a4a98e19a836460181ab822081619f86a}{\index{lkc.\-h@{lkc.\-h}!menu\-\_\-add\-\_\-option@{menu\-\_\-add\-\_\-option}}
+\index{menu\-\_\-add\-\_\-option@{menu\-\_\-add\-\_\-option}!lkc.h@{lkc.\-h}}
+\subsubsection[{menu\-\_\-add\-\_\-option}]{\setlength{\rightskip}{0pt plus 5cm}void menu\-\_\-add\-\_\-option (
+\begin{DoxyParamCaption}
+\item[{int}]{token, }
+\item[{char $\ast$}]{arg}
+\end{DoxyParamCaption}
+)}}\label{lkc_8h_a4a98e19a836460181ab822081619f86a}
+\hypertarget{lkc_8h_a1078256a96c2e0ae441b0827bb572ebd}{\index{lkc.\-h@{lkc.\-h}!menu\-\_\-add\-\_\-prompt@{menu\-\_\-add\-\_\-prompt}}
+\index{menu\-\_\-add\-\_\-prompt@{menu\-\_\-add\-\_\-prompt}!lkc.h@{lkc.\-h}}
+\subsubsection[{menu\-\_\-add\-\_\-prompt}]{\setlength{\rightskip}{0pt plus 5cm}struct {\bf property}$\ast$ menu\-\_\-add\-\_\-prompt (
+\begin{DoxyParamCaption}
+\item[{enum {\bf prop\-\_\-type}}]{type, }
+\item[{char $\ast$}]{prompt, }
+\item[{struct {\bf expr} $\ast$}]{dep}
+\end{DoxyParamCaption}
+)}}\label{lkc_8h_a1078256a96c2e0ae441b0827bb572ebd}
+\hypertarget{lkc_8h_a849a39af66a573a102b674edeb6e6116}{\index{lkc.\-h@{lkc.\-h}!menu\-\_\-add\-\_\-prop@{menu\-\_\-add\-\_\-prop}}
+\index{menu\-\_\-add\-\_\-prop@{menu\-\_\-add\-\_\-prop}!lkc.h@{lkc.\-h}}
+\subsubsection[{menu\-\_\-add\-\_\-prop}]{\setlength{\rightskip}{0pt plus 5cm}struct {\bf property}$\ast$ menu\-\_\-add\-\_\-prop (
+\begin{DoxyParamCaption}
+\item[{enum {\bf prop\-\_\-type}}]{type, }
+\item[{char $\ast$}]{prompt, }
+\item[{struct {\bf expr} $\ast$}]{expr, }
+\item[{struct {\bf expr} $\ast$}]{dep}
+\end{DoxyParamCaption}
+)}}\label{lkc_8h_a849a39af66a573a102b674edeb6e6116}
+\hypertarget{lkc_8h_afa845379fe1ec272d09beca383d17664}{\index{lkc.\-h@{lkc.\-h}!menu\-\_\-add\-\_\-symbol@{menu\-\_\-add\-\_\-symbol}}
+\index{menu\-\_\-add\-\_\-symbol@{menu\-\_\-add\-\_\-symbol}!lkc.h@{lkc.\-h}}
+\subsubsection[{menu\-\_\-add\-\_\-symbol}]{\setlength{\rightskip}{0pt plus 5cm}void menu\-\_\-add\-\_\-symbol (
+\begin{DoxyParamCaption}
+\item[{enum {\bf prop\-\_\-type}}]{type, }
+\item[{struct {\bf symbol} $\ast$}]{sym, }
+\item[{struct {\bf expr} $\ast$}]{dep}
+\end{DoxyParamCaption}
+)}}\label{lkc_8h_afa845379fe1ec272d09beca383d17664}
+\hypertarget{lkc_8h_af2083dcb11fe974b9659979df2540773}{\index{lkc.\-h@{lkc.\-h}!menu\-\_\-add\-\_\-visibility@{menu\-\_\-add\-\_\-visibility}}
+\index{menu\-\_\-add\-\_\-visibility@{menu\-\_\-add\-\_\-visibility}!lkc.h@{lkc.\-h}}
+\subsubsection[{menu\-\_\-add\-\_\-visibility}]{\setlength{\rightskip}{0pt plus 5cm}void menu\-\_\-add\-\_\-visibility (
+\begin{DoxyParamCaption}
+\item[{struct {\bf expr} $\ast$}]{dep}
+\end{DoxyParamCaption}
+)}}\label{lkc_8h_af2083dcb11fe974b9659979df2540773}
+\hypertarget{lkc_8h_acc37454a5d96af0d0a2f5689cb5cae87}{\index{lkc.\-h@{lkc.\-h}!menu\-\_\-end\-\_\-entry@{menu\-\_\-end\-\_\-entry}}
+\index{menu\-\_\-end\-\_\-entry@{menu\-\_\-end\-\_\-entry}!lkc.h@{lkc.\-h}}
+\subsubsection[{menu\-\_\-end\-\_\-entry}]{\setlength{\rightskip}{0pt plus 5cm}void menu\-\_\-end\-\_\-entry (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{lkc_8h_acc37454a5d96af0d0a2f5689cb5cae87}
+\hypertarget{lkc_8h_aeb6617baf7e72ffcddd157cec742797b}{\index{lkc.\-h@{lkc.\-h}!menu\-\_\-end\-\_\-menu@{menu\-\_\-end\-\_\-menu}}
+\index{menu\-\_\-end\-\_\-menu@{menu\-\_\-end\-\_\-menu}!lkc.h@{lkc.\-h}}
+\subsubsection[{menu\-\_\-end\-\_\-menu}]{\setlength{\rightskip}{0pt plus 5cm}void menu\-\_\-end\-\_\-menu (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{lkc_8h_aeb6617baf7e72ffcddd157cec742797b}
+\hypertarget{lkc_8h_a20eeb714831220439ccb755a367a1de7}{\index{lkc.\-h@{lkc.\-h}!menu\-\_\-finalize@{menu\-\_\-finalize}}
+\index{menu\-\_\-finalize@{menu\-\_\-finalize}!lkc.h@{lkc.\-h}}
+\subsubsection[{menu\-\_\-finalize}]{\setlength{\rightskip}{0pt plus 5cm}void menu\-\_\-finalize (
+\begin{DoxyParamCaption}
+\item[{struct {\bf menu} $\ast$}]{parent}
+\end{DoxyParamCaption}
+)}}\label{lkc_8h_a20eeb714831220439ccb755a367a1de7}
+\hypertarget{lkc_8h_a49ea3e4f17bcdb1619cc36f093c20c2f}{\index{lkc.\-h@{lkc.\-h}!menu\-\_\-set\-\_\-type@{menu\-\_\-set\-\_\-type}}
+\index{menu\-\_\-set\-\_\-type@{menu\-\_\-set\-\_\-type}!lkc.h@{lkc.\-h}}
+\subsubsection[{menu\-\_\-set\-\_\-type}]{\setlength{\rightskip}{0pt plus 5cm}void menu\-\_\-set\-\_\-type (
+\begin{DoxyParamCaption}
+\item[{int}]{type}
+\end{DoxyParamCaption}
+)}}\label{lkc_8h_a49ea3e4f17bcdb1619cc36f093c20c2f}
+\hypertarget{lkc_8h_ae33743791cc856009700e13f398d19c1}{\index{lkc.\-h@{lkc.\-h}!menu\-\_\-warn@{menu\-\_\-warn}}
+\index{menu\-\_\-warn@{menu\-\_\-warn}!lkc.h@{lkc.\-h}}
+\subsubsection[{menu\-\_\-warn}]{\setlength{\rightskip}{0pt plus 5cm}void menu\-\_\-warn (
+\begin{DoxyParamCaption}
+\item[{struct {\bf menu} $\ast$}]{menu, }
+\item[{const char $\ast$}]{fmt, }
+\item[{}]{...}
+\end{DoxyParamCaption}
+)}}\label{lkc_8h_ae33743791cc856009700e13f398d19c1}
+\hypertarget{lkc_8h_a97dfd25c1884d0f467c5773443ac90ef}{\index{lkc.\-h@{lkc.\-h}!prop\-\_\-alloc@{prop\-\_\-alloc}}
+\index{prop\-\_\-alloc@{prop\-\_\-alloc}!lkc.h@{lkc.\-h}}
+\subsubsection[{prop\-\_\-alloc}]{\setlength{\rightskip}{0pt plus 5cm}struct {\bf property}$\ast$ prop\-\_\-alloc (
+\begin{DoxyParamCaption}
+\item[{enum {\bf prop\-\_\-type}}]{type, }
+\item[{struct {\bf symbol} $\ast$}]{sym}
+\end{DoxyParamCaption}
+)}}\label{lkc_8h_a97dfd25c1884d0f467c5773443ac90ef}
+\hypertarget{lkc_8h_adc57888d34086aabd76bab980de287c9}{\index{lkc.\-h@{lkc.\-h}!prop\-\_\-get\-\_\-symbol@{prop\-\_\-get\-\_\-symbol}}
+\index{prop\-\_\-get\-\_\-symbol@{prop\-\_\-get\-\_\-symbol}!lkc.h@{lkc.\-h}}
+\subsubsection[{prop\-\_\-get\-\_\-symbol}]{\setlength{\rightskip}{0pt plus 5cm}struct {\bf symbol}$\ast$ prop\-\_\-get\-\_\-symbol (
+\begin{DoxyParamCaption}
+\item[{struct {\bf property} $\ast$}]{prop}
+\end{DoxyParamCaption}
+)}}\label{lkc_8h_adc57888d34086aabd76bab980de287c9}
+\hypertarget{lkc_8h_a42ddce81fe176a1b263d770a2c18d1aa}{\index{lkc.\-h@{lkc.\-h}!str\-\_\-append@{str\-\_\-append}}
+\index{str\-\_\-append@{str\-\_\-append}!lkc.h@{lkc.\-h}}
+\subsubsection[{str\-\_\-append}]{\setlength{\rightskip}{0pt plus 5cm}void str\-\_\-append (
+\begin{DoxyParamCaption}
+\item[{struct {\bf gstr} $\ast$}]{gs, }
+\item[{const char $\ast$}]{s}
+\end{DoxyParamCaption}
+)}}\label{lkc_8h_a42ddce81fe176a1b263d770a2c18d1aa}
+\hypertarget{lkc_8h_a13f6b85fb5572533c03c74291ab3bad0}{\index{lkc.\-h@{lkc.\-h}!str\-\_\-assign@{str\-\_\-assign}}
+\index{str\-\_\-assign@{str\-\_\-assign}!lkc.h@{lkc.\-h}}
+\subsubsection[{str\-\_\-assign}]{\setlength{\rightskip}{0pt plus 5cm}struct {\bf gstr} str\-\_\-assign (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{s}
+\end{DoxyParamCaption}
+)}}\label{lkc_8h_a13f6b85fb5572533c03c74291ab3bad0}
+\hypertarget{lkc_8h_a3ed63dac73a8fe11bdee708c35212546}{\index{lkc.\-h@{lkc.\-h}!str\-\_\-free@{str\-\_\-free}}
+\index{str\-\_\-free@{str\-\_\-free}!lkc.h@{lkc.\-h}}
+\subsubsection[{str\-\_\-free}]{\setlength{\rightskip}{0pt plus 5cm}void str\-\_\-free (
+\begin{DoxyParamCaption}
+\item[{struct {\bf gstr} $\ast$}]{gs}
+\end{DoxyParamCaption}
+)}}\label{lkc_8h_a3ed63dac73a8fe11bdee708c35212546}
+\hypertarget{lkc_8h_a89d3178aceaa1ac836ed51c488def2d1}{\index{lkc.\-h@{lkc.\-h}!str\-\_\-get@{str\-\_\-get}}
+\index{str\-\_\-get@{str\-\_\-get}!lkc.h@{lkc.\-h}}
+\subsubsection[{str\-\_\-get}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ str\-\_\-get (
+\begin{DoxyParamCaption}
+\item[{struct {\bf gstr} $\ast$}]{gs}
+\end{DoxyParamCaption}
+)}}\label{lkc_8h_a89d3178aceaa1ac836ed51c488def2d1}
+\hypertarget{lkc_8h_a796c007af6fd6641f1c5a3d07e2c866e}{\index{lkc.\-h@{lkc.\-h}!str\-\_\-new@{str\-\_\-new}}
+\index{str\-\_\-new@{str\-\_\-new}!lkc.h@{lkc.\-h}}
+\subsubsection[{str\-\_\-new}]{\setlength{\rightskip}{0pt plus 5cm}struct {\bf gstr} str\-\_\-new (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{lkc_8h_a796c007af6fd6641f1c5a3d07e2c866e}
+\hypertarget{lkc_8h_a38c58c9025ffc0595b1edc9c68dd1254}{\index{lkc.\-h@{lkc.\-h}!str\-\_\-printf@{str\-\_\-printf}}
+\index{str\-\_\-printf@{str\-\_\-printf}!lkc.h@{lkc.\-h}}
+\subsubsection[{str\-\_\-printf}]{\setlength{\rightskip}{0pt plus 5cm}void str\-\_\-printf (
+\begin{DoxyParamCaption}
+\item[{struct {\bf gstr} $\ast$}]{gs, }
+\item[{const char $\ast$}]{fmt, }
+\item[{}]{...}
+\end{DoxyParamCaption}
+)}}\label{lkc_8h_a38c58c9025ffc0595b1edc9c68dd1254}
+\hypertarget{lkc_8h_a6711fa928bfc671d8f3d0c21a4327e5d}{\index{lkc.\-h@{lkc.\-h}!sym\-\_\-add\-\_\-change\-\_\-count@{sym\-\_\-add\-\_\-change\-\_\-count}}
+\index{sym\-\_\-add\-\_\-change\-\_\-count@{sym\-\_\-add\-\_\-change\-\_\-count}!lkc.h@{lkc.\-h}}
+\subsubsection[{sym\-\_\-add\-\_\-change\-\_\-count}]{\setlength{\rightskip}{0pt plus 5cm}void sym\-\_\-add\-\_\-change\-\_\-count (
+\begin{DoxyParamCaption}
+\item[{int}]{count}
+\end{DoxyParamCaption}
+)}}\label{lkc_8h_a6711fa928bfc671d8f3d0c21a4327e5d}
+\hypertarget{lkc_8h_a5ba9e4d5244760b36a497521c899f399}{\index{lkc.\-h@{lkc.\-h}!sym\-\_\-check\-\_\-deps@{sym\-\_\-check\-\_\-deps}}
+\index{sym\-\_\-check\-\_\-deps@{sym\-\_\-check\-\_\-deps}!lkc.h@{lkc.\-h}}
+\subsubsection[{sym\-\_\-check\-\_\-deps}]{\setlength{\rightskip}{0pt plus 5cm}struct {\bf symbol}$\ast$ sym\-\_\-check\-\_\-deps (
+\begin{DoxyParamCaption}
+\item[{struct {\bf symbol} $\ast$}]{sym}
+\end{DoxyParamCaption}
+)}}\label{lkc_8h_a5ba9e4d5244760b36a497521c899f399}
+\hypertarget{lkc_8h_a78b4b2fdb95c888bc68ae5c43223b7cd}{\index{lkc.\-h@{lkc.\-h}!sym\-\_\-choice\-\_\-default@{sym\-\_\-choice\-\_\-default}}
+\index{sym\-\_\-choice\-\_\-default@{sym\-\_\-choice\-\_\-default}!lkc.h@{lkc.\-h}}
+\subsubsection[{sym\-\_\-choice\-\_\-default}]{\setlength{\rightskip}{0pt plus 5cm}struct {\bf symbol}$\ast$ sym\-\_\-choice\-\_\-default (
+\begin{DoxyParamCaption}
+\item[{struct {\bf symbol} $\ast$}]{sym}
+\end{DoxyParamCaption}
+)}}\label{lkc_8h_a78b4b2fdb95c888bc68ae5c43223b7cd}
+\hypertarget{lkc_8h_a378c7ba3a47366514b200fa05846e4f9}{\index{lkc.\-h@{lkc.\-h}!sym\-\_\-clear\-\_\-all\-\_\-valid@{sym\-\_\-clear\-\_\-all\-\_\-valid}}
+\index{sym\-\_\-clear\-\_\-all\-\_\-valid@{sym\-\_\-clear\-\_\-all\-\_\-valid}!lkc.h@{lkc.\-h}}
+\subsubsection[{sym\-\_\-clear\-\_\-all\-\_\-valid}]{\setlength{\rightskip}{0pt plus 5cm}void sym\-\_\-clear\-\_\-all\-\_\-valid (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{lkc_8h_a378c7ba3a47366514b200fa05846e4f9}
+\hypertarget{lkc_8h_aa3ea11d8b0e8717567acf4b68fe56ed5}{\index{lkc.\-h@{lkc.\-h}!sym\-\_\-get\-\_\-env\-\_\-prop@{sym\-\_\-get\-\_\-env\-\_\-prop}}
+\index{sym\-\_\-get\-\_\-env\-\_\-prop@{sym\-\_\-get\-\_\-env\-\_\-prop}!lkc.h@{lkc.\-h}}
+\subsubsection[{sym\-\_\-get\-\_\-env\-\_\-prop}]{\setlength{\rightskip}{0pt plus 5cm}struct {\bf property}$\ast$ sym\-\_\-get\-\_\-env\-\_\-prop (
+\begin{DoxyParamCaption}
+\item[{struct {\bf symbol} $\ast$}]{sym}
+\end{DoxyParamCaption}
+)}}\label{lkc_8h_aa3ea11d8b0e8717567acf4b68fe56ed5}
+\hypertarget{lkc_8h_a905025408d3aa067667921a76f022139}{\index{lkc.\-h@{lkc.\-h}!sym\-\_\-get\-\_\-string\-\_\-default@{sym\-\_\-get\-\_\-string\-\_\-default}}
+\index{sym\-\_\-get\-\_\-string\-\_\-default@{sym\-\_\-get\-\_\-string\-\_\-default}!lkc.h@{lkc.\-h}}
+\subsubsection[{sym\-\_\-get\-\_\-string\-\_\-default}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ sym\-\_\-get\-\_\-string\-\_\-default (
+\begin{DoxyParamCaption}
+\item[{struct {\bf symbol} $\ast$}]{sym}
+\end{DoxyParamCaption}
+)}}\label{lkc_8h_a905025408d3aa067667921a76f022139}
+\hypertarget{lkc_8h_a19ed882657f55b77c930a586c86265a9}{\index{lkc.\-h@{lkc.\-h}!sym\-\_\-init@{sym\-\_\-init}}
+\index{sym\-\_\-init@{sym\-\_\-init}!lkc.h@{lkc.\-h}}
+\subsubsection[{sym\-\_\-init}]{\setlength{\rightskip}{0pt plus 5cm}void sym\-\_\-init (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{lkc_8h_a19ed882657f55b77c930a586c86265a9}
+\hypertarget{lkc_8h_a6d0acd56d626e96a0577e606d4f78374}{\index{lkc.\-h@{lkc.\-h}!sym\-\_\-set\-\_\-all\-\_\-changed@{sym\-\_\-set\-\_\-all\-\_\-changed}}
+\index{sym\-\_\-set\-\_\-all\-\_\-changed@{sym\-\_\-set\-\_\-all\-\_\-changed}!lkc.h@{lkc.\-h}}
+\subsubsection[{sym\-\_\-set\-\_\-all\-\_\-changed}]{\setlength{\rightskip}{0pt plus 5cm}void sym\-\_\-set\-\_\-all\-\_\-changed (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{lkc_8h_a6d0acd56d626e96a0577e606d4f78374}
+\hypertarget{lkc_8h_ab641973ed809a8a4ba5018543bcc3021}{\index{lkc.\-h@{lkc.\-h}!sym\-\_\-set\-\_\-change\-\_\-count@{sym\-\_\-set\-\_\-change\-\_\-count}}
+\index{sym\-\_\-set\-\_\-change\-\_\-count@{sym\-\_\-set\-\_\-change\-\_\-count}!lkc.h@{lkc.\-h}}
+\subsubsection[{sym\-\_\-set\-\_\-change\-\_\-count}]{\setlength{\rightskip}{0pt plus 5cm}void sym\-\_\-set\-\_\-change\-\_\-count (
+\begin{DoxyParamCaption}
+\item[{int}]{count}
+\end{DoxyParamCaption}
+)}}\label{lkc_8h_ab641973ed809a8a4ba5018543bcc3021}
+\hypertarget{lkc_8h_a610c2965c582d2c97f45d1502e8a58f4}{\index{lkc.\-h@{lkc.\-h}!sym\-\_\-set\-\_\-changed@{sym\-\_\-set\-\_\-changed}}
+\index{sym\-\_\-set\-\_\-changed@{sym\-\_\-set\-\_\-changed}!lkc.h@{lkc.\-h}}
+\subsubsection[{sym\-\_\-set\-\_\-changed}]{\setlength{\rightskip}{0pt plus 5cm}void sym\-\_\-set\-\_\-changed (
+\begin{DoxyParamCaption}
+\item[{struct {\bf symbol} $\ast$}]{sym}
+\end{DoxyParamCaption}
+)}}\label{lkc_8h_a610c2965c582d2c97f45d1502e8a58f4}
+\hypertarget{lkc_8h_a4093904abf5c79bea332d5fbf7f43b19}{\index{lkc.\-h@{lkc.\-h}!zconf\-\_\-curname@{zconf\-\_\-curname}}
+\index{zconf\-\_\-curname@{zconf\-\_\-curname}!lkc.h@{lkc.\-h}}
+\subsubsection[{zconf\-\_\-curname}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ zconf\-\_\-curname (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{lkc_8h_a4093904abf5c79bea332d5fbf7f43b19}
+\hypertarget{lkc_8h_af67f5971b3091780349654dd1bfaaca0}{\index{lkc.\-h@{lkc.\-h}!zconf\-\_\-fopen@{zconf\-\_\-fopen}}
+\index{zconf\-\_\-fopen@{zconf\-\_\-fopen}!lkc.h@{lkc.\-h}}
+\subsubsection[{zconf\-\_\-fopen}]{\setlength{\rightskip}{0pt plus 5cm}F\-I\-L\-E$\ast$ zconf\-\_\-fopen (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{name}
+\end{DoxyParamCaption}
+)}}\label{lkc_8h_af67f5971b3091780349654dd1bfaaca0}
+\hypertarget{lkc_8h_aebe9e072a2f47918a058f0afad35a805}{\index{lkc.\-h@{lkc.\-h}!zconf\-\_\-initscan@{zconf\-\_\-initscan}}
+\index{zconf\-\_\-initscan@{zconf\-\_\-initscan}!lkc.h@{lkc.\-h}}
+\subsubsection[{zconf\-\_\-initscan}]{\setlength{\rightskip}{0pt plus 5cm}void zconf\-\_\-initscan (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{name}
+\end{DoxyParamCaption}
+)}}\label{lkc_8h_aebe9e072a2f47918a058f0afad35a805}
+\hypertarget{lkc_8h_a292b6eed8598186692a8a5096cf1cabc}{\index{lkc.\-h@{lkc.\-h}!zconf\-\_\-lineno@{zconf\-\_\-lineno}}
+\index{zconf\-\_\-lineno@{zconf\-\_\-lineno}!lkc.h@{lkc.\-h}}
+\subsubsection[{zconf\-\_\-lineno}]{\setlength{\rightskip}{0pt plus 5cm}int zconf\-\_\-lineno (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{lkc_8h_a292b6eed8598186692a8a5096cf1cabc}
+\hypertarget{lkc_8h_a0bee3b65f4b371a9ee6f1c95d8f3257c}{\index{lkc.\-h@{lkc.\-h}!zconf\-\_\-nextfile@{zconf\-\_\-nextfile}}
+\index{zconf\-\_\-nextfile@{zconf\-\_\-nextfile}!lkc.h@{lkc.\-h}}
+\subsubsection[{zconf\-\_\-nextfile}]{\setlength{\rightskip}{0pt plus 5cm}void zconf\-\_\-nextfile (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{name}
+\end{DoxyParamCaption}
+)}}\label{lkc_8h_a0bee3b65f4b371a9ee6f1c95d8f3257c}
+\hypertarget{lkc_8h_a21273ce5c169716660aa02e48976c42a}{\index{lkc.\-h@{lkc.\-h}!zconf\-\_\-starthelp@{zconf\-\_\-starthelp}}
+\index{zconf\-\_\-starthelp@{zconf\-\_\-starthelp}!lkc.h@{lkc.\-h}}
+\subsubsection[{zconf\-\_\-starthelp}]{\setlength{\rightskip}{0pt plus 5cm}void zconf\-\_\-starthelp (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{lkc_8h_a21273ce5c169716660aa02e48976c42a}
+\hypertarget{lkc_8h_a042f4e8ad522ead566ce7f82c7c5e2b0}{\index{lkc.\-h@{lkc.\-h}!zconfdump@{zconfdump}}
+\index{zconfdump@{zconfdump}!lkc.h@{lkc.\-h}}
+\subsubsection[{zconfdump}]{\setlength{\rightskip}{0pt plus 5cm}void zconfdump (
+\begin{DoxyParamCaption}
+\item[{F\-I\-L\-E $\ast$}]{out}
+\end{DoxyParamCaption}
+)}}\label{lkc_8h_a042f4e8ad522ead566ce7f82c7c5e2b0}
+\hypertarget{lkc_8h_a60fe31d484f483e8fa8549738555b5d6}{\index{lkc.\-h@{lkc.\-h}!zconfparse@{zconfparse}}
+\index{zconfparse@{zconfparse}!lkc.h@{lkc.\-h}}
+\subsubsection[{zconfparse}]{\setlength{\rightskip}{0pt plus 5cm}int zconfparse (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{lkc_8h_a60fe31d484f483e8fa8549738555b5d6}
+
+
+\subsection{Variable Documentation}
+\hypertarget{lkc_8h_ad0096dbd4845e8008f6bfb86f5675801}{\index{lkc.\-h@{lkc.\-h}!sym\-\_\-env\-\_\-list@{sym\-\_\-env\-\_\-list}}
+\index{sym\-\_\-env\-\_\-list@{sym\-\_\-env\-\_\-list}!lkc.h@{lkc.\-h}}
+\subsubsection[{sym\-\_\-env\-\_\-list}]{\setlength{\rightskip}{0pt plus 5cm}struct {\bf expr}$\ast$ sym\-\_\-env\-\_\-list}}\label{lkc_8h_ad0096dbd4845e8008f6bfb86f5675801}
+\hypertarget{lkc_8h_a199db6ed153767209a09d465be8ed979}{\index{lkc.\-h@{lkc.\-h}!zconfdebug@{zconfdebug}}
+\index{zconfdebug@{zconfdebug}!lkc.h@{lkc.\-h}}
+\subsubsection[{zconfdebug}]{\setlength{\rightskip}{0pt plus 5cm}int zconfdebug}}\label{lkc_8h_a199db6ed153767209a09d465be8ed979}

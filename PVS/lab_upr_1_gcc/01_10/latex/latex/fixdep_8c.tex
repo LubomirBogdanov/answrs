@@ -1,0 +1,87 @@
+\hypertarget{fixdep_8c}{\section{menuconfig/basic/fixdep.c File Reference}
+\label{fixdep_8c}\index{menuconfig/basic/fixdep.\-c@{menuconfig/basic/fixdep.\-c}}
+}
+{\ttfamily \#include $<$sys/types.\-h$>$}\\*
+{\ttfamily \#include $<$sys/stat.\-h$>$}\\*
+{\ttfamily \#include $<$sys/mman.\-h$>$}\\*
+{\ttfamily \#include $<$unistd.\-h$>$}\\*
+{\ttfamily \#include $<$fcntl.\-h$>$}\\*
+{\ttfamily \#include $<$string.\-h$>$}\\*
+{\ttfamily \#include $<$stdlib.\-h$>$}\\*
+{\ttfamily \#include $<$stdio.\-h$>$}\\*
+{\ttfamily \#include $<$limits.\-h$>$}\\*
+{\ttfamily \#include $<$ctype.\-h$>$}\\*
+{\ttfamily \#include $<$arpa/inet.\-h$>$}\\*
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structitem}{item}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{fixdep_8c_a6bed1b450fcfc36fe686e71fa4a4ac76}{I\-N\-T\-\_\-\-C\-O\-N\-F}~ntohl(0x434f4e46)
+\item 
+\#define \hyperlink{fixdep_8c_ab7bcdad8dd7f7242fd1a665f5cbaa0fa}{I\-N\-T\-\_\-\-O\-N\-F\-I}~ntohl(0x4f4e4649)
+\item 
+\#define \hyperlink{fixdep_8c_a02d8c5d36150d33b911b0b766a46c359}{I\-N\-T\-\_\-\-N\-F\-I\-G}~ntohl(0x4e464947)
+\item 
+\#define \hyperlink{fixdep_8c_a311d41064f165665d933abac1006b4eb}{I\-N\-T\-\_\-\-F\-I\-G\-\_\-}~ntohl(0x4649475f)
+\item 
+\#define \hyperlink{fixdep_8c_a8d66ea3b1c58ce7a611d04d888af8921}{H\-A\-S\-H\-S\-Z}~256
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{fixdep_8c_a0ddf1224851353fc92bfbff6f499fa97}{main} (int argc, char $\ast$argv\mbox{[}$\,$\mbox{]})
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+char $\ast$ \hyperlink{fixdep_8c_a23b26cdb3a71f525caf03b57f68d47fa}{target}
+\item 
+char $\ast$ \hyperlink{fixdep_8c_a2cfeb83168b3fc26d2b205e60f3a06a1}{depfile}
+\item 
+char $\ast$ \hyperlink{fixdep_8c_a07d4d69e3b8a6390fe4e833851386b5b}{cmdline}
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{fixdep_8c_a8d66ea3b1c58ce7a611d04d888af8921}{\index{fixdep.\-c@{fixdep.\-c}!H\-A\-S\-H\-S\-Z@{H\-A\-S\-H\-S\-Z}}
+\index{H\-A\-S\-H\-S\-Z@{H\-A\-S\-H\-S\-Z}!fixdep.c@{fixdep.\-c}}
+\subsubsection[{H\-A\-S\-H\-S\-Z}]{\setlength{\rightskip}{0pt plus 5cm}\#define H\-A\-S\-H\-S\-Z~256}}\label{fixdep_8c_a8d66ea3b1c58ce7a611d04d888af8921}
+\hypertarget{fixdep_8c_a6bed1b450fcfc36fe686e71fa4a4ac76}{\index{fixdep.\-c@{fixdep.\-c}!I\-N\-T\-\_\-\-C\-O\-N\-F@{I\-N\-T\-\_\-\-C\-O\-N\-F}}
+\index{I\-N\-T\-\_\-\-C\-O\-N\-F@{I\-N\-T\-\_\-\-C\-O\-N\-F}!fixdep.c@{fixdep.\-c}}
+\subsubsection[{I\-N\-T\-\_\-\-C\-O\-N\-F}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\-N\-T\-\_\-\-C\-O\-N\-F~ntohl(0x434f4e46)}}\label{fixdep_8c_a6bed1b450fcfc36fe686e71fa4a4ac76}
+\hypertarget{fixdep_8c_a311d41064f165665d933abac1006b4eb}{\index{fixdep.\-c@{fixdep.\-c}!I\-N\-T\-\_\-\-F\-I\-G\-\_\-@{I\-N\-T\-\_\-\-F\-I\-G\-\_\-}}
+\index{I\-N\-T\-\_\-\-F\-I\-G\-\_\-@{I\-N\-T\-\_\-\-F\-I\-G\-\_\-}!fixdep.c@{fixdep.\-c}}
+\subsubsection[{I\-N\-T\-\_\-\-F\-I\-G\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\-N\-T\-\_\-\-F\-I\-G\-\_\-~ntohl(0x4649475f)}}\label{fixdep_8c_a311d41064f165665d933abac1006b4eb}
+\hypertarget{fixdep_8c_a02d8c5d36150d33b911b0b766a46c359}{\index{fixdep.\-c@{fixdep.\-c}!I\-N\-T\-\_\-\-N\-F\-I\-G@{I\-N\-T\-\_\-\-N\-F\-I\-G}}
+\index{I\-N\-T\-\_\-\-N\-F\-I\-G@{I\-N\-T\-\_\-\-N\-F\-I\-G}!fixdep.c@{fixdep.\-c}}
+\subsubsection[{I\-N\-T\-\_\-\-N\-F\-I\-G}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\-N\-T\-\_\-\-N\-F\-I\-G~ntohl(0x4e464947)}}\label{fixdep_8c_a02d8c5d36150d33b911b0b766a46c359}
+\hypertarget{fixdep_8c_ab7bcdad8dd7f7242fd1a665f5cbaa0fa}{\index{fixdep.\-c@{fixdep.\-c}!I\-N\-T\-\_\-\-O\-N\-F\-I@{I\-N\-T\-\_\-\-O\-N\-F\-I}}
+\index{I\-N\-T\-\_\-\-O\-N\-F\-I@{I\-N\-T\-\_\-\-O\-N\-F\-I}!fixdep.c@{fixdep.\-c}}
+\subsubsection[{I\-N\-T\-\_\-\-O\-N\-F\-I}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\-N\-T\-\_\-\-O\-N\-F\-I~ntohl(0x4f4e4649)}}\label{fixdep_8c_ab7bcdad8dd7f7242fd1a665f5cbaa0fa}
+
+
+\subsection{Function Documentation}
+\hypertarget{fixdep_8c_a0ddf1224851353fc92bfbff6f499fa97}{\index{fixdep.\-c@{fixdep.\-c}!main@{main}}
+\index{main@{main}!fixdep.c@{fixdep.\-c}}
+\subsubsection[{main}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+\item[{int}]{argc, }
+\item[{char $\ast$}]{argv\mbox{[}$\,$\mbox{]}}
+\end{DoxyParamCaption}
+)}}\label{fixdep_8c_a0ddf1224851353fc92bfbff6f499fa97}
+
+
+\subsection{Variable Documentation}
+\hypertarget{fixdep_8c_a07d4d69e3b8a6390fe4e833851386b5b}{\index{fixdep.\-c@{fixdep.\-c}!cmdline@{cmdline}}
+\index{cmdline@{cmdline}!fixdep.c@{fixdep.\-c}}
+\subsubsection[{cmdline}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ cmdline}}\label{fixdep_8c_a07d4d69e3b8a6390fe4e833851386b5b}
+\hypertarget{fixdep_8c_a2cfeb83168b3fc26d2b205e60f3a06a1}{\index{fixdep.\-c@{fixdep.\-c}!depfile@{depfile}}
+\index{depfile@{depfile}!fixdep.c@{fixdep.\-c}}
+\subsubsection[{depfile}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ depfile}}\label{fixdep_8c_a2cfeb83168b3fc26d2b205e60f3a06a1}
+\hypertarget{fixdep_8c_a23b26cdb3a71f525caf03b57f68d47fa}{\index{fixdep.\-c@{fixdep.\-c}!target@{target}}
+\index{target@{target}!fixdep.c@{fixdep.\-c}}
+\subsubsection[{target}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ target}}\label{fixdep_8c_a23b26cdb3a71f525caf03b57f68d47fa}

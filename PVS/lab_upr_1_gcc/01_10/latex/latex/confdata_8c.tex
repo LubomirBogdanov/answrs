@@ -1,0 +1,169 @@
+\hypertarget{confdata_8c}{\section{menuconfig/confdata.c File Reference}
+\label{confdata_8c}\index{menuconfig/confdata.\-c@{menuconfig/confdata.\-c}}
+}
+{\ttfamily \#include $<$sys/stat.\-h$>$}\\*
+{\ttfamily \#include $<$ctype.\-h$>$}\\*
+{\ttfamily \#include $<$errno.\-h$>$}\\*
+{\ttfamily \#include $<$fcntl.\-h$>$}\\*
+{\ttfamily \#include $<$stdarg.\-h$>$}\\*
+{\ttfamily \#include $<$stdio.\-h$>$}\\*
+{\ttfamily \#include $<$stdlib.\-h$>$}\\*
+{\ttfamily \#include $<$string.\-h$>$}\\*
+{\ttfamily \#include $<$time.\-h$>$}\\*
+{\ttfamily \#include $<$unistd.\-h$>$}\\*
+{\ttfamily \#include \char`\"{}lkc.\-h\char`\"{}}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{confdata_8c_a7dffd63a8edde4c29217bc5190f9f35e}{L\-I\-N\-E\-\_\-\-G\-R\-O\-W\-T\-H}~16
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{confdata_8c_a58d1fa4a1a906fd473560b5758f3a255}{conf\-\_\-set\-\_\-message\-\_\-callback} (void($\ast$fn)(const char $\ast$fmt, va\-\_\-list ap))
+\item 
+const char $\ast$ \hyperlink{confdata_8c_a80476706c539221087b0cfa35c2a5629}{conf\-\_\-get\-\_\-configname} (void)
+\item 
+const char $\ast$ \hyperlink{confdata_8c_a9d2772842b9fe42a04b80a72d529b591}{conf\-\_\-get\-\_\-autoconfig\-\_\-name} (void)
+\item 
+char $\ast$ \hyperlink{confdata_8c_a05e8525f0373cc3454cc34434090fb6c}{conf\-\_\-get\-\_\-default\-\_\-confname} (void)
+\item 
+int \hyperlink{confdata_8c_ac944ea542db7963971fb4dfe14675d5d}{conf\-\_\-read\-\_\-simple} (const char $\ast$name, int def)
+\item 
+int \hyperlink{confdata_8c_a96a44c7595f00139e413194349651012}{conf\-\_\-read} (const char $\ast$name)
+\item 
+int \hyperlink{confdata_8c_a6c71f8842d7c18b75d151f0e36254e05}{conf\-\_\-write\-\_\-defconfig} (const char $\ast$filename)
+\item 
+int \hyperlink{confdata_8c_a616f708f46d54ac8c74461474194914d}{conf\-\_\-write} (const char $\ast$name)
+\item 
+int \hyperlink{confdata_8c_a6de9989ca9192699e407122350ecd5df}{conf\-\_\-write\-\_\-autoconf} (const char $\ast$filename)
+\item 
+void \hyperlink{confdata_8c_ab641973ed809a8a4ba5018543bcc3021}{sym\-\_\-set\-\_\-change\-\_\-count} (int count)
+\item 
+void \hyperlink{confdata_8c_a6711fa928bfc671d8f3d0c21a4327e5d}{sym\-\_\-add\-\_\-change\-\_\-count} (int count)
+\item 
+bool \hyperlink{confdata_8c_a53d998ec5d83ac479e15bdc0c1442a5f}{conf\-\_\-get\-\_\-changed} (void)
+\item 
+void \hyperlink{confdata_8c_a3ed1d6895cc20faf351215d34c6be976}{conf\-\_\-set\-\_\-changed\-\_\-callback} (void($\ast$fn)(void))
+\item 
+void \hyperlink{confdata_8c_a29515f1a0d8c6a73b5de132285587577}{conf\-\_\-set\-\_\-all\-\_\-new\-\_\-symbols} (enum \hyperlink{lkc_8h_a48a34c0ae0c0b2681751708f4ba9da30}{conf\-\_\-def\-\_\-mode} mode)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const char \hyperlink{confdata_8c_adb1df3557cb6dea282ce3205c9fe0e68}{conf\-\_\-defname} \mbox{[}$\,$\mbox{]} = \char`\"{}arch/\$A\-R\-C\-H/\hyperlink{conf_8c_a5600cf05dbf4fb71225a1d2e8233e356a9fd036481671ec34b279cf6706d69f91}{defconfig}\char`\"{}
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{confdata_8c_a7dffd63a8edde4c29217bc5190f9f35e}{\index{confdata.\-c@{confdata.\-c}!L\-I\-N\-E\-\_\-\-G\-R\-O\-W\-T\-H@{L\-I\-N\-E\-\_\-\-G\-R\-O\-W\-T\-H}}
+\index{L\-I\-N\-E\-\_\-\-G\-R\-O\-W\-T\-H@{L\-I\-N\-E\-\_\-\-G\-R\-O\-W\-T\-H}!confdata.c@{confdata.\-c}}
+\subsubsection[{L\-I\-N\-E\-\_\-\-G\-R\-O\-W\-T\-H}]{\setlength{\rightskip}{0pt plus 5cm}\#define L\-I\-N\-E\-\_\-\-G\-R\-O\-W\-T\-H~16}}\label{confdata_8c_a7dffd63a8edde4c29217bc5190f9f35e}
+
+
+\subsection{Function Documentation}
+\hypertarget{confdata_8c_a9d2772842b9fe42a04b80a72d529b591}{\index{confdata.\-c@{confdata.\-c}!conf\-\_\-get\-\_\-autoconfig\-\_\-name@{conf\-\_\-get\-\_\-autoconfig\-\_\-name}}
+\index{conf\-\_\-get\-\_\-autoconfig\-\_\-name@{conf\-\_\-get\-\_\-autoconfig\-\_\-name}!confdata.c@{confdata.\-c}}
+\subsubsection[{conf\-\_\-get\-\_\-autoconfig\-\_\-name}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ conf\-\_\-get\-\_\-autoconfig\-\_\-name (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{confdata_8c_a9d2772842b9fe42a04b80a72d529b591}
+\hypertarget{confdata_8c_a53d998ec5d83ac479e15bdc0c1442a5f}{\index{confdata.\-c@{confdata.\-c}!conf\-\_\-get\-\_\-changed@{conf\-\_\-get\-\_\-changed}}
+\index{conf\-\_\-get\-\_\-changed@{conf\-\_\-get\-\_\-changed}!confdata.c@{confdata.\-c}}
+\subsubsection[{conf\-\_\-get\-\_\-changed}]{\setlength{\rightskip}{0pt plus 5cm}bool conf\-\_\-get\-\_\-changed (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{confdata_8c_a53d998ec5d83ac479e15bdc0c1442a5f}
+\hypertarget{confdata_8c_a80476706c539221087b0cfa35c2a5629}{\index{confdata.\-c@{confdata.\-c}!conf\-\_\-get\-\_\-configname@{conf\-\_\-get\-\_\-configname}}
+\index{conf\-\_\-get\-\_\-configname@{conf\-\_\-get\-\_\-configname}!confdata.c@{confdata.\-c}}
+\subsubsection[{conf\-\_\-get\-\_\-configname}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ conf\-\_\-get\-\_\-configname (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{confdata_8c_a80476706c539221087b0cfa35c2a5629}
+\hypertarget{confdata_8c_a05e8525f0373cc3454cc34434090fb6c}{\index{confdata.\-c@{confdata.\-c}!conf\-\_\-get\-\_\-default\-\_\-confname@{conf\-\_\-get\-\_\-default\-\_\-confname}}
+\index{conf\-\_\-get\-\_\-default\-\_\-confname@{conf\-\_\-get\-\_\-default\-\_\-confname}!confdata.c@{confdata.\-c}}
+\subsubsection[{conf\-\_\-get\-\_\-default\-\_\-confname}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ conf\-\_\-get\-\_\-default\-\_\-confname (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{confdata_8c_a05e8525f0373cc3454cc34434090fb6c}
+\hypertarget{confdata_8c_a96a44c7595f00139e413194349651012}{\index{confdata.\-c@{confdata.\-c}!conf\-\_\-read@{conf\-\_\-read}}
+\index{conf\-\_\-read@{conf\-\_\-read}!confdata.c@{confdata.\-c}}
+\subsubsection[{conf\-\_\-read}]{\setlength{\rightskip}{0pt plus 5cm}int conf\-\_\-read (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{name}
+\end{DoxyParamCaption}
+)}}\label{confdata_8c_a96a44c7595f00139e413194349651012}
+\hypertarget{confdata_8c_ac944ea542db7963971fb4dfe14675d5d}{\index{confdata.\-c@{confdata.\-c}!conf\-\_\-read\-\_\-simple@{conf\-\_\-read\-\_\-simple}}
+\index{conf\-\_\-read\-\_\-simple@{conf\-\_\-read\-\_\-simple}!confdata.c@{confdata.\-c}}
+\subsubsection[{conf\-\_\-read\-\_\-simple}]{\setlength{\rightskip}{0pt plus 5cm}int conf\-\_\-read\-\_\-simple (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{name, }
+\item[{int}]{def}
+\end{DoxyParamCaption}
+)}}\label{confdata_8c_ac944ea542db7963971fb4dfe14675d5d}
+\hypertarget{confdata_8c_a29515f1a0d8c6a73b5de132285587577}{\index{confdata.\-c@{confdata.\-c}!conf\-\_\-set\-\_\-all\-\_\-new\-\_\-symbols@{conf\-\_\-set\-\_\-all\-\_\-new\-\_\-symbols}}
+\index{conf\-\_\-set\-\_\-all\-\_\-new\-\_\-symbols@{conf\-\_\-set\-\_\-all\-\_\-new\-\_\-symbols}!confdata.c@{confdata.\-c}}
+\subsubsection[{conf\-\_\-set\-\_\-all\-\_\-new\-\_\-symbols}]{\setlength{\rightskip}{0pt plus 5cm}void conf\-\_\-set\-\_\-all\-\_\-new\-\_\-symbols (
+\begin{DoxyParamCaption}
+\item[{enum {\bf conf\-\_\-def\-\_\-mode}}]{mode}
+\end{DoxyParamCaption}
+)}}\label{confdata_8c_a29515f1a0d8c6a73b5de132285587577}
+\hypertarget{confdata_8c_a3ed1d6895cc20faf351215d34c6be976}{\index{confdata.\-c@{confdata.\-c}!conf\-\_\-set\-\_\-changed\-\_\-callback@{conf\-\_\-set\-\_\-changed\-\_\-callback}}
+\index{conf\-\_\-set\-\_\-changed\-\_\-callback@{conf\-\_\-set\-\_\-changed\-\_\-callback}!confdata.c@{confdata.\-c}}
+\subsubsection[{conf\-\_\-set\-\_\-changed\-\_\-callback}]{\setlength{\rightskip}{0pt plus 5cm}void conf\-\_\-set\-\_\-changed\-\_\-callback (
+\begin{DoxyParamCaption}
+\item[{void($\ast$)(void)}]{fn}
+\end{DoxyParamCaption}
+)}}\label{confdata_8c_a3ed1d6895cc20faf351215d34c6be976}
+\hypertarget{confdata_8c_a58d1fa4a1a906fd473560b5758f3a255}{\index{confdata.\-c@{confdata.\-c}!conf\-\_\-set\-\_\-message\-\_\-callback@{conf\-\_\-set\-\_\-message\-\_\-callback}}
+\index{conf\-\_\-set\-\_\-message\-\_\-callback@{conf\-\_\-set\-\_\-message\-\_\-callback}!confdata.c@{confdata.\-c}}
+\subsubsection[{conf\-\_\-set\-\_\-message\-\_\-callback}]{\setlength{\rightskip}{0pt plus 5cm}void conf\-\_\-set\-\_\-message\-\_\-callback (
+\begin{DoxyParamCaption}
+\item[{void($\ast$)(const char $\ast$fmt, va\-\_\-list ap)}]{fn}
+\end{DoxyParamCaption}
+)}}\label{confdata_8c_a58d1fa4a1a906fd473560b5758f3a255}
+\hypertarget{confdata_8c_a616f708f46d54ac8c74461474194914d}{\index{confdata.\-c@{confdata.\-c}!conf\-\_\-write@{conf\-\_\-write}}
+\index{conf\-\_\-write@{conf\-\_\-write}!confdata.c@{confdata.\-c}}
+\subsubsection[{conf\-\_\-write}]{\setlength{\rightskip}{0pt plus 5cm}int conf\-\_\-write (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{name}
+\end{DoxyParamCaption}
+)}}\label{confdata_8c_a616f708f46d54ac8c74461474194914d}
+\hypertarget{confdata_8c_a6de9989ca9192699e407122350ecd5df}{\index{confdata.\-c@{confdata.\-c}!conf\-\_\-write\-\_\-autoconf@{conf\-\_\-write\-\_\-autoconf}}
+\index{conf\-\_\-write\-\_\-autoconf@{conf\-\_\-write\-\_\-autoconf}!confdata.c@{confdata.\-c}}
+\subsubsection[{conf\-\_\-write\-\_\-autoconf}]{\setlength{\rightskip}{0pt plus 5cm}int conf\-\_\-write\-\_\-autoconf (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{filename}
+\end{DoxyParamCaption}
+)}}\label{confdata_8c_a6de9989ca9192699e407122350ecd5df}
+\hypertarget{confdata_8c_a6c71f8842d7c18b75d151f0e36254e05}{\index{confdata.\-c@{confdata.\-c}!conf\-\_\-write\-\_\-defconfig@{conf\-\_\-write\-\_\-defconfig}}
+\index{conf\-\_\-write\-\_\-defconfig@{conf\-\_\-write\-\_\-defconfig}!confdata.c@{confdata.\-c}}
+\subsubsection[{conf\-\_\-write\-\_\-defconfig}]{\setlength{\rightskip}{0pt plus 5cm}int conf\-\_\-write\-\_\-defconfig (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{filename}
+\end{DoxyParamCaption}
+)}}\label{confdata_8c_a6c71f8842d7c18b75d151f0e36254e05}
+\hypertarget{confdata_8c_a6711fa928bfc671d8f3d0c21a4327e5d}{\index{confdata.\-c@{confdata.\-c}!sym\-\_\-add\-\_\-change\-\_\-count@{sym\-\_\-add\-\_\-change\-\_\-count}}
+\index{sym\-\_\-add\-\_\-change\-\_\-count@{sym\-\_\-add\-\_\-change\-\_\-count}!confdata.c@{confdata.\-c}}
+\subsubsection[{sym\-\_\-add\-\_\-change\-\_\-count}]{\setlength{\rightskip}{0pt plus 5cm}void sym\-\_\-add\-\_\-change\-\_\-count (
+\begin{DoxyParamCaption}
+\item[{int}]{count}
+\end{DoxyParamCaption}
+)}}\label{confdata_8c_a6711fa928bfc671d8f3d0c21a4327e5d}
+\hypertarget{confdata_8c_ab641973ed809a8a4ba5018543bcc3021}{\index{confdata.\-c@{confdata.\-c}!sym\-\_\-set\-\_\-change\-\_\-count@{sym\-\_\-set\-\_\-change\-\_\-count}}
+\index{sym\-\_\-set\-\_\-change\-\_\-count@{sym\-\_\-set\-\_\-change\-\_\-count}!confdata.c@{confdata.\-c}}
+\subsubsection[{sym\-\_\-set\-\_\-change\-\_\-count}]{\setlength{\rightskip}{0pt plus 5cm}void sym\-\_\-set\-\_\-change\-\_\-count (
+\begin{DoxyParamCaption}
+\item[{int}]{count}
+\end{DoxyParamCaption}
+)}}\label{confdata_8c_ab641973ed809a8a4ba5018543bcc3021}
+
+
+\subsection{Variable Documentation}
+\hypertarget{confdata_8c_adb1df3557cb6dea282ce3205c9fe0e68}{\index{confdata.\-c@{confdata.\-c}!conf\-\_\-defname@{conf\-\_\-defname}}
+\index{conf\-\_\-defname@{conf\-\_\-defname}!confdata.c@{confdata.\-c}}
+\subsubsection[{conf\-\_\-defname}]{\setlength{\rightskip}{0pt plus 5cm}const char conf\-\_\-defname\mbox{[}$\,$\mbox{]} = \char`\"{}arch/\$A\-R\-C\-H/{\bf defconfig}\char`\"{}}}\label{confdata_8c_adb1df3557cb6dea282ce3205c9fe0e68}

@@ -1,0 +1,46 @@
+\hypertarget{menubox_8c}{\section{menuconfig/lxdialog/menubox.c File Reference}
+\label{menubox_8c}\index{menuconfig/lxdialog/menubox.\-c@{menuconfig/lxdialog/menubox.\-c}}
+}
+{\ttfamily \#include \char`\"{}dialog.\-h\char`\"{}}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{menubox_8c_a438e61b8cc12d3dc2b4644bf1f98ee77}{print\-\_\-item}(index, choice, selected)
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{menubox_8c_a7f77ead942788fe7853ced4f2444c243}{dialog\-\_\-menu} (const char $\ast$title, const char $\ast$prompt, const void $\ast$selected, int $\ast$s\-\_\-scroll)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{menubox_8c_a438e61b8cc12d3dc2b4644bf1f98ee77}{\index{menubox.\-c@{menubox.\-c}!print\-\_\-item@{print\-\_\-item}}
+\index{print\-\_\-item@{print\-\_\-item}!menubox.c@{menubox.\-c}}
+\subsubsection[{print\-\_\-item}]{\setlength{\rightskip}{0pt plus 5cm}\#define print\-\_\-item(
+\begin{DoxyParamCaption}
+\item[{}]{index, }
+\item[{}]{choice, }
+\item[{}]{selected}
+\end{DoxyParamCaption}
+)}}\label{menubox_8c_a438e61b8cc12d3dc2b4644bf1f98ee77}
+{\bfseries Value\-:}
+\begin{DoxyCode}
+\textcolor{keywordflow}{do} \{                                    \hyperlink{dialog_8h_acb31d79c8af86b1a11b47abe371a9980}{\(\backslash\)}
+\hyperlink{dialog_8h_acb31d79c8af86b1a11b47abe371a9980}{    item\_set}(index);                       \(\backslash\)
+    do\_print\_item(\hyperlink{structmenu}{menu}, \hyperlink{dialog_8h_a17bb5a0c75397504acc8b73fa02cf8c2}{item\_str}(), choice, selected, !\hyperlink{dialog_8h_a4fad80b3dfa37df9605384f3ab6beec5}{item\_is\_tag}(\textcolor{charliteral}{':'})); \(\backslash\)
+\} \textcolor{keywordflow}{while} (0)
+\end{DoxyCode}
+
+
+\subsection{Function Documentation}
+\hypertarget{menubox_8c_a7f77ead942788fe7853ced4f2444c243}{\index{menubox.\-c@{menubox.\-c}!dialog\-\_\-menu@{dialog\-\_\-menu}}
+\index{dialog\-\_\-menu@{dialog\-\_\-menu}!menubox.c@{menubox.\-c}}
+\subsubsection[{dialog\-\_\-menu}]{\setlength{\rightskip}{0pt plus 5cm}int dialog\-\_\-menu (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{title, }
+\item[{const char $\ast$}]{prompt, }
+\item[{const void $\ast$}]{selected, }
+\item[{int $\ast$}]{s\-\_\-scroll}
+\end{DoxyParamCaption}
+)}}\label{menubox_8c_a7f77ead942788fe7853ced4f2444c243}

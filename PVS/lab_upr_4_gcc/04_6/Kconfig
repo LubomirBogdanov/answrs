@@ -1,0 +1,29 @@
+mainmenu "Main Menu"
+
+comment "Technical University - Sofia, lab. exercise 4"
+
+choice
+	prompt "led"
+	default 0
+	help
+		This value changes the speed of the LED blinking.
+
+	config LED_BLINK_ITERATOR_50000
+		bool "delay 50000"
+
+	config LED_BLINK_ITERATOR_200000
+		bool "delay 200000"
+
+	config LED_BLINK_ITERATOR_400000
+		bool "delay 400000"		
+endchoice
+
+config BUTTON_ENABLED
+	help 
+		This entry enables/disables the board's button.
+	bool "Button enable"
+
+config UART_BAUD_RATE
+	int "Enter UART baud rate"
+	range 9600 115200
+

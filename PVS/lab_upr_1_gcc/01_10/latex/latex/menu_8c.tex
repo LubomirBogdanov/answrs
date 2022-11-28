@@ -1,0 +1,276 @@
+\hypertarget{menu_8c}{\section{menuconfig/menu.c File Reference}
+\label{menu_8c}\index{menuconfig/menu.\-c@{menuconfig/menu.\-c}}
+}
+{\ttfamily \#include $<$ctype.\-h$>$}\\*
+{\ttfamily \#include $<$stdarg.\-h$>$}\\*
+{\ttfamily \#include $<$stdlib.\-h$>$}\\*
+{\ttfamily \#include $<$string.\-h$>$}\\*
+{\ttfamily \#include \char`\"{}lkc.\-h\char`\"{}}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{menu_8c_ae33743791cc856009700e13f398d19c1}{menu\-\_\-warn} (struct \hyperlink{structmenu}{menu} $\ast$\hyperlink{structmenu}{menu}, const char $\ast$fmt,...)
+\item 
+void \hyperlink{menu_8c_a3001a28af74164a9ef95bccb4673c473}{\-\_\-menu\-\_\-init} (void)
+\item 
+void \hyperlink{menu_8c_a6121cef3799f8ec05953b86c4feddf18}{menu\-\_\-add\-\_\-entry} (struct \hyperlink{structsymbol}{symbol} $\ast$sym)
+\item 
+void \hyperlink{menu_8c_acc37454a5d96af0d0a2f5689cb5cae87}{menu\-\_\-end\-\_\-entry} (void)
+\item 
+struct \hyperlink{structmenu}{menu} $\ast$ \hyperlink{menu_8c_a1a9af8833fd43833ac5a6bdbddb712b9}{menu\-\_\-add\-\_\-menu} (void)
+\item 
+void \hyperlink{menu_8c_aeb6617baf7e72ffcddd157cec742797b}{menu\-\_\-end\-\_\-menu} (void)
+\item 
+void \hyperlink{menu_8c_a250ea7ce223a04e39053df8848f2bbdc}{menu\-\_\-add\-\_\-dep} (struct \hyperlink{structexpr}{expr} $\ast$dep)
+\item 
+void \hyperlink{menu_8c_a49ea3e4f17bcdb1619cc36f093c20c2f}{menu\-\_\-set\-\_\-type} (int type)
+\item 
+struct \hyperlink{structproperty}{property} $\ast$ \hyperlink{menu_8c_a849a39af66a573a102b674edeb6e6116}{menu\-\_\-add\-\_\-prop} (enum \hyperlink{expr_8h_a403a578df6dfdc7e86f6bca789c523c2}{prop\-\_\-type} type, char $\ast$prompt, struct \hyperlink{structexpr}{expr} $\ast$\hyperlink{structexpr}{expr}, struct \hyperlink{structexpr}{expr} $\ast$dep)
+\item 
+struct \hyperlink{structproperty}{property} $\ast$ \hyperlink{menu_8c_a1078256a96c2e0ae441b0827bb572ebd}{menu\-\_\-add\-\_\-prompt} (enum \hyperlink{expr_8h_a403a578df6dfdc7e86f6bca789c523c2}{prop\-\_\-type} type, char $\ast$prompt, struct \hyperlink{structexpr}{expr} $\ast$dep)
+\item 
+void \hyperlink{menu_8c_af39b848c19e75da991a6d13e2c048232}{menu\-\_\-add\-\_\-visibility} (struct \hyperlink{structexpr}{expr} $\ast$\hyperlink{structexpr}{expr})
+\item 
+void \hyperlink{menu_8c_a3ebeb8d74ec8acbd1108a5f9eca3f44a}{menu\-\_\-add\-\_\-expr} (enum \hyperlink{expr_8h_a403a578df6dfdc7e86f6bca789c523c2}{prop\-\_\-type} type, struct \hyperlink{structexpr}{expr} $\ast$\hyperlink{structexpr}{expr}, struct \hyperlink{structexpr}{expr} $\ast$dep)
+\item 
+void \hyperlink{menu_8c_afa845379fe1ec272d09beca383d17664}{menu\-\_\-add\-\_\-symbol} (enum \hyperlink{expr_8h_a403a578df6dfdc7e86f6bca789c523c2}{prop\-\_\-type} type, struct \hyperlink{structsymbol}{symbol} $\ast$sym, struct \hyperlink{structexpr}{expr} $\ast$dep)
+\item 
+void \hyperlink{menu_8c_a4a98e19a836460181ab822081619f86a}{menu\-\_\-add\-\_\-option} (int token, char $\ast$arg)
+\item 
+void \hyperlink{menu_8c_a20eeb714831220439ccb755a367a1de7}{menu\-\_\-finalize} (struct \hyperlink{structmenu}{menu} $\ast$parent)
+\item 
+bool \hyperlink{menu_8c_add504767230c1f9d3a7824509cfe5c2e}{menu\-\_\-has\-\_\-prompt} (struct \hyperlink{structmenu}{menu} $\ast$\hyperlink{structmenu}{menu})
+\item 
+bool \hyperlink{menu_8c_ab5caae305a94ce70313e5e9743759fc3}{menu\-\_\-is\-\_\-visible} (struct \hyperlink{structmenu}{menu} $\ast$\hyperlink{structmenu}{menu})
+\item 
+const char $\ast$ \hyperlink{menu_8c_a54dbcc756d7472558fc48ce6920c460b}{menu\-\_\-get\-\_\-prompt} (struct \hyperlink{structmenu}{menu} $\ast$\hyperlink{structmenu}{menu})
+\item 
+struct \hyperlink{structmenu}{menu} $\ast$ \hyperlink{menu_8c_a5342fdc281427c11b3a5c26d45708bc9}{menu\-\_\-get\-\_\-root\-\_\-menu} (struct \hyperlink{structmenu}{menu} $\ast$\hyperlink{structmenu}{menu})
+\item 
+struct \hyperlink{structmenu}{menu} $\ast$ \hyperlink{menu_8c_ae3ae6f72fe4978f91b19f8938357cd33}{menu\-\_\-get\-\_\-parent\-\_\-menu} (struct \hyperlink{structmenu}{menu} $\ast$\hyperlink{structmenu}{menu})
+\item 
+bool \hyperlink{menu_8c_a097eceaa1fde1bc3699f8f791d97e2dc}{menu\-\_\-has\-\_\-help} (struct \hyperlink{structmenu}{menu} $\ast$\hyperlink{structmenu}{menu})
+\item 
+const char $\ast$ \hyperlink{menu_8c_aa8ca8e3568b4f264d1bda7d896bf50f1}{menu\-\_\-get\-\_\-help} (struct \hyperlink{structmenu}{menu} $\ast$\hyperlink{structmenu}{menu})
+\item 
+void \hyperlink{menu_8c_ad8edb6f20c5160776654c13c7de40cc1}{get\-\_\-symbol\-\_\-str} (struct \hyperlink{structgstr}{gstr} $\ast$r, struct \hyperlink{structsymbol}{symbol} $\ast$sym, struct \hyperlink{structlist__head}{list\-\_\-head} $\ast$head)
+\item 
+struct \hyperlink{structgstr}{gstr} \hyperlink{menu_8c_a47573fdb13bc0bb5df9d09f202db7598}{get\-\_\-relations\-\_\-str} (struct \hyperlink{structsymbol}{symbol} $\ast$$\ast$sym\-\_\-arr, struct \hyperlink{structlist__head}{list\-\_\-head} $\ast$head)
+\item 
+void \hyperlink{menu_8c_a14b7099825fe97545a54f2bce2a19b25}{menu\-\_\-get\-\_\-ext\-\_\-help} (struct \hyperlink{structmenu}{menu} $\ast$\hyperlink{structmenu}{menu}, struct \hyperlink{structgstr}{gstr} $\ast$help)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structmenu}{menu} \hyperlink{menu_8c_a5c91f47c0ec0e6b9d5e89dcd2cf2ceba}{rootmenu}
+\item 
+struct \hyperlink{structfile}{file} $\ast$ \hyperlink{menu_8c_a9cb6cd8810ed11698874b40d8a5a8749}{file\-\_\-list}
+\item 
+struct \hyperlink{structfile}{file} $\ast$ \hyperlink{menu_8c_ac6eea6f469d4e3b3886cdfc0a9a745a9}{current\-\_\-file}
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{menu_8c_a3001a28af74164a9ef95bccb4673c473}{\index{menu.\-c@{menu.\-c}!\-\_\-menu\-\_\-init@{\-\_\-menu\-\_\-init}}
+\index{\-\_\-menu\-\_\-init@{\-\_\-menu\-\_\-init}!menu.c@{menu.\-c}}
+\subsubsection[{\-\_\-menu\-\_\-init}]{\setlength{\rightskip}{0pt plus 5cm}void \-\_\-menu\-\_\-init (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{menu_8c_a3001a28af74164a9ef95bccb4673c473}
+\hypertarget{menu_8c_a47573fdb13bc0bb5df9d09f202db7598}{\index{menu.\-c@{menu.\-c}!get\-\_\-relations\-\_\-str@{get\-\_\-relations\-\_\-str}}
+\index{get\-\_\-relations\-\_\-str@{get\-\_\-relations\-\_\-str}!menu.c@{menu.\-c}}
+\subsubsection[{get\-\_\-relations\-\_\-str}]{\setlength{\rightskip}{0pt plus 5cm}struct {\bf gstr} get\-\_\-relations\-\_\-str (
+\begin{DoxyParamCaption}
+\item[{struct {\bf symbol} $\ast$$\ast$}]{sym\-\_\-arr, }
+\item[{struct {\bf list\-\_\-head} $\ast$}]{head}
+\end{DoxyParamCaption}
+)}}\label{menu_8c_a47573fdb13bc0bb5df9d09f202db7598}
+\hypertarget{menu_8c_ad8edb6f20c5160776654c13c7de40cc1}{\index{menu.\-c@{menu.\-c}!get\-\_\-symbol\-\_\-str@{get\-\_\-symbol\-\_\-str}}
+\index{get\-\_\-symbol\-\_\-str@{get\-\_\-symbol\-\_\-str}!menu.c@{menu.\-c}}
+\subsubsection[{get\-\_\-symbol\-\_\-str}]{\setlength{\rightskip}{0pt plus 5cm}void get\-\_\-symbol\-\_\-str (
+\begin{DoxyParamCaption}
+\item[{struct {\bf gstr} $\ast$}]{r, }
+\item[{struct {\bf symbol} $\ast$}]{sym, }
+\item[{struct {\bf list\-\_\-head} $\ast$}]{head}
+\end{DoxyParamCaption}
+)}}\label{menu_8c_ad8edb6f20c5160776654c13c7de40cc1}
+\hypertarget{menu_8c_a250ea7ce223a04e39053df8848f2bbdc}{\index{menu.\-c@{menu.\-c}!menu\-\_\-add\-\_\-dep@{menu\-\_\-add\-\_\-dep}}
+\index{menu\-\_\-add\-\_\-dep@{menu\-\_\-add\-\_\-dep}!menu.c@{menu.\-c}}
+\subsubsection[{menu\-\_\-add\-\_\-dep}]{\setlength{\rightskip}{0pt plus 5cm}void menu\-\_\-add\-\_\-dep (
+\begin{DoxyParamCaption}
+\item[{struct {\bf expr} $\ast$}]{dep}
+\end{DoxyParamCaption}
+)}}\label{menu_8c_a250ea7ce223a04e39053df8848f2bbdc}
+\hypertarget{menu_8c_a6121cef3799f8ec05953b86c4feddf18}{\index{menu.\-c@{menu.\-c}!menu\-\_\-add\-\_\-entry@{menu\-\_\-add\-\_\-entry}}
+\index{menu\-\_\-add\-\_\-entry@{menu\-\_\-add\-\_\-entry}!menu.c@{menu.\-c}}
+\subsubsection[{menu\-\_\-add\-\_\-entry}]{\setlength{\rightskip}{0pt plus 5cm}void menu\-\_\-add\-\_\-entry (
+\begin{DoxyParamCaption}
+\item[{struct {\bf symbol} $\ast$}]{sym}
+\end{DoxyParamCaption}
+)}}\label{menu_8c_a6121cef3799f8ec05953b86c4feddf18}
+\hypertarget{menu_8c_a3ebeb8d74ec8acbd1108a5f9eca3f44a}{\index{menu.\-c@{menu.\-c}!menu\-\_\-add\-\_\-expr@{menu\-\_\-add\-\_\-expr}}
+\index{menu\-\_\-add\-\_\-expr@{menu\-\_\-add\-\_\-expr}!menu.c@{menu.\-c}}
+\subsubsection[{menu\-\_\-add\-\_\-expr}]{\setlength{\rightskip}{0pt plus 5cm}void menu\-\_\-add\-\_\-expr (
+\begin{DoxyParamCaption}
+\item[{enum {\bf prop\-\_\-type}}]{type, }
+\item[{struct {\bf expr} $\ast$}]{expr, }
+\item[{struct {\bf expr} $\ast$}]{dep}
+\end{DoxyParamCaption}
+)}}\label{menu_8c_a3ebeb8d74ec8acbd1108a5f9eca3f44a}
+\hypertarget{menu_8c_a1a9af8833fd43833ac5a6bdbddb712b9}{\index{menu.\-c@{menu.\-c}!menu\-\_\-add\-\_\-menu@{menu\-\_\-add\-\_\-menu}}
+\index{menu\-\_\-add\-\_\-menu@{menu\-\_\-add\-\_\-menu}!menu.c@{menu.\-c}}
+\subsubsection[{menu\-\_\-add\-\_\-menu}]{\setlength{\rightskip}{0pt plus 5cm}struct {\bf menu}$\ast$ menu\-\_\-add\-\_\-menu (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{menu_8c_a1a9af8833fd43833ac5a6bdbddb712b9}
+\hypertarget{menu_8c_a4a98e19a836460181ab822081619f86a}{\index{menu.\-c@{menu.\-c}!menu\-\_\-add\-\_\-option@{menu\-\_\-add\-\_\-option}}
+\index{menu\-\_\-add\-\_\-option@{menu\-\_\-add\-\_\-option}!menu.c@{menu.\-c}}
+\subsubsection[{menu\-\_\-add\-\_\-option}]{\setlength{\rightskip}{0pt plus 5cm}void menu\-\_\-add\-\_\-option (
+\begin{DoxyParamCaption}
+\item[{int}]{token, }
+\item[{char $\ast$}]{arg}
+\end{DoxyParamCaption}
+)}}\label{menu_8c_a4a98e19a836460181ab822081619f86a}
+\hypertarget{menu_8c_a1078256a96c2e0ae441b0827bb572ebd}{\index{menu.\-c@{menu.\-c}!menu\-\_\-add\-\_\-prompt@{menu\-\_\-add\-\_\-prompt}}
+\index{menu\-\_\-add\-\_\-prompt@{menu\-\_\-add\-\_\-prompt}!menu.c@{menu.\-c}}
+\subsubsection[{menu\-\_\-add\-\_\-prompt}]{\setlength{\rightskip}{0pt plus 5cm}struct {\bf property}$\ast$ menu\-\_\-add\-\_\-prompt (
+\begin{DoxyParamCaption}
+\item[{enum {\bf prop\-\_\-type}}]{type, }
+\item[{char $\ast$}]{prompt, }
+\item[{struct {\bf expr} $\ast$}]{dep}
+\end{DoxyParamCaption}
+)}}\label{menu_8c_a1078256a96c2e0ae441b0827bb572ebd}
+\hypertarget{menu_8c_a849a39af66a573a102b674edeb6e6116}{\index{menu.\-c@{menu.\-c}!menu\-\_\-add\-\_\-prop@{menu\-\_\-add\-\_\-prop}}
+\index{menu\-\_\-add\-\_\-prop@{menu\-\_\-add\-\_\-prop}!menu.c@{menu.\-c}}
+\subsubsection[{menu\-\_\-add\-\_\-prop}]{\setlength{\rightskip}{0pt plus 5cm}struct {\bf property}$\ast$ menu\-\_\-add\-\_\-prop (
+\begin{DoxyParamCaption}
+\item[{enum {\bf prop\-\_\-type}}]{type, }
+\item[{char $\ast$}]{prompt, }
+\item[{struct {\bf expr} $\ast$}]{expr, }
+\item[{struct {\bf expr} $\ast$}]{dep}
+\end{DoxyParamCaption}
+)}}\label{menu_8c_a849a39af66a573a102b674edeb6e6116}
+\hypertarget{menu_8c_afa845379fe1ec272d09beca383d17664}{\index{menu.\-c@{menu.\-c}!menu\-\_\-add\-\_\-symbol@{menu\-\_\-add\-\_\-symbol}}
+\index{menu\-\_\-add\-\_\-symbol@{menu\-\_\-add\-\_\-symbol}!menu.c@{menu.\-c}}
+\subsubsection[{menu\-\_\-add\-\_\-symbol}]{\setlength{\rightskip}{0pt plus 5cm}void menu\-\_\-add\-\_\-symbol (
+\begin{DoxyParamCaption}
+\item[{enum {\bf prop\-\_\-type}}]{type, }
+\item[{struct {\bf symbol} $\ast$}]{sym, }
+\item[{struct {\bf expr} $\ast$}]{dep}
+\end{DoxyParamCaption}
+)}}\label{menu_8c_afa845379fe1ec272d09beca383d17664}
+\hypertarget{menu_8c_af39b848c19e75da991a6d13e2c048232}{\index{menu.\-c@{menu.\-c}!menu\-\_\-add\-\_\-visibility@{menu\-\_\-add\-\_\-visibility}}
+\index{menu\-\_\-add\-\_\-visibility@{menu\-\_\-add\-\_\-visibility}!menu.c@{menu.\-c}}
+\subsubsection[{menu\-\_\-add\-\_\-visibility}]{\setlength{\rightskip}{0pt plus 5cm}void menu\-\_\-add\-\_\-visibility (
+\begin{DoxyParamCaption}
+\item[{struct {\bf expr} $\ast$}]{expr}
+\end{DoxyParamCaption}
+)}}\label{menu_8c_af39b848c19e75da991a6d13e2c048232}
+\hypertarget{menu_8c_acc37454a5d96af0d0a2f5689cb5cae87}{\index{menu.\-c@{menu.\-c}!menu\-\_\-end\-\_\-entry@{menu\-\_\-end\-\_\-entry}}
+\index{menu\-\_\-end\-\_\-entry@{menu\-\_\-end\-\_\-entry}!menu.c@{menu.\-c}}
+\subsubsection[{menu\-\_\-end\-\_\-entry}]{\setlength{\rightskip}{0pt plus 5cm}void menu\-\_\-end\-\_\-entry (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{menu_8c_acc37454a5d96af0d0a2f5689cb5cae87}
+\hypertarget{menu_8c_aeb6617baf7e72ffcddd157cec742797b}{\index{menu.\-c@{menu.\-c}!menu\-\_\-end\-\_\-menu@{menu\-\_\-end\-\_\-menu}}
+\index{menu\-\_\-end\-\_\-menu@{menu\-\_\-end\-\_\-menu}!menu.c@{menu.\-c}}
+\subsubsection[{menu\-\_\-end\-\_\-menu}]{\setlength{\rightskip}{0pt plus 5cm}void menu\-\_\-end\-\_\-menu (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{menu_8c_aeb6617baf7e72ffcddd157cec742797b}
+\hypertarget{menu_8c_a20eeb714831220439ccb755a367a1de7}{\index{menu.\-c@{menu.\-c}!menu\-\_\-finalize@{menu\-\_\-finalize}}
+\index{menu\-\_\-finalize@{menu\-\_\-finalize}!menu.c@{menu.\-c}}
+\subsubsection[{menu\-\_\-finalize}]{\setlength{\rightskip}{0pt plus 5cm}void menu\-\_\-finalize (
+\begin{DoxyParamCaption}
+\item[{struct {\bf menu} $\ast$}]{parent}
+\end{DoxyParamCaption}
+)}}\label{menu_8c_a20eeb714831220439ccb755a367a1de7}
+\hypertarget{menu_8c_a14b7099825fe97545a54f2bce2a19b25}{\index{menu.\-c@{menu.\-c}!menu\-\_\-get\-\_\-ext\-\_\-help@{menu\-\_\-get\-\_\-ext\-\_\-help}}
+\index{menu\-\_\-get\-\_\-ext\-\_\-help@{menu\-\_\-get\-\_\-ext\-\_\-help}!menu.c@{menu.\-c}}
+\subsubsection[{menu\-\_\-get\-\_\-ext\-\_\-help}]{\setlength{\rightskip}{0pt plus 5cm}void menu\-\_\-get\-\_\-ext\-\_\-help (
+\begin{DoxyParamCaption}
+\item[{struct {\bf menu} $\ast$}]{menu, }
+\item[{struct {\bf gstr} $\ast$}]{help}
+\end{DoxyParamCaption}
+)}}\label{menu_8c_a14b7099825fe97545a54f2bce2a19b25}
+\hypertarget{menu_8c_aa8ca8e3568b4f264d1bda7d896bf50f1}{\index{menu.\-c@{menu.\-c}!menu\-\_\-get\-\_\-help@{menu\-\_\-get\-\_\-help}}
+\index{menu\-\_\-get\-\_\-help@{menu\-\_\-get\-\_\-help}!menu.c@{menu.\-c}}
+\subsubsection[{menu\-\_\-get\-\_\-help}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ menu\-\_\-get\-\_\-help (
+\begin{DoxyParamCaption}
+\item[{struct {\bf menu} $\ast$}]{menu}
+\end{DoxyParamCaption}
+)}}\label{menu_8c_aa8ca8e3568b4f264d1bda7d896bf50f1}
+\hypertarget{menu_8c_ae3ae6f72fe4978f91b19f8938357cd33}{\index{menu.\-c@{menu.\-c}!menu\-\_\-get\-\_\-parent\-\_\-menu@{menu\-\_\-get\-\_\-parent\-\_\-menu}}
+\index{menu\-\_\-get\-\_\-parent\-\_\-menu@{menu\-\_\-get\-\_\-parent\-\_\-menu}!menu.c@{menu.\-c}}
+\subsubsection[{menu\-\_\-get\-\_\-parent\-\_\-menu}]{\setlength{\rightskip}{0pt plus 5cm}struct {\bf menu}$\ast$ menu\-\_\-get\-\_\-parent\-\_\-menu (
+\begin{DoxyParamCaption}
+\item[{struct {\bf menu} $\ast$}]{menu}
+\end{DoxyParamCaption}
+)}}\label{menu_8c_ae3ae6f72fe4978f91b19f8938357cd33}
+\hypertarget{menu_8c_a54dbcc756d7472558fc48ce6920c460b}{\index{menu.\-c@{menu.\-c}!menu\-\_\-get\-\_\-prompt@{menu\-\_\-get\-\_\-prompt}}
+\index{menu\-\_\-get\-\_\-prompt@{menu\-\_\-get\-\_\-prompt}!menu.c@{menu.\-c}}
+\subsubsection[{menu\-\_\-get\-\_\-prompt}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ menu\-\_\-get\-\_\-prompt (
+\begin{DoxyParamCaption}
+\item[{struct {\bf menu} $\ast$}]{menu}
+\end{DoxyParamCaption}
+)}}\label{menu_8c_a54dbcc756d7472558fc48ce6920c460b}
+\hypertarget{menu_8c_a5342fdc281427c11b3a5c26d45708bc9}{\index{menu.\-c@{menu.\-c}!menu\-\_\-get\-\_\-root\-\_\-menu@{menu\-\_\-get\-\_\-root\-\_\-menu}}
+\index{menu\-\_\-get\-\_\-root\-\_\-menu@{menu\-\_\-get\-\_\-root\-\_\-menu}!menu.c@{menu.\-c}}
+\subsubsection[{menu\-\_\-get\-\_\-root\-\_\-menu}]{\setlength{\rightskip}{0pt plus 5cm}struct {\bf menu}$\ast$ menu\-\_\-get\-\_\-root\-\_\-menu (
+\begin{DoxyParamCaption}
+\item[{struct {\bf menu} $\ast$}]{menu}
+\end{DoxyParamCaption}
+)}}\label{menu_8c_a5342fdc281427c11b3a5c26d45708bc9}
+\hypertarget{menu_8c_a097eceaa1fde1bc3699f8f791d97e2dc}{\index{menu.\-c@{menu.\-c}!menu\-\_\-has\-\_\-help@{menu\-\_\-has\-\_\-help}}
+\index{menu\-\_\-has\-\_\-help@{menu\-\_\-has\-\_\-help}!menu.c@{menu.\-c}}
+\subsubsection[{menu\-\_\-has\-\_\-help}]{\setlength{\rightskip}{0pt plus 5cm}bool menu\-\_\-has\-\_\-help (
+\begin{DoxyParamCaption}
+\item[{struct {\bf menu} $\ast$}]{menu}
+\end{DoxyParamCaption}
+)}}\label{menu_8c_a097eceaa1fde1bc3699f8f791d97e2dc}
+\hypertarget{menu_8c_add504767230c1f9d3a7824509cfe5c2e}{\index{menu.\-c@{menu.\-c}!menu\-\_\-has\-\_\-prompt@{menu\-\_\-has\-\_\-prompt}}
+\index{menu\-\_\-has\-\_\-prompt@{menu\-\_\-has\-\_\-prompt}!menu.c@{menu.\-c}}
+\subsubsection[{menu\-\_\-has\-\_\-prompt}]{\setlength{\rightskip}{0pt plus 5cm}bool menu\-\_\-has\-\_\-prompt (
+\begin{DoxyParamCaption}
+\item[{struct {\bf menu} $\ast$}]{menu}
+\end{DoxyParamCaption}
+)}}\label{menu_8c_add504767230c1f9d3a7824509cfe5c2e}
+\hypertarget{menu_8c_ab5caae305a94ce70313e5e9743759fc3}{\index{menu.\-c@{menu.\-c}!menu\-\_\-is\-\_\-visible@{menu\-\_\-is\-\_\-visible}}
+\index{menu\-\_\-is\-\_\-visible@{menu\-\_\-is\-\_\-visible}!menu.c@{menu.\-c}}
+\subsubsection[{menu\-\_\-is\-\_\-visible}]{\setlength{\rightskip}{0pt plus 5cm}bool menu\-\_\-is\-\_\-visible (
+\begin{DoxyParamCaption}
+\item[{struct {\bf menu} $\ast$}]{menu}
+\end{DoxyParamCaption}
+)}}\label{menu_8c_ab5caae305a94ce70313e5e9743759fc3}
+\hypertarget{menu_8c_a49ea3e4f17bcdb1619cc36f093c20c2f}{\index{menu.\-c@{menu.\-c}!menu\-\_\-set\-\_\-type@{menu\-\_\-set\-\_\-type}}
+\index{menu\-\_\-set\-\_\-type@{menu\-\_\-set\-\_\-type}!menu.c@{menu.\-c}}
+\subsubsection[{menu\-\_\-set\-\_\-type}]{\setlength{\rightskip}{0pt plus 5cm}void menu\-\_\-set\-\_\-type (
+\begin{DoxyParamCaption}
+\item[{int}]{type}
+\end{DoxyParamCaption}
+)}}\label{menu_8c_a49ea3e4f17bcdb1619cc36f093c20c2f}
+\hypertarget{menu_8c_ae33743791cc856009700e13f398d19c1}{\index{menu.\-c@{menu.\-c}!menu\-\_\-warn@{menu\-\_\-warn}}
+\index{menu\-\_\-warn@{menu\-\_\-warn}!menu.c@{menu.\-c}}
+\subsubsection[{menu\-\_\-warn}]{\setlength{\rightskip}{0pt plus 5cm}void menu\-\_\-warn (
+\begin{DoxyParamCaption}
+\item[{struct {\bf menu} $\ast$}]{menu, }
+\item[{const char $\ast$}]{fmt, }
+\item[{}]{...}
+\end{DoxyParamCaption}
+)}}\label{menu_8c_ae33743791cc856009700e13f398d19c1}
+
+
+\subsection{Variable Documentation}
+\hypertarget{menu_8c_ac6eea6f469d4e3b3886cdfc0a9a745a9}{\index{menu.\-c@{menu.\-c}!current\-\_\-file@{current\-\_\-file}}
+\index{current\-\_\-file@{current\-\_\-file}!menu.c@{menu.\-c}}
+\subsubsection[{current\-\_\-file}]{\setlength{\rightskip}{0pt plus 5cm}struct {\bf file}$\ast$ current\-\_\-file}}\label{menu_8c_ac6eea6f469d4e3b3886cdfc0a9a745a9}
+\hypertarget{menu_8c_a9cb6cd8810ed11698874b40d8a5a8749}{\index{menu.\-c@{menu.\-c}!file\-\_\-list@{file\-\_\-list}}
+\index{file\-\_\-list@{file\-\_\-list}!menu.c@{menu.\-c}}
+\subsubsection[{file\-\_\-list}]{\setlength{\rightskip}{0pt plus 5cm}struct {\bf file}$\ast$ file\-\_\-list}}\label{menu_8c_a9cb6cd8810ed11698874b40d8a5a8749}
+\hypertarget{menu_8c_a5c91f47c0ec0e6b9d5e89dcd2cf2ceba}{\index{menu.\-c@{menu.\-c}!rootmenu@{rootmenu}}
+\index{rootmenu@{rootmenu}!menu.c@{menu.\-c}}
+\subsubsection[{rootmenu}]{\setlength{\rightskip}{0pt plus 5cm}struct {\bf menu} rootmenu}}\label{menu_8c_a5c91f47c0ec0e6b9d5e89dcd2cf2ceba}

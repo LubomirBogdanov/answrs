@@ -1,0 +1,149 @@
+\hypertarget{uart_8h}{\section{uart/uart.h File Reference}
+\label{uart_8h}\index{uart/uart.\-h@{uart/uart.\-h}}
+}
+{\ttfamily \#include $<$stdint.\-h$>$}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{uart_8h_a951ac28336b0709fa788dc7bd5eef7b5}{G\-P\-I\-O\-A\-\_\-\-M\-O\-D\-E\-R\-\_\-\-A\-F\-\_\-\-P\-A9}~0x80000
+\item 
+\#define \hyperlink{uart_8h_aedabb61eccc7e46421c59332a05de8a0}{G\-P\-I\-O\-A\-\_\-\-O\-T\-Y\-P\-E\-R\-\_\-\-P\-A9}~0x200
+\item 
+\#define \hyperlink{uart_8h_ab83dc62b208b1cb5f235eda5fc40a84b}{G\-P\-I\-O\-A\-\_\-\-M\-O\-D\-E\-R\-\_\-\-A\-F\-\_\-\-P\-A10}~0x200000
+\item 
+\#define \hyperlink{uart_8h_a2e05c5207a346db2b4462b4280c715de}{G\-P\-I\-O\-A\-\_\-\-A\-F7\-\_\-\-P\-A9}~0x70
+\item 
+\#define \hyperlink{uart_8h_a0ab6cc689a1a882f1ec5c0c2633da132}{G\-P\-I\-O\-A\-\_\-\-A\-F7\-\_\-\-P\-A10}~0x700
+\item 
+\#define \hyperlink{uart_8h_a7ec8d6167c0314f014827e2a39462935}{R\-C\-C\-\_\-\-A\-H\-B1\-E\-N\-R\-\_\-\-G\-P\-I\-O\-A\-\_\-\-E\-N}~0x01
+\item 
+\#define \hyperlink{uart_8h_ac50ccf964380bea8990bfe04eb6b8c5a}{R\-C\-C\-\_\-\-A\-P\-B2\-\_\-\-E\-N\-R\-\_\-\-U\-S\-A\-R\-T1\-\_\-\-E\-N}~0x10
+\item 
+\#define \hyperlink{uart_8h_a02acd18b2ce033a786ad044af26f7fd4}{U\-S\-A\-R\-T1\-\_\-\-U\-E}~0x01
+\item 
+\#define \hyperlink{uart_8h_aa471972e6c471eccde653d35ec32ee5a}{U\-S\-A\-R\-T1\-\_\-\-R\-E}~0x04
+\item 
+\#define \hyperlink{uart_8h_a2f83246bfa597445beea5bfaf125af4b}{U\-S\-A\-R\-T1\-\_\-\-T\-E}~0x08
+\item 
+\#define \hyperlink{uart_8h_a402b8ef68ed569824c0c3f12e03e5dee}{U\-S\-A\-R\-T1\-\_\-\-R\-E\-A\-C\-K}~0x400000
+\item 
+\#define \hyperlink{uart_8h_a62cf2d31c24b8b3c49badad92c78144e}{U\-S\-A\-R\-T1\-\_\-\-T\-E\-A\-C\-K}~0x200000
+\item 
+\#define \hyperlink{uart_8h_af4b542b5c9b03d38e9e3699e2bc032db}{U\-S\-A\-R\-T1\-\_\-\-T\-X\-E}~0x80
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{uart_8h_af715869169122bf6b11d66428ce15786}{uart\-\_\-init} (uint32\-\_\-t baud\-\_\-rate)
+\begin{DoxyCompactList}\small\item\em This function initializes the U\-A\-R\-T module. It can be used for redirecting the printf function. \end{DoxyCompactList}\item 
+void \hyperlink{uart_8h_a99282977bc1adf744899336109251345}{uart\-\_\-send\-\_\-buff} (uint8\-\_\-t $\ast$buff, uint8\-\_\-t buff\-\_\-size)
+\begin{DoxyCompactList}\small\item\em This function sends an array of chars over the U\-A\-R\-T interface. \end{DoxyCompactList}\item 
+void \hyperlink{uart_8h_a223496da92021626a4430fed0af667bd}{\-\_\-putchar} (char character)
+\begin{DoxyCompactList}\small\item\em This function is used by the \hyperlink{printf_8h_a3cb9f0894fab1c8fbb0753c9c7c2a8d9}{printf( )} port. It sends a single char over the U\-A\-R\-T interface. This function is blocking. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{uart_8h_a0ab6cc689a1a882f1ec5c0c2633da132}{\index{uart.\-h@{uart.\-h}!G\-P\-I\-O\-A\-\_\-\-A\-F7\-\_\-\-P\-A10@{G\-P\-I\-O\-A\-\_\-\-A\-F7\-\_\-\-P\-A10}}
+\index{G\-P\-I\-O\-A\-\_\-\-A\-F7\-\_\-\-P\-A10@{G\-P\-I\-O\-A\-\_\-\-A\-F7\-\_\-\-P\-A10}!uart.h@{uart.\-h}}
+\subsubsection[{G\-P\-I\-O\-A\-\_\-\-A\-F7\-\_\-\-P\-A10}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\-P\-I\-O\-A\-\_\-\-A\-F7\-\_\-\-P\-A10~0x700}}\label{uart_8h_a0ab6cc689a1a882f1ec5c0c2633da132}
+\hypertarget{uart_8h_a2e05c5207a346db2b4462b4280c715de}{\index{uart.\-h@{uart.\-h}!G\-P\-I\-O\-A\-\_\-\-A\-F7\-\_\-\-P\-A9@{G\-P\-I\-O\-A\-\_\-\-A\-F7\-\_\-\-P\-A9}}
+\index{G\-P\-I\-O\-A\-\_\-\-A\-F7\-\_\-\-P\-A9@{G\-P\-I\-O\-A\-\_\-\-A\-F7\-\_\-\-P\-A9}!uart.h@{uart.\-h}}
+\subsubsection[{G\-P\-I\-O\-A\-\_\-\-A\-F7\-\_\-\-P\-A9}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\-P\-I\-O\-A\-\_\-\-A\-F7\-\_\-\-P\-A9~0x70}}\label{uart_8h_a2e05c5207a346db2b4462b4280c715de}
+\hypertarget{uart_8h_ab83dc62b208b1cb5f235eda5fc40a84b}{\index{uart.\-h@{uart.\-h}!G\-P\-I\-O\-A\-\_\-\-M\-O\-D\-E\-R\-\_\-\-A\-F\-\_\-\-P\-A10@{G\-P\-I\-O\-A\-\_\-\-M\-O\-D\-E\-R\-\_\-\-A\-F\-\_\-\-P\-A10}}
+\index{G\-P\-I\-O\-A\-\_\-\-M\-O\-D\-E\-R\-\_\-\-A\-F\-\_\-\-P\-A10@{G\-P\-I\-O\-A\-\_\-\-M\-O\-D\-E\-R\-\_\-\-A\-F\-\_\-\-P\-A10}!uart.h@{uart.\-h}}
+\subsubsection[{G\-P\-I\-O\-A\-\_\-\-M\-O\-D\-E\-R\-\_\-\-A\-F\-\_\-\-P\-A10}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\-P\-I\-O\-A\-\_\-\-M\-O\-D\-E\-R\-\_\-\-A\-F\-\_\-\-P\-A10~0x200000}}\label{uart_8h_ab83dc62b208b1cb5f235eda5fc40a84b}
+\hypertarget{uart_8h_a951ac28336b0709fa788dc7bd5eef7b5}{\index{uart.\-h@{uart.\-h}!G\-P\-I\-O\-A\-\_\-\-M\-O\-D\-E\-R\-\_\-\-A\-F\-\_\-\-P\-A9@{G\-P\-I\-O\-A\-\_\-\-M\-O\-D\-E\-R\-\_\-\-A\-F\-\_\-\-P\-A9}}
+\index{G\-P\-I\-O\-A\-\_\-\-M\-O\-D\-E\-R\-\_\-\-A\-F\-\_\-\-P\-A9@{G\-P\-I\-O\-A\-\_\-\-M\-O\-D\-E\-R\-\_\-\-A\-F\-\_\-\-P\-A9}!uart.h@{uart.\-h}}
+\subsubsection[{G\-P\-I\-O\-A\-\_\-\-M\-O\-D\-E\-R\-\_\-\-A\-F\-\_\-\-P\-A9}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\-P\-I\-O\-A\-\_\-\-M\-O\-D\-E\-R\-\_\-\-A\-F\-\_\-\-P\-A9~0x80000}}\label{uart_8h_a951ac28336b0709fa788dc7bd5eef7b5}
+\hypertarget{uart_8h_aedabb61eccc7e46421c59332a05de8a0}{\index{uart.\-h@{uart.\-h}!G\-P\-I\-O\-A\-\_\-\-O\-T\-Y\-P\-E\-R\-\_\-\-P\-A9@{G\-P\-I\-O\-A\-\_\-\-O\-T\-Y\-P\-E\-R\-\_\-\-P\-A9}}
+\index{G\-P\-I\-O\-A\-\_\-\-O\-T\-Y\-P\-E\-R\-\_\-\-P\-A9@{G\-P\-I\-O\-A\-\_\-\-O\-T\-Y\-P\-E\-R\-\_\-\-P\-A9}!uart.h@{uart.\-h}}
+\subsubsection[{G\-P\-I\-O\-A\-\_\-\-O\-T\-Y\-P\-E\-R\-\_\-\-P\-A9}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\-P\-I\-O\-A\-\_\-\-O\-T\-Y\-P\-E\-R\-\_\-\-P\-A9~0x200}}\label{uart_8h_aedabb61eccc7e46421c59332a05de8a0}
+\hypertarget{uart_8h_a7ec8d6167c0314f014827e2a39462935}{\index{uart.\-h@{uart.\-h}!R\-C\-C\-\_\-\-A\-H\-B1\-E\-N\-R\-\_\-\-G\-P\-I\-O\-A\-\_\-\-E\-N@{R\-C\-C\-\_\-\-A\-H\-B1\-E\-N\-R\-\_\-\-G\-P\-I\-O\-A\-\_\-\-E\-N}}
+\index{R\-C\-C\-\_\-\-A\-H\-B1\-E\-N\-R\-\_\-\-G\-P\-I\-O\-A\-\_\-\-E\-N@{R\-C\-C\-\_\-\-A\-H\-B1\-E\-N\-R\-\_\-\-G\-P\-I\-O\-A\-\_\-\-E\-N}!uart.h@{uart.\-h}}
+\subsubsection[{R\-C\-C\-\_\-\-A\-H\-B1\-E\-N\-R\-\_\-\-G\-P\-I\-O\-A\-\_\-\-E\-N}]{\setlength{\rightskip}{0pt plus 5cm}\#define R\-C\-C\-\_\-\-A\-H\-B1\-E\-N\-R\-\_\-\-G\-P\-I\-O\-A\-\_\-\-E\-N~0x01}}\label{uart_8h_a7ec8d6167c0314f014827e2a39462935}
+\hypertarget{uart_8h_ac50ccf964380bea8990bfe04eb6b8c5a}{\index{uart.\-h@{uart.\-h}!R\-C\-C\-\_\-\-A\-P\-B2\-\_\-\-E\-N\-R\-\_\-\-U\-S\-A\-R\-T1\-\_\-\-E\-N@{R\-C\-C\-\_\-\-A\-P\-B2\-\_\-\-E\-N\-R\-\_\-\-U\-S\-A\-R\-T1\-\_\-\-E\-N}}
+\index{R\-C\-C\-\_\-\-A\-P\-B2\-\_\-\-E\-N\-R\-\_\-\-U\-S\-A\-R\-T1\-\_\-\-E\-N@{R\-C\-C\-\_\-\-A\-P\-B2\-\_\-\-E\-N\-R\-\_\-\-U\-S\-A\-R\-T1\-\_\-\-E\-N}!uart.h@{uart.\-h}}
+\subsubsection[{R\-C\-C\-\_\-\-A\-P\-B2\-\_\-\-E\-N\-R\-\_\-\-U\-S\-A\-R\-T1\-\_\-\-E\-N}]{\setlength{\rightskip}{0pt plus 5cm}\#define R\-C\-C\-\_\-\-A\-P\-B2\-\_\-\-E\-N\-R\-\_\-\-U\-S\-A\-R\-T1\-\_\-\-E\-N~0x10}}\label{uart_8h_ac50ccf964380bea8990bfe04eb6b8c5a}
+\hypertarget{uart_8h_aa471972e6c471eccde653d35ec32ee5a}{\index{uart.\-h@{uart.\-h}!U\-S\-A\-R\-T1\-\_\-\-R\-E@{U\-S\-A\-R\-T1\-\_\-\-R\-E}}
+\index{U\-S\-A\-R\-T1\-\_\-\-R\-E@{U\-S\-A\-R\-T1\-\_\-\-R\-E}!uart.h@{uart.\-h}}
+\subsubsection[{U\-S\-A\-R\-T1\-\_\-\-R\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\-S\-A\-R\-T1\-\_\-\-R\-E~0x04}}\label{uart_8h_aa471972e6c471eccde653d35ec32ee5a}
+\hypertarget{uart_8h_a402b8ef68ed569824c0c3f12e03e5dee}{\index{uart.\-h@{uart.\-h}!U\-S\-A\-R\-T1\-\_\-\-R\-E\-A\-C\-K@{U\-S\-A\-R\-T1\-\_\-\-R\-E\-A\-C\-K}}
+\index{U\-S\-A\-R\-T1\-\_\-\-R\-E\-A\-C\-K@{U\-S\-A\-R\-T1\-\_\-\-R\-E\-A\-C\-K}!uart.h@{uart.\-h}}
+\subsubsection[{U\-S\-A\-R\-T1\-\_\-\-R\-E\-A\-C\-K}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\-S\-A\-R\-T1\-\_\-\-R\-E\-A\-C\-K~0x400000}}\label{uart_8h_a402b8ef68ed569824c0c3f12e03e5dee}
+\hypertarget{uart_8h_a2f83246bfa597445beea5bfaf125af4b}{\index{uart.\-h@{uart.\-h}!U\-S\-A\-R\-T1\-\_\-\-T\-E@{U\-S\-A\-R\-T1\-\_\-\-T\-E}}
+\index{U\-S\-A\-R\-T1\-\_\-\-T\-E@{U\-S\-A\-R\-T1\-\_\-\-T\-E}!uart.h@{uart.\-h}}
+\subsubsection[{U\-S\-A\-R\-T1\-\_\-\-T\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\-S\-A\-R\-T1\-\_\-\-T\-E~0x08}}\label{uart_8h_a2f83246bfa597445beea5bfaf125af4b}
+\hypertarget{uart_8h_a62cf2d31c24b8b3c49badad92c78144e}{\index{uart.\-h@{uart.\-h}!U\-S\-A\-R\-T1\-\_\-\-T\-E\-A\-C\-K@{U\-S\-A\-R\-T1\-\_\-\-T\-E\-A\-C\-K}}
+\index{U\-S\-A\-R\-T1\-\_\-\-T\-E\-A\-C\-K@{U\-S\-A\-R\-T1\-\_\-\-T\-E\-A\-C\-K}!uart.h@{uart.\-h}}
+\subsubsection[{U\-S\-A\-R\-T1\-\_\-\-T\-E\-A\-C\-K}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\-S\-A\-R\-T1\-\_\-\-T\-E\-A\-C\-K~0x200000}}\label{uart_8h_a62cf2d31c24b8b3c49badad92c78144e}
+\hypertarget{uart_8h_af4b542b5c9b03d38e9e3699e2bc032db}{\index{uart.\-h@{uart.\-h}!U\-S\-A\-R\-T1\-\_\-\-T\-X\-E@{U\-S\-A\-R\-T1\-\_\-\-T\-X\-E}}
+\index{U\-S\-A\-R\-T1\-\_\-\-T\-X\-E@{U\-S\-A\-R\-T1\-\_\-\-T\-X\-E}!uart.h@{uart.\-h}}
+\subsubsection[{U\-S\-A\-R\-T1\-\_\-\-T\-X\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\-S\-A\-R\-T1\-\_\-\-T\-X\-E~0x80}}\label{uart_8h_af4b542b5c9b03d38e9e3699e2bc032db}
+\hypertarget{uart_8h_a02acd18b2ce033a786ad044af26f7fd4}{\index{uart.\-h@{uart.\-h}!U\-S\-A\-R\-T1\-\_\-\-U\-E@{U\-S\-A\-R\-T1\-\_\-\-U\-E}}
+\index{U\-S\-A\-R\-T1\-\_\-\-U\-E@{U\-S\-A\-R\-T1\-\_\-\-U\-E}!uart.h@{uart.\-h}}
+\subsubsection[{U\-S\-A\-R\-T1\-\_\-\-U\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\-S\-A\-R\-T1\-\_\-\-U\-E~0x01}}\label{uart_8h_a02acd18b2ce033a786ad044af26f7fd4}
+
+
+\subsection{Function Documentation}
+\hypertarget{uart_8h_a223496da92021626a4430fed0af667bd}{\index{uart.\-h@{uart.\-h}!\-\_\-putchar@{\-\_\-putchar}}
+\index{\-\_\-putchar@{\-\_\-putchar}!uart.h@{uart.\-h}}
+\subsubsection[{\-\_\-putchar}]{\setlength{\rightskip}{0pt plus 5cm}void \-\_\-putchar (
+\begin{DoxyParamCaption}
+\item[{char}]{character}
+\end{DoxyParamCaption}
+)}}\label{uart_8h_a223496da92021626a4430fed0af667bd}
+
+
+This function is used by the \hyperlink{printf_8h_a3cb9f0894fab1c8fbb0753c9c7c2a8d9}{printf( )} port. It sends a single char over the U\-A\-R\-T interface. This function is blocking. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em character} & -\/ an 8-\/bit A\-S\-C\-I\-I character.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\hypertarget{uart_8h_af715869169122bf6b11d66428ce15786}{\index{uart.\-h@{uart.\-h}!uart\-\_\-init@{uart\-\_\-init}}
+\index{uart\-\_\-init@{uart\-\_\-init}!uart.h@{uart.\-h}}
+\subsubsection[{uart\-\_\-init}]{\setlength{\rightskip}{0pt plus 5cm}void uart\-\_\-init (
+\begin{DoxyParamCaption}
+\item[{uint32\-\_\-t}]{baud\-\_\-rate}
+\end{DoxyParamCaption}
+)}}\label{uart_8h_af715869169122bf6b11d66428ce15786}
+
+
+This function initializes the U\-A\-R\-T module. It can be used for redirecting the printf function. 
+
+To initialize the U\-A\-R\-T, first the clock of the module has to be enabled. Second, the G\-P\-I\-O pins have to be multiplexed to the U\-A\-R\-T module. Third, the module has to be enabled and last -\/ the U\-A\-R\-T baudrate has to be set according to the user settings.
+
+
+\begin{DoxyParams}{Parameters}
+{\em baud\-\_\-rate} & -\/ the speed of the data tranmission over the interface, in bauds. Can be one of the following integers\-: , , , .\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\hypertarget{uart_8h_a99282977bc1adf744899336109251345}{\index{uart.\-h@{uart.\-h}!uart\-\_\-send\-\_\-buff@{uart\-\_\-send\-\_\-buff}}
+\index{uart\-\_\-send\-\_\-buff@{uart\-\_\-send\-\_\-buff}!uart.h@{uart.\-h}}
+\subsubsection[{uart\-\_\-send\-\_\-buff}]{\setlength{\rightskip}{0pt plus 5cm}void uart\-\_\-send\-\_\-buff (
+\begin{DoxyParamCaption}
+\item[{uint8\-\_\-t $\ast$}]{buff, }
+\item[{uint8\-\_\-t}]{buff\-\_\-size}
+\end{DoxyParamCaption}
+)}}\label{uart_8h_a99282977bc1adf744899336109251345}
+
+
+This function sends an array of chars over the U\-A\-R\-T interface. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em buff} & -\/ a pointer to an array of 8-\/bit characters. \\
+\hline
+{\em buff\-\_\-size} & -\/ the number of elements in the array.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}

@@ -1,0 +1,8 @@
+#
+#Submodule printf.c
+#
+
+all: printf.o
+
+printf.o:
+		arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -nostartfiles --specs=nosys.specs -mfloat-abi=hard -mfpu=fpv5-d16 -O0 -g -c -fpic printf.c -o ../debug/printf.o

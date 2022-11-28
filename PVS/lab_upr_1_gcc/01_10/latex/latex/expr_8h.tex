@@ -1,0 +1,705 @@
+\hypertarget{expr_8h}{\section{menuconfig/expr.h File Reference}
+\label{expr_8h}\index{menuconfig/expr.\-h@{menuconfig/expr.\-h}}
+}
+{\ttfamily \#include $<$assert.\-h$>$}\\*
+{\ttfamily \#include $<$stdio.\-h$>$}\\*
+{\ttfamily \#include \char`\"{}list.\-h\char`\"{}}\\*
+{\ttfamily \#include $<$stdbool.\-h$>$}\\*
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structfile}{file}
+\item 
+union \hyperlink{unionexpr__data}{expr\-\_\-data}
+\item 
+struct \hyperlink{structexpr}{expr}
+\item 
+struct \hyperlink{structexpr__value}{expr\-\_\-value}
+\item 
+struct \hyperlink{structsymbol__value}{symbol\-\_\-value}
+\item 
+struct \hyperlink{structsymbol}{symbol}
+\item 
+struct \hyperlink{structproperty}{property}
+\item 
+struct \hyperlink{structmenu}{menu}
+\item 
+struct \hyperlink{structjump__key}{jump\-\_\-key}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{expr_8h_abec4acf1844ea2243d103d8b7b328d8e}{E\-X\-P\-R\-\_\-\-O\-R}(dep1, dep2)~(((dep1)$>$(dep2))?(dep1)\-:(dep2))
+\item 
+\#define \hyperlink{expr_8h_a67a7a1000228d1d62054331254e01ed8}{E\-X\-P\-R\-\_\-\-A\-N\-D}(dep1, dep2)~(((dep1)$<$(dep2))?(dep1)\-:(dep2))
+\item 
+\#define \hyperlink{expr_8h_a8c591a782f9a7e047eb77b6713f07a01}{E\-X\-P\-R\-\_\-\-N\-O\-T}(dep)~(2-\/(dep))
+\item 
+\#define \hyperlink{expr_8h_a60e2a565d1e4d29dd429cea945cdcf9c}{expr\-\_\-list\-\_\-for\-\_\-each\-\_\-sym}(l, e, s)~for (e = (l); e \&\& (s = e-\/$>$right.\-sym); e = e-\/$>$left.\-expr)
+\item 
+\#define \hyperlink{expr_8h_ab97c818dd44c9afd6546ed892680d872}{for\-\_\-all\-\_\-symbols}(\hyperlink{zconf_8lex_8c_acb559820d9ca11295b4500f179ef6392}{i}, sym)~for (\hyperlink{zconf_8lex_8c_acb559820d9ca11295b4500f179ef6392}{i} = 0; \hyperlink{zconf_8lex_8c_acb559820d9ca11295b4500f179ef6392}{i} $<$ \hyperlink{expr_8h_aa6a2ebe4ed480217e070130d63754658}{S\-Y\-M\-B\-O\-L\-\_\-\-H\-A\-S\-H\-S\-I\-Z\-E}; \hyperlink{zconf_8lex_8c_acb559820d9ca11295b4500f179ef6392}{i}++) for (sym = \hyperlink{zconf_8tab_8c_a757692ed09d816ee16b06ed899530e05}{symbol\-\_\-hash}\mbox{[}\hyperlink{zconf_8lex_8c_acb559820d9ca11295b4500f179ef6392}{i}\mbox{]}; sym; sym = sym-\/$>$next) \hyperlink{zconf_8lex_8c_ad4a65b873df5c05570846b5413b41dfd}{if} (sym-\/$>$type != \hyperlink{expr_8h_a9e6705a3296471be728a3b6570b56231adc22a638e6248e88fd3661715ac1af48}{S\-\_\-\-O\-T\-H\-E\-R})
+\item 
+\#define \hyperlink{expr_8h_a8040dfd309b568d93ee63f4ef15ea922}{S\-Y\-M\-B\-O\-L\-\_\-\-C\-O\-N\-S\-T}~0x0001  /$\ast$ symbol is const $\ast$/
+\item 
+\#define \hyperlink{expr_8h_a42c87e80838a3ec65a345cd109dbb2f3}{S\-Y\-M\-B\-O\-L\-\_\-\-C\-H\-E\-C\-K}~0x0008  /$\ast$ used during dependency checking $\ast$/
+\item 
+\#define \hyperlink{expr_8h_a05057b27f6e4527d1c5d9a3c12b9b07d}{S\-Y\-M\-B\-O\-L\-\_\-\-C\-H\-O\-I\-C\-E}~0x0010  /$\ast$ start of a choice block (null name) $\ast$/
+\item 
+\#define \hyperlink{expr_8h_a8cd6e2f81c6526116518a305363b6c1f}{S\-Y\-M\-B\-O\-L\-\_\-\-C\-H\-O\-I\-C\-E\-V\-A\-L}~0x0020  /$\ast$ used as a value in a choice block $\ast$/
+\item 
+\#define \hyperlink{expr_8h_a86978adde1691028d7460c40be1c2125}{S\-Y\-M\-B\-O\-L\-\_\-\-V\-A\-L\-I\-D}~0x0080  /$\ast$ set when symbol.\-curr is calculated $\ast$/
+\item 
+\#define \hyperlink{expr_8h_a9cf70df9b5e445015cfda73b5efd32f6}{S\-Y\-M\-B\-O\-L\-\_\-\-O\-P\-T\-I\-O\-N\-A\-L}~0x0100  /$\ast$ choice is optional -\/ values can be 'n' $\ast$/
+\item 
+\#define \hyperlink{expr_8h_adfbb69f8bbcf17906d81db04eab7c2f8}{S\-Y\-M\-B\-O\-L\-\_\-\-W\-R\-I\-T\-E}~0x0200  /$\ast$ ? $\ast$/
+\item 
+\#define \hyperlink{expr_8h_a0d39ae20e26bca6c16127e951ea0162b}{S\-Y\-M\-B\-O\-L\-\_\-\-C\-H\-A\-N\-G\-E\-D}~0x0400  /$\ast$ ? $\ast$/
+\item 
+\#define \hyperlink{expr_8h_a7308ce85c4536758655355d753f0ff8b}{S\-Y\-M\-B\-O\-L\-\_\-\-A\-U\-T\-O}~0x1000  /$\ast$ value from environment variable $\ast$/
+\item 
+\#define \hyperlink{expr_8h_a7257cb60a278345c7964860f4b2f7836}{S\-Y\-M\-B\-O\-L\-\_\-\-C\-H\-E\-C\-K\-E\-D}~0x2000  /$\ast$ used during dependency checking $\ast$/
+\item 
+\#define \hyperlink{expr_8h_a58d67dbde818e4b9fc7664c38c6944b5}{S\-Y\-M\-B\-O\-L\-\_\-\-W\-A\-R\-N\-E\-D}~0x8000  /$\ast$ warning has been issued $\ast$/
+\item 
+\#define \hyperlink{expr_8h_a5a09b4a84b99bd3c6de5c426da30e15d}{S\-Y\-M\-B\-O\-L\-\_\-\-D\-E\-F}~0x10000  /$\ast$ First bit of S\-Y\-M\-B\-O\-L\-\_\-\-D\-E\-F $\ast$/
+\item 
+\#define \hyperlink{expr_8h_a9ced5749f9001e0bd77eb24850ee4670}{S\-Y\-M\-B\-O\-L\-\_\-\-D\-E\-F\-\_\-\-U\-S\-E\-R}~0x10000  /$\ast$ symbol.\-def\mbox{[}\-S\-\_\-\-D\-E\-F\-\_\-\-U\-S\-E\-R\mbox{]} is valid $\ast$/
+\item 
+\#define \hyperlink{expr_8h_ad31100191eaf4278668a8bb7ebdecd07}{S\-Y\-M\-B\-O\-L\-\_\-\-D\-E\-F\-\_\-\-A\-U\-T\-O}~0x20000  /$\ast$ symbol.\-def\mbox{[}\-S\-\_\-\-D\-E\-F\-\_\-\-A\-U\-T\-O\mbox{]} is valid $\ast$/
+\item 
+\#define \hyperlink{expr_8h_a700b99669901978c78b918f929ceaf71}{S\-Y\-M\-B\-O\-L\-\_\-\-D\-E\-F3}~0x40000  /$\ast$ symbol.\-def\mbox{[}\-S\-\_\-\-D\-E\-F\-\_\-3\mbox{]} is valid $\ast$/
+\item 
+\#define \hyperlink{expr_8h_a0f878fdeb3cd8f4bfb3fcb319d00187a}{S\-Y\-M\-B\-O\-L\-\_\-\-D\-E\-F4}~0x80000  /$\ast$ symbol.\-def\mbox{[}\-S\-\_\-\-D\-E\-F\-\_\-4\mbox{]} is valid $\ast$/
+\item 
+\#define \hyperlink{expr_8h_a5726a08ed319cb065ff0179b70207c39}{S\-Y\-M\-B\-O\-L\-\_\-\-M\-A\-X\-L\-E\-N\-G\-T\-H}~256
+\item 
+\#define \hyperlink{expr_8h_aa6a2ebe4ed480217e070130d63754658}{S\-Y\-M\-B\-O\-L\-\_\-\-H\-A\-S\-H\-S\-I\-Z\-E}~9973
+\item 
+\#define \hyperlink{expr_8h_ab50fb439f0c2e7c2c5b8b12c7be60e77}{for\-\_\-all\-\_\-properties}(sym, st, tok)
+\item 
+\#define \hyperlink{expr_8h_ad506aec4f082dde16ca1697c338136ce}{for\-\_\-all\-\_\-defaults}(sym, st)~\hyperlink{expr_8h_ab50fb439f0c2e7c2c5b8b12c7be60e77}{for\-\_\-all\-\_\-properties}(sym, st, \hyperlink{expr_8h_a403a578df6dfdc7e86f6bca789c523c2a6a59f8acead76e8242da2ffa474f5314}{P\-\_\-\-D\-E\-F\-A\-U\-L\-T})
+\item 
+\#define \hyperlink{expr_8h_a2f58d34053c46d65a73cf204b1ebffe5}{for\-\_\-all\-\_\-choices}(sym, st)~\hyperlink{expr_8h_ab50fb439f0c2e7c2c5b8b12c7be60e77}{for\-\_\-all\-\_\-properties}(sym, st, \hyperlink{expr_8h_a403a578df6dfdc7e86f6bca789c523c2a0130e66b941c866f26873ac24d619c12}{P\-\_\-\-C\-H\-O\-I\-C\-E})
+\item 
+\#define \hyperlink{expr_8h_a8efb7fbb7d072f4db2372d87e1d2af6b}{for\-\_\-all\-\_\-prompts}(sym, st)
+\item 
+\#define \hyperlink{expr_8h_a9901051434527c225cb425896f5b4d8b}{M\-E\-N\-U\-\_\-\-C\-H\-A\-N\-G\-E\-D}~0x0001
+\item 
+\#define \hyperlink{expr_8h_a7ba60c35f5521c885aa96724f6811b04}{M\-E\-N\-U\-\_\-\-R\-O\-O\-T}~0x0002
+\item 
+\#define \hyperlink{expr_8h_a5ec5053291214a96059c05041ee30028}{J\-U\-M\-P\-\_\-\-N\-B}~9
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef enum \hyperlink{expr_8h_af4926743b1e532e0b2ad24161ff942a3}{tristate} \hyperlink{expr_8h_abdecc18fb5adf77b7bf1a6f4bb820fc0}{tristate}
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{expr_8h_af4926743b1e532e0b2ad24161ff942a3}{tristate} \{ \hyperlink{expr_8h_af4926743b1e532e0b2ad24161ff942a3a8fe4a05f1addc1b9a4aae17d7b166646}{no}, 
+\hyperlink{expr_8h_af4926743b1e532e0b2ad24161ff942a3af9d70d5d5a4d7f060fa0024e238161e2}{mod}, 
+\hyperlink{expr_8h_af4926743b1e532e0b2ad24161ff942a3aa447884a6b7ce069acc4b7eb98acdb92}{yes}
+ \}
+\item 
+enum \hyperlink{expr_8h_a42f022cdf0b8313a80f367d2739b9c19}{expr\-\_\-type} \{ \\*
+\hyperlink{expr_8h_a42f022cdf0b8313a80f367d2739b9c19aea07a624765558e71010a97222288e72}{E\-\_\-\-N\-O\-N\-E}, 
+\hyperlink{expr_8h_a42f022cdf0b8313a80f367d2739b9c19af2f8d5248a1afaee24eb11593fdd9452}{E\-\_\-\-O\-R}, 
+\hyperlink{expr_8h_a42f022cdf0b8313a80f367d2739b9c19ace28ee262ab00b3fc25921bd8e58cfb3}{E\-\_\-\-A\-N\-D}, 
+\hyperlink{expr_8h_a42f022cdf0b8313a80f367d2739b9c19a752ce96dc8e0b7d4f21a90eb2de86617}{E\-\_\-\-N\-O\-T}, 
+\\*
+\hyperlink{expr_8h_a42f022cdf0b8313a80f367d2739b9c19ae082ac0bf7a351e7d0e986d0f77390f4}{E\-\_\-\-E\-Q\-U\-A\-L}, 
+\hyperlink{expr_8h_a42f022cdf0b8313a80f367d2739b9c19a0d3641b0be709644c0f6ae897274897b}{E\-\_\-\-U\-N\-E\-Q\-U\-A\-L}, 
+\hyperlink{expr_8h_a42f022cdf0b8313a80f367d2739b9c19ac57407bc36c8da1d452886f4aae184d6}{E\-\_\-\-L\-I\-S\-T}, 
+\hyperlink{expr_8h_a42f022cdf0b8313a80f367d2739b9c19a65004d7af71b1f468b63127c0e26aac3}{E\-\_\-\-S\-Y\-M\-B\-O\-L}, 
+\\*
+\hyperlink{expr_8h_a42f022cdf0b8313a80f367d2739b9c19ab6ca7abb674ed4b432be474346b02ff4}{E\-\_\-\-R\-A\-N\-G\-E}
+ \}
+\item 
+enum \hyperlink{expr_8h_a9e6705a3296471be728a3b6570b56231}{symbol\-\_\-type} \{ \\*
+\hyperlink{expr_8h_a9e6705a3296471be728a3b6570b56231a1dea9ede390e0628042b8d422bc031b4}{S\-\_\-\-U\-N\-K\-N\-O\-W\-N}, 
+\hyperlink{expr_8h_a9e6705a3296471be728a3b6570b56231a3b87aa1261f067989ec27c1d158ee3f8}{S\-\_\-\-B\-O\-O\-L\-E\-A\-N}, 
+\hyperlink{expr_8h_a9e6705a3296471be728a3b6570b56231a4dc9c80b501c7c78ef3212471676d4fe}{S\-\_\-\-T\-R\-I\-S\-T\-A\-T\-E}, 
+\hyperlink{expr_8h_a9e6705a3296471be728a3b6570b56231a5d2095a9c6c3224606729ef1b14ec199}{S\-\_\-\-I\-N\-T}, 
+\\*
+\hyperlink{expr_8h_a9e6705a3296471be728a3b6570b56231a3024fd5be4ffb33269ff8deb6d0abc35}{S\-\_\-\-H\-E\-X}, 
+\hyperlink{expr_8h_a9e6705a3296471be728a3b6570b56231a1b31077fb0df7a46f524d36e68ab3dc1}{S\-\_\-\-S\-T\-R\-I\-N\-G}, 
+\hyperlink{expr_8h_a9e6705a3296471be728a3b6570b56231adc22a638e6248e88fd3661715ac1af48}{S\-\_\-\-O\-T\-H\-E\-R}
+ \}
+\item 
+enum \{ \\*
+\hyperlink{expr_8h_a06fc87d81c62e9abb8790b6e5713c55ba1b0f5ac53e83f259761b575ac27b1a3e}{S\-\_\-\-D\-E\-F\-\_\-\-U\-S\-E\-R}, 
+\hyperlink{expr_8h_a06fc87d81c62e9abb8790b6e5713c55ba73cd1caa1772c4add0ccdcf1f2504d80}{S\-\_\-\-D\-E\-F\-\_\-\-A\-U\-T\-O}, 
+\hyperlink{expr_8h_a06fc87d81c62e9abb8790b6e5713c55ba804005496446899a4046d0c581700666}{S\-\_\-\-D\-E\-F\-\_\-\-D\-E\-F3}, 
+\hyperlink{expr_8h_a06fc87d81c62e9abb8790b6e5713c55ba1de33ba78995627daf9a8333eb17adbf}{S\-\_\-\-D\-E\-F\-\_\-\-D\-E\-F4}, 
+\\*
+\hyperlink{expr_8h_a06fc87d81c62e9abb8790b6e5713c55ba3ba578f109613726ac36139494826070}{S\-\_\-\-D\-E\-F\-\_\-\-C\-O\-U\-N\-T}
+ \}
+\item 
+enum \hyperlink{expr_8h_a403a578df6dfdc7e86f6bca789c523c2}{prop\-\_\-type} \{ \\*
+\hyperlink{expr_8h_a403a578df6dfdc7e86f6bca789c523c2a1dc7c13336215d35db9b3b6fa125d615}{P\-\_\-\-U\-N\-K\-N\-O\-W\-N}, 
+\hyperlink{expr_8h_a403a578df6dfdc7e86f6bca789c523c2aafb93b7c218752a5b1250f2be37f51bf}{P\-\_\-\-P\-R\-O\-M\-P\-T}, 
+\hyperlink{expr_8h_a403a578df6dfdc7e86f6bca789c523c2af907d9737cd8023ebe6375d8e50a6e22}{P\-\_\-\-C\-O\-M\-M\-E\-N\-T}, 
+\hyperlink{expr_8h_a403a578df6dfdc7e86f6bca789c523c2ad4045694658d6cb2c6b3b7090d6bb244}{P\-\_\-\-M\-E\-N\-U}, 
+\\*
+\hyperlink{expr_8h_a403a578df6dfdc7e86f6bca789c523c2a6a59f8acead76e8242da2ffa474f5314}{P\-\_\-\-D\-E\-F\-A\-U\-L\-T}, 
+\hyperlink{expr_8h_a403a578df6dfdc7e86f6bca789c523c2a0130e66b941c866f26873ac24d619c12}{P\-\_\-\-C\-H\-O\-I\-C\-E}, 
+\hyperlink{expr_8h_a403a578df6dfdc7e86f6bca789c523c2a28801a97004da564733c0d1b64b1d974}{P\-\_\-\-S\-E\-L\-E\-C\-T}, 
+\hyperlink{expr_8h_a403a578df6dfdc7e86f6bca789c523c2a5f2c6a3d05c5a092e334be25b4b916ab}{P\-\_\-\-R\-A\-N\-G\-E}, 
+\\*
+\hyperlink{expr_8h_a403a578df6dfdc7e86f6bca789c523c2a766b9fec0a6aebf78338a96b14a95c56}{P\-\_\-\-E\-N\-V}, 
+\hyperlink{expr_8h_a403a578df6dfdc7e86f6bca789c523c2a9900074d57f1d0eb6da458717995b4ee}{P\-\_\-\-S\-Y\-M\-B\-O\-L}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structfile}{file} $\ast$ \hyperlink{expr_8h_a69f42c110a88d539fe3e0c7a850f587d}{lookup\-\_\-file} (const char $\ast$name)
+\item 
+struct \hyperlink{structexpr}{expr} $\ast$ \hyperlink{expr_8h_a0778e58824b9508f465da6f103b8fe82}{expr\-\_\-alloc\-\_\-symbol} (struct \hyperlink{structsymbol}{symbol} $\ast$sym)
+\item 
+struct \hyperlink{structexpr}{expr} $\ast$ \hyperlink{expr_8h_a62dc8ceab82195feae7e6589d5d586cb}{expr\-\_\-alloc\-\_\-one} (enum \hyperlink{expr_8h_a42f022cdf0b8313a80f367d2739b9c19}{expr\-\_\-type} type, struct \hyperlink{structexpr}{expr} $\ast$ce)
+\item 
+struct \hyperlink{structexpr}{expr} $\ast$ \hyperlink{expr_8h_ac7950ae0e594f78dc78ec7c7161bf314}{expr\-\_\-alloc\-\_\-two} (enum \hyperlink{expr_8h_a42f022cdf0b8313a80f367d2739b9c19}{expr\-\_\-type} type, struct \hyperlink{structexpr}{expr} $\ast$\hyperlink{expr_8c_a54066849b19dfd8c8c8d136545e6a5a7}{e1}, struct \hyperlink{structexpr}{expr} $\ast$\hyperlink{expr_8c_aeb94089846f9faece66af4aabd2f0875}{e2})
+\item 
+struct \hyperlink{structexpr}{expr} $\ast$ \hyperlink{expr_8h_a5081433c07d02a4ba10fe1560bd0b37b}{expr\-\_\-alloc\-\_\-comp} (enum \hyperlink{expr_8h_a42f022cdf0b8313a80f367d2739b9c19}{expr\-\_\-type} type, struct \hyperlink{structsymbol}{symbol} $\ast$s1, struct \hyperlink{structsymbol}{symbol} $\ast$s2)
+\item 
+struct \hyperlink{structexpr}{expr} $\ast$ \hyperlink{expr_8h_a00b49f1e02e8c5d36d60268cc9e7d7c4}{expr\-\_\-alloc\-\_\-and} (struct \hyperlink{structexpr}{expr} $\ast$\hyperlink{expr_8c_a54066849b19dfd8c8c8d136545e6a5a7}{e1}, struct \hyperlink{structexpr}{expr} $\ast$\hyperlink{expr_8c_aeb94089846f9faece66af4aabd2f0875}{e2})
+\item 
+struct \hyperlink{structexpr}{expr} $\ast$ \hyperlink{expr_8h_a8c2a72de9f22460f34f0ed79464e7b95}{expr\-\_\-alloc\-\_\-or} (struct \hyperlink{structexpr}{expr} $\ast$\hyperlink{expr_8c_a54066849b19dfd8c8c8d136545e6a5a7}{e1}, struct \hyperlink{structexpr}{expr} $\ast$\hyperlink{expr_8c_aeb94089846f9faece66af4aabd2f0875}{e2})
+\item 
+struct \hyperlink{structexpr}{expr} $\ast$ \hyperlink{expr_8h_aaf09ba115074cf6548f636c11053104a}{expr\-\_\-copy} (const struct \hyperlink{structexpr}{expr} $\ast$org)
+\item 
+void \hyperlink{expr_8h_a58696588994c9bc2c840546d4684eeb8}{expr\-\_\-free} (struct \hyperlink{structexpr}{expr} $\ast$e)
+\item 
+int \hyperlink{expr_8h_acbdeff5e36ad1ef7ed788a07f76d9800}{expr\-\_\-eq} (struct \hyperlink{structexpr}{expr} $\ast$\hyperlink{expr_8c_a54066849b19dfd8c8c8d136545e6a5a7}{e1}, struct \hyperlink{structexpr}{expr} $\ast$\hyperlink{expr_8c_aeb94089846f9faece66af4aabd2f0875}{e2})
+\item 
+void \hyperlink{expr_8h_a57718610c3d0874aac37e293d43e9bea}{expr\-\_\-eliminate\-\_\-eq} (struct \hyperlink{structexpr}{expr} $\ast$$\ast$ep1, struct \hyperlink{structexpr}{expr} $\ast$$\ast$ep2)
+\item 
+\hyperlink{expr_8h_af4926743b1e532e0b2ad24161ff942a3}{tristate} \hyperlink{expr_8h_ada515d86b7687887dcb09818d175297e}{expr\-\_\-calc\-\_\-value} (struct \hyperlink{structexpr}{expr} $\ast$e)
+\item 
+struct \hyperlink{structexpr}{expr} $\ast$ \hyperlink{expr_8h_ab01edde3153c5a84669726285ac3634b}{expr\-\_\-eliminate\-\_\-yn} (struct \hyperlink{structexpr}{expr} $\ast$e)
+\item 
+struct \hyperlink{structexpr}{expr} $\ast$ \hyperlink{expr_8h_a5645337a4e753eacc5897b19fc778237}{expr\-\_\-trans\-\_\-bool} (struct \hyperlink{structexpr}{expr} $\ast$e)
+\item 
+struct \hyperlink{structexpr}{expr} $\ast$ \hyperlink{expr_8h_ae8debd383afb9a764a7b824a188d7efa}{expr\-\_\-eliminate\-\_\-dups} (struct \hyperlink{structexpr}{expr} $\ast$e)
+\item 
+struct \hyperlink{structexpr}{expr} $\ast$ \hyperlink{expr_8h_a8b22cf6cb9f41b69cc6af2ecf42ee34b}{expr\-\_\-transform} (struct \hyperlink{structexpr}{expr} $\ast$e)
+\item 
+int \hyperlink{expr_8h_a393dd71ecea7229f7b799b010c301183}{expr\-\_\-contains\-\_\-symbol} (struct \hyperlink{structexpr}{expr} $\ast$dep, struct \hyperlink{structsymbol}{symbol} $\ast$sym)
+\item 
+bool \hyperlink{expr_8h_a502fcee2302f6be2b19016ab87779902}{expr\-\_\-depends\-\_\-symbol} (struct \hyperlink{structexpr}{expr} $\ast$dep, struct \hyperlink{structsymbol}{symbol} $\ast$sym)
+\item 
+struct \hyperlink{structexpr}{expr} $\ast$ \hyperlink{expr_8h_a01108a98d875ed208f75873868a75f3c}{expr\-\_\-extract\-\_\-eq\-\_\-and} (struct \hyperlink{structexpr}{expr} $\ast$$\ast$ep1, struct \hyperlink{structexpr}{expr} $\ast$$\ast$ep2)
+\item 
+struct \hyperlink{structexpr}{expr} $\ast$ \hyperlink{expr_8h_a91f19ea347321a72f819e6b1e20f17cd}{expr\-\_\-extract\-\_\-eq\-\_\-or} (struct \hyperlink{structexpr}{expr} $\ast$$\ast$ep1, struct \hyperlink{structexpr}{expr} $\ast$$\ast$ep2)
+\item 
+void \hyperlink{expr_8h_a9c1ce3af68120d33dda4db773c8ef44d}{expr\-\_\-extract\-\_\-eq} (enum \hyperlink{expr_8h_a42f022cdf0b8313a80f367d2739b9c19}{expr\-\_\-type} type, struct \hyperlink{structexpr}{expr} $\ast$$\ast$ep, struct \hyperlink{structexpr}{expr} $\ast$$\ast$ep1, struct \hyperlink{structexpr}{expr} $\ast$$\ast$ep2)
+\item 
+struct \hyperlink{structexpr}{expr} $\ast$ \hyperlink{expr_8h_a4fe39c57a0e50ef7cee5afd3cc8f1ec1}{expr\-\_\-trans\-\_\-compare} (struct \hyperlink{structexpr}{expr} $\ast$e, enum \hyperlink{expr_8h_a42f022cdf0b8313a80f367d2739b9c19}{expr\-\_\-type} type, struct \hyperlink{structsymbol}{symbol} $\ast$sym)
+\item 
+struct \hyperlink{structexpr}{expr} $\ast$ \hyperlink{expr_8h_aa7e704688d61d72669c0d12904d4d6db}{expr\-\_\-simplify\-\_\-unmet\-\_\-dep} (struct \hyperlink{structexpr}{expr} $\ast$\hyperlink{expr_8c_a54066849b19dfd8c8c8d136545e6a5a7}{e1}, struct \hyperlink{structexpr}{expr} $\ast$\hyperlink{expr_8c_aeb94089846f9faece66af4aabd2f0875}{e2})
+\item 
+void \hyperlink{expr_8h_aaf833e883e15e99fd75756e3a0ed81e8}{expr\-\_\-fprint} (struct \hyperlink{structexpr}{expr} $\ast$e, F\-I\-L\-E $\ast$out)
+\item 
+void \hyperlink{expr_8h_a3e599bfcd77d596b82ccc67b8edd0221}{expr\-\_\-gstr\-\_\-print} (struct \hyperlink{structexpr}{expr} $\ast$e, struct \hyperlink{structgstr}{gstr} $\ast$gs)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structfile}{file} $\ast$ \hyperlink{expr_8h_a9cb6cd8810ed11698874b40d8a5a8749}{file\-\_\-list}
+\item 
+struct \hyperlink{structfile}{file} $\ast$ \hyperlink{expr_8h_ac6eea6f469d4e3b3886cdfc0a9a745a9}{current\-\_\-file}
+\item 
+struct \hyperlink{structsymbol}{symbol} \hyperlink{symbol_8c_abcc3b2c847656de8645c4302fb955034}{symbol\-\_\-yes} \hyperlink{symbol_8c_ac6e0f5d112e7baf46fcc024bb36f0013}{symbol\-\_\-no} \hyperlink{expr_8h_a288bc38f9973340adc741080f1f50936}{symbol\-\_\-mod}
+\item 
+struct \hyperlink{structsymbol}{symbol} $\ast$ \hyperlink{expr_8h_a51a1f7e2d11e5937c573e9b5f856c5be}{modules\-\_\-sym}
+\item 
+struct \hyperlink{structsymbol}{symbol} $\ast$ \hyperlink{expr_8h_afddde2678f37645efd0e4d71e270874b}{sym\-\_\-defconfig\-\_\-list}
+\item 
+int \hyperlink{expr_8h_a0c7b92758e5868f313785278162206c4}{cdebug}
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{expr_8h_a67a7a1000228d1d62054331254e01ed8}{\index{expr.\-h@{expr.\-h}!E\-X\-P\-R\-\_\-\-A\-N\-D@{E\-X\-P\-R\-\_\-\-A\-N\-D}}
+\index{E\-X\-P\-R\-\_\-\-A\-N\-D@{E\-X\-P\-R\-\_\-\-A\-N\-D}!expr.h@{expr.\-h}}
+\subsubsection[{E\-X\-P\-R\-\_\-\-A\-N\-D}]{\setlength{\rightskip}{0pt plus 5cm}\#define E\-X\-P\-R\-\_\-\-A\-N\-D(
+\begin{DoxyParamCaption}
+\item[{}]{dep1, }
+\item[{}]{dep2}
+\end{DoxyParamCaption}
+)~(((dep1)$<$(dep2))?(dep1)\-:(dep2))}}\label{expr_8h_a67a7a1000228d1d62054331254e01ed8}
+\hypertarget{expr_8h_a60e2a565d1e4d29dd429cea945cdcf9c}{\index{expr.\-h@{expr.\-h}!expr\-\_\-list\-\_\-for\-\_\-each\-\_\-sym@{expr\-\_\-list\-\_\-for\-\_\-each\-\_\-sym}}
+\index{expr\-\_\-list\-\_\-for\-\_\-each\-\_\-sym@{expr\-\_\-list\-\_\-for\-\_\-each\-\_\-sym}!expr.h@{expr.\-h}}
+\subsubsection[{expr\-\_\-list\-\_\-for\-\_\-each\-\_\-sym}]{\setlength{\rightskip}{0pt plus 5cm}\#define expr\-\_\-list\-\_\-for\-\_\-each\-\_\-sym(
+\begin{DoxyParamCaption}
+\item[{}]{l, }
+\item[{}]{e, }
+\item[{}]{s}
+\end{DoxyParamCaption}
+)~for (e = (l); e \&\& (s = e-\/$>$right.\-sym); e = e-\/$>$left.\-expr)}}\label{expr_8h_a60e2a565d1e4d29dd429cea945cdcf9c}
+\hypertarget{expr_8h_a8c591a782f9a7e047eb77b6713f07a01}{\index{expr.\-h@{expr.\-h}!E\-X\-P\-R\-\_\-\-N\-O\-T@{E\-X\-P\-R\-\_\-\-N\-O\-T}}
+\index{E\-X\-P\-R\-\_\-\-N\-O\-T@{E\-X\-P\-R\-\_\-\-N\-O\-T}!expr.h@{expr.\-h}}
+\subsubsection[{E\-X\-P\-R\-\_\-\-N\-O\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define E\-X\-P\-R\-\_\-\-N\-O\-T(
+\begin{DoxyParamCaption}
+\item[{}]{dep}
+\end{DoxyParamCaption}
+)~(2-\/(dep))}}\label{expr_8h_a8c591a782f9a7e047eb77b6713f07a01}
+\hypertarget{expr_8h_abec4acf1844ea2243d103d8b7b328d8e}{\index{expr.\-h@{expr.\-h}!E\-X\-P\-R\-\_\-\-O\-R@{E\-X\-P\-R\-\_\-\-O\-R}}
+\index{E\-X\-P\-R\-\_\-\-O\-R@{E\-X\-P\-R\-\_\-\-O\-R}!expr.h@{expr.\-h}}
+\subsubsection[{E\-X\-P\-R\-\_\-\-O\-R}]{\setlength{\rightskip}{0pt plus 5cm}\#define E\-X\-P\-R\-\_\-\-O\-R(
+\begin{DoxyParamCaption}
+\item[{}]{dep1, }
+\item[{}]{dep2}
+\end{DoxyParamCaption}
+)~(((dep1)$>$(dep2))?(dep1)\-:(dep2))}}\label{expr_8h_abec4acf1844ea2243d103d8b7b328d8e}
+\hypertarget{expr_8h_a2f58d34053c46d65a73cf204b1ebffe5}{\index{expr.\-h@{expr.\-h}!for\-\_\-all\-\_\-choices@{for\-\_\-all\-\_\-choices}}
+\index{for\-\_\-all\-\_\-choices@{for\-\_\-all\-\_\-choices}!expr.h@{expr.\-h}}
+\subsubsection[{for\-\_\-all\-\_\-choices}]{\setlength{\rightskip}{0pt plus 5cm}\#define for\-\_\-all\-\_\-choices(
+\begin{DoxyParamCaption}
+\item[{}]{sym, }
+\item[{}]{st}
+\end{DoxyParamCaption}
+)~{\bf for\-\_\-all\-\_\-properties}(sym, st, {\bf P\-\_\-\-C\-H\-O\-I\-C\-E})}}\label{expr_8h_a2f58d34053c46d65a73cf204b1ebffe5}
+\hypertarget{expr_8h_ad506aec4f082dde16ca1697c338136ce}{\index{expr.\-h@{expr.\-h}!for\-\_\-all\-\_\-defaults@{for\-\_\-all\-\_\-defaults}}
+\index{for\-\_\-all\-\_\-defaults@{for\-\_\-all\-\_\-defaults}!expr.h@{expr.\-h}}
+\subsubsection[{for\-\_\-all\-\_\-defaults}]{\setlength{\rightskip}{0pt plus 5cm}\#define for\-\_\-all\-\_\-defaults(
+\begin{DoxyParamCaption}
+\item[{}]{sym, }
+\item[{}]{st}
+\end{DoxyParamCaption}
+)~{\bf for\-\_\-all\-\_\-properties}(sym, st, {\bf P\-\_\-\-D\-E\-F\-A\-U\-L\-T})}}\label{expr_8h_ad506aec4f082dde16ca1697c338136ce}
+\hypertarget{expr_8h_a8efb7fbb7d072f4db2372d87e1d2af6b}{\index{expr.\-h@{expr.\-h}!for\-\_\-all\-\_\-prompts@{for\-\_\-all\-\_\-prompts}}
+\index{for\-\_\-all\-\_\-prompts@{for\-\_\-all\-\_\-prompts}!expr.h@{expr.\-h}}
+\subsubsection[{for\-\_\-all\-\_\-prompts}]{\setlength{\rightskip}{0pt plus 5cm}\#define for\-\_\-all\-\_\-prompts(
+\begin{DoxyParamCaption}
+\item[{}]{sym, }
+\item[{}]{st}
+\end{DoxyParamCaption}
+)}}\label{expr_8h_a8efb7fbb7d072f4db2372d87e1d2af6b}
+{\bfseries Value\-:}
+\begin{DoxyCode}
+\textcolor{keywordflow}{for} (st = sym->prop; st; st = st->next) \hyperlink{zconf_8lex_8c_ad4a65b873df5c05570846b5413b41dfd}{\(\backslash\)}
+\hyperlink{zconf_8lex_8c_ad4a65b873df5c05570846b5413b41dfd}{        if} (st->text)
+\end{DoxyCode}
+\hypertarget{expr_8h_ab50fb439f0c2e7c2c5b8b12c7be60e77}{\index{expr.\-h@{expr.\-h}!for\-\_\-all\-\_\-properties@{for\-\_\-all\-\_\-properties}}
+\index{for\-\_\-all\-\_\-properties@{for\-\_\-all\-\_\-properties}!expr.h@{expr.\-h}}
+\subsubsection[{for\-\_\-all\-\_\-properties}]{\setlength{\rightskip}{0pt plus 5cm}\#define for\-\_\-all\-\_\-properties(
+\begin{DoxyParamCaption}
+\item[{}]{sym, }
+\item[{}]{st, }
+\item[{}]{tok}
+\end{DoxyParamCaption}
+)}}\label{expr_8h_ab50fb439f0c2e7c2c5b8b12c7be60e77}
+{\bfseries Value\-:}
+\begin{DoxyCode}
+\textcolor{keywordflow}{for} (st = sym->prop; st; st = st->next) \hyperlink{zconf_8lex_8c_ad4a65b873df5c05570846b5413b41dfd}{\(\backslash\)}
+\hyperlink{zconf_8lex_8c_ad4a65b873df5c05570846b5413b41dfd}{        if} (st->type == (tok))
+\end{DoxyCode}
+\hypertarget{expr_8h_ab97c818dd44c9afd6546ed892680d872}{\index{expr.\-h@{expr.\-h}!for\-\_\-all\-\_\-symbols@{for\-\_\-all\-\_\-symbols}}
+\index{for\-\_\-all\-\_\-symbols@{for\-\_\-all\-\_\-symbols}!expr.h@{expr.\-h}}
+\subsubsection[{for\-\_\-all\-\_\-symbols}]{\setlength{\rightskip}{0pt plus 5cm}\#define for\-\_\-all\-\_\-symbols(
+\begin{DoxyParamCaption}
+\item[{}]{{\bf i}, }
+\item[{}]{sym}
+\end{DoxyParamCaption}
+)~for ({\bf i} = 0; {\bf i} $<$ {\bf S\-Y\-M\-B\-O\-L\-\_\-\-H\-A\-S\-H\-S\-I\-Z\-E}; {\bf i}++) for (sym = {\bf symbol\-\_\-hash}\mbox{[}{\bf i}\mbox{]}; sym; sym = sym-\/$>$next) {\bf if} (sym-\/$>$type != {\bf S\-\_\-\-O\-T\-H\-E\-R})}}\label{expr_8h_ab97c818dd44c9afd6546ed892680d872}
+\hypertarget{expr_8h_a5ec5053291214a96059c05041ee30028}{\index{expr.\-h@{expr.\-h}!J\-U\-M\-P\-\_\-\-N\-B@{J\-U\-M\-P\-\_\-\-N\-B}}
+\index{J\-U\-M\-P\-\_\-\-N\-B@{J\-U\-M\-P\-\_\-\-N\-B}!expr.h@{expr.\-h}}
+\subsubsection[{J\-U\-M\-P\-\_\-\-N\-B}]{\setlength{\rightskip}{0pt plus 5cm}\#define J\-U\-M\-P\-\_\-\-N\-B~9}}\label{expr_8h_a5ec5053291214a96059c05041ee30028}
+\hypertarget{expr_8h_a9901051434527c225cb425896f5b4d8b}{\index{expr.\-h@{expr.\-h}!M\-E\-N\-U\-\_\-\-C\-H\-A\-N\-G\-E\-D@{M\-E\-N\-U\-\_\-\-C\-H\-A\-N\-G\-E\-D}}
+\index{M\-E\-N\-U\-\_\-\-C\-H\-A\-N\-G\-E\-D@{M\-E\-N\-U\-\_\-\-C\-H\-A\-N\-G\-E\-D}!expr.h@{expr.\-h}}
+\subsubsection[{M\-E\-N\-U\-\_\-\-C\-H\-A\-N\-G\-E\-D}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\-E\-N\-U\-\_\-\-C\-H\-A\-N\-G\-E\-D~0x0001}}\label{expr_8h_a9901051434527c225cb425896f5b4d8b}
+\hypertarget{expr_8h_a7ba60c35f5521c885aa96724f6811b04}{\index{expr.\-h@{expr.\-h}!M\-E\-N\-U\-\_\-\-R\-O\-O\-T@{M\-E\-N\-U\-\_\-\-R\-O\-O\-T}}
+\index{M\-E\-N\-U\-\_\-\-R\-O\-O\-T@{M\-E\-N\-U\-\_\-\-R\-O\-O\-T}!expr.h@{expr.\-h}}
+\subsubsection[{M\-E\-N\-U\-\_\-\-R\-O\-O\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\-E\-N\-U\-\_\-\-R\-O\-O\-T~0x0002}}\label{expr_8h_a7ba60c35f5521c885aa96724f6811b04}
+\hypertarget{expr_8h_a7308ce85c4536758655355d753f0ff8b}{\index{expr.\-h@{expr.\-h}!S\-Y\-M\-B\-O\-L\-\_\-\-A\-U\-T\-O@{S\-Y\-M\-B\-O\-L\-\_\-\-A\-U\-T\-O}}
+\index{S\-Y\-M\-B\-O\-L\-\_\-\-A\-U\-T\-O@{S\-Y\-M\-B\-O\-L\-\_\-\-A\-U\-T\-O}!expr.h@{expr.\-h}}
+\subsubsection[{S\-Y\-M\-B\-O\-L\-\_\-\-A\-U\-T\-O}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\-Y\-M\-B\-O\-L\-\_\-\-A\-U\-T\-O~0x1000  /$\ast$ value from environment variable $\ast$/}}\label{expr_8h_a7308ce85c4536758655355d753f0ff8b}
+\hypertarget{expr_8h_a0d39ae20e26bca6c16127e951ea0162b}{\index{expr.\-h@{expr.\-h}!S\-Y\-M\-B\-O\-L\-\_\-\-C\-H\-A\-N\-G\-E\-D@{S\-Y\-M\-B\-O\-L\-\_\-\-C\-H\-A\-N\-G\-E\-D}}
+\index{S\-Y\-M\-B\-O\-L\-\_\-\-C\-H\-A\-N\-G\-E\-D@{S\-Y\-M\-B\-O\-L\-\_\-\-C\-H\-A\-N\-G\-E\-D}!expr.h@{expr.\-h}}
+\subsubsection[{S\-Y\-M\-B\-O\-L\-\_\-\-C\-H\-A\-N\-G\-E\-D}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\-Y\-M\-B\-O\-L\-\_\-\-C\-H\-A\-N\-G\-E\-D~0x0400  /$\ast$ ? $\ast$/}}\label{expr_8h_a0d39ae20e26bca6c16127e951ea0162b}
+\hypertarget{expr_8h_a42c87e80838a3ec65a345cd109dbb2f3}{\index{expr.\-h@{expr.\-h}!S\-Y\-M\-B\-O\-L\-\_\-\-C\-H\-E\-C\-K@{S\-Y\-M\-B\-O\-L\-\_\-\-C\-H\-E\-C\-K}}
+\index{S\-Y\-M\-B\-O\-L\-\_\-\-C\-H\-E\-C\-K@{S\-Y\-M\-B\-O\-L\-\_\-\-C\-H\-E\-C\-K}!expr.h@{expr.\-h}}
+\subsubsection[{S\-Y\-M\-B\-O\-L\-\_\-\-C\-H\-E\-C\-K}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\-Y\-M\-B\-O\-L\-\_\-\-C\-H\-E\-C\-K~0x0008  /$\ast$ used during dependency checking $\ast$/}}\label{expr_8h_a42c87e80838a3ec65a345cd109dbb2f3}
+\hypertarget{expr_8h_a7257cb60a278345c7964860f4b2f7836}{\index{expr.\-h@{expr.\-h}!S\-Y\-M\-B\-O\-L\-\_\-\-C\-H\-E\-C\-K\-E\-D@{S\-Y\-M\-B\-O\-L\-\_\-\-C\-H\-E\-C\-K\-E\-D}}
+\index{S\-Y\-M\-B\-O\-L\-\_\-\-C\-H\-E\-C\-K\-E\-D@{S\-Y\-M\-B\-O\-L\-\_\-\-C\-H\-E\-C\-K\-E\-D}!expr.h@{expr.\-h}}
+\subsubsection[{S\-Y\-M\-B\-O\-L\-\_\-\-C\-H\-E\-C\-K\-E\-D}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\-Y\-M\-B\-O\-L\-\_\-\-C\-H\-E\-C\-K\-E\-D~0x2000  /$\ast$ used during dependency checking $\ast$/}}\label{expr_8h_a7257cb60a278345c7964860f4b2f7836}
+\hypertarget{expr_8h_a05057b27f6e4527d1c5d9a3c12b9b07d}{\index{expr.\-h@{expr.\-h}!S\-Y\-M\-B\-O\-L\-\_\-\-C\-H\-O\-I\-C\-E@{S\-Y\-M\-B\-O\-L\-\_\-\-C\-H\-O\-I\-C\-E}}
+\index{S\-Y\-M\-B\-O\-L\-\_\-\-C\-H\-O\-I\-C\-E@{S\-Y\-M\-B\-O\-L\-\_\-\-C\-H\-O\-I\-C\-E}!expr.h@{expr.\-h}}
+\subsubsection[{S\-Y\-M\-B\-O\-L\-\_\-\-C\-H\-O\-I\-C\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\-Y\-M\-B\-O\-L\-\_\-\-C\-H\-O\-I\-C\-E~0x0010  /$\ast$ start of a choice block (null name) $\ast$/}}\label{expr_8h_a05057b27f6e4527d1c5d9a3c12b9b07d}
+\hypertarget{expr_8h_a8cd6e2f81c6526116518a305363b6c1f}{\index{expr.\-h@{expr.\-h}!S\-Y\-M\-B\-O\-L\-\_\-\-C\-H\-O\-I\-C\-E\-V\-A\-L@{S\-Y\-M\-B\-O\-L\-\_\-\-C\-H\-O\-I\-C\-E\-V\-A\-L}}
+\index{S\-Y\-M\-B\-O\-L\-\_\-\-C\-H\-O\-I\-C\-E\-V\-A\-L@{S\-Y\-M\-B\-O\-L\-\_\-\-C\-H\-O\-I\-C\-E\-V\-A\-L}!expr.h@{expr.\-h}}
+\subsubsection[{S\-Y\-M\-B\-O\-L\-\_\-\-C\-H\-O\-I\-C\-E\-V\-A\-L}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\-Y\-M\-B\-O\-L\-\_\-\-C\-H\-O\-I\-C\-E\-V\-A\-L~0x0020  /$\ast$ used as a value in a choice block $\ast$/}}\label{expr_8h_a8cd6e2f81c6526116518a305363b6c1f}
+\hypertarget{expr_8h_a8040dfd309b568d93ee63f4ef15ea922}{\index{expr.\-h@{expr.\-h}!S\-Y\-M\-B\-O\-L\-\_\-\-C\-O\-N\-S\-T@{S\-Y\-M\-B\-O\-L\-\_\-\-C\-O\-N\-S\-T}}
+\index{S\-Y\-M\-B\-O\-L\-\_\-\-C\-O\-N\-S\-T@{S\-Y\-M\-B\-O\-L\-\_\-\-C\-O\-N\-S\-T}!expr.h@{expr.\-h}}
+\subsubsection[{S\-Y\-M\-B\-O\-L\-\_\-\-C\-O\-N\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\-Y\-M\-B\-O\-L\-\_\-\-C\-O\-N\-S\-T~0x0001  /$\ast$ symbol is const $\ast$/}}\label{expr_8h_a8040dfd309b568d93ee63f4ef15ea922}
+\hypertarget{expr_8h_a5a09b4a84b99bd3c6de5c426da30e15d}{\index{expr.\-h@{expr.\-h}!S\-Y\-M\-B\-O\-L\-\_\-\-D\-E\-F@{S\-Y\-M\-B\-O\-L\-\_\-\-D\-E\-F}}
+\index{S\-Y\-M\-B\-O\-L\-\_\-\-D\-E\-F@{S\-Y\-M\-B\-O\-L\-\_\-\-D\-E\-F}!expr.h@{expr.\-h}}
+\subsubsection[{S\-Y\-M\-B\-O\-L\-\_\-\-D\-E\-F}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\-Y\-M\-B\-O\-L\-\_\-\-D\-E\-F~0x10000  /$\ast$ First bit of S\-Y\-M\-B\-O\-L\-\_\-\-D\-E\-F $\ast$/}}\label{expr_8h_a5a09b4a84b99bd3c6de5c426da30e15d}
+\hypertarget{expr_8h_a700b99669901978c78b918f929ceaf71}{\index{expr.\-h@{expr.\-h}!S\-Y\-M\-B\-O\-L\-\_\-\-D\-E\-F3@{S\-Y\-M\-B\-O\-L\-\_\-\-D\-E\-F3}}
+\index{S\-Y\-M\-B\-O\-L\-\_\-\-D\-E\-F3@{S\-Y\-M\-B\-O\-L\-\_\-\-D\-E\-F3}!expr.h@{expr.\-h}}
+\subsubsection[{S\-Y\-M\-B\-O\-L\-\_\-\-D\-E\-F3}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\-Y\-M\-B\-O\-L\-\_\-\-D\-E\-F3~0x40000  /$\ast$ symbol.\-def\mbox{[}\-S\-\_\-\-D\-E\-F\-\_\-3\mbox{]} is valid $\ast$/}}\label{expr_8h_a700b99669901978c78b918f929ceaf71}
+\hypertarget{expr_8h_a0f878fdeb3cd8f4bfb3fcb319d00187a}{\index{expr.\-h@{expr.\-h}!S\-Y\-M\-B\-O\-L\-\_\-\-D\-E\-F4@{S\-Y\-M\-B\-O\-L\-\_\-\-D\-E\-F4}}
+\index{S\-Y\-M\-B\-O\-L\-\_\-\-D\-E\-F4@{S\-Y\-M\-B\-O\-L\-\_\-\-D\-E\-F4}!expr.h@{expr.\-h}}
+\subsubsection[{S\-Y\-M\-B\-O\-L\-\_\-\-D\-E\-F4}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\-Y\-M\-B\-O\-L\-\_\-\-D\-E\-F4~0x80000  /$\ast$ symbol.\-def\mbox{[}\-S\-\_\-\-D\-E\-F\-\_\-4\mbox{]} is valid $\ast$/}}\label{expr_8h_a0f878fdeb3cd8f4bfb3fcb319d00187a}
+\hypertarget{expr_8h_ad31100191eaf4278668a8bb7ebdecd07}{\index{expr.\-h@{expr.\-h}!S\-Y\-M\-B\-O\-L\-\_\-\-D\-E\-F\-\_\-\-A\-U\-T\-O@{S\-Y\-M\-B\-O\-L\-\_\-\-D\-E\-F\-\_\-\-A\-U\-T\-O}}
+\index{S\-Y\-M\-B\-O\-L\-\_\-\-D\-E\-F\-\_\-\-A\-U\-T\-O@{S\-Y\-M\-B\-O\-L\-\_\-\-D\-E\-F\-\_\-\-A\-U\-T\-O}!expr.h@{expr.\-h}}
+\subsubsection[{S\-Y\-M\-B\-O\-L\-\_\-\-D\-E\-F\-\_\-\-A\-U\-T\-O}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\-Y\-M\-B\-O\-L\-\_\-\-D\-E\-F\-\_\-\-A\-U\-T\-O~0x20000  /$\ast$ symbol.\-def\mbox{[}\-S\-\_\-\-D\-E\-F\-\_\-\-A\-U\-T\-O\mbox{]} is valid $\ast$/}}\label{expr_8h_ad31100191eaf4278668a8bb7ebdecd07}
+\hypertarget{expr_8h_a9ced5749f9001e0bd77eb24850ee4670}{\index{expr.\-h@{expr.\-h}!S\-Y\-M\-B\-O\-L\-\_\-\-D\-E\-F\-\_\-\-U\-S\-E\-R@{S\-Y\-M\-B\-O\-L\-\_\-\-D\-E\-F\-\_\-\-U\-S\-E\-R}}
+\index{S\-Y\-M\-B\-O\-L\-\_\-\-D\-E\-F\-\_\-\-U\-S\-E\-R@{S\-Y\-M\-B\-O\-L\-\_\-\-D\-E\-F\-\_\-\-U\-S\-E\-R}!expr.h@{expr.\-h}}
+\subsubsection[{S\-Y\-M\-B\-O\-L\-\_\-\-D\-E\-F\-\_\-\-U\-S\-E\-R}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\-Y\-M\-B\-O\-L\-\_\-\-D\-E\-F\-\_\-\-U\-S\-E\-R~0x10000  /$\ast$ symbol.\-def\mbox{[}\-S\-\_\-\-D\-E\-F\-\_\-\-U\-S\-E\-R\mbox{]} is valid $\ast$/}}\label{expr_8h_a9ced5749f9001e0bd77eb24850ee4670}
+\hypertarget{expr_8h_aa6a2ebe4ed480217e070130d63754658}{\index{expr.\-h@{expr.\-h}!S\-Y\-M\-B\-O\-L\-\_\-\-H\-A\-S\-H\-S\-I\-Z\-E@{S\-Y\-M\-B\-O\-L\-\_\-\-H\-A\-S\-H\-S\-I\-Z\-E}}
+\index{S\-Y\-M\-B\-O\-L\-\_\-\-H\-A\-S\-H\-S\-I\-Z\-E@{S\-Y\-M\-B\-O\-L\-\_\-\-H\-A\-S\-H\-S\-I\-Z\-E}!expr.h@{expr.\-h}}
+\subsubsection[{S\-Y\-M\-B\-O\-L\-\_\-\-H\-A\-S\-H\-S\-I\-Z\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\-Y\-M\-B\-O\-L\-\_\-\-H\-A\-S\-H\-S\-I\-Z\-E~9973}}\label{expr_8h_aa6a2ebe4ed480217e070130d63754658}
+\hypertarget{expr_8h_a5726a08ed319cb065ff0179b70207c39}{\index{expr.\-h@{expr.\-h}!S\-Y\-M\-B\-O\-L\-\_\-\-M\-A\-X\-L\-E\-N\-G\-T\-H@{S\-Y\-M\-B\-O\-L\-\_\-\-M\-A\-X\-L\-E\-N\-G\-T\-H}}
+\index{S\-Y\-M\-B\-O\-L\-\_\-\-M\-A\-X\-L\-E\-N\-G\-T\-H@{S\-Y\-M\-B\-O\-L\-\_\-\-M\-A\-X\-L\-E\-N\-G\-T\-H}!expr.h@{expr.\-h}}
+\subsubsection[{S\-Y\-M\-B\-O\-L\-\_\-\-M\-A\-X\-L\-E\-N\-G\-T\-H}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\-Y\-M\-B\-O\-L\-\_\-\-M\-A\-X\-L\-E\-N\-G\-T\-H~256}}\label{expr_8h_a5726a08ed319cb065ff0179b70207c39}
+\hypertarget{expr_8h_a9cf70df9b5e445015cfda73b5efd32f6}{\index{expr.\-h@{expr.\-h}!S\-Y\-M\-B\-O\-L\-\_\-\-O\-P\-T\-I\-O\-N\-A\-L@{S\-Y\-M\-B\-O\-L\-\_\-\-O\-P\-T\-I\-O\-N\-A\-L}}
+\index{S\-Y\-M\-B\-O\-L\-\_\-\-O\-P\-T\-I\-O\-N\-A\-L@{S\-Y\-M\-B\-O\-L\-\_\-\-O\-P\-T\-I\-O\-N\-A\-L}!expr.h@{expr.\-h}}
+\subsubsection[{S\-Y\-M\-B\-O\-L\-\_\-\-O\-P\-T\-I\-O\-N\-A\-L}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\-Y\-M\-B\-O\-L\-\_\-\-O\-P\-T\-I\-O\-N\-A\-L~0x0100  /$\ast$ choice is optional -\/ values can be 'n' $\ast$/}}\label{expr_8h_a9cf70df9b5e445015cfda73b5efd32f6}
+\hypertarget{expr_8h_a86978adde1691028d7460c40be1c2125}{\index{expr.\-h@{expr.\-h}!S\-Y\-M\-B\-O\-L\-\_\-\-V\-A\-L\-I\-D@{S\-Y\-M\-B\-O\-L\-\_\-\-V\-A\-L\-I\-D}}
+\index{S\-Y\-M\-B\-O\-L\-\_\-\-V\-A\-L\-I\-D@{S\-Y\-M\-B\-O\-L\-\_\-\-V\-A\-L\-I\-D}!expr.h@{expr.\-h}}
+\subsubsection[{S\-Y\-M\-B\-O\-L\-\_\-\-V\-A\-L\-I\-D}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\-Y\-M\-B\-O\-L\-\_\-\-V\-A\-L\-I\-D~0x0080  /$\ast$ set when symbol.\-curr is calculated $\ast$/}}\label{expr_8h_a86978adde1691028d7460c40be1c2125}
+\hypertarget{expr_8h_a58d67dbde818e4b9fc7664c38c6944b5}{\index{expr.\-h@{expr.\-h}!S\-Y\-M\-B\-O\-L\-\_\-\-W\-A\-R\-N\-E\-D@{S\-Y\-M\-B\-O\-L\-\_\-\-W\-A\-R\-N\-E\-D}}
+\index{S\-Y\-M\-B\-O\-L\-\_\-\-W\-A\-R\-N\-E\-D@{S\-Y\-M\-B\-O\-L\-\_\-\-W\-A\-R\-N\-E\-D}!expr.h@{expr.\-h}}
+\subsubsection[{S\-Y\-M\-B\-O\-L\-\_\-\-W\-A\-R\-N\-E\-D}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\-Y\-M\-B\-O\-L\-\_\-\-W\-A\-R\-N\-E\-D~0x8000  /$\ast$ warning has been issued $\ast$/}}\label{expr_8h_a58d67dbde818e4b9fc7664c38c6944b5}
+\hypertarget{expr_8h_adfbb69f8bbcf17906d81db04eab7c2f8}{\index{expr.\-h@{expr.\-h}!S\-Y\-M\-B\-O\-L\-\_\-\-W\-R\-I\-T\-E@{S\-Y\-M\-B\-O\-L\-\_\-\-W\-R\-I\-T\-E}}
+\index{S\-Y\-M\-B\-O\-L\-\_\-\-W\-R\-I\-T\-E@{S\-Y\-M\-B\-O\-L\-\_\-\-W\-R\-I\-T\-E}!expr.h@{expr.\-h}}
+\subsubsection[{S\-Y\-M\-B\-O\-L\-\_\-\-W\-R\-I\-T\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\-Y\-M\-B\-O\-L\-\_\-\-W\-R\-I\-T\-E~0x0200  /$\ast$ ? $\ast$/}}\label{expr_8h_adfbb69f8bbcf17906d81db04eab7c2f8}
+
+
+\subsection{Typedef Documentation}
+\hypertarget{expr_8h_abdecc18fb5adf77b7bf1a6f4bb820fc0}{\index{expr.\-h@{expr.\-h}!tristate@{tristate}}
+\index{tristate@{tristate}!expr.h@{expr.\-h}}
+\subsubsection[{tristate}]{\setlength{\rightskip}{0pt plus 5cm}typedef enum {\bf tristate}  {\bf tristate}}}\label{expr_8h_abdecc18fb5adf77b7bf1a6f4bb820fc0}
+
+
+\subsection{Enumeration Type Documentation}
+\hypertarget{expr_8h_a06fc87d81c62e9abb8790b6e5713c55b}{\subsubsection[{anonymous enum}]{\setlength{\rightskip}{0pt plus 5cm}anonymous enum}}\label{expr_8h_a06fc87d81c62e9abb8790b6e5713c55b}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{S\-\_\-\-D\-E\-F\-\_\-\-U\-S\-E\-R@{S\-\_\-\-D\-E\-F\-\_\-\-U\-S\-E\-R}!expr.\-h@{expr.\-h}}\index{expr.\-h@{expr.\-h}!S\-\_\-\-D\-E\-F\-\_\-\-U\-S\-E\-R@{S\-\_\-\-D\-E\-F\-\_\-\-U\-S\-E\-R}}\item[{\em 
+\hypertarget{expr_8h_a06fc87d81c62e9abb8790b6e5713c55ba1b0f5ac53e83f259761b575ac27b1a3e}{S\-\_\-\-D\-E\-F\-\_\-\-U\-S\-E\-R}\label{expr_8h_a06fc87d81c62e9abb8790b6e5713c55ba1b0f5ac53e83f259761b575ac27b1a3e}
+}]\index{S\-\_\-\-D\-E\-F\-\_\-\-A\-U\-T\-O@{S\-\_\-\-D\-E\-F\-\_\-\-A\-U\-T\-O}!expr.\-h@{expr.\-h}}\index{expr.\-h@{expr.\-h}!S\-\_\-\-D\-E\-F\-\_\-\-A\-U\-T\-O@{S\-\_\-\-D\-E\-F\-\_\-\-A\-U\-T\-O}}\item[{\em 
+\hypertarget{expr_8h_a06fc87d81c62e9abb8790b6e5713c55ba73cd1caa1772c4add0ccdcf1f2504d80}{S\-\_\-\-D\-E\-F\-\_\-\-A\-U\-T\-O}\label{expr_8h_a06fc87d81c62e9abb8790b6e5713c55ba73cd1caa1772c4add0ccdcf1f2504d80}
+}]\index{S\-\_\-\-D\-E\-F\-\_\-\-D\-E\-F3@{S\-\_\-\-D\-E\-F\-\_\-\-D\-E\-F3}!expr.\-h@{expr.\-h}}\index{expr.\-h@{expr.\-h}!S\-\_\-\-D\-E\-F\-\_\-\-D\-E\-F3@{S\-\_\-\-D\-E\-F\-\_\-\-D\-E\-F3}}\item[{\em 
+\hypertarget{expr_8h_a06fc87d81c62e9abb8790b6e5713c55ba804005496446899a4046d0c581700666}{S\-\_\-\-D\-E\-F\-\_\-\-D\-E\-F3}\label{expr_8h_a06fc87d81c62e9abb8790b6e5713c55ba804005496446899a4046d0c581700666}
+}]\index{S\-\_\-\-D\-E\-F\-\_\-\-D\-E\-F4@{S\-\_\-\-D\-E\-F\-\_\-\-D\-E\-F4}!expr.\-h@{expr.\-h}}\index{expr.\-h@{expr.\-h}!S\-\_\-\-D\-E\-F\-\_\-\-D\-E\-F4@{S\-\_\-\-D\-E\-F\-\_\-\-D\-E\-F4}}\item[{\em 
+\hypertarget{expr_8h_a06fc87d81c62e9abb8790b6e5713c55ba1de33ba78995627daf9a8333eb17adbf}{S\-\_\-\-D\-E\-F\-\_\-\-D\-E\-F4}\label{expr_8h_a06fc87d81c62e9abb8790b6e5713c55ba1de33ba78995627daf9a8333eb17adbf}
+}]\index{S\-\_\-\-D\-E\-F\-\_\-\-C\-O\-U\-N\-T@{S\-\_\-\-D\-E\-F\-\_\-\-C\-O\-U\-N\-T}!expr.\-h@{expr.\-h}}\index{expr.\-h@{expr.\-h}!S\-\_\-\-D\-E\-F\-\_\-\-C\-O\-U\-N\-T@{S\-\_\-\-D\-E\-F\-\_\-\-C\-O\-U\-N\-T}}\item[{\em 
+\hypertarget{expr_8h_a06fc87d81c62e9abb8790b6e5713c55ba3ba578f109613726ac36139494826070}{S\-\_\-\-D\-E\-F\-\_\-\-C\-O\-U\-N\-T}\label{expr_8h_a06fc87d81c62e9abb8790b6e5713c55ba3ba578f109613726ac36139494826070}
+}]\end{description}
+\end{Desc}
+\hypertarget{expr_8h_a42f022cdf0b8313a80f367d2739b9c19}{\index{expr.\-h@{expr.\-h}!expr\-\_\-type@{expr\-\_\-type}}
+\index{expr\-\_\-type@{expr\-\_\-type}!expr.h@{expr.\-h}}
+\subsubsection[{expr\-\_\-type}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf expr\-\_\-type}}}\label{expr_8h_a42f022cdf0b8313a80f367d2739b9c19}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{E\-\_\-\-N\-O\-N\-E@{E\-\_\-\-N\-O\-N\-E}!expr.\-h@{expr.\-h}}\index{expr.\-h@{expr.\-h}!E\-\_\-\-N\-O\-N\-E@{E\-\_\-\-N\-O\-N\-E}}\item[{\em 
+\hypertarget{expr_8h_a42f022cdf0b8313a80f367d2739b9c19aea07a624765558e71010a97222288e72}{E\-\_\-\-N\-O\-N\-E}\label{expr_8h_a42f022cdf0b8313a80f367d2739b9c19aea07a624765558e71010a97222288e72}
+}]\index{E\-\_\-\-O\-R@{E\-\_\-\-O\-R}!expr.\-h@{expr.\-h}}\index{expr.\-h@{expr.\-h}!E\-\_\-\-O\-R@{E\-\_\-\-O\-R}}\item[{\em 
+\hypertarget{expr_8h_a42f022cdf0b8313a80f367d2739b9c19af2f8d5248a1afaee24eb11593fdd9452}{E\-\_\-\-O\-R}\label{expr_8h_a42f022cdf0b8313a80f367d2739b9c19af2f8d5248a1afaee24eb11593fdd9452}
+}]\index{E\-\_\-\-A\-N\-D@{E\-\_\-\-A\-N\-D}!expr.\-h@{expr.\-h}}\index{expr.\-h@{expr.\-h}!E\-\_\-\-A\-N\-D@{E\-\_\-\-A\-N\-D}}\item[{\em 
+\hypertarget{expr_8h_a42f022cdf0b8313a80f367d2739b9c19ace28ee262ab00b3fc25921bd8e58cfb3}{E\-\_\-\-A\-N\-D}\label{expr_8h_a42f022cdf0b8313a80f367d2739b9c19ace28ee262ab00b3fc25921bd8e58cfb3}
+}]\index{E\-\_\-\-N\-O\-T@{E\-\_\-\-N\-O\-T}!expr.\-h@{expr.\-h}}\index{expr.\-h@{expr.\-h}!E\-\_\-\-N\-O\-T@{E\-\_\-\-N\-O\-T}}\item[{\em 
+\hypertarget{expr_8h_a42f022cdf0b8313a80f367d2739b9c19a752ce96dc8e0b7d4f21a90eb2de86617}{E\-\_\-\-N\-O\-T}\label{expr_8h_a42f022cdf0b8313a80f367d2739b9c19a752ce96dc8e0b7d4f21a90eb2de86617}
+}]\index{E\-\_\-\-E\-Q\-U\-A\-L@{E\-\_\-\-E\-Q\-U\-A\-L}!expr.\-h@{expr.\-h}}\index{expr.\-h@{expr.\-h}!E\-\_\-\-E\-Q\-U\-A\-L@{E\-\_\-\-E\-Q\-U\-A\-L}}\item[{\em 
+\hypertarget{expr_8h_a42f022cdf0b8313a80f367d2739b9c19ae082ac0bf7a351e7d0e986d0f77390f4}{E\-\_\-\-E\-Q\-U\-A\-L}\label{expr_8h_a42f022cdf0b8313a80f367d2739b9c19ae082ac0bf7a351e7d0e986d0f77390f4}
+}]\index{E\-\_\-\-U\-N\-E\-Q\-U\-A\-L@{E\-\_\-\-U\-N\-E\-Q\-U\-A\-L}!expr.\-h@{expr.\-h}}\index{expr.\-h@{expr.\-h}!E\-\_\-\-U\-N\-E\-Q\-U\-A\-L@{E\-\_\-\-U\-N\-E\-Q\-U\-A\-L}}\item[{\em 
+\hypertarget{expr_8h_a42f022cdf0b8313a80f367d2739b9c19a0d3641b0be709644c0f6ae897274897b}{E\-\_\-\-U\-N\-E\-Q\-U\-A\-L}\label{expr_8h_a42f022cdf0b8313a80f367d2739b9c19a0d3641b0be709644c0f6ae897274897b}
+}]\index{E\-\_\-\-L\-I\-S\-T@{E\-\_\-\-L\-I\-S\-T}!expr.\-h@{expr.\-h}}\index{expr.\-h@{expr.\-h}!E\-\_\-\-L\-I\-S\-T@{E\-\_\-\-L\-I\-S\-T}}\item[{\em 
+\hypertarget{expr_8h_a42f022cdf0b8313a80f367d2739b9c19ac57407bc36c8da1d452886f4aae184d6}{E\-\_\-\-L\-I\-S\-T}\label{expr_8h_a42f022cdf0b8313a80f367d2739b9c19ac57407bc36c8da1d452886f4aae184d6}
+}]\index{E\-\_\-\-S\-Y\-M\-B\-O\-L@{E\-\_\-\-S\-Y\-M\-B\-O\-L}!expr.\-h@{expr.\-h}}\index{expr.\-h@{expr.\-h}!E\-\_\-\-S\-Y\-M\-B\-O\-L@{E\-\_\-\-S\-Y\-M\-B\-O\-L}}\item[{\em 
+\hypertarget{expr_8h_a42f022cdf0b8313a80f367d2739b9c19a65004d7af71b1f468b63127c0e26aac3}{E\-\_\-\-S\-Y\-M\-B\-O\-L}\label{expr_8h_a42f022cdf0b8313a80f367d2739b9c19a65004d7af71b1f468b63127c0e26aac3}
+}]\index{E\-\_\-\-R\-A\-N\-G\-E@{E\-\_\-\-R\-A\-N\-G\-E}!expr.\-h@{expr.\-h}}\index{expr.\-h@{expr.\-h}!E\-\_\-\-R\-A\-N\-G\-E@{E\-\_\-\-R\-A\-N\-G\-E}}\item[{\em 
+\hypertarget{expr_8h_a42f022cdf0b8313a80f367d2739b9c19ab6ca7abb674ed4b432be474346b02ff4}{E\-\_\-\-R\-A\-N\-G\-E}\label{expr_8h_a42f022cdf0b8313a80f367d2739b9c19ab6ca7abb674ed4b432be474346b02ff4}
+}]\end{description}
+\end{Desc}
+\hypertarget{expr_8h_a403a578df6dfdc7e86f6bca789c523c2}{\index{expr.\-h@{expr.\-h}!prop\-\_\-type@{prop\-\_\-type}}
+\index{prop\-\_\-type@{prop\-\_\-type}!expr.h@{expr.\-h}}
+\subsubsection[{prop\-\_\-type}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf prop\-\_\-type}}}\label{expr_8h_a403a578df6dfdc7e86f6bca789c523c2}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{P\-\_\-\-U\-N\-K\-N\-O\-W\-N@{P\-\_\-\-U\-N\-K\-N\-O\-W\-N}!expr.\-h@{expr.\-h}}\index{expr.\-h@{expr.\-h}!P\-\_\-\-U\-N\-K\-N\-O\-W\-N@{P\-\_\-\-U\-N\-K\-N\-O\-W\-N}}\item[{\em 
+\hypertarget{expr_8h_a403a578df6dfdc7e86f6bca789c523c2a1dc7c13336215d35db9b3b6fa125d615}{P\-\_\-\-U\-N\-K\-N\-O\-W\-N}\label{expr_8h_a403a578df6dfdc7e86f6bca789c523c2a1dc7c13336215d35db9b3b6fa125d615}
+}]\index{P\-\_\-\-P\-R\-O\-M\-P\-T@{P\-\_\-\-P\-R\-O\-M\-P\-T}!expr.\-h@{expr.\-h}}\index{expr.\-h@{expr.\-h}!P\-\_\-\-P\-R\-O\-M\-P\-T@{P\-\_\-\-P\-R\-O\-M\-P\-T}}\item[{\em 
+\hypertarget{expr_8h_a403a578df6dfdc7e86f6bca789c523c2aafb93b7c218752a5b1250f2be37f51bf}{P\-\_\-\-P\-R\-O\-M\-P\-T}\label{expr_8h_a403a578df6dfdc7e86f6bca789c523c2aafb93b7c218752a5b1250f2be37f51bf}
+}]\index{P\-\_\-\-C\-O\-M\-M\-E\-N\-T@{P\-\_\-\-C\-O\-M\-M\-E\-N\-T}!expr.\-h@{expr.\-h}}\index{expr.\-h@{expr.\-h}!P\-\_\-\-C\-O\-M\-M\-E\-N\-T@{P\-\_\-\-C\-O\-M\-M\-E\-N\-T}}\item[{\em 
+\hypertarget{expr_8h_a403a578df6dfdc7e86f6bca789c523c2af907d9737cd8023ebe6375d8e50a6e22}{P\-\_\-\-C\-O\-M\-M\-E\-N\-T}\label{expr_8h_a403a578df6dfdc7e86f6bca789c523c2af907d9737cd8023ebe6375d8e50a6e22}
+}]\index{P\-\_\-\-M\-E\-N\-U@{P\-\_\-\-M\-E\-N\-U}!expr.\-h@{expr.\-h}}\index{expr.\-h@{expr.\-h}!P\-\_\-\-M\-E\-N\-U@{P\-\_\-\-M\-E\-N\-U}}\item[{\em 
+\hypertarget{expr_8h_a403a578df6dfdc7e86f6bca789c523c2ad4045694658d6cb2c6b3b7090d6bb244}{P\-\_\-\-M\-E\-N\-U}\label{expr_8h_a403a578df6dfdc7e86f6bca789c523c2ad4045694658d6cb2c6b3b7090d6bb244}
+}]\index{P\-\_\-\-D\-E\-F\-A\-U\-L\-T@{P\-\_\-\-D\-E\-F\-A\-U\-L\-T}!expr.\-h@{expr.\-h}}\index{expr.\-h@{expr.\-h}!P\-\_\-\-D\-E\-F\-A\-U\-L\-T@{P\-\_\-\-D\-E\-F\-A\-U\-L\-T}}\item[{\em 
+\hypertarget{expr_8h_a403a578df6dfdc7e86f6bca789c523c2a6a59f8acead76e8242da2ffa474f5314}{P\-\_\-\-D\-E\-F\-A\-U\-L\-T}\label{expr_8h_a403a578df6dfdc7e86f6bca789c523c2a6a59f8acead76e8242da2ffa474f5314}
+}]\index{P\-\_\-\-C\-H\-O\-I\-C\-E@{P\-\_\-\-C\-H\-O\-I\-C\-E}!expr.\-h@{expr.\-h}}\index{expr.\-h@{expr.\-h}!P\-\_\-\-C\-H\-O\-I\-C\-E@{P\-\_\-\-C\-H\-O\-I\-C\-E}}\item[{\em 
+\hypertarget{expr_8h_a403a578df6dfdc7e86f6bca789c523c2a0130e66b941c866f26873ac24d619c12}{P\-\_\-\-C\-H\-O\-I\-C\-E}\label{expr_8h_a403a578df6dfdc7e86f6bca789c523c2a0130e66b941c866f26873ac24d619c12}
+}]\index{P\-\_\-\-S\-E\-L\-E\-C\-T@{P\-\_\-\-S\-E\-L\-E\-C\-T}!expr.\-h@{expr.\-h}}\index{expr.\-h@{expr.\-h}!P\-\_\-\-S\-E\-L\-E\-C\-T@{P\-\_\-\-S\-E\-L\-E\-C\-T}}\item[{\em 
+\hypertarget{expr_8h_a403a578df6dfdc7e86f6bca789c523c2a28801a97004da564733c0d1b64b1d974}{P\-\_\-\-S\-E\-L\-E\-C\-T}\label{expr_8h_a403a578df6dfdc7e86f6bca789c523c2a28801a97004da564733c0d1b64b1d974}
+}]\index{P\-\_\-\-R\-A\-N\-G\-E@{P\-\_\-\-R\-A\-N\-G\-E}!expr.\-h@{expr.\-h}}\index{expr.\-h@{expr.\-h}!P\-\_\-\-R\-A\-N\-G\-E@{P\-\_\-\-R\-A\-N\-G\-E}}\item[{\em 
+\hypertarget{expr_8h_a403a578df6dfdc7e86f6bca789c523c2a5f2c6a3d05c5a092e334be25b4b916ab}{P\-\_\-\-R\-A\-N\-G\-E}\label{expr_8h_a403a578df6dfdc7e86f6bca789c523c2a5f2c6a3d05c5a092e334be25b4b916ab}
+}]\index{P\-\_\-\-E\-N\-V@{P\-\_\-\-E\-N\-V}!expr.\-h@{expr.\-h}}\index{expr.\-h@{expr.\-h}!P\-\_\-\-E\-N\-V@{P\-\_\-\-E\-N\-V}}\item[{\em 
+\hypertarget{expr_8h_a403a578df6dfdc7e86f6bca789c523c2a766b9fec0a6aebf78338a96b14a95c56}{P\-\_\-\-E\-N\-V}\label{expr_8h_a403a578df6dfdc7e86f6bca789c523c2a766b9fec0a6aebf78338a96b14a95c56}
+}]\index{P\-\_\-\-S\-Y\-M\-B\-O\-L@{P\-\_\-\-S\-Y\-M\-B\-O\-L}!expr.\-h@{expr.\-h}}\index{expr.\-h@{expr.\-h}!P\-\_\-\-S\-Y\-M\-B\-O\-L@{P\-\_\-\-S\-Y\-M\-B\-O\-L}}\item[{\em 
+\hypertarget{expr_8h_a403a578df6dfdc7e86f6bca789c523c2a9900074d57f1d0eb6da458717995b4ee}{P\-\_\-\-S\-Y\-M\-B\-O\-L}\label{expr_8h_a403a578df6dfdc7e86f6bca789c523c2a9900074d57f1d0eb6da458717995b4ee}
+}]\end{description}
+\end{Desc}
+\hypertarget{expr_8h_a9e6705a3296471be728a3b6570b56231}{\index{expr.\-h@{expr.\-h}!symbol\-\_\-type@{symbol\-\_\-type}}
+\index{symbol\-\_\-type@{symbol\-\_\-type}!expr.h@{expr.\-h}}
+\subsubsection[{symbol\-\_\-type}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf symbol\-\_\-type}}}\label{expr_8h_a9e6705a3296471be728a3b6570b56231}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{S\-\_\-\-U\-N\-K\-N\-O\-W\-N@{S\-\_\-\-U\-N\-K\-N\-O\-W\-N}!expr.\-h@{expr.\-h}}\index{expr.\-h@{expr.\-h}!S\-\_\-\-U\-N\-K\-N\-O\-W\-N@{S\-\_\-\-U\-N\-K\-N\-O\-W\-N}}\item[{\em 
+\hypertarget{expr_8h_a9e6705a3296471be728a3b6570b56231a1dea9ede390e0628042b8d422bc031b4}{S\-\_\-\-U\-N\-K\-N\-O\-W\-N}\label{expr_8h_a9e6705a3296471be728a3b6570b56231a1dea9ede390e0628042b8d422bc031b4}
+}]\index{S\-\_\-\-B\-O\-O\-L\-E\-A\-N@{S\-\_\-\-B\-O\-O\-L\-E\-A\-N}!expr.\-h@{expr.\-h}}\index{expr.\-h@{expr.\-h}!S\-\_\-\-B\-O\-O\-L\-E\-A\-N@{S\-\_\-\-B\-O\-O\-L\-E\-A\-N}}\item[{\em 
+\hypertarget{expr_8h_a9e6705a3296471be728a3b6570b56231a3b87aa1261f067989ec27c1d158ee3f8}{S\-\_\-\-B\-O\-O\-L\-E\-A\-N}\label{expr_8h_a9e6705a3296471be728a3b6570b56231a3b87aa1261f067989ec27c1d158ee3f8}
+}]\index{S\-\_\-\-T\-R\-I\-S\-T\-A\-T\-E@{S\-\_\-\-T\-R\-I\-S\-T\-A\-T\-E}!expr.\-h@{expr.\-h}}\index{expr.\-h@{expr.\-h}!S\-\_\-\-T\-R\-I\-S\-T\-A\-T\-E@{S\-\_\-\-T\-R\-I\-S\-T\-A\-T\-E}}\item[{\em 
+\hypertarget{expr_8h_a9e6705a3296471be728a3b6570b56231a4dc9c80b501c7c78ef3212471676d4fe}{S\-\_\-\-T\-R\-I\-S\-T\-A\-T\-E}\label{expr_8h_a9e6705a3296471be728a3b6570b56231a4dc9c80b501c7c78ef3212471676d4fe}
+}]\index{S\-\_\-\-I\-N\-T@{S\-\_\-\-I\-N\-T}!expr.\-h@{expr.\-h}}\index{expr.\-h@{expr.\-h}!S\-\_\-\-I\-N\-T@{S\-\_\-\-I\-N\-T}}\item[{\em 
+\hypertarget{expr_8h_a9e6705a3296471be728a3b6570b56231a5d2095a9c6c3224606729ef1b14ec199}{S\-\_\-\-I\-N\-T}\label{expr_8h_a9e6705a3296471be728a3b6570b56231a5d2095a9c6c3224606729ef1b14ec199}
+}]\index{S\-\_\-\-H\-E\-X@{S\-\_\-\-H\-E\-X}!expr.\-h@{expr.\-h}}\index{expr.\-h@{expr.\-h}!S\-\_\-\-H\-E\-X@{S\-\_\-\-H\-E\-X}}\item[{\em 
+\hypertarget{expr_8h_a9e6705a3296471be728a3b6570b56231a3024fd5be4ffb33269ff8deb6d0abc35}{S\-\_\-\-H\-E\-X}\label{expr_8h_a9e6705a3296471be728a3b6570b56231a3024fd5be4ffb33269ff8deb6d0abc35}
+}]\index{S\-\_\-\-S\-T\-R\-I\-N\-G@{S\-\_\-\-S\-T\-R\-I\-N\-G}!expr.\-h@{expr.\-h}}\index{expr.\-h@{expr.\-h}!S\-\_\-\-S\-T\-R\-I\-N\-G@{S\-\_\-\-S\-T\-R\-I\-N\-G}}\item[{\em 
+\hypertarget{expr_8h_a9e6705a3296471be728a3b6570b56231a1b31077fb0df7a46f524d36e68ab3dc1}{S\-\_\-\-S\-T\-R\-I\-N\-G}\label{expr_8h_a9e6705a3296471be728a3b6570b56231a1b31077fb0df7a46f524d36e68ab3dc1}
+}]\index{S\-\_\-\-O\-T\-H\-E\-R@{S\-\_\-\-O\-T\-H\-E\-R}!expr.\-h@{expr.\-h}}\index{expr.\-h@{expr.\-h}!S\-\_\-\-O\-T\-H\-E\-R@{S\-\_\-\-O\-T\-H\-E\-R}}\item[{\em 
+\hypertarget{expr_8h_a9e6705a3296471be728a3b6570b56231adc22a638e6248e88fd3661715ac1af48}{S\-\_\-\-O\-T\-H\-E\-R}\label{expr_8h_a9e6705a3296471be728a3b6570b56231adc22a638e6248e88fd3661715ac1af48}
+}]\end{description}
+\end{Desc}
+\hypertarget{expr_8h_af4926743b1e532e0b2ad24161ff942a3}{\index{expr.\-h@{expr.\-h}!tristate@{tristate}}
+\index{tristate@{tristate}!expr.h@{expr.\-h}}
+\subsubsection[{tristate}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf tristate}}}\label{expr_8h_af4926743b1e532e0b2ad24161ff942a3}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{no@{no}!expr.\-h@{expr.\-h}}\index{expr.\-h@{expr.\-h}!no@{no}}\item[{\em 
+\hypertarget{expr_8h_af4926743b1e532e0b2ad24161ff942a3a8fe4a05f1addc1b9a4aae17d7b166646}{no}\label{expr_8h_af4926743b1e532e0b2ad24161ff942a3a8fe4a05f1addc1b9a4aae17d7b166646}
+}]\index{mod@{mod}!expr.\-h@{expr.\-h}}\index{expr.\-h@{expr.\-h}!mod@{mod}}\item[{\em 
+\hypertarget{expr_8h_af4926743b1e532e0b2ad24161ff942a3af9d70d5d5a4d7f060fa0024e238161e2}{mod}\label{expr_8h_af4926743b1e532e0b2ad24161ff942a3af9d70d5d5a4d7f060fa0024e238161e2}
+}]\index{yes@{yes}!expr.\-h@{expr.\-h}}\index{expr.\-h@{expr.\-h}!yes@{yes}}\item[{\em 
+\hypertarget{expr_8h_af4926743b1e532e0b2ad24161ff942a3aa447884a6b7ce069acc4b7eb98acdb92}{yes}\label{expr_8h_af4926743b1e532e0b2ad24161ff942a3aa447884a6b7ce069acc4b7eb98acdb92}
+}]\end{description}
+\end{Desc}
+
+
+\subsection{Function Documentation}
+\hypertarget{expr_8h_a00b49f1e02e8c5d36d60268cc9e7d7c4}{\index{expr.\-h@{expr.\-h}!expr\-\_\-alloc\-\_\-and@{expr\-\_\-alloc\-\_\-and}}
+\index{expr\-\_\-alloc\-\_\-and@{expr\-\_\-alloc\-\_\-and}!expr.h@{expr.\-h}}
+\subsubsection[{expr\-\_\-alloc\-\_\-and}]{\setlength{\rightskip}{0pt plus 5cm}struct {\bf expr}$\ast$ expr\-\_\-alloc\-\_\-and (
+\begin{DoxyParamCaption}
+\item[{struct {\bf expr} $\ast$}]{e1, }
+\item[{struct {\bf expr} $\ast$}]{e2}
+\end{DoxyParamCaption}
+)}}\label{expr_8h_a00b49f1e02e8c5d36d60268cc9e7d7c4}
+\hypertarget{expr_8h_a5081433c07d02a4ba10fe1560bd0b37b}{\index{expr.\-h@{expr.\-h}!expr\-\_\-alloc\-\_\-comp@{expr\-\_\-alloc\-\_\-comp}}
+\index{expr\-\_\-alloc\-\_\-comp@{expr\-\_\-alloc\-\_\-comp}!expr.h@{expr.\-h}}
+\subsubsection[{expr\-\_\-alloc\-\_\-comp}]{\setlength{\rightskip}{0pt plus 5cm}struct {\bf expr}$\ast$ expr\-\_\-alloc\-\_\-comp (
+\begin{DoxyParamCaption}
+\item[{enum {\bf expr\-\_\-type}}]{type, }
+\item[{struct {\bf symbol} $\ast$}]{s1, }
+\item[{struct {\bf symbol} $\ast$}]{s2}
+\end{DoxyParamCaption}
+)}}\label{expr_8h_a5081433c07d02a4ba10fe1560bd0b37b}
+\hypertarget{expr_8h_a62dc8ceab82195feae7e6589d5d586cb}{\index{expr.\-h@{expr.\-h}!expr\-\_\-alloc\-\_\-one@{expr\-\_\-alloc\-\_\-one}}
+\index{expr\-\_\-alloc\-\_\-one@{expr\-\_\-alloc\-\_\-one}!expr.h@{expr.\-h}}
+\subsubsection[{expr\-\_\-alloc\-\_\-one}]{\setlength{\rightskip}{0pt plus 5cm}struct {\bf expr}$\ast$ expr\-\_\-alloc\-\_\-one (
+\begin{DoxyParamCaption}
+\item[{enum {\bf expr\-\_\-type}}]{type, }
+\item[{struct {\bf expr} $\ast$}]{ce}
+\end{DoxyParamCaption}
+)}}\label{expr_8h_a62dc8ceab82195feae7e6589d5d586cb}
+\hypertarget{expr_8h_a8c2a72de9f22460f34f0ed79464e7b95}{\index{expr.\-h@{expr.\-h}!expr\-\_\-alloc\-\_\-or@{expr\-\_\-alloc\-\_\-or}}
+\index{expr\-\_\-alloc\-\_\-or@{expr\-\_\-alloc\-\_\-or}!expr.h@{expr.\-h}}
+\subsubsection[{expr\-\_\-alloc\-\_\-or}]{\setlength{\rightskip}{0pt plus 5cm}struct {\bf expr}$\ast$ expr\-\_\-alloc\-\_\-or (
+\begin{DoxyParamCaption}
+\item[{struct {\bf expr} $\ast$}]{e1, }
+\item[{struct {\bf expr} $\ast$}]{e2}
+\end{DoxyParamCaption}
+)}}\label{expr_8h_a8c2a72de9f22460f34f0ed79464e7b95}
+\hypertarget{expr_8h_a0778e58824b9508f465da6f103b8fe82}{\index{expr.\-h@{expr.\-h}!expr\-\_\-alloc\-\_\-symbol@{expr\-\_\-alloc\-\_\-symbol}}
+\index{expr\-\_\-alloc\-\_\-symbol@{expr\-\_\-alloc\-\_\-symbol}!expr.h@{expr.\-h}}
+\subsubsection[{expr\-\_\-alloc\-\_\-symbol}]{\setlength{\rightskip}{0pt plus 5cm}struct {\bf expr}$\ast$ expr\-\_\-alloc\-\_\-symbol (
+\begin{DoxyParamCaption}
+\item[{struct {\bf symbol} $\ast$}]{sym}
+\end{DoxyParamCaption}
+)}}\label{expr_8h_a0778e58824b9508f465da6f103b8fe82}
+\hypertarget{expr_8h_ac7950ae0e594f78dc78ec7c7161bf314}{\index{expr.\-h@{expr.\-h}!expr\-\_\-alloc\-\_\-two@{expr\-\_\-alloc\-\_\-two}}
+\index{expr\-\_\-alloc\-\_\-two@{expr\-\_\-alloc\-\_\-two}!expr.h@{expr.\-h}}
+\subsubsection[{expr\-\_\-alloc\-\_\-two}]{\setlength{\rightskip}{0pt plus 5cm}struct {\bf expr}$\ast$ expr\-\_\-alloc\-\_\-two (
+\begin{DoxyParamCaption}
+\item[{enum {\bf expr\-\_\-type}}]{type, }
+\item[{struct {\bf expr} $\ast$}]{e1, }
+\item[{struct {\bf expr} $\ast$}]{e2}
+\end{DoxyParamCaption}
+)}}\label{expr_8h_ac7950ae0e594f78dc78ec7c7161bf314}
+\hypertarget{expr_8h_ada515d86b7687887dcb09818d175297e}{\index{expr.\-h@{expr.\-h}!expr\-\_\-calc\-\_\-value@{expr\-\_\-calc\-\_\-value}}
+\index{expr\-\_\-calc\-\_\-value@{expr\-\_\-calc\-\_\-value}!expr.h@{expr.\-h}}
+\subsubsection[{expr\-\_\-calc\-\_\-value}]{\setlength{\rightskip}{0pt plus 5cm}{\bf tristate} expr\-\_\-calc\-\_\-value (
+\begin{DoxyParamCaption}
+\item[{struct {\bf expr} $\ast$}]{e}
+\end{DoxyParamCaption}
+)}}\label{expr_8h_ada515d86b7687887dcb09818d175297e}
+\hypertarget{expr_8h_a393dd71ecea7229f7b799b010c301183}{\index{expr.\-h@{expr.\-h}!expr\-\_\-contains\-\_\-symbol@{expr\-\_\-contains\-\_\-symbol}}
+\index{expr\-\_\-contains\-\_\-symbol@{expr\-\_\-contains\-\_\-symbol}!expr.h@{expr.\-h}}
+\subsubsection[{expr\-\_\-contains\-\_\-symbol}]{\setlength{\rightskip}{0pt plus 5cm}int expr\-\_\-contains\-\_\-symbol (
+\begin{DoxyParamCaption}
+\item[{struct {\bf expr} $\ast$}]{dep, }
+\item[{struct {\bf symbol} $\ast$}]{sym}
+\end{DoxyParamCaption}
+)}}\label{expr_8h_a393dd71ecea7229f7b799b010c301183}
+\hypertarget{expr_8h_aaf09ba115074cf6548f636c11053104a}{\index{expr.\-h@{expr.\-h}!expr\-\_\-copy@{expr\-\_\-copy}}
+\index{expr\-\_\-copy@{expr\-\_\-copy}!expr.h@{expr.\-h}}
+\subsubsection[{expr\-\_\-copy}]{\setlength{\rightskip}{0pt plus 5cm}struct {\bf expr}$\ast$ expr\-\_\-copy (
+\begin{DoxyParamCaption}
+\item[{const struct {\bf expr} $\ast$}]{org}
+\end{DoxyParamCaption}
+)}}\label{expr_8h_aaf09ba115074cf6548f636c11053104a}
+\hypertarget{expr_8h_a502fcee2302f6be2b19016ab87779902}{\index{expr.\-h@{expr.\-h}!expr\-\_\-depends\-\_\-symbol@{expr\-\_\-depends\-\_\-symbol}}
+\index{expr\-\_\-depends\-\_\-symbol@{expr\-\_\-depends\-\_\-symbol}!expr.h@{expr.\-h}}
+\subsubsection[{expr\-\_\-depends\-\_\-symbol}]{\setlength{\rightskip}{0pt plus 5cm}bool expr\-\_\-depends\-\_\-symbol (
+\begin{DoxyParamCaption}
+\item[{struct {\bf expr} $\ast$}]{dep, }
+\item[{struct {\bf symbol} $\ast$}]{sym}
+\end{DoxyParamCaption}
+)}}\label{expr_8h_a502fcee2302f6be2b19016ab87779902}
+\hypertarget{expr_8h_ae8debd383afb9a764a7b824a188d7efa}{\index{expr.\-h@{expr.\-h}!expr\-\_\-eliminate\-\_\-dups@{expr\-\_\-eliminate\-\_\-dups}}
+\index{expr\-\_\-eliminate\-\_\-dups@{expr\-\_\-eliminate\-\_\-dups}!expr.h@{expr.\-h}}
+\subsubsection[{expr\-\_\-eliminate\-\_\-dups}]{\setlength{\rightskip}{0pt plus 5cm}struct {\bf expr}$\ast$ expr\-\_\-eliminate\-\_\-dups (
+\begin{DoxyParamCaption}
+\item[{struct {\bf expr} $\ast$}]{e}
+\end{DoxyParamCaption}
+)}}\label{expr_8h_ae8debd383afb9a764a7b824a188d7efa}
+\hypertarget{expr_8h_a57718610c3d0874aac37e293d43e9bea}{\index{expr.\-h@{expr.\-h}!expr\-\_\-eliminate\-\_\-eq@{expr\-\_\-eliminate\-\_\-eq}}
+\index{expr\-\_\-eliminate\-\_\-eq@{expr\-\_\-eliminate\-\_\-eq}!expr.h@{expr.\-h}}
+\subsubsection[{expr\-\_\-eliminate\-\_\-eq}]{\setlength{\rightskip}{0pt plus 5cm}void expr\-\_\-eliminate\-\_\-eq (
+\begin{DoxyParamCaption}
+\item[{struct {\bf expr} $\ast$$\ast$}]{ep1, }
+\item[{struct {\bf expr} $\ast$$\ast$}]{ep2}
+\end{DoxyParamCaption}
+)}}\label{expr_8h_a57718610c3d0874aac37e293d43e9bea}
+\hypertarget{expr_8h_ab01edde3153c5a84669726285ac3634b}{\index{expr.\-h@{expr.\-h}!expr\-\_\-eliminate\-\_\-yn@{expr\-\_\-eliminate\-\_\-yn}}
+\index{expr\-\_\-eliminate\-\_\-yn@{expr\-\_\-eliminate\-\_\-yn}!expr.h@{expr.\-h}}
+\subsubsection[{expr\-\_\-eliminate\-\_\-yn}]{\setlength{\rightskip}{0pt plus 5cm}struct {\bf expr}$\ast$ expr\-\_\-eliminate\-\_\-yn (
+\begin{DoxyParamCaption}
+\item[{struct {\bf expr} $\ast$}]{e}
+\end{DoxyParamCaption}
+)}}\label{expr_8h_ab01edde3153c5a84669726285ac3634b}
+\hypertarget{expr_8h_acbdeff5e36ad1ef7ed788a07f76d9800}{\index{expr.\-h@{expr.\-h}!expr\-\_\-eq@{expr\-\_\-eq}}
+\index{expr\-\_\-eq@{expr\-\_\-eq}!expr.h@{expr.\-h}}
+\subsubsection[{expr\-\_\-eq}]{\setlength{\rightskip}{0pt plus 5cm}int expr\-\_\-eq (
+\begin{DoxyParamCaption}
+\item[{struct {\bf expr} $\ast$}]{e1, }
+\item[{struct {\bf expr} $\ast$}]{e2}
+\end{DoxyParamCaption}
+)}}\label{expr_8h_acbdeff5e36ad1ef7ed788a07f76d9800}
+\hypertarget{expr_8h_a9c1ce3af68120d33dda4db773c8ef44d}{\index{expr.\-h@{expr.\-h}!expr\-\_\-extract\-\_\-eq@{expr\-\_\-extract\-\_\-eq}}
+\index{expr\-\_\-extract\-\_\-eq@{expr\-\_\-extract\-\_\-eq}!expr.h@{expr.\-h}}
+\subsubsection[{expr\-\_\-extract\-\_\-eq}]{\setlength{\rightskip}{0pt plus 5cm}void expr\-\_\-extract\-\_\-eq (
+\begin{DoxyParamCaption}
+\item[{enum {\bf expr\-\_\-type}}]{type, }
+\item[{struct {\bf expr} $\ast$$\ast$}]{ep, }
+\item[{struct {\bf expr} $\ast$$\ast$}]{ep1, }
+\item[{struct {\bf expr} $\ast$$\ast$}]{ep2}
+\end{DoxyParamCaption}
+)}}\label{expr_8h_a9c1ce3af68120d33dda4db773c8ef44d}
+\hypertarget{expr_8h_a01108a98d875ed208f75873868a75f3c}{\index{expr.\-h@{expr.\-h}!expr\-\_\-extract\-\_\-eq\-\_\-and@{expr\-\_\-extract\-\_\-eq\-\_\-and}}
+\index{expr\-\_\-extract\-\_\-eq\-\_\-and@{expr\-\_\-extract\-\_\-eq\-\_\-and}!expr.h@{expr.\-h}}
+\subsubsection[{expr\-\_\-extract\-\_\-eq\-\_\-and}]{\setlength{\rightskip}{0pt plus 5cm}struct {\bf expr}$\ast$ expr\-\_\-extract\-\_\-eq\-\_\-and (
+\begin{DoxyParamCaption}
+\item[{struct {\bf expr} $\ast$$\ast$}]{ep1, }
+\item[{struct {\bf expr} $\ast$$\ast$}]{ep2}
+\end{DoxyParamCaption}
+)}}\label{expr_8h_a01108a98d875ed208f75873868a75f3c}
+\hypertarget{expr_8h_a91f19ea347321a72f819e6b1e20f17cd}{\index{expr.\-h@{expr.\-h}!expr\-\_\-extract\-\_\-eq\-\_\-or@{expr\-\_\-extract\-\_\-eq\-\_\-or}}
+\index{expr\-\_\-extract\-\_\-eq\-\_\-or@{expr\-\_\-extract\-\_\-eq\-\_\-or}!expr.h@{expr.\-h}}
+\subsubsection[{expr\-\_\-extract\-\_\-eq\-\_\-or}]{\setlength{\rightskip}{0pt plus 5cm}struct {\bf expr}$\ast$ expr\-\_\-extract\-\_\-eq\-\_\-or (
+\begin{DoxyParamCaption}
+\item[{struct {\bf expr} $\ast$$\ast$}]{ep1, }
+\item[{struct {\bf expr} $\ast$$\ast$}]{ep2}
+\end{DoxyParamCaption}
+)}}\label{expr_8h_a91f19ea347321a72f819e6b1e20f17cd}
+\hypertarget{expr_8h_aaf833e883e15e99fd75756e3a0ed81e8}{\index{expr.\-h@{expr.\-h}!expr\-\_\-fprint@{expr\-\_\-fprint}}
+\index{expr\-\_\-fprint@{expr\-\_\-fprint}!expr.h@{expr.\-h}}
+\subsubsection[{expr\-\_\-fprint}]{\setlength{\rightskip}{0pt plus 5cm}void expr\-\_\-fprint (
+\begin{DoxyParamCaption}
+\item[{struct {\bf expr} $\ast$}]{e, }
+\item[{F\-I\-L\-E $\ast$}]{out}
+\end{DoxyParamCaption}
+)}}\label{expr_8h_aaf833e883e15e99fd75756e3a0ed81e8}
+\hypertarget{expr_8h_a58696588994c9bc2c840546d4684eeb8}{\index{expr.\-h@{expr.\-h}!expr\-\_\-free@{expr\-\_\-free}}
+\index{expr\-\_\-free@{expr\-\_\-free}!expr.h@{expr.\-h}}
+\subsubsection[{expr\-\_\-free}]{\setlength{\rightskip}{0pt plus 5cm}void expr\-\_\-free (
+\begin{DoxyParamCaption}
+\item[{struct {\bf expr} $\ast$}]{e}
+\end{DoxyParamCaption}
+)}}\label{expr_8h_a58696588994c9bc2c840546d4684eeb8}
+\hypertarget{expr_8h_a3e599bfcd77d596b82ccc67b8edd0221}{\index{expr.\-h@{expr.\-h}!expr\-\_\-gstr\-\_\-print@{expr\-\_\-gstr\-\_\-print}}
+\index{expr\-\_\-gstr\-\_\-print@{expr\-\_\-gstr\-\_\-print}!expr.h@{expr.\-h}}
+\subsubsection[{expr\-\_\-gstr\-\_\-print}]{\setlength{\rightskip}{0pt plus 5cm}void expr\-\_\-gstr\-\_\-print (
+\begin{DoxyParamCaption}
+\item[{struct {\bf expr} $\ast$}]{e, }
+\item[{struct {\bf gstr} $\ast$}]{gs}
+\end{DoxyParamCaption}
+)}}\label{expr_8h_a3e599bfcd77d596b82ccc67b8edd0221}
+\hypertarget{expr_8h_aa7e704688d61d72669c0d12904d4d6db}{\index{expr.\-h@{expr.\-h}!expr\-\_\-simplify\-\_\-unmet\-\_\-dep@{expr\-\_\-simplify\-\_\-unmet\-\_\-dep}}
+\index{expr\-\_\-simplify\-\_\-unmet\-\_\-dep@{expr\-\_\-simplify\-\_\-unmet\-\_\-dep}!expr.h@{expr.\-h}}
+\subsubsection[{expr\-\_\-simplify\-\_\-unmet\-\_\-dep}]{\setlength{\rightskip}{0pt plus 5cm}struct {\bf expr}$\ast$ expr\-\_\-simplify\-\_\-unmet\-\_\-dep (
+\begin{DoxyParamCaption}
+\item[{struct {\bf expr} $\ast$}]{e1, }
+\item[{struct {\bf expr} $\ast$}]{e2}
+\end{DoxyParamCaption}
+)}}\label{expr_8h_aa7e704688d61d72669c0d12904d4d6db}
+\hypertarget{expr_8h_a5645337a4e753eacc5897b19fc778237}{\index{expr.\-h@{expr.\-h}!expr\-\_\-trans\-\_\-bool@{expr\-\_\-trans\-\_\-bool}}
+\index{expr\-\_\-trans\-\_\-bool@{expr\-\_\-trans\-\_\-bool}!expr.h@{expr.\-h}}
+\subsubsection[{expr\-\_\-trans\-\_\-bool}]{\setlength{\rightskip}{0pt plus 5cm}struct {\bf expr}$\ast$ expr\-\_\-trans\-\_\-bool (
+\begin{DoxyParamCaption}
+\item[{struct {\bf expr} $\ast$}]{e}
+\end{DoxyParamCaption}
+)}}\label{expr_8h_a5645337a4e753eacc5897b19fc778237}
+\hypertarget{expr_8h_a4fe39c57a0e50ef7cee5afd3cc8f1ec1}{\index{expr.\-h@{expr.\-h}!expr\-\_\-trans\-\_\-compare@{expr\-\_\-trans\-\_\-compare}}
+\index{expr\-\_\-trans\-\_\-compare@{expr\-\_\-trans\-\_\-compare}!expr.h@{expr.\-h}}
+\subsubsection[{expr\-\_\-trans\-\_\-compare}]{\setlength{\rightskip}{0pt plus 5cm}struct {\bf expr}$\ast$ expr\-\_\-trans\-\_\-compare (
+\begin{DoxyParamCaption}
+\item[{struct {\bf expr} $\ast$}]{e, }
+\item[{enum {\bf expr\-\_\-type}}]{type, }
+\item[{struct {\bf symbol} $\ast$}]{sym}
+\end{DoxyParamCaption}
+)}}\label{expr_8h_a4fe39c57a0e50ef7cee5afd3cc8f1ec1}
+\hypertarget{expr_8h_a8b22cf6cb9f41b69cc6af2ecf42ee34b}{\index{expr.\-h@{expr.\-h}!expr\-\_\-transform@{expr\-\_\-transform}}
+\index{expr\-\_\-transform@{expr\-\_\-transform}!expr.h@{expr.\-h}}
+\subsubsection[{expr\-\_\-transform}]{\setlength{\rightskip}{0pt plus 5cm}struct {\bf expr}$\ast$ expr\-\_\-transform (
+\begin{DoxyParamCaption}
+\item[{struct {\bf expr} $\ast$}]{e}
+\end{DoxyParamCaption}
+)}}\label{expr_8h_a8b22cf6cb9f41b69cc6af2ecf42ee34b}
+\hypertarget{expr_8h_a69f42c110a88d539fe3e0c7a850f587d}{\index{expr.\-h@{expr.\-h}!lookup\-\_\-file@{lookup\-\_\-file}}
+\index{lookup\-\_\-file@{lookup\-\_\-file}!expr.h@{expr.\-h}}
+\subsubsection[{lookup\-\_\-file}]{\setlength{\rightskip}{0pt plus 5cm}struct {\bf file}$\ast$ lookup\-\_\-file (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{name}
+\end{DoxyParamCaption}
+)}}\label{expr_8h_a69f42c110a88d539fe3e0c7a850f587d}
+
+
+\subsection{Variable Documentation}
+\hypertarget{expr_8h_a0c7b92758e5868f313785278162206c4}{\index{expr.\-h@{expr.\-h}!cdebug@{cdebug}}
+\index{cdebug@{cdebug}!expr.h@{expr.\-h}}
+\subsubsection[{cdebug}]{\setlength{\rightskip}{0pt plus 5cm}int cdebug}}\label{expr_8h_a0c7b92758e5868f313785278162206c4}
+\hypertarget{expr_8h_ac6eea6f469d4e3b3886cdfc0a9a745a9}{\index{expr.\-h@{expr.\-h}!current\-\_\-file@{current\-\_\-file}}
+\index{current\-\_\-file@{current\-\_\-file}!expr.h@{expr.\-h}}
+\subsubsection[{current\-\_\-file}]{\setlength{\rightskip}{0pt plus 5cm}struct {\bf file}$\ast$ current\-\_\-file}}\label{expr_8h_ac6eea6f469d4e3b3886cdfc0a9a745a9}
+\hypertarget{expr_8h_a9cb6cd8810ed11698874b40d8a5a8749}{\index{expr.\-h@{expr.\-h}!file\-\_\-list@{file\-\_\-list}}
+\index{file\-\_\-list@{file\-\_\-list}!expr.h@{expr.\-h}}
+\subsubsection[{file\-\_\-list}]{\setlength{\rightskip}{0pt plus 5cm}struct {\bf file}$\ast$ file\-\_\-list}}\label{expr_8h_a9cb6cd8810ed11698874b40d8a5a8749}
+\hypertarget{expr_8h_a51a1f7e2d11e5937c573e9b5f856c5be}{\index{expr.\-h@{expr.\-h}!modules\-\_\-sym@{modules\-\_\-sym}}
+\index{modules\-\_\-sym@{modules\-\_\-sym}!expr.h@{expr.\-h}}
+\subsubsection[{modules\-\_\-sym}]{\setlength{\rightskip}{0pt plus 5cm}struct {\bf symbol}$\ast$ modules\-\_\-sym}}\label{expr_8h_a51a1f7e2d11e5937c573e9b5f856c5be}
+\hypertarget{expr_8h_afddde2678f37645efd0e4d71e270874b}{\index{expr.\-h@{expr.\-h}!sym\-\_\-defconfig\-\_\-list@{sym\-\_\-defconfig\-\_\-list}}
+\index{sym\-\_\-defconfig\-\_\-list@{sym\-\_\-defconfig\-\_\-list}!expr.h@{expr.\-h}}
+\subsubsection[{sym\-\_\-defconfig\-\_\-list}]{\setlength{\rightskip}{0pt plus 5cm}struct {\bf symbol}$\ast$ sym\-\_\-defconfig\-\_\-list}}\label{expr_8h_afddde2678f37645efd0e4d71e270874b}
+\hypertarget{expr_8h_a288bc38f9973340adc741080f1f50936}{\index{expr.\-h@{expr.\-h}!symbol\-\_\-mod@{symbol\-\_\-mod}}
+\index{symbol\-\_\-mod@{symbol\-\_\-mod}!expr.h@{expr.\-h}}
+\subsubsection[{symbol\-\_\-mod}]{\setlength{\rightskip}{0pt plus 5cm}struct {\bf symbol} {\bf symbol\-\_\-yes} {\bf symbol\-\_\-no} symbol\-\_\-mod}}\label{expr_8h_a288bc38f9973340adc741080f1f50936}

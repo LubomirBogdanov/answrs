@@ -1,0 +1,109 @@
+
+./debug/main.o:     file format elf32-littlearm
+
+
+Disassembly of section .text:
+
+00000000 <main>:
+   0:	b580      	push	{r7, lr}
+   2:	b082      	sub	sp, #8
+   4:	af00      	add	r7, sp, #0
+   6:	f7ff fffe 	bl	0 <led_init>
+   a:	f44f 5016 	mov.w	r0, #9600	; 0x2580
+   e:	f7ff fffe 	bl	0 <uart_init>
+  12:	2101      	movs	r1, #1
+  14:	480d      	ldr	r0, [pc, #52]	; (4c <main+0x4c>)
+  16:	f7ff fffe 	bl	0 <printf_>
+  1a:	f7ff fffe 	bl	0 <led_set>
+  1e:	2300      	movs	r3, #0
+  20:	607b      	str	r3, [r7, #4]
+  22:	e002      	b.n	2a <main+0x2a>
+  24:	687b      	ldr	r3, [r7, #4]
+  26:	3301      	adds	r3, #1
+  28:	607b      	str	r3, [r7, #4]
+  2a:	687b      	ldr	r3, [r7, #4]
+  2c:	4a08      	ldr	r2, [pc, #32]	; (50 <main+0x50>)
+  2e:	4293      	cmp	r3, r2
+  30:	ddf8      	ble.n	24 <main+0x24>
+  32:	f7ff fffe 	bl	0 <led_clear>
+  36:	2300      	movs	r3, #0
+  38:	607b      	str	r3, [r7, #4]
+  3a:	e002      	b.n	42 <main+0x42>
+  3c:	687b      	ldr	r3, [r7, #4]
+  3e:	3301      	adds	r3, #1
+  40:	607b      	str	r3, [r7, #4]
+  42:	687b      	ldr	r3, [r7, #4]
+  44:	4a02      	ldr	r2, [pc, #8]	; (50 <main+0x50>)
+  46:	4293      	cmp	r3, r2
+  48:	ddf8      	ble.n	3c <main+0x3c>
+  4a:	e7e6      	b.n	1a <main+0x1a>
+  4c:	00000000 	andeq	r0, r0, r0
+  50:	00061a7f 	andeq	r1, r6, pc, ror sl
+
+Disassembly of section .rodata:
+
+00000000 <.rodata>:
+   0:	73696854 	cmnvc	r9, #84, 16	; 0x540000
+   4:	20736920 	rsbscs	r6, r3, r0, lsr #18
+   8:	65206e61 	strvs	r6, [r0, #-3681]!	; 0xfffff19f
+   c:	706d6178 	rsbvc	r6, sp, r8, ror r1
+  10:	7520656c 	strvc	r6, [r0, #-1388]!	; 0xfffffa94
+  14:	65676173 	strbvs	r6, [r7, #-371]!	; 0xfffffe8d
+  18:	20666f20 	rsbcs	r6, r6, r0, lsr #30
+  1c:	6e697270 	mcrvs	2, 3, r7, cr9, cr0, {3}
+  20:	61206674 			; <UNDEFINED> instruction: 0x61206674
+  24:	5520646e 	strpl	r6, [r0, #-1134]!	; 0xfffffb92
+  28:	54524153 	ldrbpl	r4, [r2], #-339	; 0xfffffead
+  2c:	000a6425 	andeq	r6, sl, r5, lsr #8
+
+Disassembly of section .comment:
+
+00000000 <.comment>:
+   0:	43434700 	movtmi	r4, #14080	; 0x3700
+   4:	4728203a 			; <UNDEFINED> instruction: 0x4728203a
+   8:	5420554e 	strtpl	r5, [r0], #-1358	; 0xfffffab2
+   c:	736c6f6f 	cmnvc	ip, #444	; 0x1bc
+  10:	726f6620 	rsbvc	r6, pc, #32, 12	; 0x2000000
+  14:	6d724120 	ldfvse	f4, [r2, #-128]!	; 0xffffff80
+  18:	626d4520 	rsbvs	r4, sp, #32, 10	; 0x8000000
+  1c:	65646465 	strbvs	r6, [r4, #-1125]!	; 0xfffffb9b
+  20:	72502064 	subsvc	r2, r0, #100	; 0x64
+  24:	7365636f 	cmnvc	r5, #-1140850687	; 0xbc000001
+  28:	73726f73 	cmnvc	r2, #460	; 0x1cc
+  2c:	322d3820 	eorcc	r3, sp, #32, 16	; 0x200000
+  30:	2d383130 	ldfcss	f3, [r8, #-192]!	; 0xffffff40
+  34:	6d2d3471 	cfstrsvs	mvf3, [sp, #-452]!	; 0xfffffe3c
+  38:	726f6a61 	rsbvc	r6, pc, #397312	; 0x61000
+  3c:	2e382029 	cdpcs	0, 3, cr2, cr8, cr9, {1}
+  40:	20312e32 	eorscs	r2, r1, r2, lsr lr
+  44:	38313032 	ldmdacc	r1!, {r1, r4, r5, ip, sp}
+  48:	33313231 	teqcc	r1, #268435459	; 0x10000003
+  4c:	65722820 	ldrbvs	r2, [r2, #-2080]!	; 0xfffff7e0
+  50:	7361656c 	cmnvc	r1, #108, 10	; 0x1b000000
+  54:	5b202965 	blpl	80a5f0 <main+0x80a5f0>
+  58:	2d636367 	stclcs	3, cr6, [r3, #-412]!	; 0xfffffe64
+  5c:	72622d38 	rsbvc	r2, r2, #56, 26	; 0xe00
+  60:	68636e61 	stmdavs	r3!, {r0, r5, r6, r9, sl, fp, sp, lr}^
+  64:	76657220 	strbtvc	r7, [r5], -r0, lsr #4
+  68:	6f697369 	svcvs	0x00697369
+  6c:	3632206e 	ldrtcc	r2, [r2], -lr, rrx
+  70:	34373037 	ldrtcc	r3, [r7], #-55	; 0xffffffc9
+  74:	Address 0x0000000000000074 is out of bounds.
+
+
+Disassembly of section .ARM.attributes:
+
+00000000 <.ARM.attributes>:
+   0:	00002d41 	andeq	r2, r0, r1, asr #26
+   4:	61656100 	cmnvs	r5, r0, lsl #2
+   8:	01006962 	tsteq	r0, r2, ror #18
+   c:	00000023 	andeq	r0, r0, r3, lsr #32
+  10:	2d453705 	stclcs	7, cr3, [r5, #-20]	; 0xffffffec
+  14:	0d06004d 	stceq	0, cr0, [r6, #-308]	; 0xfffffecc
+  18:	02094d07 	andeq	r4, r9, #448	; 0x1c0
+  1c:	01140412 	tsteq	r4, r2, lsl r4
+  20:	03170115 	tsteq	r7, #1073741829	; 0x40000005
+  24:	01190118 	tsteq	r9, r8, lsl r1
+  28:	061e011a 			; <UNDEFINED> instruction: 0x061e011a
+  2c:	Address 0x000000000000002c is out of bounds.
+

@@ -1,0 +1,96 @@
+\hypertarget{conf_8c}{\section{menuconfig/conf.c File Reference}
+\label{conf_8c}\index{menuconfig/conf.\-c@{menuconfig/conf.\-c}}
+}
+{\ttfamily \#include $<$locale.\-h$>$}\\*
+{\ttfamily \#include $<$ctype.\-h$>$}\\*
+{\ttfamily \#include $<$stdio.\-h$>$}\\*
+{\ttfamily \#include $<$stdlib.\-h$>$}\\*
+{\ttfamily \#include $<$string.\-h$>$}\\*
+{\ttfamily \#include $<$time.\-h$>$}\\*
+{\ttfamily \#include $<$unistd.\-h$>$}\\*
+{\ttfamily \#include $<$getopt.\-h$>$}\\*
+{\ttfamily \#include $<$sys/stat.\-h$>$}\\*
+{\ttfamily \#include $<$sys/time.\-h$>$}\\*
+{\ttfamily \#include \char`\"{}lkc.\-h\char`\"{}}\\*
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{conf_8c_a5600cf05dbf4fb71225a1d2e8233e356}{input\-\_\-mode} \{ \\*
+\hyperlink{conf_8c_a5600cf05dbf4fb71225a1d2e8233e356a3e6699eacdc239caf0e46ec9f7802b03}{oldaskconfig}, 
+\hyperlink{conf_8c_a5600cf05dbf4fb71225a1d2e8233e356a87b18e229af6819d73b5c26811ba1370}{silentoldconfig}, 
+\hyperlink{conf_8c_a5600cf05dbf4fb71225a1d2e8233e356a0274a624c85bf8e1a8549e758b717dfb}{oldconfig}, 
+\hyperlink{conf_8c_a5600cf05dbf4fb71225a1d2e8233e356a792e0b8e1e2739ff7690d712c3f3bf73}{allnoconfig}, 
+\\*
+\hyperlink{conf_8c_a5600cf05dbf4fb71225a1d2e8233e356a692499e8b00ee424f49b3356c1583ebe}{allyesconfig}, 
+\hyperlink{conf_8c_a5600cf05dbf4fb71225a1d2e8233e356a60778dd56a9d5c02bd062a2c9327f6f3}{allmodconfig}, 
+\hyperlink{conf_8c_a5600cf05dbf4fb71225a1d2e8233e356ad7c2b753693cf6118fd27e6d9aa0b5da}{alldefconfig}, 
+\hyperlink{conf_8c_a5600cf05dbf4fb71225a1d2e8233e356aa1fc3cb6b500888abb1728dc2bb2f852}{randconfig}, 
+\\*
+\hyperlink{conf_8c_a5600cf05dbf4fb71225a1d2e8233e356a9fd036481671ec34b279cf6706d69f91}{defconfig}, 
+\hyperlink{conf_8c_a5600cf05dbf4fb71225a1d2e8233e356a8673234670da14d1d0b4848255f7557e}{savedefconfig}, 
+\hyperlink{conf_8c_a5600cf05dbf4fb71225a1d2e8233e356a0fb0066c77510d54b5574656a8a32737}{listnewconfig}, 
+\hyperlink{conf_8c_a5600cf05dbf4fb71225a1d2e8233e356a52bb006e81d23187307552432194f7bf}{olddefconfig}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{conf_8c_a0c99d968a34e803d378692bde2e3f18f}{main} (int ac, char $\ast$$\ast$av)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{conf_8c_a5600cf05dbf4fb71225a1d2e8233e356}{input\-\_\-mode} \hyperlink{conf_8c_a49b9f45a34bb7eeda686a2ffe880e76e}{input\-\_\-mode} = \hyperlink{conf_8c_a5600cf05dbf4fb71225a1d2e8233e356a3e6699eacdc239caf0e46ec9f7802b03}{oldaskconfig}
+\end{DoxyCompactItemize}
+
+
+\subsection{Enumeration Type Documentation}
+\hypertarget{conf_8c_a5600cf05dbf4fb71225a1d2e8233e356}{\index{conf.\-c@{conf.\-c}!input\-\_\-mode@{input\-\_\-mode}}
+\index{input\-\_\-mode@{input\-\_\-mode}!conf.c@{conf.\-c}}
+\subsubsection[{input\-\_\-mode}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf input\-\_\-mode}}}\label{conf_8c_a5600cf05dbf4fb71225a1d2e8233e356}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{oldaskconfig@{oldaskconfig}!conf.\-c@{conf.\-c}}\index{conf.\-c@{conf.\-c}!oldaskconfig@{oldaskconfig}}\item[{\em 
+\hypertarget{conf_8c_a5600cf05dbf4fb71225a1d2e8233e356a3e6699eacdc239caf0e46ec9f7802b03}{oldaskconfig}\label{conf_8c_a5600cf05dbf4fb71225a1d2e8233e356a3e6699eacdc239caf0e46ec9f7802b03}
+}]\index{silentoldconfig@{silentoldconfig}!conf.\-c@{conf.\-c}}\index{conf.\-c@{conf.\-c}!silentoldconfig@{silentoldconfig}}\item[{\em 
+\hypertarget{conf_8c_a5600cf05dbf4fb71225a1d2e8233e356a87b18e229af6819d73b5c26811ba1370}{silentoldconfig}\label{conf_8c_a5600cf05dbf4fb71225a1d2e8233e356a87b18e229af6819d73b5c26811ba1370}
+}]\index{oldconfig@{oldconfig}!conf.\-c@{conf.\-c}}\index{conf.\-c@{conf.\-c}!oldconfig@{oldconfig}}\item[{\em 
+\hypertarget{conf_8c_a5600cf05dbf4fb71225a1d2e8233e356a0274a624c85bf8e1a8549e758b717dfb}{oldconfig}\label{conf_8c_a5600cf05dbf4fb71225a1d2e8233e356a0274a624c85bf8e1a8549e758b717dfb}
+}]\index{allnoconfig@{allnoconfig}!conf.\-c@{conf.\-c}}\index{conf.\-c@{conf.\-c}!allnoconfig@{allnoconfig}}\item[{\em 
+\hypertarget{conf_8c_a5600cf05dbf4fb71225a1d2e8233e356a792e0b8e1e2739ff7690d712c3f3bf73}{allnoconfig}\label{conf_8c_a5600cf05dbf4fb71225a1d2e8233e356a792e0b8e1e2739ff7690d712c3f3bf73}
+}]\index{allyesconfig@{allyesconfig}!conf.\-c@{conf.\-c}}\index{conf.\-c@{conf.\-c}!allyesconfig@{allyesconfig}}\item[{\em 
+\hypertarget{conf_8c_a5600cf05dbf4fb71225a1d2e8233e356a692499e8b00ee424f49b3356c1583ebe}{allyesconfig}\label{conf_8c_a5600cf05dbf4fb71225a1d2e8233e356a692499e8b00ee424f49b3356c1583ebe}
+}]\index{allmodconfig@{allmodconfig}!conf.\-c@{conf.\-c}}\index{conf.\-c@{conf.\-c}!allmodconfig@{allmodconfig}}\item[{\em 
+\hypertarget{conf_8c_a5600cf05dbf4fb71225a1d2e8233e356a60778dd56a9d5c02bd062a2c9327f6f3}{allmodconfig}\label{conf_8c_a5600cf05dbf4fb71225a1d2e8233e356a60778dd56a9d5c02bd062a2c9327f6f3}
+}]\index{alldefconfig@{alldefconfig}!conf.\-c@{conf.\-c}}\index{conf.\-c@{conf.\-c}!alldefconfig@{alldefconfig}}\item[{\em 
+\hypertarget{conf_8c_a5600cf05dbf4fb71225a1d2e8233e356ad7c2b753693cf6118fd27e6d9aa0b5da}{alldefconfig}\label{conf_8c_a5600cf05dbf4fb71225a1d2e8233e356ad7c2b753693cf6118fd27e6d9aa0b5da}
+}]\index{randconfig@{randconfig}!conf.\-c@{conf.\-c}}\index{conf.\-c@{conf.\-c}!randconfig@{randconfig}}\item[{\em 
+\hypertarget{conf_8c_a5600cf05dbf4fb71225a1d2e8233e356aa1fc3cb6b500888abb1728dc2bb2f852}{randconfig}\label{conf_8c_a5600cf05dbf4fb71225a1d2e8233e356aa1fc3cb6b500888abb1728dc2bb2f852}
+}]\index{defconfig@{defconfig}!conf.\-c@{conf.\-c}}\index{conf.\-c@{conf.\-c}!defconfig@{defconfig}}\item[{\em 
+\hypertarget{conf_8c_a5600cf05dbf4fb71225a1d2e8233e356a9fd036481671ec34b279cf6706d69f91}{defconfig}\label{conf_8c_a5600cf05dbf4fb71225a1d2e8233e356a9fd036481671ec34b279cf6706d69f91}
+}]\index{savedefconfig@{savedefconfig}!conf.\-c@{conf.\-c}}\index{conf.\-c@{conf.\-c}!savedefconfig@{savedefconfig}}\item[{\em 
+\hypertarget{conf_8c_a5600cf05dbf4fb71225a1d2e8233e356a8673234670da14d1d0b4848255f7557e}{savedefconfig}\label{conf_8c_a5600cf05dbf4fb71225a1d2e8233e356a8673234670da14d1d0b4848255f7557e}
+}]\index{listnewconfig@{listnewconfig}!conf.\-c@{conf.\-c}}\index{conf.\-c@{conf.\-c}!listnewconfig@{listnewconfig}}\item[{\em 
+\hypertarget{conf_8c_a5600cf05dbf4fb71225a1d2e8233e356a0fb0066c77510d54b5574656a8a32737}{listnewconfig}\label{conf_8c_a5600cf05dbf4fb71225a1d2e8233e356a0fb0066c77510d54b5574656a8a32737}
+}]\index{olddefconfig@{olddefconfig}!conf.\-c@{conf.\-c}}\index{conf.\-c@{conf.\-c}!olddefconfig@{olddefconfig}}\item[{\em 
+\hypertarget{conf_8c_a5600cf05dbf4fb71225a1d2e8233e356a52bb006e81d23187307552432194f7bf}{olddefconfig}\label{conf_8c_a5600cf05dbf4fb71225a1d2e8233e356a52bb006e81d23187307552432194f7bf}
+}]\end{description}
+\end{Desc}
+
+
+\subsection{Function Documentation}
+\hypertarget{conf_8c_a0c99d968a34e803d378692bde2e3f18f}{\index{conf.\-c@{conf.\-c}!main@{main}}
+\index{main@{main}!conf.c@{conf.\-c}}
+\subsubsection[{main}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+\item[{int}]{ac, }
+\item[{char $\ast$$\ast$}]{av}
+\end{DoxyParamCaption}
+)}}\label{conf_8c_a0c99d968a34e803d378692bde2e3f18f}
+
+
+\subsection{Variable Documentation}
+\hypertarget{conf_8c_a49b9f45a34bb7eeda686a2ffe880e76e}{\index{conf.\-c@{conf.\-c}!input\-\_\-mode@{input\-\_\-mode}}
+\index{input\-\_\-mode@{input\-\_\-mode}!conf.c@{conf.\-c}}
+\subsubsection[{input\-\_\-mode}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf input\-\_\-mode}  {\bf input\-\_\-mode} = {\bf oldaskconfig}}}\label{conf_8c_a49b9f45a34bb7eeda686a2ffe880e76e}

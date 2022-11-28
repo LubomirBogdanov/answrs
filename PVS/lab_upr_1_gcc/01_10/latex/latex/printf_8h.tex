@@ -1,0 +1,186 @@
+\hypertarget{printf_8h}{\section{printf/printf.h File Reference}
+\label{printf_8h}\index{printf/printf.\-h@{printf/printf.\-h}}
+}
+{\ttfamily \#include $<$stdarg.\-h$>$}\\*
+{\ttfamily \#include $<$stddef.\-h$>$}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{printf_8h_a3cb9f0894fab1c8fbb0753c9c7c2a8d9}{printf}~\hyperlink{printf_8h_a770cb7c9f4a7b37dc5b49c4c68a8308e}{printf\-\_\-}
+\item 
+\#define \hyperlink{printf_8h_a5998f60c4f4af322b36debdbd11d7917}{sprintf}~\hyperlink{printf_8h_a989410555ef35cd646c15d51e649faaa}{sprintf\-\_\-}
+\item 
+\#define \hyperlink{printf_8h_aa367b75c5aed883fef5befbdf04835a4}{snprintf}~\hyperlink{printf_8h_a5b16fca837f5301cb0c01fa668f044f4}{snprintf\-\_\-}
+\item 
+\#define \hyperlink{printf_8h_a00ba2ca988495904efc418acbf0627d7}{vsnprintf}~\hyperlink{printf_8h_af37254f8c6a2d9d51e82c85fd666f88e}{vsnprintf\-\_\-}
+\item 
+\#define \hyperlink{printf_8h_a275497dfccfba8ca97e73865fd2b083b}{vprintf}~\hyperlink{printf_8h_aa199d9388f8dcddcda1a0451315cae89}{vprintf\-\_\-}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{printf_8h_a223496da92021626a4430fed0af667bd}{\-\_\-putchar} (char character)
+\begin{DoxyCompactList}\small\item\em This function is used by the \hyperlink{printf_8h_a3cb9f0894fab1c8fbb0753c9c7c2a8d9}{printf( )} port. It sends a single char over the U\-A\-R\-T interface. This function is blocking. \end{DoxyCompactList}\item 
+int \hyperlink{printf_8h_a770cb7c9f4a7b37dc5b49c4c68a8308e}{printf\-\_\-} (const char $\ast$format,...)
+\item 
+int \hyperlink{printf_8h_a989410555ef35cd646c15d51e649faaa}{sprintf\-\_\-} (char $\ast$\hyperlink{structbuffer}{buffer}, const char $\ast$format,...)
+\item 
+int \hyperlink{printf_8h_a5b16fca837f5301cb0c01fa668f044f4}{snprintf\-\_\-} (char $\ast$\hyperlink{structbuffer}{buffer}, size\-\_\-t count, const char $\ast$format,...)
+\item 
+int \hyperlink{printf_8h_af37254f8c6a2d9d51e82c85fd666f88e}{vsnprintf\-\_\-} (char $\ast$\hyperlink{structbuffer}{buffer}, size\-\_\-t count, const char $\ast$format, va\-\_\-list va)
+\item 
+int \hyperlink{printf_8h_aa199d9388f8dcddcda1a0451315cae89}{vprintf\-\_\-} (const char $\ast$format, va\-\_\-list va)
+\item 
+int \hyperlink{printf_8h_a16cdc6ff34afc2122ae164d4ee3a8c50}{fctprintf} (void($\ast$out)(char character, void $\ast$arg), void $\ast$arg, const char $\ast$format,...)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{printf_8h_a3cb9f0894fab1c8fbb0753c9c7c2a8d9}{\index{printf.\-h@{printf.\-h}!printf@{printf}}
+\index{printf@{printf}!printf.h@{printf.\-h}}
+\subsubsection[{printf}]{\setlength{\rightskip}{0pt plus 5cm}\#define printf~{\bf printf\-\_\-}}}\label{printf_8h_a3cb9f0894fab1c8fbb0753c9c7c2a8d9}
+Tiny printf implementation You have to implement {\itshape putchar if you use \hyperlink{printf_8h_a3cb9f0894fab1c8fbb0753c9c7c2a8d9}{printf()} To avoid conflicts with the regular \hyperlink{printf_8h_a3cb9f0894fab1c8fbb0753c9c7c2a8d9}{printf()} A\-P\-I it is overridden by macro defines and internal underscore-\/appended functions like printf}() are used 
+\begin{DoxyParams}{Parameters}
+{\em format} & A string that specifies the format of the output \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The number of characters that are written into the array, not counting the terminating null character 
+\end{DoxyReturn}
+\hypertarget{printf_8h_aa367b75c5aed883fef5befbdf04835a4}{\index{printf.\-h@{printf.\-h}!snprintf@{snprintf}}
+\index{snprintf@{snprintf}!printf.h@{printf.\-h}}
+\subsubsection[{snprintf}]{\setlength{\rightskip}{0pt plus 5cm}\#define snprintf~{\bf snprintf\-\_\-}}}\label{printf_8h_aa367b75c5aed883fef5befbdf04835a4}
+Tiny snprintf/vsnprintf implementation 
+\begin{DoxyParams}{Parameters}
+{\em buffer} & A pointer to the buffer where to store the formatted string \\
+\hline
+{\em count} & The maximum number of characters to store in the buffer, including a terminating null character \\
+\hline
+{\em format} & A string that specifies the format of the output \\
+\hline
+{\em va} & A value identifying a variable arguments list \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The number of characters that C\-O\-U\-L\-D have been written into the buffer, not counting the terminating null character. A value equal or larger than count indicates truncation. Only when the returned value is non-\/negative and less than count, the string has been completely written. 
+\end{DoxyReturn}
+\hypertarget{printf_8h_a5998f60c4f4af322b36debdbd11d7917}{\index{printf.\-h@{printf.\-h}!sprintf@{sprintf}}
+\index{sprintf@{sprintf}!printf.h@{printf.\-h}}
+\subsubsection[{sprintf}]{\setlength{\rightskip}{0pt plus 5cm}\#define sprintf~{\bf sprintf\-\_\-}}}\label{printf_8h_a5998f60c4f4af322b36debdbd11d7917}
+Tiny sprintf implementation Due to security reasons (buffer overflow) Y\-O\-U S\-H\-O\-U\-L\-D C\-O\-N\-S\-I\-D\-E\-R U\-S\-I\-N\-G (V)S\-N\-P\-R\-I\-N\-T\-F I\-N\-S\-T\-E\-A\-D! 
+\begin{DoxyParams}{Parameters}
+{\em buffer} & A pointer to the buffer where to store the formatted string. M\-U\-S\-T be big enough to store the output! \\
+\hline
+{\em format} & A string that specifies the format of the output \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The number of characters that are W\-R\-I\-T\-T\-E\-N into the buffer, not counting the terminating null character 
+\end{DoxyReturn}
+\hypertarget{printf_8h_a275497dfccfba8ca97e73865fd2b083b}{\index{printf.\-h@{printf.\-h}!vprintf@{vprintf}}
+\index{vprintf@{vprintf}!printf.h@{printf.\-h}}
+\subsubsection[{vprintf}]{\setlength{\rightskip}{0pt plus 5cm}\#define vprintf~{\bf vprintf\-\_\-}}}\label{printf_8h_a275497dfccfba8ca97e73865fd2b083b}
+Tiny vprintf implementation 
+\begin{DoxyParams}{Parameters}
+{\em format} & A string that specifies the format of the output \\
+\hline
+{\em va} & A value identifying a variable arguments list \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The number of characters that are W\-R\-I\-T\-T\-E\-N into the buffer, not counting the terminating null character 
+\end{DoxyReturn}
+\hypertarget{printf_8h_a00ba2ca988495904efc418acbf0627d7}{\index{printf.\-h@{printf.\-h}!vsnprintf@{vsnprintf}}
+\index{vsnprintf@{vsnprintf}!printf.h@{printf.\-h}}
+\subsubsection[{vsnprintf}]{\setlength{\rightskip}{0pt plus 5cm}\#define vsnprintf~{\bf vsnprintf\-\_\-}}}\label{printf_8h_a00ba2ca988495904efc418acbf0627d7}
+
+
+\subsection{Function Documentation}
+\hypertarget{printf_8h_a223496da92021626a4430fed0af667bd}{\index{printf.\-h@{printf.\-h}!\-\_\-putchar@{\-\_\-putchar}}
+\index{\-\_\-putchar@{\-\_\-putchar}!printf.h@{printf.\-h}}
+\subsubsection[{\-\_\-putchar}]{\setlength{\rightskip}{0pt plus 5cm}void \-\_\-putchar (
+\begin{DoxyParamCaption}
+\item[{char}]{character}
+\end{DoxyParamCaption}
+)}}\label{printf_8h_a223496da92021626a4430fed0af667bd}
+
+
+This function is used by the \hyperlink{printf_8h_a3cb9f0894fab1c8fbb0753c9c7c2a8d9}{printf( )} port. It sends a single char over the U\-A\-R\-T interface. This function is blocking. 
+
+Output a character to a custom device like U\-A\-R\-T, used by the \hyperlink{printf_8h_a3cb9f0894fab1c8fbb0753c9c7c2a8d9}{printf()} function This function is declared here only. You have to write your custom implementation somewhere 
+\begin{DoxyParams}{Parameters}
+{\em character} & Character to output\\
+\hline
+{\em character} & -\/ an 8-\/bit A\-S\-C\-I\-I character.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\hypertarget{printf_8h_a16cdc6ff34afc2122ae164d4ee3a8c50}{\index{printf.\-h@{printf.\-h}!fctprintf@{fctprintf}}
+\index{fctprintf@{fctprintf}!printf.h@{printf.\-h}}
+\subsubsection[{fctprintf}]{\setlength{\rightskip}{0pt plus 5cm}int fctprintf (
+\begin{DoxyParamCaption}
+\item[{void($\ast$)(char character, void $\ast$arg)}]{out, }
+\item[{void $\ast$}]{arg, }
+\item[{const char $\ast$}]{format, }
+\item[{}]{...}
+\end{DoxyParamCaption}
+)}}\label{printf_8h_a16cdc6ff34afc2122ae164d4ee3a8c50}
+printf with output function You may use this as dynamic alternative to \hyperlink{printf_8h_a3cb9f0894fab1c8fbb0753c9c7c2a8d9}{printf()} with its fixed \hyperlink{printf_8h_a223496da92021626a4430fed0af667bd}{\-\_\-putchar()} output 
+\begin{DoxyParams}{Parameters}
+{\em out} & An output function which takes one character and an argument pointer \\
+\hline
+{\em arg} & An argument pointer for user data passed to output function \\
+\hline
+{\em format} & A string that specifies the format of the output \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The number of characters that are sent to the output function, not counting the terminating null character 
+\end{DoxyReturn}
+\hypertarget{printf_8h_a770cb7c9f4a7b37dc5b49c4c68a8308e}{\index{printf.\-h@{printf.\-h}!printf\-\_\-@{printf\-\_\-}}
+\index{printf\-\_\-@{printf\-\_\-}!printf.h@{printf.\-h}}
+\subsubsection[{printf\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}int printf\-\_\- (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{format, }
+\item[{}]{...}
+\end{DoxyParamCaption}
+)}}\label{printf_8h_a770cb7c9f4a7b37dc5b49c4c68a8308e}
+\hypertarget{printf_8h_a5b16fca837f5301cb0c01fa668f044f4}{\index{printf.\-h@{printf.\-h}!snprintf\-\_\-@{snprintf\-\_\-}}
+\index{snprintf\-\_\-@{snprintf\-\_\-}!printf.h@{printf.\-h}}
+\subsubsection[{snprintf\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}int snprintf\-\_\- (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{buffer, }
+\item[{size\-\_\-t}]{count, }
+\item[{const char $\ast$}]{format, }
+\item[{}]{...}
+\end{DoxyParamCaption}
+)}}\label{printf_8h_a5b16fca837f5301cb0c01fa668f044f4}
+\hypertarget{printf_8h_a989410555ef35cd646c15d51e649faaa}{\index{printf.\-h@{printf.\-h}!sprintf\-\_\-@{sprintf\-\_\-}}
+\index{sprintf\-\_\-@{sprintf\-\_\-}!printf.h@{printf.\-h}}
+\subsubsection[{sprintf\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}int sprintf\-\_\- (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{buffer, }
+\item[{const char $\ast$}]{format, }
+\item[{}]{...}
+\end{DoxyParamCaption}
+)}}\label{printf_8h_a989410555ef35cd646c15d51e649faaa}
+\hypertarget{printf_8h_aa199d9388f8dcddcda1a0451315cae89}{\index{printf.\-h@{printf.\-h}!vprintf\-\_\-@{vprintf\-\_\-}}
+\index{vprintf\-\_\-@{vprintf\-\_\-}!printf.h@{printf.\-h}}
+\subsubsection[{vprintf\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}int vprintf\-\_\- (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{format, }
+\item[{va\-\_\-list}]{va}
+\end{DoxyParamCaption}
+)}}\label{printf_8h_aa199d9388f8dcddcda1a0451315cae89}
+\hypertarget{printf_8h_af37254f8c6a2d9d51e82c85fd666f88e}{\index{printf.\-h@{printf.\-h}!vsnprintf\-\_\-@{vsnprintf\-\_\-}}
+\index{vsnprintf\-\_\-@{vsnprintf\-\_\-}!printf.h@{printf.\-h}}
+\subsubsection[{vsnprintf\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}int vsnprintf\-\_\- (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{buffer, }
+\item[{size\-\_\-t}]{count, }
+\item[{const char $\ast$}]{format, }
+\item[{va\-\_\-list}]{va}
+\end{DoxyParamCaption}
+)}}\label{printf_8h_af37254f8c6a2d9d51e82c85fd666f88e}

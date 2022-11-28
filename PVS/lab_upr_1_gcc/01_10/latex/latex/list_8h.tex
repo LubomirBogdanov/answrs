@@ -1,0 +1,87 @@
+\hypertarget{list_8h}{\section{menuconfig/list.h File Reference}
+\label{list_8h}\index{menuconfig/list.\-h@{menuconfig/list.\-h}}
+}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structlist__head}{list\-\_\-head}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{list_8h_a276e8a32e0bbf024aadd9420b8f2d3b3}{offsetof}(T\-Y\-P\-E, M\-E\-M\-B\-E\-R)~((size\-\_\-t) \&((T\-Y\-P\-E $\ast$)0)-\/$>$M\-E\-M\-B\-E\-R)
+\item 
+\#define \hyperlink{list_8h_af8c317a42292b61c93aae91e59118a46}{container\-\_\-of}(ptr, type, member)
+\item 
+\#define \hyperlink{list_8h_a4642d4b7df28478bb762fe43c85b5c63}{L\-I\-S\-T\-\_\-\-H\-E\-A\-D\-\_\-\-I\-N\-I\-T}(name)~\{ \&(name), \&(name) \}
+\item 
+\#define \hyperlink{list_8h_a42f0e72af970a790b60a740af8c9ecd0}{L\-I\-S\-T\-\_\-\-H\-E\-A\-D}(name)~struct \hyperlink{structlist__head}{list\-\_\-head} name = \hyperlink{list_8h_a4642d4b7df28478bb762fe43c85b5c63}{L\-I\-S\-T\-\_\-\-H\-E\-A\-D\-\_\-\-I\-N\-I\-T}(name)
+\item 
+\#define \hyperlink{list_8h_a26c976b7f654e70df318c1843e5094de}{list\-\_\-entry}(ptr, type, member)~\hyperlink{list_8h_af8c317a42292b61c93aae91e59118a46}{container\-\_\-of}(ptr, type, member)
+\item 
+\#define \hyperlink{list_8h_a9b782fefb5ab71ce9762182e45a615e1}{list\-\_\-for\-\_\-each\-\_\-entry}(pos, head, member)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{list_8h_af8c317a42292b61c93aae91e59118a46}{\index{list.\-h@{list.\-h}!container\-\_\-of@{container\-\_\-of}}
+\index{container\-\_\-of@{container\-\_\-of}!list.h@{list.\-h}}
+\subsubsection[{container\-\_\-of}]{\setlength{\rightskip}{0pt plus 5cm}\#define container\-\_\-of(
+\begin{DoxyParamCaption}
+\item[{}]{ptr, }
+\item[{}]{type, }
+\item[{}]{member}
+\end{DoxyParamCaption}
+)}}\label{list_8h_af8c317a42292b61c93aae91e59118a46}
+{\bfseries Value\-:}
+\begin{DoxyCode}
+(\{                      \(\backslash\)
+    const typeof( ((type *)0)->member ) *\_\_mptr = (ptr);    \(\backslash\)
+    (type *)( (\textcolor{keywordtype}{char} *)\_\_mptr - \hyperlink{list_8h_a276e8a32e0bbf024aadd9420b8f2d3b3}{offsetof}(type,member) );\})
+\end{DoxyCode}
+container\-\_\-of -\/ cast a member of a structure out to the containing structure \-: the pointer to the member. \-: the type of the container struct this is embedded in. \-: the name of the member within the struct. \hypertarget{list_8h_a26c976b7f654e70df318c1843e5094de}{\index{list.\-h@{list.\-h}!list\-\_\-entry@{list\-\_\-entry}}
+\index{list\-\_\-entry@{list\-\_\-entry}!list.h@{list.\-h}}
+\subsubsection[{list\-\_\-entry}]{\setlength{\rightskip}{0pt plus 5cm}\#define list\-\_\-entry(
+\begin{DoxyParamCaption}
+\item[{}]{ptr, }
+\item[{}]{type, }
+\item[{}]{member}
+\end{DoxyParamCaption}
+)~{\bf container\-\_\-of}(ptr, type, member)}}\label{list_8h_a26c976b7f654e70df318c1843e5094de}
+list\-\_\-entry -\/ get the struct for this entry \-: the \&struct \hyperlink{structlist__head}{list\-\_\-head} pointer. \-: the type of the struct this is embedded in. \-: the name of the list\-\_\-struct within the struct. \hypertarget{list_8h_a9b782fefb5ab71ce9762182e45a615e1}{\index{list.\-h@{list.\-h}!list\-\_\-for\-\_\-each\-\_\-entry@{list\-\_\-for\-\_\-each\-\_\-entry}}
+\index{list\-\_\-for\-\_\-each\-\_\-entry@{list\-\_\-for\-\_\-each\-\_\-entry}!list.h@{list.\-h}}
+\subsubsection[{list\-\_\-for\-\_\-each\-\_\-entry}]{\setlength{\rightskip}{0pt plus 5cm}\#define list\-\_\-for\-\_\-each\-\_\-entry(
+\begin{DoxyParamCaption}
+\item[{}]{pos, }
+\item[{}]{head, }
+\item[{}]{member}
+\end{DoxyParamCaption}
+)}}\label{list_8h_a9b782fefb5ab71ce9762182e45a615e1}
+{\bfseries Value\-:}
+\begin{DoxyCode}
+\textcolor{keywordflow}{for} (pos = \hyperlink{list_8h_a26c976b7f654e70df318c1843e5094de}{list\_entry}((head)->\hyperlink{structdialog__list_a871012485a0b37aa851161bb5d044961}{next}, typeof(*pos), member);    \(\backslash\)
+         &pos->member != (head);    \(\backslash\)
+         pos = \hyperlink{list_8h_a26c976b7f654e70df318c1843e5094de}{list\_entry}(pos->member.next, typeof(*pos), member))
+\end{DoxyCode}
+list\-\_\-for\-\_\-each\-\_\-entry -\/ iterate over list of given type \-: the type $\ast$ to use as a loop cursor. \-: the head for your list. \-: the name of the list\-\_\-struct within the struct. \hypertarget{list_8h_a42f0e72af970a790b60a740af8c9ecd0}{\index{list.\-h@{list.\-h}!L\-I\-S\-T\-\_\-\-H\-E\-A\-D@{L\-I\-S\-T\-\_\-\-H\-E\-A\-D}}
+\index{L\-I\-S\-T\-\_\-\-H\-E\-A\-D@{L\-I\-S\-T\-\_\-\-H\-E\-A\-D}!list.h@{list.\-h}}
+\subsubsection[{L\-I\-S\-T\-\_\-\-H\-E\-A\-D}]{\setlength{\rightskip}{0pt plus 5cm}\#define L\-I\-S\-T\-\_\-\-H\-E\-A\-D(
+\begin{DoxyParamCaption}
+\item[{}]{name}
+\end{DoxyParamCaption}
+)~struct {\bf list\-\_\-head} name = {\bf L\-I\-S\-T\-\_\-\-H\-E\-A\-D\-\_\-\-I\-N\-I\-T}(name)}}\label{list_8h_a42f0e72af970a790b60a740af8c9ecd0}
+\hypertarget{list_8h_a4642d4b7df28478bb762fe43c85b5c63}{\index{list.\-h@{list.\-h}!L\-I\-S\-T\-\_\-\-H\-E\-A\-D\-\_\-\-I\-N\-I\-T@{L\-I\-S\-T\-\_\-\-H\-E\-A\-D\-\_\-\-I\-N\-I\-T}}
+\index{L\-I\-S\-T\-\_\-\-H\-E\-A\-D\-\_\-\-I\-N\-I\-T@{L\-I\-S\-T\-\_\-\-H\-E\-A\-D\-\_\-\-I\-N\-I\-T}!list.h@{list.\-h}}
+\subsubsection[{L\-I\-S\-T\-\_\-\-H\-E\-A\-D\-\_\-\-I\-N\-I\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define L\-I\-S\-T\-\_\-\-H\-E\-A\-D\-\_\-\-I\-N\-I\-T(
+\begin{DoxyParamCaption}
+\item[{}]{name}
+\end{DoxyParamCaption}
+)~\{ \&(name), \&(name) \}}}\label{list_8h_a4642d4b7df28478bb762fe43c85b5c63}
+\hypertarget{list_8h_a276e8a32e0bbf024aadd9420b8f2d3b3}{\index{list.\-h@{list.\-h}!offsetof@{offsetof}}
+\index{offsetof@{offsetof}!list.h@{list.\-h}}
+\subsubsection[{offsetof}]{\setlength{\rightskip}{0pt plus 5cm}\#define offsetof(
+\begin{DoxyParamCaption}
+\item[{}]{T\-Y\-P\-E, }
+\item[{}]{M\-E\-M\-B\-E\-R}
+\end{DoxyParamCaption}
+)~((size\-\_\-t) \&((T\-Y\-P\-E $\ast$)0)-\/$>$M\-E\-M\-B\-E\-R)}}\label{list_8h_a276e8a32e0bbf024aadd9420b8f2d3b3}

@@ -1,0 +1,88 @@
+\hypertarget{util_8c}{\section{menuconfig/util.c File Reference}
+\label{util_8c}\index{menuconfig/util.\-c@{menuconfig/util.\-c}}
+}
+{\ttfamily \#include $<$stdarg.\-h$>$}\\*
+{\ttfamily \#include $<$stdlib.\-h$>$}\\*
+{\ttfamily \#include $<$string.\-h$>$}\\*
+{\ttfamily \#include \char`\"{}lkc.\-h\char`\"{}}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structfile}{file} $\ast$ \hyperlink{util_8c_a9c1ece44c680b0a8c4c806119b1c3de8}{file\-\_\-lookup} (const char $\ast$name)
+\item 
+int \hyperlink{util_8c_a9f96480171f1c2075ecf8fbac8d53294}{file\-\_\-write\-\_\-dep} (const char $\ast$name)
+\item 
+struct \hyperlink{structgstr}{gstr} \hyperlink{util_8c_a796c007af6fd6641f1c5a3d07e2c866e}{str\-\_\-new} (void)
+\item 
+struct \hyperlink{structgstr}{gstr} \hyperlink{util_8c_a13f6b85fb5572533c03c74291ab3bad0}{str\-\_\-assign} (const char $\ast$s)
+\item 
+void \hyperlink{util_8c_a3ed63dac73a8fe11bdee708c35212546}{str\-\_\-free} (struct \hyperlink{structgstr}{gstr} $\ast$gs)
+\item 
+void \hyperlink{util_8c_a42ddce81fe176a1b263d770a2c18d1aa}{str\-\_\-append} (struct \hyperlink{structgstr}{gstr} $\ast$gs, const char $\ast$s)
+\item 
+void \hyperlink{util_8c_a38c58c9025ffc0595b1edc9c68dd1254}{str\-\_\-printf} (struct \hyperlink{structgstr}{gstr} $\ast$gs, const char $\ast$fmt,...)
+\item 
+const char $\ast$ \hyperlink{util_8c_a89d3178aceaa1ac836ed51c488def2d1}{str\-\_\-get} (struct \hyperlink{structgstr}{gstr} $\ast$gs)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{util_8c_a9c1ece44c680b0a8c4c806119b1c3de8}{\index{util.\-c@{util.\-c}!file\-\_\-lookup@{file\-\_\-lookup}}
+\index{file\-\_\-lookup@{file\-\_\-lookup}!util.c@{util.\-c}}
+\subsubsection[{file\-\_\-lookup}]{\setlength{\rightskip}{0pt plus 5cm}struct {\bf file}$\ast$ file\-\_\-lookup (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{name}
+\end{DoxyParamCaption}
+)}}\label{util_8c_a9c1ece44c680b0a8c4c806119b1c3de8}
+\hypertarget{util_8c_a9f96480171f1c2075ecf8fbac8d53294}{\index{util.\-c@{util.\-c}!file\-\_\-write\-\_\-dep@{file\-\_\-write\-\_\-dep}}
+\index{file\-\_\-write\-\_\-dep@{file\-\_\-write\-\_\-dep}!util.c@{util.\-c}}
+\subsubsection[{file\-\_\-write\-\_\-dep}]{\setlength{\rightskip}{0pt plus 5cm}int file\-\_\-write\-\_\-dep (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{name}
+\end{DoxyParamCaption}
+)}}\label{util_8c_a9f96480171f1c2075ecf8fbac8d53294}
+\hypertarget{util_8c_a42ddce81fe176a1b263d770a2c18d1aa}{\index{util.\-c@{util.\-c}!str\-\_\-append@{str\-\_\-append}}
+\index{str\-\_\-append@{str\-\_\-append}!util.c@{util.\-c}}
+\subsubsection[{str\-\_\-append}]{\setlength{\rightskip}{0pt plus 5cm}void str\-\_\-append (
+\begin{DoxyParamCaption}
+\item[{struct {\bf gstr} $\ast$}]{gs, }
+\item[{const char $\ast$}]{s}
+\end{DoxyParamCaption}
+)}}\label{util_8c_a42ddce81fe176a1b263d770a2c18d1aa}
+\hypertarget{util_8c_a13f6b85fb5572533c03c74291ab3bad0}{\index{util.\-c@{util.\-c}!str\-\_\-assign@{str\-\_\-assign}}
+\index{str\-\_\-assign@{str\-\_\-assign}!util.c@{util.\-c}}
+\subsubsection[{str\-\_\-assign}]{\setlength{\rightskip}{0pt plus 5cm}struct {\bf gstr} str\-\_\-assign (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{s}
+\end{DoxyParamCaption}
+)}}\label{util_8c_a13f6b85fb5572533c03c74291ab3bad0}
+\hypertarget{util_8c_a3ed63dac73a8fe11bdee708c35212546}{\index{util.\-c@{util.\-c}!str\-\_\-free@{str\-\_\-free}}
+\index{str\-\_\-free@{str\-\_\-free}!util.c@{util.\-c}}
+\subsubsection[{str\-\_\-free}]{\setlength{\rightskip}{0pt plus 5cm}void str\-\_\-free (
+\begin{DoxyParamCaption}
+\item[{struct {\bf gstr} $\ast$}]{gs}
+\end{DoxyParamCaption}
+)}}\label{util_8c_a3ed63dac73a8fe11bdee708c35212546}
+\hypertarget{util_8c_a89d3178aceaa1ac836ed51c488def2d1}{\index{util.\-c@{util.\-c}!str\-\_\-get@{str\-\_\-get}}
+\index{str\-\_\-get@{str\-\_\-get}!util.c@{util.\-c}}
+\subsubsection[{str\-\_\-get}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ str\-\_\-get (
+\begin{DoxyParamCaption}
+\item[{struct {\bf gstr} $\ast$}]{gs}
+\end{DoxyParamCaption}
+)}}\label{util_8c_a89d3178aceaa1ac836ed51c488def2d1}
+\hypertarget{util_8c_a796c007af6fd6641f1c5a3d07e2c866e}{\index{util.\-c@{util.\-c}!str\-\_\-new@{str\-\_\-new}}
+\index{str\-\_\-new@{str\-\_\-new}!util.c@{util.\-c}}
+\subsubsection[{str\-\_\-new}]{\setlength{\rightskip}{0pt plus 5cm}struct {\bf gstr} str\-\_\-new (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{util_8c_a796c007af6fd6641f1c5a3d07e2c866e}
+\hypertarget{util_8c_a38c58c9025ffc0595b1edc9c68dd1254}{\index{util.\-c@{util.\-c}!str\-\_\-printf@{str\-\_\-printf}}
+\index{str\-\_\-printf@{str\-\_\-printf}!util.c@{util.\-c}}
+\subsubsection[{str\-\_\-printf}]{\setlength{\rightskip}{0pt plus 5cm}void str\-\_\-printf (
+\begin{DoxyParamCaption}
+\item[{struct {\bf gstr} $\ast$}]{gs, }
+\item[{const char $\ast$}]{fmt, }
+\item[{}]{...}
+\end{DoxyParamCaption}
+)}}\label{util_8c_a38c58c9025ffc0595b1edc9c68dd1254}

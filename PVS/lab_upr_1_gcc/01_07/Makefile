@@ -1,0 +1,37 @@
+#Created on 06 Oct 2020 by Lubomir Bogdanov
+#This is an example and simple Makefile
+
+all: main.bin size
+
+main.bin: main.axf
+	arm-none-eabi-objcopy -O binary ./debug/main.axf ./debug/main.bin
+
+main.axf: debug main.o startup.o led.o uart.o printf.o
+	arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -nostartfiles --specs=nosys.specs -Tscript.ld ./debug/main.o ./debug/led.o ./debug/uart.o ./debug/startup.o ./debug/printf.o -o ./debug/main.axf
+
+debug:
+	mkdir -p debug
+
+main.o:
+	arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -nostartfiles --specs=nosys.specs -I./uart -I./led -I./printf -c main.c -o ./debug/main.o
+	
+startup.o:
+	arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -nostartfiles --specs=nosys.specs -c startup.c -o ./debug/startup.o
+	
+led.o:
+	${MAKE} -C led
+	
+uart.o:
+	${MAKE} -C uart
+
+printf.o:
+	${MAKE} -C printf
+		
+flash: main.bin
+	openocd -f board/stm32f7discovery.cfg -c"init" -c"reset halt" -c"flash probe 0" -c"flash write_image erase ./debug/main.bin 0x08000000" -c"reset run" -c"exit"
+
+clean:
+	rm -r debug 
+	
+size:
+	arm-none-eabi-size ./debug/main.axf

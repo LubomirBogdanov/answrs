@@ -1,0 +1,1196 @@
+\hypertarget{zconf_8lex_8c}{\section{menuconfig/zconf.lex.\-c File Reference}
+\label{zconf_8lex_8c}\index{menuconfig/zconf.\-lex.\-c@{menuconfig/zconf.\-lex.\-c}}
+}
+{\ttfamily \#include $<$stdio.\-h$>$}\\*
+{\ttfamily \#include $<$string.\-h$>$}\\*
+{\ttfamily \#include $<$errno.\-h$>$}\\*
+{\ttfamily \#include $<$stdlib.\-h$>$}\\*
+{\ttfamily \#include $<$limits.\-h$>$}\\*
+{\ttfamily \#include $<$unistd.\-h$>$}\\*
+{\ttfamily \#include \char`\"{}lkc.\-h\char`\"{}}\\*
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structyy__buffer__state}{yy\-\_\-buffer\-\_\-state}
+\item 
+struct \hyperlink{structyy__trans__info}{yy\-\_\-trans\-\_\-info}
+\item 
+struct \hyperlink{structbuffer}{buffer}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{zconf_8lex_8c_a1ae16e642a197fa4948998525813c6f5}{Y\-Y\-\_\-\-I\-N\-T\-\_\-\-A\-L\-I\-G\-N\-E\-D}~short int
+\item 
+\#define \hyperlink{zconf_8lex_8c_ac86ea8173dfcfc5c989d3295a77e2f95}{yy\-\_\-create\-\_\-buffer}~\hyperlink{zconf_8lex_8c_a80ba3493df6630505b927821ae7c6957}{zconf\-\_\-create\-\_\-buffer}
+\item 
+\#define \hyperlink{zconf_8lex_8c_ad1868c6b38b45af25a4a0f449912a808}{yy\-\_\-delete\-\_\-buffer}~\hyperlink{zconf_8lex_8c_a04b6ddd2ec01b91dd73e80967175ce48}{zconf\-\_\-delete\-\_\-buffer}
+\item 
+\#define \hyperlink{zconf_8lex_8c_a301f4439c9b191c80db45f5b1a8c7269}{yy\-\_\-flex\-\_\-debug}~\hyperlink{zconf_8lex_8c_a7782ffb23d97a32fa53e8ae772ea15d0}{zconf\-\_\-flex\-\_\-debug}
+\item 
+\#define \hyperlink{zconf_8lex_8c_aa14efad9f9c24106a3e3398a4f6621c2}{yy\-\_\-init\-\_\-buffer}~zconf\-\_\-init\-\_\-buffer
+\item 
+\#define \hyperlink{zconf_8lex_8c_ab01a4c7245136f22a63acac7c0ceb343}{yy\-\_\-flush\-\_\-buffer}~\hyperlink{zconf_8lex_8c_a0817a4092d94ab0d5cc25fab0b3669fa}{zconf\-\_\-flush\-\_\-buffer}
+\item 
+\#define \hyperlink{zconf_8lex_8c_a039fc377fd4784139d8706ba0ae229fa}{yy\-\_\-load\-\_\-buffer\-\_\-state}~zconf\-\_\-load\-\_\-buffer\-\_\-state
+\item 
+\#define \hyperlink{zconf_8lex_8c_a968d5b9e7e06a38bfca977b343d47d5c}{yy\-\_\-switch\-\_\-to\-\_\-buffer}~\hyperlink{zconf_8lex_8c_a60a8e85217c4238d8f967ad8f6ff967b}{zconf\-\_\-switch\-\_\-to\-\_\-buffer}
+\item 
+\#define \hyperlink{zconf_8lex_8c_aa789f4617e33fb99594cb04a3688a0c1}{yyin}~\hyperlink{zconf_8lex_8c_aa6bdbfa61131d6a4b6edb9668ee68245}{zconfin}
+\item 
+\#define \hyperlink{zconf_8lex_8c_afa07a629486cb790560bb95713ec7794}{yyleng}~\hyperlink{zconf_8lex_8c_ae2e0278627f45ce903fcf64d64458e41}{zconfleng}
+\item 
+\#define \hyperlink{zconf_8lex_8c_a5611300548b2030d86b6ab9168132b88}{yylex}~\hyperlink{zconf_8tab_8c_afabee26479352018b42d112d4be577c3}{zconflex}
+\item 
+\#define \hyperlink{zconf_8lex_8c_ad71cf0fddcfe4f61de0929105b33226c}{yylineno}~\hyperlink{zconf_8lex_8c_a7e294bd28ace210fbdac30bf6ca5320f}{zconflineno}
+\item 
+\#define \hyperlink{zconf_8lex_8c_a4fd44867d448dcb6fc32ea004a15de54}{yyout}~\hyperlink{zconf_8lex_8c_a5cd9e3e7f1b374a77f728c9722ab5084}{zconfout}
+\item 
+\#define \hyperlink{zconf_8lex_8c_a2259355ac49295f72feab070a34a9b11}{yyrestart}~\hyperlink{zconf_8lex_8c_a2e2075cea0cf737cad4ea2bbe96f6bfd}{zconfrestart}
+\item 
+\#define \hyperlink{zconf_8lex_8c_a0d71f919dbec1ffd74b2460fa7e5ac28}{yytext}~\hyperlink{zconf_8lex_8c_a35c57269c2d2dff52f687a0a83bcc133}{zconftext}
+\item 
+\#define \hyperlink{zconf_8lex_8c_a5be541efdb129f7cefb2437f52fe7359}{yywrap}~\hyperlink{zconf_8lex_8c_afc5a5bd09a5987231463932db6b25d0a}{zconfwrap}
+\item 
+\#define \hyperlink{zconf_8lex_8c_a803397ab738ee8630166680646a2d913}{yyalloc}~\hyperlink{zconf_8lex_8c_ac10f25925a1f3da740ac5ee115ed0457}{zconfalloc}
+\item 
+\#define \hyperlink{zconf_8lex_8c_ab1eba250555ca003eb39387bb1a41d39}{yyrealloc}~\hyperlink{zconf_8lex_8c_adb515f650a293ed52e06a5c56a41c2b4}{zconfrealloc}
+\item 
+\#define \hyperlink{zconf_8lex_8c_a4fa4368d47620ea80150b516e8884f6b}{yyfree}~\hyperlink{zconf_8lex_8c_af04f437491456e6088df33446c50e39d}{zconffree}
+\item 
+\#define \hyperlink{zconf_8lex_8c_a3c3d1ef92e93b0bc81d7760a73d5c3b6}{F\-L\-E\-X\-\_\-\-S\-C\-A\-N\-N\-E\-R}
+\item 
+\#define \hyperlink{zconf_8lex_8c_a243ca1d30872935faf05ea5118ed6fdc}{Y\-Y\-\_\-\-F\-L\-E\-X\-\_\-\-M\-A\-J\-O\-R\-\_\-\-V\-E\-R\-S\-I\-O\-N}~2
+\item 
+\#define \hyperlink{zconf_8lex_8c_a90f9d458829400869e47efb68a865677}{Y\-Y\-\_\-\-F\-L\-E\-X\-\_\-\-M\-I\-N\-O\-R\-\_\-\-V\-E\-R\-S\-I\-O\-N}~5
+\item 
+\#define \hyperlink{zconf_8lex_8c_ac676bd06869180ea493e9b6d7c078dbb}{Y\-Y\-\_\-\-F\-L\-E\-X\-\_\-\-S\-U\-B\-M\-I\-N\-O\-R\-\_\-\-V\-E\-R\-S\-I\-O\-N}~35
+\item 
+\#define \hyperlink{zconf_8lex_8c_a9465c9986fdda27730c9dff8d16a0887}{F\-L\-E\-X\-\_\-\-B\-E\-T\-A}
+\item 
+\#define \hyperlink{zconf_8lex_8c_aec980b5a71bbe6d67931df20f0ebaec4}{F\-L\-E\-X\-I\-N\-T\-\_\-\-H}
+\item 
+\#define \hyperlink{zconf_8lex_8c_aadcf2a81af243df333b31efa6461ab8e}{I\-N\-T8\-\_\-\-M\-I\-N}~(-\/128)
+\item 
+\#define \hyperlink{zconf_8lex_8c_ad4e9955955b27624963643eac448118a}{I\-N\-T16\-\_\-\-M\-I\-N}~(-\/32767-\/1)
+\item 
+\#define \hyperlink{zconf_8lex_8c_a688eb21a22db27c2b2bd5836943cdcbe}{I\-N\-T32\-\_\-\-M\-I\-N}~(-\/2147483647-\/1)
+\item 
+\#define \hyperlink{zconf_8lex_8c_aaf7f29f45f1a513b4748a4e5014ddf6a}{I\-N\-T8\-\_\-\-M\-A\-X}~(127)
+\item 
+\#define \hyperlink{zconf_8lex_8c_ac58f2c111cc9989c86db2a7dc4fd84ca}{I\-N\-T16\-\_\-\-M\-A\-X}~(32767)
+\item 
+\#define \hyperlink{zconf_8lex_8c_a181807730d4a375f848ba139813ce04f}{I\-N\-T32\-\_\-\-M\-A\-X}~(2147483647)
+\item 
+\#define \hyperlink{zconf_8lex_8c_aeb4e270a084ee26fe73e799861bd0252}{U\-I\-N\-T8\-\_\-\-M\-A\-X}~(255\-U)
+\item 
+\#define \hyperlink{zconf_8lex_8c_a3ea490c9b3617d4479bd80ef93cd5602}{U\-I\-N\-T16\-\_\-\-M\-A\-X}~(65535\-U)
+\item 
+\#define \hyperlink{zconf_8lex_8c_ab5eb23180f7cc12b7d6c04a8ec067fdd}{U\-I\-N\-T32\-\_\-\-M\-A\-X}~(4294967295\-U)
+\item 
+\#define \hyperlink{zconf_8lex_8c_aa2f1a918be586b44bf08126bde2d7cc9}{yyconst}
+\item 
+\#define \hyperlink{zconf_8lex_8c_a8e0bcf8f8a5b613ea583347f8bc31cbf}{Y\-Y\-\_\-\-N\-U\-L\-L}~0
+\item 
+\#define \hyperlink{zconf_8lex_8c_af1185350b7a92cf8aa5324c68850c8a6}{Y\-Y\-\_\-\-S\-C\-\_\-\-T\-O\-\_\-\-U\-I}(c)~((unsigned int) (unsigned char) c)
+\item 
+\#define \hyperlink{zconf_8lex_8c_ab766bbbee08d04b67e3fe599d6900873}{B\-E\-G\-I\-N}~(yy\-\_\-start) = 1 + 2 $\ast$
+\item 
+\#define \hyperlink{zconf_8lex_8c_a8e14785f9eab7a997d659b25af9584c5}{Y\-Y\-\_\-\-S\-T\-A\-R\-T}~(((yy\-\_\-start) -\/ 1) / 2)
+\item 
+\#define \hyperlink{zconf_8lex_8c_a32b5b960944f946b192d54f672569cd9}{Y\-Y\-S\-T\-A\-T\-E}~\hyperlink{zconf_8lex_8c_a8e14785f9eab7a997d659b25af9584c5}{Y\-Y\-\_\-\-S\-T\-A\-R\-T}
+\item 
+\#define \hyperlink{zconf_8lex_8c_ab3077e60914fc54dcc55ecae1ce9700b}{Y\-Y\-\_\-\-S\-T\-A\-T\-E\-\_\-\-E\-O\-F}(state)~(\hyperlink{zconf_8lex_8c_ab2708fd42cff29ce6a0a52b91bea40d1}{Y\-Y\-\_\-\-E\-N\-D\-\_\-\-O\-F\-\_\-\-B\-U\-F\-F\-E\-R} + state + 1)
+\item 
+\#define \hyperlink{zconf_8lex_8c_a0406739e64fb5750cf995d2ae68ce69d}{Y\-Y\-\_\-\-N\-E\-W\-\_\-\-F\-I\-L\-E}~\hyperlink{zconf_8lex_8c_a2e2075cea0cf737cad4ea2bbe96f6bfd}{zconfrestart}(\hyperlink{zconf_8lex_8c_aa6bdbfa61131d6a4b6edb9668ee68245}{zconfin}  )
+\item 
+\#define \hyperlink{zconf_8lex_8c_ab866a64da164ed2d4d444df1ef1fc9b3}{Y\-Y\-\_\-\-E\-N\-D\-\_\-\-O\-F\-\_\-\-B\-U\-F\-F\-E\-R\-\_\-\-C\-H\-A\-R}~0
+\item 
+\#define \hyperlink{zconf_8lex_8c_ae7e51116e747d3390e7a6cfc6532834c}{Y\-Y\-\_\-\-B\-U\-F\-\_\-\-S\-I\-Z\-E}~16384
+\item 
+\#define \hyperlink{zconf_8lex_8c_ac2f8b6fccdc516d96b02ac09a4dc01bd}{Y\-Y\-\_\-\-S\-T\-A\-T\-E\-\_\-\-B\-U\-F\-\_\-\-S\-I\-Z\-E}~((\hyperlink{zconf_8lex_8c_ae7e51116e747d3390e7a6cfc6532834c}{Y\-Y\-\_\-\-B\-U\-F\-\_\-\-S\-I\-Z\-E} + 2) $\ast$ sizeof(\hyperlink{zconf_8lex_8c_a9ba7c416f135b0f0c1f4addded4616b5}{yy\-\_\-state\-\_\-type}))
+\item 
+\#define \hyperlink{zconf_8lex_8c_aa79d63ed3ff8d2249baf1732a73089f5}{Y\-Y\-\_\-\-T\-Y\-P\-E\-D\-E\-F\-\_\-\-Y\-Y\-\_\-\-B\-U\-F\-F\-E\-R\-\_\-\-S\-T\-A\-T\-E}
+\item 
+\#define \hyperlink{zconf_8lex_8c_adf4b0db227e07782e28ade353a7ba7a1}{E\-O\-B\-\_\-\-A\-C\-T\-\_\-\-C\-O\-N\-T\-I\-N\-U\-E\-\_\-\-S\-C\-A\-N}~0
+\item 
+\#define \hyperlink{zconf_8lex_8c_a7f71d7fa2c403eb4b2f38cb9536f3c63}{E\-O\-B\-\_\-\-A\-C\-T\-\_\-\-E\-N\-D\-\_\-\-O\-F\-\_\-\-F\-I\-L\-E}~1
+\item 
+\#define \hyperlink{zconf_8lex_8c_ad1a0b5ebcabffe388e9e9ebb2619c1fb}{E\-O\-B\-\_\-\-A\-C\-T\-\_\-\-L\-A\-S\-T\-\_\-\-M\-A\-T\-C\-H}~2
+\item 
+\#define \hyperlink{zconf_8lex_8c_a12e5f3a76911433480bca7f4edba6119}{Y\-Y\-\_\-\-L\-E\-S\-S\-\_\-\-L\-I\-N\-E\-N\-O}(n)
+\item 
+\#define \hyperlink{zconf_8lex_8c_ae65cb72d09db0abdc4b8e8c4d533ab14}{yyless}(n)
+\item 
+\#define \hyperlink{zconf_8lex_8c_a448a4e9041a09588332733c6846c770c}{unput}(c)~yyunput( c, (\hyperlink{zconf_8lex_8c_a790a191a93ef4d3b8c0bb43fd7480052}{yytext\-\_\-ptr})  )
+\item 
+\#define \hyperlink{zconf_8lex_8c_ae0f2b0b5f04b2338367826b5670774f9}{Y\-Y\-\_\-\-T\-Y\-P\-E\-D\-E\-F\-\_\-\-Y\-Y\-\_\-\-S\-I\-Z\-E\-\_\-\-T}
+\item 
+\#define \hyperlink{zconf_8lex_8c_a8aaa9e1fa7f13d6954d045ef973a9c84}{Y\-Y\-\_\-\-S\-T\-R\-U\-C\-T\-\_\-\-Y\-Y\-\_\-\-B\-U\-F\-F\-E\-R\-\_\-\-S\-T\-A\-T\-E}
+\item 
+\#define \hyperlink{zconf_8lex_8c_a53579db42834b88199458993912c646d}{Y\-Y\-\_\-\-B\-U\-F\-F\-E\-R\-\_\-\-N\-E\-W}~0
+\item 
+\#define \hyperlink{zconf_8lex_8c_a609d19f40900ecc2a5f812d9388c21fb}{Y\-Y\-\_\-\-B\-U\-F\-F\-E\-R\-\_\-\-N\-O\-R\-M\-A\-L}~1
+\item 
+\#define \hyperlink{zconf_8lex_8c_ad689d97c15e807a6116ace7a420cea57}{Y\-Y\-\_\-\-B\-U\-F\-F\-E\-R\-\_\-\-E\-O\-F\-\_\-\-P\-E\-N\-D\-I\-N\-G}~2
+\item 
+\#define \hyperlink{zconf_8lex_8c_aa093d500a6330d06d8e4760c494fac33}{Y\-Y\-\_\-\-C\-U\-R\-R\-E\-N\-T\-\_\-\-B\-U\-F\-F\-E\-R}
+\item 
+\#define \hyperlink{zconf_8lex_8c_a817a6a24af62508b5a35f4bed5f56a2e}{Y\-Y\-\_\-\-C\-U\-R\-R\-E\-N\-T\-\_\-\-B\-U\-F\-F\-E\-R\-\_\-\-L\-V\-A\-L\-U\-E}~(yy\-\_\-buffer\-\_\-stack)\mbox{[}(yy\-\_\-buffer\-\_\-stack\-\_\-top)\mbox{]}
+\item 
+\#define \hyperlink{zconf_8lex_8c_ac5d478d90ea9a2ecd43d579067a2e89d}{Y\-Y\-\_\-\-F\-L\-U\-S\-H\-\_\-\-B\-U\-F\-F\-E\-R}~\hyperlink{zconf_8lex_8c_a0817a4092d94ab0d5cc25fab0b3669fa}{zconf\-\_\-flush\-\_\-buffer}(\hyperlink{zconf_8lex_8c_aa093d500a6330d06d8e4760c494fac33}{Y\-Y\-\_\-\-C\-U\-R\-R\-E\-N\-T\-\_\-\-B\-U\-F\-F\-E\-R} )
+\item 
+\#define \hyperlink{zconf_8lex_8c_ab7eb911e18655f2f78e63afe5a8a4a12}{yy\-\_\-new\-\_\-buffer}~\hyperlink{zconf_8lex_8c_a80ba3493df6630505b927821ae7c6957}{zconf\-\_\-create\-\_\-buffer}
+\item 
+\#define \hyperlink{zconf_8lex_8c_ac56eb96366c08862bf0efe5d83d1fc4c}{yy\-\_\-set\-\_\-interactive}(is\-\_\-interactive)
+\item 
+\#define \hyperlink{zconf_8lex_8c_a12e30d13a76a94e78010db9996d39c50}{yy\-\_\-set\-\_\-bol}(at\-\_\-bol)
+\item 
+\#define \hyperlink{zconf_8lex_8c_a71ca89b3656acd0552f14949a571560b}{Y\-Y\-\_\-\-A\-T\-\_\-\-B\-O\-L}()~(\hyperlink{zconf_8lex_8c_a817a6a24af62508b5a35f4bed5f56a2e}{Y\-Y\-\_\-\-C\-U\-R\-R\-E\-N\-T\-\_\-\-B\-U\-F\-F\-E\-R\-\_\-\-L\-V\-A\-L\-U\-E}-\/$>$yy\-\_\-at\-\_\-bol)
+\item 
+\#define \hyperlink{zconf_8lex_8c_afc5a5bd09a5987231463932db6b25d0a}{zconfwrap}(n)~1
+\item 
+\#define \hyperlink{zconf_8lex_8c_ae1ef5933028cbc587d31328e53d11a99}{Y\-Y\-\_\-\-S\-K\-I\-P\-\_\-\-Y\-Y\-W\-R\-A\-P}
+\item 
+\#define \hyperlink{zconf_8lex_8c_a790a191a93ef4d3b8c0bb43fd7480052}{yytext\-\_\-ptr}~\hyperlink{zconf_8lex_8c_a35c57269c2d2dff52f687a0a83bcc133}{zconftext}
+\item 
+\#define \hyperlink{zconf_8lex_8c_acc3486d769af4e4b2820346a0093cc79}{Y\-Y\-\_\-\-D\-O\-\_\-\-B\-E\-F\-O\-R\-E\-\_\-\-A\-C\-T\-I\-O\-N}
+\item 
+\#define \hyperlink{zconf_8lex_8c_ae558785bb896e090901c2b905f6790c6}{Y\-Y\-\_\-\-N\-U\-M\-\_\-\-R\-U\-L\-E\-S}~33
+\item 
+\#define \hyperlink{zconf_8lex_8c_ab2708fd42cff29ce6a0a52b91bea40d1}{Y\-Y\-\_\-\-E\-N\-D\-\_\-\-O\-F\-\_\-\-B\-U\-F\-F\-E\-R}~34
+\item 
+\#define \hyperlink{zconf_8lex_8c_a835f10dd1ab4bf9a80c4cd80ee6e3058}{R\-E\-J\-E\-C\-T}~reject\-\_\-used\-\_\-but\-\_\-not\-\_\-detected
+\item 
+\#define \hyperlink{zconf_8lex_8c_a745d37b5e002b2e5f93ad42ea7b554be}{yymore}()~yymore\-\_\-used\-\_\-but\-\_\-not\-\_\-detected
+\item 
+\#define \hyperlink{zconf_8lex_8c_a68792d73820bc46a71d3d4e613f0b977}{Y\-Y\-\_\-\-M\-O\-R\-E\-\_\-\-A\-D\-J}~0
+\item 
+\#define \hyperlink{zconf_8lex_8c_a56858d18c7eda4f53664496ef566f651}{Y\-Y\-\_\-\-R\-E\-S\-T\-O\-R\-E\-\_\-\-Y\-Y\-\_\-\-M\-O\-R\-E\-\_\-\-O\-F\-F\-S\-E\-T}
+\item 
+\#define \hyperlink{zconf_8lex_8c_a85523a0c7d95c059d251b4e9829947aa}{Y\-Y\-\_\-\-N\-O\-\_\-\-I\-N\-P\-U\-T}~1
+\item 
+\#define \hyperlink{zconf_8lex_8c_a363b7b2d7c8879bdd3790cdbfb872674}{S\-T\-A\-R\-T\-\_\-\-S\-T\-R\-S\-I\-Z\-E}~16
+\item 
+\#define \hyperlink{zconf_8lex_8c_aa3d063564f6ab16f6d408b8369d0e9ff}{I\-N\-I\-T\-I\-A\-L}~0
+\item 
+\#define \hyperlink{zconf_8lex_8c_ab0d87e07831e7e4943caef187872123e}{C\-O\-M\-M\-A\-N\-D}~1
+\item 
+\#define \hyperlink{zconf_8lex_8c_ae8a798ec5e0449028e485688e8241b5e}{H\-E\-L\-P}~2
+\item 
+\#define \hyperlink{zconf_8lex_8c_a0f4d394a3ab4e09bff60f714c66dc5ee}{S\-T\-R\-I\-N\-G}~3
+\item 
+\#define \hyperlink{zconf_8lex_8c_aebb974620b1ad75fe08c61b727387493}{P\-A\-R\-A\-M}~4
+\item 
+\#define \hyperlink{zconf_8lex_8c_a26938d921de835f6183c02e54cf08828}{Y\-Y\-\_\-\-E\-X\-T\-R\-A\-\_\-\-T\-Y\-P\-E}~void $\ast$
+\item 
+\#define \hyperlink{zconf_8lex_8c_aab1491ceccb1c95c14320b2903773a1c}{Y\-Y\-\_\-\-R\-E\-A\-D\-\_\-\-B\-U\-F\-\_\-\-S\-I\-Z\-E}~8192
+\item 
+\#define \hyperlink{zconf_8lex_8c_aad1dc60a04a1d8cfc8b3ded13601e361}{E\-C\-H\-O}~do \{ \hyperlink{zconf_8lex_8c_ad4a65b873df5c05570846b5413b41dfd}{if} (fwrite( \hyperlink{zconf_8lex_8c_a35c57269c2d2dff52f687a0a83bcc133}{zconftext}, \hyperlink{zconf_8lex_8c_ae2e0278627f45ce903fcf64d64458e41}{zconfleng}, 1, \hyperlink{zconf_8lex_8c_a5cd9e3e7f1b374a77f728c9722ab5084}{zconfout} )) \{\} \} \hyperlink{zconf_8lex_8c_a8fdafe3be7e00ce3d4f0cb50a9a5eb39}{while} (0)
+\item 
+\#define \hyperlink{zconf_8lex_8c_aacfdca45fa4beb8b06172525a53c424a}{Y\-Y\-\_\-\-I\-N\-P\-U\-T}(buf, result, max\-\_\-size)
+\item 
+\#define \hyperlink{zconf_8lex_8c_ac3286b18a2e91b4571b97df96a118e84}{yyterminate}()~return \hyperlink{zconf_8lex_8c_a8e0bcf8f8a5b613ea583347f8bc31cbf}{Y\-Y\-\_\-\-N\-U\-L\-L}
+\item 
+\#define \hyperlink{zconf_8lex_8c_a227e75c43b9e0cd41529974230be7e75}{Y\-Y\-\_\-\-S\-T\-A\-R\-T\-\_\-\-S\-T\-A\-C\-K\-\_\-\-I\-N\-C\-R}~25
+\item 
+\#define \hyperlink{zconf_8lex_8c_ac0586b8b0b092d02f4ba7d45abe328f2}{Y\-Y\-\_\-\-F\-A\-T\-A\-L\-\_\-\-E\-R\-R\-O\-R}(msg)~yy\-\_\-fatal\-\_\-error( msg )
+\item 
+\#define \hyperlink{zconf_8lex_8c_a7682c8d9cec0859408d2421fbe4a5570}{Y\-Y\-\_\-\-D\-E\-C\-L\-\_\-\-I\-S\-\_\-\-O\-U\-R\-S}~1
+\item 
+\#define \hyperlink{zconf_8lex_8c_ae5b01ac2fa5a6ad5fb97559638abe686}{Y\-Y\-\_\-\-D\-E\-C\-L}~int \hyperlink{zconf_8tab_8c_afabee26479352018b42d112d4be577c3}{zconflex} (void)
+\item 
+\#define \hyperlink{zconf_8lex_8c_a6198b2fcf96178b24ad4efff2a3debb0}{Y\-Y\-\_\-\-U\-S\-E\-R\-\_\-\-A\-C\-T\-I\-O\-N}
+\item 
+\#define \hyperlink{zconf_8lex_8c_a3cc40a460ad7df816678bcc05241e84c}{Y\-Y\-\_\-\-B\-R\-E\-A\-K}~break;
+\item 
+\#define \hyperlink{zconf_8lex_8c_a690504b662e4281515bf12722df178ba}{Y\-Y\-\_\-\-R\-U\-L\-E\-\_\-\-S\-E\-T\-U\-P}~\hyperlink{zconf_8lex_8c_a6198b2fcf96178b24ad4efff2a3debb0}{Y\-Y\-\_\-\-U\-S\-E\-R\-\_\-\-A\-C\-T\-I\-O\-N}
+\item 
+\#define \hyperlink{zconf_8lex_8c_ae93e67b85c44f6bd31ead14a552a35c8}{Y\-Y\-\_\-\-E\-X\-I\-T\-\_\-\-F\-A\-I\-L\-U\-R\-E}~2
+\item 
+\#define \hyperlink{zconf_8lex_8c_ae65cb72d09db0abdc4b8e8c4d533ab14}{yyless}(n)
+\item 
+\#define \hyperlink{zconf_8lex_8c_a828cc83270f8f5bb1688e14dd4e28128}{Y\-Y\-T\-A\-B\-L\-E\-S\-\_\-\-N\-A\-M\-E}~\char`\"{}yytables\char`\"{}
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef signed char \hyperlink{zconf_8lex_8c_a7b0840dff4a2ef1702118aa12264b2a7}{flex\-\_\-int8\-\_\-t}
+\item 
+typedef short int \hyperlink{zconf_8lex_8c_a2e73b2c75126814585525fb2e9d51159}{flex\-\_\-int16\-\_\-t}
+\item 
+typedef int \hyperlink{zconf_8lex_8c_a838ce943cf44ef7769480714fc6c3ba9}{flex\-\_\-int32\-\_\-t}
+\item 
+typedef unsigned char \hyperlink{zconf_8lex_8c_a0fac5ea484f64e75dbe6eba4aa61750c}{flex\-\_\-uint8\-\_\-t}
+\item 
+typedef unsigned short int \hyperlink{zconf_8lex_8c_ac50cdb9eefbef83a1cec89e3a7f6e1d2}{flex\-\_\-uint16\-\_\-t}
+\item 
+typedef unsigned int \hyperlink{zconf_8lex_8c_a36869712de12820c73aae736762e8e88}{flex\-\_\-uint32\-\_\-t}
+\item 
+typedef struct \hyperlink{structyy__buffer__state}{yy\-\_\-buffer\-\_\-state} $\ast$ \hyperlink{zconf_8lex_8c_a4e5bd2d129903df83f3d13effaf8f3e4}{Y\-Y\-\_\-\-B\-U\-F\-F\-E\-R\-\_\-\-S\-T\-A\-T\-E}
+\item 
+typedef size\-\_\-t \hyperlink{zconf_8lex_8c_ad557845057f187eec4be07e2717d2afa}{yy\-\_\-size\-\_\-t}
+\item 
+typedef unsigned char \hyperlink{zconf_8lex_8c_a1f324b3cb0839eeb90145f0274e6946e}{Y\-Y\-\_\-\-C\-H\-A\-R}
+\item 
+typedef int \hyperlink{zconf_8lex_8c_a9ba7c416f135b0f0c1f4addded4616b5}{yy\-\_\-state\-\_\-type}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{zconf_8lex_8c_a2e2075cea0cf737cad4ea2bbe96f6bfd}{zconfrestart} (F\-I\-L\-E $\ast$input\-\_\-file)
+\item 
+void \hyperlink{zconf_8lex_8c_a60a8e85217c4238d8f967ad8f6ff967b}{zconf\-\_\-switch\-\_\-to\-\_\-buffer} (\hyperlink{zconf_8lex_8c_a4e5bd2d129903df83f3d13effaf8f3e4}{Y\-Y\-\_\-\-B\-U\-F\-F\-E\-R\-\_\-\-S\-T\-A\-T\-E} new\-\_\-buffer)
+\item 
+\hyperlink{zconf_8lex_8c_a4e5bd2d129903df83f3d13effaf8f3e4}{Y\-Y\-\_\-\-B\-U\-F\-F\-E\-R\-\_\-\-S\-T\-A\-T\-E} \hyperlink{zconf_8lex_8c_a80ba3493df6630505b927821ae7c6957}{zconf\-\_\-create\-\_\-buffer} (F\-I\-L\-E $\ast$\hyperlink{structfile}{file}, int size)
+\item 
+void \hyperlink{zconf_8lex_8c_a04b6ddd2ec01b91dd73e80967175ce48}{zconf\-\_\-delete\-\_\-buffer} (\hyperlink{zconf_8lex_8c_a4e5bd2d129903df83f3d13effaf8f3e4}{Y\-Y\-\_\-\-B\-U\-F\-F\-E\-R\-\_\-\-S\-T\-A\-T\-E} b)
+\item 
+void \hyperlink{zconf_8lex_8c_a0817a4092d94ab0d5cc25fab0b3669fa}{zconf\-\_\-flush\-\_\-buffer} (\hyperlink{zconf_8lex_8c_a4e5bd2d129903df83f3d13effaf8f3e4}{Y\-Y\-\_\-\-B\-U\-F\-F\-E\-R\-\_\-\-S\-T\-A\-T\-E} b)
+\item 
+void \hyperlink{zconf_8lex_8c_aadb412536d91c5d458e25c95aa272e82}{zconfpush\-\_\-buffer\-\_\-state} (\hyperlink{zconf_8lex_8c_a4e5bd2d129903df83f3d13effaf8f3e4}{Y\-Y\-\_\-\-B\-U\-F\-F\-E\-R\-\_\-\-S\-T\-A\-T\-E} new\-\_\-buffer)
+\item 
+void \hyperlink{zconf_8lex_8c_a00079b9f3721b858e53abbfd7190ac2b}{zconfpop\-\_\-buffer\-\_\-state} (void)
+\item 
+\hyperlink{zconf_8lex_8c_a4e5bd2d129903df83f3d13effaf8f3e4}{Y\-Y\-\_\-\-B\-U\-F\-F\-E\-R\-\_\-\-S\-T\-A\-T\-E} \hyperlink{zconf_8lex_8c_a86cd0e34cfe9598162707812dd1294bf}{zconf\-\_\-scan\-\_\-buffer} (char $\ast$base, \hyperlink{zconf_8lex_8c_ad557845057f187eec4be07e2717d2afa}{yy\-\_\-size\-\_\-t} size)
+\item 
+\hyperlink{zconf_8lex_8c_a4e5bd2d129903df83f3d13effaf8f3e4}{Y\-Y\-\_\-\-B\-U\-F\-F\-E\-R\-\_\-\-S\-T\-A\-T\-E} \hyperlink{zconf_8lex_8c_adbcd2a5f80817706d7dd406ef2ec71fc}{zconf\-\_\-scan\-\_\-string} (\hyperlink{zconf_8lex_8c_aa2f1a918be586b44bf08126bde2d7cc9}{yyconst} char $\ast$yy\-\_\-str)
+\item 
+\hyperlink{zconf_8lex_8c_a4e5bd2d129903df83f3d13effaf8f3e4}{Y\-Y\-\_\-\-B\-U\-F\-F\-E\-R\-\_\-\-S\-T\-A\-T\-E} \hyperlink{zconf_8lex_8c_a91ad5742a227b08b62c65661faaf2cb5}{zconf\-\_\-scan\-\_\-bytes} (\hyperlink{zconf_8lex_8c_aa2f1a918be586b44bf08126bde2d7cc9}{yyconst} char $\ast$bytes, int len)
+\item 
+void $\ast$ \hyperlink{zconf_8lex_8c_ac10f25925a1f3da740ac5ee115ed0457}{zconfalloc} (\hyperlink{zconf_8lex_8c_ad557845057f187eec4be07e2717d2afa}{yy\-\_\-size\-\_\-t})
+\item 
+void $\ast$ \hyperlink{zconf_8lex_8c_adb515f650a293ed52e06a5c56a41c2b4}{zconfrealloc} (void $\ast$, \hyperlink{zconf_8lex_8c_ad557845057f187eec4be07e2717d2afa}{yy\-\_\-size\-\_\-t})
+\item 
+void \hyperlink{zconf_8lex_8c_af04f437491456e6088df33446c50e39d}{zconffree} (void $\ast$)
+\item 
+int \hyperlink{zconf_8lex_8c_abcec42caaf5da3b0cd70536f6cfcc5b9}{zconflex\-\_\-destroy} (void)
+\item 
+int \hyperlink{zconf_8lex_8c_aaad5221de4717876f04119e9500cecf2}{zconfget\-\_\-debug} (void)
+\item 
+void \hyperlink{zconf_8lex_8c_ab5a5fa5afe1756ebbac3f5a32ec091dd}{zconfset\-\_\-debug} (int debug\-\_\-flag)
+\item 
+\hyperlink{zconf_8lex_8c_a26938d921de835f6183c02e54cf08828}{Y\-Y\-\_\-\-E\-X\-T\-R\-A\-\_\-\-T\-Y\-P\-E} \hyperlink{zconf_8lex_8c_a26a60a262d22de4bcf74fa3eaad0a408}{zconfget\-\_\-extra} (void)
+\item 
+void \hyperlink{zconf_8lex_8c_a4c69642054f1b12a74bc3df4ad38db0a}{zconfset\-\_\-extra} (\hyperlink{zconf_8lex_8c_a26938d921de835f6183c02e54cf08828}{Y\-Y\-\_\-\-E\-X\-T\-R\-A\-\_\-\-T\-Y\-P\-E} user\-\_\-defined)
+\item 
+F\-I\-L\-E $\ast$ \hyperlink{zconf_8lex_8c_a19b2006777b8b31571d65522486c2aa7}{zconfget\-\_\-in} (void)
+\item 
+void \hyperlink{zconf_8lex_8c_a19416ea6acce2b292d64888f60304d8d}{zconfset\-\_\-in} (F\-I\-L\-E $\ast$in\-\_\-str)
+\item 
+F\-I\-L\-E $\ast$ \hyperlink{zconf_8lex_8c_af7b59304177e930bee2c09d2bc059ce4}{zconfget\-\_\-out} (void)
+\item 
+void \hyperlink{zconf_8lex_8c_a8ceccd2b1e82507373f9d633d068823d}{zconfset\-\_\-out} (F\-I\-L\-E $\ast$out\-\_\-str)
+\item 
+int \hyperlink{zconf_8lex_8c_aa72ed7ae069fe8fa44f037a0cd50ec66}{zconfget\-\_\-leng} (void)
+\item 
+char $\ast$ \hyperlink{zconf_8lex_8c_a8d7175dee466171364fb4d4646b10e4c}{zconfget\-\_\-text} (void)
+\item 
+int \hyperlink{zconf_8lex_8c_a1b8da546b161fa9a00415b04fdb42203}{zconfget\-\_\-lineno} (void)
+\item 
+void \hyperlink{zconf_8lex_8c_a7b0319f9e1694ffefcc745b880720292}{zconfset\-\_\-lineno} (int line\-\_\-number)
+\item 
+int \hyperlink{zconf_8lex_8c_afabee26479352018b42d112d4be577c3}{zconflex} (void)
+\item 
+\hyperlink{zconf_8lex_8c_ad4a65b873df5c05570846b5413b41dfd}{if} (!(yy\-\_\-init))
+\item 
+\hyperlink{zconf_8lex_8c_a8fdafe3be7e00ce3d4f0cb50a9a5eb39}{while} (1)
+\item 
+void \hyperlink{zconf_8lex_8c_a21273ce5c169716660aa02e48976c42a}{zconf\-\_\-starthelp} (void)
+\item 
+F\-I\-L\-E $\ast$ \hyperlink{zconf_8lex_8c_af67f5971b3091780349654dd1bfaaca0}{zconf\-\_\-fopen} (const char $\ast$name)
+\item 
+void \hyperlink{zconf_8lex_8c_aebe9e072a2f47918a058f0afad35a805}{zconf\-\_\-initscan} (const char $\ast$name)
+\item 
+void \hyperlink{zconf_8lex_8c_a0bee3b65f4b371a9ee6f1c95d8f3257c}{zconf\-\_\-nextfile} (const char $\ast$name)
+\item 
+int \hyperlink{zconf_8lex_8c_a292b6eed8598186692a8a5096cf1cabc}{zconf\-\_\-lineno} (void)
+\item 
+const char $\ast$ \hyperlink{zconf_8lex_8c_a4093904abf5c79bea332d5fbf7f43b19}{zconf\-\_\-curname} (void)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{zconf_8lex_8c_ae2e0278627f45ce903fcf64d64458e41}{zconfleng}
+\item 
+F\-I\-L\-E $\ast$ \hyperlink{zconf_8lex_8c_aa6bdbfa61131d6a4b6edb9668ee68245}{zconfin} = (F\-I\-L\-E $\ast$) 0
+\item 
+F\-I\-L\-E $\ast$ \hyperlink{zconf_8lex_8c_a5cd9e3e7f1b374a77f728c9722ab5084}{zconfout} = (F\-I\-L\-E $\ast$) 0
+\item 
+int \hyperlink{zconf_8lex_8c_a7e294bd28ace210fbdac30bf6ca5320f}{zconflineno} = 1
+\item 
+char $\ast$ \hyperlink{zconf_8lex_8c_a35c57269c2d2dff52f687a0a83bcc133}{zconftext}
+\item 
+int \hyperlink{zconf_8lex_8c_a7782ffb23d97a32fa53e8ae772ea15d0}{zconf\-\_\-flex\-\_\-debug} = 0
+\item 
+struct \hyperlink{structbuffer}{buffer} $\ast$ \hyperlink{zconf_8lex_8c_a95d313b3f845272bb81466be6b6b61d4}{current\-\_\-buf}
+\item 
+\hyperlink{zconf_8lex_8c_abcefb20c54ce0f92452cfbb9cf657670}{Y\-Y\-\_\-\-D\-E\-C\-L}
+\item 
+register char $\ast$ \hyperlink{zconf_8lex_8c_ab98daea4ec951dfa966b5ca0f8133d38}{yy\-\_\-cp}
+\item 
+register char $\ast$ \hyperlink{zconf_8lex_8c_a71cf769ce518e8687bf8999b278c65f4}{yy\-\_\-bp}
+\item 
+register int \hyperlink{zconf_8lex_8c_a7ffc8c947830757dd87ad202a6823edd}{yy\-\_\-act}
+\item 
+int \hyperlink{zconf_8lex_8c_aba03208f197d75b6e355ba9b2ae08ab5}{str} = 0
+\item 
+int \hyperlink{zconf_8lex_8c_aac33256e3de965a23b06010535745b5f}{ts}
+\item 
+int \hyperlink{zconf_8lex_8c_acb559820d9ca11295b4500f179ef6392}{i}
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{zconf_8lex_8c_ab766bbbee08d04b67e3fe599d6900873}{\index{zconf.\-lex.\-c@{zconf.\-lex.\-c}!B\-E\-G\-I\-N@{B\-E\-G\-I\-N}}
+\index{B\-E\-G\-I\-N@{B\-E\-G\-I\-N}!zconf.lex.c@{zconf.\-lex.\-c}}
+\subsubsection[{B\-E\-G\-I\-N}]{\setlength{\rightskip}{0pt plus 5cm}\#define B\-E\-G\-I\-N~(yy\-\_\-start) = 1 + 2 $\ast$}}\label{zconf_8lex_8c_ab766bbbee08d04b67e3fe599d6900873}
+\hypertarget{zconf_8lex_8c_ab0d87e07831e7e4943caef187872123e}{\index{zconf.\-lex.\-c@{zconf.\-lex.\-c}!C\-O\-M\-M\-A\-N\-D@{C\-O\-M\-M\-A\-N\-D}}
+\index{C\-O\-M\-M\-A\-N\-D@{C\-O\-M\-M\-A\-N\-D}!zconf.lex.c@{zconf.\-lex.\-c}}
+\subsubsection[{C\-O\-M\-M\-A\-N\-D}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\-O\-M\-M\-A\-N\-D~1}}\label{zconf_8lex_8c_ab0d87e07831e7e4943caef187872123e}
+\hypertarget{zconf_8lex_8c_aad1dc60a04a1d8cfc8b3ded13601e361}{\index{zconf.\-lex.\-c@{zconf.\-lex.\-c}!E\-C\-H\-O@{E\-C\-H\-O}}
+\index{E\-C\-H\-O@{E\-C\-H\-O}!zconf.lex.c@{zconf.\-lex.\-c}}
+\subsubsection[{E\-C\-H\-O}]{\setlength{\rightskip}{0pt plus 5cm}\#define E\-C\-H\-O~do \{ {\bf if} (fwrite( {\bf zconftext}, {\bf zconfleng}, 1, {\bf zconfout} )) \{\} \} {\bf while} (0)}}\label{zconf_8lex_8c_aad1dc60a04a1d8cfc8b3ded13601e361}
+\hypertarget{zconf_8lex_8c_adf4b0db227e07782e28ade353a7ba7a1}{\index{zconf.\-lex.\-c@{zconf.\-lex.\-c}!E\-O\-B\-\_\-\-A\-C\-T\-\_\-\-C\-O\-N\-T\-I\-N\-U\-E\-\_\-\-S\-C\-A\-N@{E\-O\-B\-\_\-\-A\-C\-T\-\_\-\-C\-O\-N\-T\-I\-N\-U\-E\-\_\-\-S\-C\-A\-N}}
+\index{E\-O\-B\-\_\-\-A\-C\-T\-\_\-\-C\-O\-N\-T\-I\-N\-U\-E\-\_\-\-S\-C\-A\-N@{E\-O\-B\-\_\-\-A\-C\-T\-\_\-\-C\-O\-N\-T\-I\-N\-U\-E\-\_\-\-S\-C\-A\-N}!zconf.lex.c@{zconf.\-lex.\-c}}
+\subsubsection[{E\-O\-B\-\_\-\-A\-C\-T\-\_\-\-C\-O\-N\-T\-I\-N\-U\-E\-\_\-\-S\-C\-A\-N}]{\setlength{\rightskip}{0pt plus 5cm}\#define E\-O\-B\-\_\-\-A\-C\-T\-\_\-\-C\-O\-N\-T\-I\-N\-U\-E\-\_\-\-S\-C\-A\-N~0}}\label{zconf_8lex_8c_adf4b0db227e07782e28ade353a7ba7a1}
+\hypertarget{zconf_8lex_8c_a7f71d7fa2c403eb4b2f38cb9536f3c63}{\index{zconf.\-lex.\-c@{zconf.\-lex.\-c}!E\-O\-B\-\_\-\-A\-C\-T\-\_\-\-E\-N\-D\-\_\-\-O\-F\-\_\-\-F\-I\-L\-E@{E\-O\-B\-\_\-\-A\-C\-T\-\_\-\-E\-N\-D\-\_\-\-O\-F\-\_\-\-F\-I\-L\-E}}
+\index{E\-O\-B\-\_\-\-A\-C\-T\-\_\-\-E\-N\-D\-\_\-\-O\-F\-\_\-\-F\-I\-L\-E@{E\-O\-B\-\_\-\-A\-C\-T\-\_\-\-E\-N\-D\-\_\-\-O\-F\-\_\-\-F\-I\-L\-E}!zconf.lex.c@{zconf.\-lex.\-c}}
+\subsubsection[{E\-O\-B\-\_\-\-A\-C\-T\-\_\-\-E\-N\-D\-\_\-\-O\-F\-\_\-\-F\-I\-L\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define E\-O\-B\-\_\-\-A\-C\-T\-\_\-\-E\-N\-D\-\_\-\-O\-F\-\_\-\-F\-I\-L\-E~1}}\label{zconf_8lex_8c_a7f71d7fa2c403eb4b2f38cb9536f3c63}
+\hypertarget{zconf_8lex_8c_ad1a0b5ebcabffe388e9e9ebb2619c1fb}{\index{zconf.\-lex.\-c@{zconf.\-lex.\-c}!E\-O\-B\-\_\-\-A\-C\-T\-\_\-\-L\-A\-S\-T\-\_\-\-M\-A\-T\-C\-H@{E\-O\-B\-\_\-\-A\-C\-T\-\_\-\-L\-A\-S\-T\-\_\-\-M\-A\-T\-C\-H}}
+\index{E\-O\-B\-\_\-\-A\-C\-T\-\_\-\-L\-A\-S\-T\-\_\-\-M\-A\-T\-C\-H@{E\-O\-B\-\_\-\-A\-C\-T\-\_\-\-L\-A\-S\-T\-\_\-\-M\-A\-T\-C\-H}!zconf.lex.c@{zconf.\-lex.\-c}}
+\subsubsection[{E\-O\-B\-\_\-\-A\-C\-T\-\_\-\-L\-A\-S\-T\-\_\-\-M\-A\-T\-C\-H}]{\setlength{\rightskip}{0pt plus 5cm}\#define E\-O\-B\-\_\-\-A\-C\-T\-\_\-\-L\-A\-S\-T\-\_\-\-M\-A\-T\-C\-H~2}}\label{zconf_8lex_8c_ad1a0b5ebcabffe388e9e9ebb2619c1fb}
+\hypertarget{zconf_8lex_8c_a9465c9986fdda27730c9dff8d16a0887}{\index{zconf.\-lex.\-c@{zconf.\-lex.\-c}!F\-L\-E\-X\-\_\-\-B\-E\-T\-A@{F\-L\-E\-X\-\_\-\-B\-E\-T\-A}}
+\index{F\-L\-E\-X\-\_\-\-B\-E\-T\-A@{F\-L\-E\-X\-\_\-\-B\-E\-T\-A}!zconf.lex.c@{zconf.\-lex.\-c}}
+\subsubsection[{F\-L\-E\-X\-\_\-\-B\-E\-T\-A}]{\setlength{\rightskip}{0pt plus 5cm}\#define F\-L\-E\-X\-\_\-\-B\-E\-T\-A}}\label{zconf_8lex_8c_a9465c9986fdda27730c9dff8d16a0887}
+\hypertarget{zconf_8lex_8c_a3c3d1ef92e93b0bc81d7760a73d5c3b6}{\index{zconf.\-lex.\-c@{zconf.\-lex.\-c}!F\-L\-E\-X\-\_\-\-S\-C\-A\-N\-N\-E\-R@{F\-L\-E\-X\-\_\-\-S\-C\-A\-N\-N\-E\-R}}
+\index{F\-L\-E\-X\-\_\-\-S\-C\-A\-N\-N\-E\-R@{F\-L\-E\-X\-\_\-\-S\-C\-A\-N\-N\-E\-R}!zconf.lex.c@{zconf.\-lex.\-c}}
+\subsubsection[{F\-L\-E\-X\-\_\-\-S\-C\-A\-N\-N\-E\-R}]{\setlength{\rightskip}{0pt plus 5cm}\#define F\-L\-E\-X\-\_\-\-S\-C\-A\-N\-N\-E\-R}}\label{zconf_8lex_8c_a3c3d1ef92e93b0bc81d7760a73d5c3b6}
+\hypertarget{zconf_8lex_8c_aec980b5a71bbe6d67931df20f0ebaec4}{\index{zconf.\-lex.\-c@{zconf.\-lex.\-c}!F\-L\-E\-X\-I\-N\-T\-\_\-\-H@{F\-L\-E\-X\-I\-N\-T\-\_\-\-H}}
+\index{F\-L\-E\-X\-I\-N\-T\-\_\-\-H@{F\-L\-E\-X\-I\-N\-T\-\_\-\-H}!zconf.lex.c@{zconf.\-lex.\-c}}
+\subsubsection[{F\-L\-E\-X\-I\-N\-T\-\_\-\-H}]{\setlength{\rightskip}{0pt plus 5cm}\#define F\-L\-E\-X\-I\-N\-T\-\_\-\-H}}\label{zconf_8lex_8c_aec980b5a71bbe6d67931df20f0ebaec4}
+\hypertarget{zconf_8lex_8c_ae8a798ec5e0449028e485688e8241b5e}{\index{zconf.\-lex.\-c@{zconf.\-lex.\-c}!H\-E\-L\-P@{H\-E\-L\-P}}
+\index{H\-E\-L\-P@{H\-E\-L\-P}!zconf.lex.c@{zconf.\-lex.\-c}}
+\subsubsection[{H\-E\-L\-P}]{\setlength{\rightskip}{0pt plus 5cm}\#define H\-E\-L\-P~2}}\label{zconf_8lex_8c_ae8a798ec5e0449028e485688e8241b5e}
+\hypertarget{zconf_8lex_8c_aa3d063564f6ab16f6d408b8369d0e9ff}{\index{zconf.\-lex.\-c@{zconf.\-lex.\-c}!I\-N\-I\-T\-I\-A\-L@{I\-N\-I\-T\-I\-A\-L}}
+\index{I\-N\-I\-T\-I\-A\-L@{I\-N\-I\-T\-I\-A\-L}!zconf.lex.c@{zconf.\-lex.\-c}}
+\subsubsection[{I\-N\-I\-T\-I\-A\-L}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\-N\-I\-T\-I\-A\-L~0}}\label{zconf_8lex_8c_aa3d063564f6ab16f6d408b8369d0e9ff}
+\hypertarget{zconf_8lex_8c_ac58f2c111cc9989c86db2a7dc4fd84ca}{\index{zconf.\-lex.\-c@{zconf.\-lex.\-c}!I\-N\-T16\-\_\-\-M\-A\-X@{I\-N\-T16\-\_\-\-M\-A\-X}}
+\index{I\-N\-T16\-\_\-\-M\-A\-X@{I\-N\-T16\-\_\-\-M\-A\-X}!zconf.lex.c@{zconf.\-lex.\-c}}
+\subsubsection[{I\-N\-T16\-\_\-\-M\-A\-X}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\-N\-T16\-\_\-\-M\-A\-X~(32767)}}\label{zconf_8lex_8c_ac58f2c111cc9989c86db2a7dc4fd84ca}
+\hypertarget{zconf_8lex_8c_ad4e9955955b27624963643eac448118a}{\index{zconf.\-lex.\-c@{zconf.\-lex.\-c}!I\-N\-T16\-\_\-\-M\-I\-N@{I\-N\-T16\-\_\-\-M\-I\-N}}
+\index{I\-N\-T16\-\_\-\-M\-I\-N@{I\-N\-T16\-\_\-\-M\-I\-N}!zconf.lex.c@{zconf.\-lex.\-c}}
+\subsubsection[{I\-N\-T16\-\_\-\-M\-I\-N}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\-N\-T16\-\_\-\-M\-I\-N~(-\/32767-\/1)}}\label{zconf_8lex_8c_ad4e9955955b27624963643eac448118a}
+\hypertarget{zconf_8lex_8c_a181807730d4a375f848ba139813ce04f}{\index{zconf.\-lex.\-c@{zconf.\-lex.\-c}!I\-N\-T32\-\_\-\-M\-A\-X@{I\-N\-T32\-\_\-\-M\-A\-X}}
+\index{I\-N\-T32\-\_\-\-M\-A\-X@{I\-N\-T32\-\_\-\-M\-A\-X}!zconf.lex.c@{zconf.\-lex.\-c}}
+\subsubsection[{I\-N\-T32\-\_\-\-M\-A\-X}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\-N\-T32\-\_\-\-M\-A\-X~(2147483647)}}\label{zconf_8lex_8c_a181807730d4a375f848ba139813ce04f}
+\hypertarget{zconf_8lex_8c_a688eb21a22db27c2b2bd5836943cdcbe}{\index{zconf.\-lex.\-c@{zconf.\-lex.\-c}!I\-N\-T32\-\_\-\-M\-I\-N@{I\-N\-T32\-\_\-\-M\-I\-N}}
+\index{I\-N\-T32\-\_\-\-M\-I\-N@{I\-N\-T32\-\_\-\-M\-I\-N}!zconf.lex.c@{zconf.\-lex.\-c}}
+\subsubsection[{I\-N\-T32\-\_\-\-M\-I\-N}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\-N\-T32\-\_\-\-M\-I\-N~(-\/2147483647-\/1)}}\label{zconf_8lex_8c_a688eb21a22db27c2b2bd5836943cdcbe}
+\hypertarget{zconf_8lex_8c_aaf7f29f45f1a513b4748a4e5014ddf6a}{\index{zconf.\-lex.\-c@{zconf.\-lex.\-c}!I\-N\-T8\-\_\-\-M\-A\-X@{I\-N\-T8\-\_\-\-M\-A\-X}}
+\index{I\-N\-T8\-\_\-\-M\-A\-X@{I\-N\-T8\-\_\-\-M\-A\-X}!zconf.lex.c@{zconf.\-lex.\-c}}
+\subsubsection[{I\-N\-T8\-\_\-\-M\-A\-X}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\-N\-T8\-\_\-\-M\-A\-X~(127)}}\label{zconf_8lex_8c_aaf7f29f45f1a513b4748a4e5014ddf6a}
+\hypertarget{zconf_8lex_8c_aadcf2a81af243df333b31efa6461ab8e}{\index{zconf.\-lex.\-c@{zconf.\-lex.\-c}!I\-N\-T8\-\_\-\-M\-I\-N@{I\-N\-T8\-\_\-\-M\-I\-N}}
+\index{I\-N\-T8\-\_\-\-M\-I\-N@{I\-N\-T8\-\_\-\-M\-I\-N}!zconf.lex.c@{zconf.\-lex.\-c}}
+\subsubsection[{I\-N\-T8\-\_\-\-M\-I\-N}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\-N\-T8\-\_\-\-M\-I\-N~(-\/128)}}\label{zconf_8lex_8c_aadcf2a81af243df333b31efa6461ab8e}
+\hypertarget{zconf_8lex_8c_aebb974620b1ad75fe08c61b727387493}{\index{zconf.\-lex.\-c@{zconf.\-lex.\-c}!P\-A\-R\-A\-M@{P\-A\-R\-A\-M}}
+\index{P\-A\-R\-A\-M@{P\-A\-R\-A\-M}!zconf.lex.c@{zconf.\-lex.\-c}}
+\subsubsection[{P\-A\-R\-A\-M}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\-A\-R\-A\-M~4}}\label{zconf_8lex_8c_aebb974620b1ad75fe08c61b727387493}
+\hypertarget{zconf_8lex_8c_a835f10dd1ab4bf9a80c4cd80ee6e3058}{\index{zconf.\-lex.\-c@{zconf.\-lex.\-c}!R\-E\-J\-E\-C\-T@{R\-E\-J\-E\-C\-T}}
+\index{R\-E\-J\-E\-C\-T@{R\-E\-J\-E\-C\-T}!zconf.lex.c@{zconf.\-lex.\-c}}
+\subsubsection[{R\-E\-J\-E\-C\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define R\-E\-J\-E\-C\-T~reject\-\_\-used\-\_\-but\-\_\-not\-\_\-detected}}\label{zconf_8lex_8c_a835f10dd1ab4bf9a80c4cd80ee6e3058}
+\hypertarget{zconf_8lex_8c_a363b7b2d7c8879bdd3790cdbfb872674}{\index{zconf.\-lex.\-c@{zconf.\-lex.\-c}!S\-T\-A\-R\-T\-\_\-\-S\-T\-R\-S\-I\-Z\-E@{S\-T\-A\-R\-T\-\_\-\-S\-T\-R\-S\-I\-Z\-E}}
+\index{S\-T\-A\-R\-T\-\_\-\-S\-T\-R\-S\-I\-Z\-E@{S\-T\-A\-R\-T\-\_\-\-S\-T\-R\-S\-I\-Z\-E}!zconf.lex.c@{zconf.\-lex.\-c}}
+\subsubsection[{S\-T\-A\-R\-T\-\_\-\-S\-T\-R\-S\-I\-Z\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\-T\-A\-R\-T\-\_\-\-S\-T\-R\-S\-I\-Z\-E~16}}\label{zconf_8lex_8c_a363b7b2d7c8879bdd3790cdbfb872674}
+\hypertarget{zconf_8lex_8c_a0f4d394a3ab4e09bff60f714c66dc5ee}{\index{zconf.\-lex.\-c@{zconf.\-lex.\-c}!S\-T\-R\-I\-N\-G@{S\-T\-R\-I\-N\-G}}
+\index{S\-T\-R\-I\-N\-G@{S\-T\-R\-I\-N\-G}!zconf.lex.c@{zconf.\-lex.\-c}}
+\subsubsection[{S\-T\-R\-I\-N\-G}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\-T\-R\-I\-N\-G~3}}\label{zconf_8lex_8c_a0f4d394a3ab4e09bff60f714c66dc5ee}
+\hypertarget{zconf_8lex_8c_a3ea490c9b3617d4479bd80ef93cd5602}{\index{zconf.\-lex.\-c@{zconf.\-lex.\-c}!U\-I\-N\-T16\-\_\-\-M\-A\-X@{U\-I\-N\-T16\-\_\-\-M\-A\-X}}
+\index{U\-I\-N\-T16\-\_\-\-M\-A\-X@{U\-I\-N\-T16\-\_\-\-M\-A\-X}!zconf.lex.c@{zconf.\-lex.\-c}}
+\subsubsection[{U\-I\-N\-T16\-\_\-\-M\-A\-X}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\-I\-N\-T16\-\_\-\-M\-A\-X~(65535\-U)}}\label{zconf_8lex_8c_a3ea490c9b3617d4479bd80ef93cd5602}
+\hypertarget{zconf_8lex_8c_ab5eb23180f7cc12b7d6c04a8ec067fdd}{\index{zconf.\-lex.\-c@{zconf.\-lex.\-c}!U\-I\-N\-T32\-\_\-\-M\-A\-X@{U\-I\-N\-T32\-\_\-\-M\-A\-X}}
+\index{U\-I\-N\-T32\-\_\-\-M\-A\-X@{U\-I\-N\-T32\-\_\-\-M\-A\-X}!zconf.lex.c@{zconf.\-lex.\-c}}
+\subsubsection[{U\-I\-N\-T32\-\_\-\-M\-A\-X}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\-I\-N\-T32\-\_\-\-M\-A\-X~(4294967295\-U)}}\label{zconf_8lex_8c_ab5eb23180f7cc12b7d6c04a8ec067fdd}
+\hypertarget{zconf_8lex_8c_aeb4e270a084ee26fe73e799861bd0252}{\index{zconf.\-lex.\-c@{zconf.\-lex.\-c}!U\-I\-N\-T8\-\_\-\-M\-A\-X@{U\-I\-N\-T8\-\_\-\-M\-A\-X}}
+\index{U\-I\-N\-T8\-\_\-\-M\-A\-X@{U\-I\-N\-T8\-\_\-\-M\-A\-X}!zconf.lex.c@{zconf.\-lex.\-c}}
+\subsubsection[{U\-I\-N\-T8\-\_\-\-M\-A\-X}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\-I\-N\-T8\-\_\-\-M\-A\-X~(255\-U)}}\label{zconf_8lex_8c_aeb4e270a084ee26fe73e799861bd0252}
+\hypertarget{zconf_8lex_8c_a448a4e9041a09588332733c6846c770c}{\index{zconf.\-lex.\-c@{zconf.\-lex.\-c}!unput@{unput}}
+\index{unput@{unput}!zconf.lex.c@{zconf.\-lex.\-c}}
+\subsubsection[{unput}]{\setlength{\rightskip}{0pt plus 5cm}\#define unput(
+\begin{DoxyParamCaption}
+\item[{}]{c}
+\end{DoxyParamCaption}
+)~yyunput( c, ({\bf yytext\-\_\-ptr})  )}}\label{zconf_8lex_8c_a448a4e9041a09588332733c6846c770c}
+\hypertarget{zconf_8lex_8c_a71ca89b3656acd0552f14949a571560b}{\index{zconf.\-lex.\-c@{zconf.\-lex.\-c}!Y\-Y\-\_\-\-A\-T\-\_\-\-B\-O\-L@{Y\-Y\-\_\-\-A\-T\-\_\-\-B\-O\-L}}
+\index{Y\-Y\-\_\-\-A\-T\-\_\-\-B\-O\-L@{Y\-Y\-\_\-\-A\-T\-\_\-\-B\-O\-L}!zconf.lex.c@{zconf.\-lex.\-c}}
+\subsubsection[{Y\-Y\-\_\-\-A\-T\-\_\-\-B\-O\-L}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\-Y\-\_\-\-A\-T\-\_\-\-B\-O\-L(
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)~({\bf Y\-Y\-\_\-\-C\-U\-R\-R\-E\-N\-T\-\_\-\-B\-U\-F\-F\-E\-R\-\_\-\-L\-V\-A\-L\-U\-E}-\/$>$yy\-\_\-at\-\_\-bol)}}\label{zconf_8lex_8c_a71ca89b3656acd0552f14949a571560b}
+\hypertarget{zconf_8lex_8c_a3cc40a460ad7df816678bcc05241e84c}{\index{zconf.\-lex.\-c@{zconf.\-lex.\-c}!Y\-Y\-\_\-\-B\-R\-E\-A\-K@{Y\-Y\-\_\-\-B\-R\-E\-A\-K}}
+\index{Y\-Y\-\_\-\-B\-R\-E\-A\-K@{Y\-Y\-\_\-\-B\-R\-E\-A\-K}!zconf.lex.c@{zconf.\-lex.\-c}}
+\subsubsection[{Y\-Y\-\_\-\-B\-R\-E\-A\-K}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\-Y\-\_\-\-B\-R\-E\-A\-K~break;}}\label{zconf_8lex_8c_a3cc40a460ad7df816678bcc05241e84c}
+\hypertarget{zconf_8lex_8c_ae7e51116e747d3390e7a6cfc6532834c}{\index{zconf.\-lex.\-c@{zconf.\-lex.\-c}!Y\-Y\-\_\-\-B\-U\-F\-\_\-\-S\-I\-Z\-E@{Y\-Y\-\_\-\-B\-U\-F\-\_\-\-S\-I\-Z\-E}}
+\index{Y\-Y\-\_\-\-B\-U\-F\-\_\-\-S\-I\-Z\-E@{Y\-Y\-\_\-\-B\-U\-F\-\_\-\-S\-I\-Z\-E}!zconf.lex.c@{zconf.\-lex.\-c}}
+\subsubsection[{Y\-Y\-\_\-\-B\-U\-F\-\_\-\-S\-I\-Z\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\-Y\-\_\-\-B\-U\-F\-\_\-\-S\-I\-Z\-E~16384}}\label{zconf_8lex_8c_ae7e51116e747d3390e7a6cfc6532834c}
+\hypertarget{zconf_8lex_8c_ad689d97c15e807a6116ace7a420cea57}{\index{zconf.\-lex.\-c@{zconf.\-lex.\-c}!Y\-Y\-\_\-\-B\-U\-F\-F\-E\-R\-\_\-\-E\-O\-F\-\_\-\-P\-E\-N\-D\-I\-N\-G@{Y\-Y\-\_\-\-B\-U\-F\-F\-E\-R\-\_\-\-E\-O\-F\-\_\-\-P\-E\-N\-D\-I\-N\-G}}
+\index{Y\-Y\-\_\-\-B\-U\-F\-F\-E\-R\-\_\-\-E\-O\-F\-\_\-\-P\-E\-N\-D\-I\-N\-G@{Y\-Y\-\_\-\-B\-U\-F\-F\-E\-R\-\_\-\-E\-O\-F\-\_\-\-P\-E\-N\-D\-I\-N\-G}!zconf.lex.c@{zconf.\-lex.\-c}}
+\subsubsection[{Y\-Y\-\_\-\-B\-U\-F\-F\-E\-R\-\_\-\-E\-O\-F\-\_\-\-P\-E\-N\-D\-I\-N\-G}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\-Y\-\_\-\-B\-U\-F\-F\-E\-R\-\_\-\-E\-O\-F\-\_\-\-P\-E\-N\-D\-I\-N\-G~2}}\label{zconf_8lex_8c_ad689d97c15e807a6116ace7a420cea57}
+\hypertarget{zconf_8lex_8c_a53579db42834b88199458993912c646d}{\index{zconf.\-lex.\-c@{zconf.\-lex.\-c}!Y\-Y\-\_\-\-B\-U\-F\-F\-E\-R\-\_\-\-N\-E\-W@{Y\-Y\-\_\-\-B\-U\-F\-F\-E\-R\-\_\-\-N\-E\-W}}
+\index{Y\-Y\-\_\-\-B\-U\-F\-F\-E\-R\-\_\-\-N\-E\-W@{Y\-Y\-\_\-\-B\-U\-F\-F\-E\-R\-\_\-\-N\-E\-W}!zconf.lex.c@{zconf.\-lex.\-c}}
+\subsubsection[{Y\-Y\-\_\-\-B\-U\-F\-F\-E\-R\-\_\-\-N\-E\-W}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\-Y\-\_\-\-B\-U\-F\-F\-E\-R\-\_\-\-N\-E\-W~0}}\label{zconf_8lex_8c_a53579db42834b88199458993912c646d}
+\hypertarget{zconf_8lex_8c_a609d19f40900ecc2a5f812d9388c21fb}{\index{zconf.\-lex.\-c@{zconf.\-lex.\-c}!Y\-Y\-\_\-\-B\-U\-F\-F\-E\-R\-\_\-\-N\-O\-R\-M\-A\-L@{Y\-Y\-\_\-\-B\-U\-F\-F\-E\-R\-\_\-\-N\-O\-R\-M\-A\-L}}
+\index{Y\-Y\-\_\-\-B\-U\-F\-F\-E\-R\-\_\-\-N\-O\-R\-M\-A\-L@{Y\-Y\-\_\-\-B\-U\-F\-F\-E\-R\-\_\-\-N\-O\-R\-M\-A\-L}!zconf.lex.c@{zconf.\-lex.\-c}}
+\subsubsection[{Y\-Y\-\_\-\-B\-U\-F\-F\-E\-R\-\_\-\-N\-O\-R\-M\-A\-L}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\-Y\-\_\-\-B\-U\-F\-F\-E\-R\-\_\-\-N\-O\-R\-M\-A\-L~1}}\label{zconf_8lex_8c_a609d19f40900ecc2a5f812d9388c21fb}
+\hypertarget{zconf_8lex_8c_ac86ea8173dfcfc5c989d3295a77e2f95}{\index{zconf.\-lex.\-c@{zconf.\-lex.\-c}!yy\-\_\-create\-\_\-buffer@{yy\-\_\-create\-\_\-buffer}}
+\index{yy\-\_\-create\-\_\-buffer@{yy\-\_\-create\-\_\-buffer}!zconf.lex.c@{zconf.\-lex.\-c}}
+\subsubsection[{yy\-\_\-create\-\_\-buffer}]{\setlength{\rightskip}{0pt plus 5cm}\#define yy\-\_\-create\-\_\-buffer~{\bf zconf\-\_\-create\-\_\-buffer}}}\label{zconf_8lex_8c_ac86ea8173dfcfc5c989d3295a77e2f95}
+\hypertarget{zconf_8lex_8c_aa093d500a6330d06d8e4760c494fac33}{\index{zconf.\-lex.\-c@{zconf.\-lex.\-c}!Y\-Y\-\_\-\-C\-U\-R\-R\-E\-N\-T\-\_\-\-B\-U\-F\-F\-E\-R@{Y\-Y\-\_\-\-C\-U\-R\-R\-E\-N\-T\-\_\-\-B\-U\-F\-F\-E\-R}}
+\index{Y\-Y\-\_\-\-C\-U\-R\-R\-E\-N\-T\-\_\-\-B\-U\-F\-F\-E\-R@{Y\-Y\-\_\-\-C\-U\-R\-R\-E\-N\-T\-\_\-\-B\-U\-F\-F\-E\-R}!zconf.lex.c@{zconf.\-lex.\-c}}
+\subsubsection[{Y\-Y\-\_\-\-C\-U\-R\-R\-E\-N\-T\-\_\-\-B\-U\-F\-F\-E\-R}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\-Y\-\_\-\-C\-U\-R\-R\-E\-N\-T\-\_\-\-B\-U\-F\-F\-E\-R}}\label{zconf_8lex_8c_aa093d500a6330d06d8e4760c494fac33}
+{\bfseries Value\-:}
+\begin{DoxyCode}
+( (yy\_buffer\_stack) \(\backslash\)
+                          ? (yy\_buffer\_stack)[(yy\_buffer\_stack\_top)] \(\backslash\)
+                          : NULL)
+\end{DoxyCode}
+\hypertarget{zconf_8lex_8c_a817a6a24af62508b5a35f4bed5f56a2e}{\index{zconf.\-lex.\-c@{zconf.\-lex.\-c}!Y\-Y\-\_\-\-C\-U\-R\-R\-E\-N\-T\-\_\-\-B\-U\-F\-F\-E\-R\-\_\-\-L\-V\-A\-L\-U\-E@{Y\-Y\-\_\-\-C\-U\-R\-R\-E\-N\-T\-\_\-\-B\-U\-F\-F\-E\-R\-\_\-\-L\-V\-A\-L\-U\-E}}
+\index{Y\-Y\-\_\-\-C\-U\-R\-R\-E\-N\-T\-\_\-\-B\-U\-F\-F\-E\-R\-\_\-\-L\-V\-A\-L\-U\-E@{Y\-Y\-\_\-\-C\-U\-R\-R\-E\-N\-T\-\_\-\-B\-U\-F\-F\-E\-R\-\_\-\-L\-V\-A\-L\-U\-E}!zconf.lex.c@{zconf.\-lex.\-c}}
+\subsubsection[{Y\-Y\-\_\-\-C\-U\-R\-R\-E\-N\-T\-\_\-\-B\-U\-F\-F\-E\-R\-\_\-\-L\-V\-A\-L\-U\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\-Y\-\_\-\-C\-U\-R\-R\-E\-N\-T\-\_\-\-B\-U\-F\-F\-E\-R\-\_\-\-L\-V\-A\-L\-U\-E~(yy\-\_\-buffer\-\_\-stack)\mbox{[}(yy\-\_\-buffer\-\_\-stack\-\_\-top)\mbox{]}}}\label{zconf_8lex_8c_a817a6a24af62508b5a35f4bed5f56a2e}
+\hypertarget{zconf_8lex_8c_ae5b01ac2fa5a6ad5fb97559638abe686}{\index{zconf.\-lex.\-c@{zconf.\-lex.\-c}!Y\-Y\-\_\-\-D\-E\-C\-L@{Y\-Y\-\_\-\-D\-E\-C\-L}}
+\index{Y\-Y\-\_\-\-D\-E\-C\-L@{Y\-Y\-\_\-\-D\-E\-C\-L}!zconf.lex.c@{zconf.\-lex.\-c}}
+\subsubsection[{Y\-Y\-\_\-\-D\-E\-C\-L}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\-Y\-\_\-\-D\-E\-C\-L~int {\bf zconflex} (void)}}\label{zconf_8lex_8c_ae5b01ac2fa5a6ad5fb97559638abe686}
+\hypertarget{zconf_8lex_8c_a7682c8d9cec0859408d2421fbe4a5570}{\index{zconf.\-lex.\-c@{zconf.\-lex.\-c}!Y\-Y\-\_\-\-D\-E\-C\-L\-\_\-\-I\-S\-\_\-\-O\-U\-R\-S@{Y\-Y\-\_\-\-D\-E\-C\-L\-\_\-\-I\-S\-\_\-\-O\-U\-R\-S}}
+\index{Y\-Y\-\_\-\-D\-E\-C\-L\-\_\-\-I\-S\-\_\-\-O\-U\-R\-S@{Y\-Y\-\_\-\-D\-E\-C\-L\-\_\-\-I\-S\-\_\-\-O\-U\-R\-S}!zconf.lex.c@{zconf.\-lex.\-c}}
+\subsubsection[{Y\-Y\-\_\-\-D\-E\-C\-L\-\_\-\-I\-S\-\_\-\-O\-U\-R\-S}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\-Y\-\_\-\-D\-E\-C\-L\-\_\-\-I\-S\-\_\-\-O\-U\-R\-S~1}}\label{zconf_8lex_8c_a7682c8d9cec0859408d2421fbe4a5570}
+\hypertarget{zconf_8lex_8c_ad1868c6b38b45af25a4a0f449912a808}{\index{zconf.\-lex.\-c@{zconf.\-lex.\-c}!yy\-\_\-delete\-\_\-buffer@{yy\-\_\-delete\-\_\-buffer}}
+\index{yy\-\_\-delete\-\_\-buffer@{yy\-\_\-delete\-\_\-buffer}!zconf.lex.c@{zconf.\-lex.\-c}}
+\subsubsection[{yy\-\_\-delete\-\_\-buffer}]{\setlength{\rightskip}{0pt plus 5cm}\#define yy\-\_\-delete\-\_\-buffer~{\bf zconf\-\_\-delete\-\_\-buffer}}}\label{zconf_8lex_8c_ad1868c6b38b45af25a4a0f449912a808}
+\hypertarget{zconf_8lex_8c_acc3486d769af4e4b2820346a0093cc79}{\index{zconf.\-lex.\-c@{zconf.\-lex.\-c}!Y\-Y\-\_\-\-D\-O\-\_\-\-B\-E\-F\-O\-R\-E\-\_\-\-A\-C\-T\-I\-O\-N@{Y\-Y\-\_\-\-D\-O\-\_\-\-B\-E\-F\-O\-R\-E\-\_\-\-A\-C\-T\-I\-O\-N}}
+\index{Y\-Y\-\_\-\-D\-O\-\_\-\-B\-E\-F\-O\-R\-E\-\_\-\-A\-C\-T\-I\-O\-N@{Y\-Y\-\_\-\-D\-O\-\_\-\-B\-E\-F\-O\-R\-E\-\_\-\-A\-C\-T\-I\-O\-N}!zconf.lex.c@{zconf.\-lex.\-c}}
+\subsubsection[{Y\-Y\-\_\-\-D\-O\-\_\-\-B\-E\-F\-O\-R\-E\-\_\-\-A\-C\-T\-I\-O\-N}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\-Y\-\_\-\-D\-O\-\_\-\-B\-E\-F\-O\-R\-E\-\_\-\-A\-C\-T\-I\-O\-N}}\label{zconf_8lex_8c_acc3486d769af4e4b2820346a0093cc79}
+{\bfseries Value\-:}
+\begin{DoxyCode}
+(\hyperlink{zconf_8lex_8c_a790a191a93ef4d3b8c0bb43fd7480052}{yytext\_ptr}) = \hyperlink{zconf_8lex_8c_a71cf769ce518e8687bf8999b278c65f4}{yy\_bp}; \hyperlink{zconf_8lex_8c_ae2e0278627f45ce903fcf64d64458e41}{\(\backslash\)}
+\hyperlink{zconf_8lex_8c_ae2e0278627f45ce903fcf64d64458e41}{    zconfleng} = (size\_t) (\hyperlink{zconf_8lex_8c_ab98daea4ec951dfa966b5ca0f8133d38}{yy\_cp} - \hyperlink{zconf_8lex_8c_a71cf769ce518e8687bf8999b278c65f4}{yy\_bp}); \(\backslash\)
+    (yy\_hold\_char) = *\hyperlink{zconf_8lex_8c_ab98daea4ec951dfa966b5ca0f8133d38}{yy\_cp}; \(\backslash\)
+    *\hyperlink{zconf_8lex_8c_ab98daea4ec951dfa966b5ca0f8133d38}{yy\_cp} = \textcolor{charliteral}{'\(\backslash\)0'}; \(\backslash\)
+    (yy\_c\_buf\_p) = \hyperlink{zconf_8lex_8c_ab98daea4ec951dfa966b5ca0f8133d38}{yy\_cp};
+\end{DoxyCode}
+\hypertarget{zconf_8lex_8c_ab2708fd42cff29ce6a0a52b91bea40d1}{\index{zconf.\-lex.\-c@{zconf.\-lex.\-c}!Y\-Y\-\_\-\-E\-N\-D\-\_\-\-O\-F\-\_\-\-B\-U\-F\-F\-E\-R@{Y\-Y\-\_\-\-E\-N\-D\-\_\-\-O\-F\-\_\-\-B\-U\-F\-F\-E\-R}}
+\index{Y\-Y\-\_\-\-E\-N\-D\-\_\-\-O\-F\-\_\-\-B\-U\-F\-F\-E\-R@{Y\-Y\-\_\-\-E\-N\-D\-\_\-\-O\-F\-\_\-\-B\-U\-F\-F\-E\-R}!zconf.lex.c@{zconf.\-lex.\-c}}
+\subsubsection[{Y\-Y\-\_\-\-E\-N\-D\-\_\-\-O\-F\-\_\-\-B\-U\-F\-F\-E\-R}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\-Y\-\_\-\-E\-N\-D\-\_\-\-O\-F\-\_\-\-B\-U\-F\-F\-E\-R~34}}\label{zconf_8lex_8c_ab2708fd42cff29ce6a0a52b91bea40d1}
+\hypertarget{zconf_8lex_8c_ab866a64da164ed2d4d444df1ef1fc9b3}{\index{zconf.\-lex.\-c@{zconf.\-lex.\-c}!Y\-Y\-\_\-\-E\-N\-D\-\_\-\-O\-F\-\_\-\-B\-U\-F\-F\-E\-R\-\_\-\-C\-H\-A\-R@{Y\-Y\-\_\-\-E\-N\-D\-\_\-\-O\-F\-\_\-\-B\-U\-F\-F\-E\-R\-\_\-\-C\-H\-A\-R}}
+\index{Y\-Y\-\_\-\-E\-N\-D\-\_\-\-O\-F\-\_\-\-B\-U\-F\-F\-E\-R\-\_\-\-C\-H\-A\-R@{Y\-Y\-\_\-\-E\-N\-D\-\_\-\-O\-F\-\_\-\-B\-U\-F\-F\-E\-R\-\_\-\-C\-H\-A\-R}!zconf.lex.c@{zconf.\-lex.\-c}}
+\subsubsection[{Y\-Y\-\_\-\-E\-N\-D\-\_\-\-O\-F\-\_\-\-B\-U\-F\-F\-E\-R\-\_\-\-C\-H\-A\-R}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\-Y\-\_\-\-E\-N\-D\-\_\-\-O\-F\-\_\-\-B\-U\-F\-F\-E\-R\-\_\-\-C\-H\-A\-R~0}}\label{zconf_8lex_8c_ab866a64da164ed2d4d444df1ef1fc9b3}
+\hypertarget{zconf_8lex_8c_ae93e67b85c44f6bd31ead14a552a35c8}{\index{zconf.\-lex.\-c@{zconf.\-lex.\-c}!Y\-Y\-\_\-\-E\-X\-I\-T\-\_\-\-F\-A\-I\-L\-U\-R\-E@{Y\-Y\-\_\-\-E\-X\-I\-T\-\_\-\-F\-A\-I\-L\-U\-R\-E}}
+\index{Y\-Y\-\_\-\-E\-X\-I\-T\-\_\-\-F\-A\-I\-L\-U\-R\-E@{Y\-Y\-\_\-\-E\-X\-I\-T\-\_\-\-F\-A\-I\-L\-U\-R\-E}!zconf.lex.c@{zconf.\-lex.\-c}}
+\subsubsection[{Y\-Y\-\_\-\-E\-X\-I\-T\-\_\-\-F\-A\-I\-L\-U\-R\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\-Y\-\_\-\-E\-X\-I\-T\-\_\-\-F\-A\-I\-L\-U\-R\-E~2}}\label{zconf_8lex_8c_ae93e67b85c44f6bd31ead14a552a35c8}
+\hypertarget{zconf_8lex_8c_a26938d921de835f6183c02e54cf08828}{\index{zconf.\-lex.\-c@{zconf.\-lex.\-c}!Y\-Y\-\_\-\-E\-X\-T\-R\-A\-\_\-\-T\-Y\-P\-E@{Y\-Y\-\_\-\-E\-X\-T\-R\-A\-\_\-\-T\-Y\-P\-E}}
+\index{Y\-Y\-\_\-\-E\-X\-T\-R\-A\-\_\-\-T\-Y\-P\-E@{Y\-Y\-\_\-\-E\-X\-T\-R\-A\-\_\-\-T\-Y\-P\-E}!zconf.lex.c@{zconf.\-lex.\-c}}
+\subsubsection[{Y\-Y\-\_\-\-E\-X\-T\-R\-A\-\_\-\-T\-Y\-P\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\-Y\-\_\-\-E\-X\-T\-R\-A\-\_\-\-T\-Y\-P\-E~void $\ast$}}\label{zconf_8lex_8c_a26938d921de835f6183c02e54cf08828}
+\hypertarget{zconf_8lex_8c_ac0586b8b0b092d02f4ba7d45abe328f2}{\index{zconf.\-lex.\-c@{zconf.\-lex.\-c}!Y\-Y\-\_\-\-F\-A\-T\-A\-L\-\_\-\-E\-R\-R\-O\-R@{Y\-Y\-\_\-\-F\-A\-T\-A\-L\-\_\-\-E\-R\-R\-O\-R}}
+\index{Y\-Y\-\_\-\-F\-A\-T\-A\-L\-\_\-\-E\-R\-R\-O\-R@{Y\-Y\-\_\-\-F\-A\-T\-A\-L\-\_\-\-E\-R\-R\-O\-R}!zconf.lex.c@{zconf.\-lex.\-c}}
+\subsubsection[{Y\-Y\-\_\-\-F\-A\-T\-A\-L\-\_\-\-E\-R\-R\-O\-R}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\-Y\-\_\-\-F\-A\-T\-A\-L\-\_\-\-E\-R\-R\-O\-R(
+\begin{DoxyParamCaption}
+\item[{}]{msg}
+\end{DoxyParamCaption}
+)~yy\-\_\-fatal\-\_\-error( msg )}}\label{zconf_8lex_8c_ac0586b8b0b092d02f4ba7d45abe328f2}
+\hypertarget{zconf_8lex_8c_a301f4439c9b191c80db45f5b1a8c7269}{\index{zconf.\-lex.\-c@{zconf.\-lex.\-c}!yy\-\_\-flex\-\_\-debug@{yy\-\_\-flex\-\_\-debug}}
+\index{yy\-\_\-flex\-\_\-debug@{yy\-\_\-flex\-\_\-debug}!zconf.lex.c@{zconf.\-lex.\-c}}
+\subsubsection[{yy\-\_\-flex\-\_\-debug}]{\setlength{\rightskip}{0pt plus 5cm}\#define yy\-\_\-flex\-\_\-debug~{\bf zconf\-\_\-flex\-\_\-debug}}}\label{zconf_8lex_8c_a301f4439c9b191c80db45f5b1a8c7269}
+\hypertarget{zconf_8lex_8c_a243ca1d30872935faf05ea5118ed6fdc}{\index{zconf.\-lex.\-c@{zconf.\-lex.\-c}!Y\-Y\-\_\-\-F\-L\-E\-X\-\_\-\-M\-A\-J\-O\-R\-\_\-\-V\-E\-R\-S\-I\-O\-N@{Y\-Y\-\_\-\-F\-L\-E\-X\-\_\-\-M\-A\-J\-O\-R\-\_\-\-V\-E\-R\-S\-I\-O\-N}}
+\index{Y\-Y\-\_\-\-F\-L\-E\-X\-\_\-\-M\-A\-J\-O\-R\-\_\-\-V\-E\-R\-S\-I\-O\-N@{Y\-Y\-\_\-\-F\-L\-E\-X\-\_\-\-M\-A\-J\-O\-R\-\_\-\-V\-E\-R\-S\-I\-O\-N}!zconf.lex.c@{zconf.\-lex.\-c}}
+\subsubsection[{Y\-Y\-\_\-\-F\-L\-E\-X\-\_\-\-M\-A\-J\-O\-R\-\_\-\-V\-E\-R\-S\-I\-O\-N}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\-Y\-\_\-\-F\-L\-E\-X\-\_\-\-M\-A\-J\-O\-R\-\_\-\-V\-E\-R\-S\-I\-O\-N~2}}\label{zconf_8lex_8c_a243ca1d30872935faf05ea5118ed6fdc}
+\hypertarget{zconf_8lex_8c_a90f9d458829400869e47efb68a865677}{\index{zconf.\-lex.\-c@{zconf.\-lex.\-c}!Y\-Y\-\_\-\-F\-L\-E\-X\-\_\-\-M\-I\-N\-O\-R\-\_\-\-V\-E\-R\-S\-I\-O\-N@{Y\-Y\-\_\-\-F\-L\-E\-X\-\_\-\-M\-I\-N\-O\-R\-\_\-\-V\-E\-R\-S\-I\-O\-N}}
+\index{Y\-Y\-\_\-\-F\-L\-E\-X\-\_\-\-M\-I\-N\-O\-R\-\_\-\-V\-E\-R\-S\-I\-O\-N@{Y\-Y\-\_\-\-F\-L\-E\-X\-\_\-\-M\-I\-N\-O\-R\-\_\-\-V\-E\-R\-S\-I\-O\-N}!zconf.lex.c@{zconf.\-lex.\-c}}
+\subsubsection[{Y\-Y\-\_\-\-F\-L\-E\-X\-\_\-\-M\-I\-N\-O\-R\-\_\-\-V\-E\-R\-S\-I\-O\-N}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\-Y\-\_\-\-F\-L\-E\-X\-\_\-\-M\-I\-N\-O\-R\-\_\-\-V\-E\-R\-S\-I\-O\-N~5}}\label{zconf_8lex_8c_a90f9d458829400869e47efb68a865677}
+\hypertarget{zconf_8lex_8c_ac676bd06869180ea493e9b6d7c078dbb}{\index{zconf.\-lex.\-c@{zconf.\-lex.\-c}!Y\-Y\-\_\-\-F\-L\-E\-X\-\_\-\-S\-U\-B\-M\-I\-N\-O\-R\-\_\-\-V\-E\-R\-S\-I\-O\-N@{Y\-Y\-\_\-\-F\-L\-E\-X\-\_\-\-S\-U\-B\-M\-I\-N\-O\-R\-\_\-\-V\-E\-R\-S\-I\-O\-N}}
+\index{Y\-Y\-\_\-\-F\-L\-E\-X\-\_\-\-S\-U\-B\-M\-I\-N\-O\-R\-\_\-\-V\-E\-R\-S\-I\-O\-N@{Y\-Y\-\_\-\-F\-L\-E\-X\-\_\-\-S\-U\-B\-M\-I\-N\-O\-R\-\_\-\-V\-E\-R\-S\-I\-O\-N}!zconf.lex.c@{zconf.\-lex.\-c}}
+\subsubsection[{Y\-Y\-\_\-\-F\-L\-E\-X\-\_\-\-S\-U\-B\-M\-I\-N\-O\-R\-\_\-\-V\-E\-R\-S\-I\-O\-N}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\-Y\-\_\-\-F\-L\-E\-X\-\_\-\-S\-U\-B\-M\-I\-N\-O\-R\-\_\-\-V\-E\-R\-S\-I\-O\-N~35}}\label{zconf_8lex_8c_ac676bd06869180ea493e9b6d7c078dbb}
+\hypertarget{zconf_8lex_8c_ab01a4c7245136f22a63acac7c0ceb343}{\index{zconf.\-lex.\-c@{zconf.\-lex.\-c}!yy\-\_\-flush\-\_\-buffer@{yy\-\_\-flush\-\_\-buffer}}
+\index{yy\-\_\-flush\-\_\-buffer@{yy\-\_\-flush\-\_\-buffer}!zconf.lex.c@{zconf.\-lex.\-c}}
+\subsubsection[{yy\-\_\-flush\-\_\-buffer}]{\setlength{\rightskip}{0pt plus 5cm}\#define yy\-\_\-flush\-\_\-buffer~{\bf zconf\-\_\-flush\-\_\-buffer}}}\label{zconf_8lex_8c_ab01a4c7245136f22a63acac7c0ceb343}
+\hypertarget{zconf_8lex_8c_ac5d478d90ea9a2ecd43d579067a2e89d}{\index{zconf.\-lex.\-c@{zconf.\-lex.\-c}!Y\-Y\-\_\-\-F\-L\-U\-S\-H\-\_\-\-B\-U\-F\-F\-E\-R@{Y\-Y\-\_\-\-F\-L\-U\-S\-H\-\_\-\-B\-U\-F\-F\-E\-R}}
+\index{Y\-Y\-\_\-\-F\-L\-U\-S\-H\-\_\-\-B\-U\-F\-F\-E\-R@{Y\-Y\-\_\-\-F\-L\-U\-S\-H\-\_\-\-B\-U\-F\-F\-E\-R}!zconf.lex.c@{zconf.\-lex.\-c}}
+\subsubsection[{Y\-Y\-\_\-\-F\-L\-U\-S\-H\-\_\-\-B\-U\-F\-F\-E\-R}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\-Y\-\_\-\-F\-L\-U\-S\-H\-\_\-\-B\-U\-F\-F\-E\-R~{\bf zconf\-\_\-flush\-\_\-buffer}({\bf Y\-Y\-\_\-\-C\-U\-R\-R\-E\-N\-T\-\_\-\-B\-U\-F\-F\-E\-R} )}}\label{zconf_8lex_8c_ac5d478d90ea9a2ecd43d579067a2e89d}
+\hypertarget{zconf_8lex_8c_aa14efad9f9c24106a3e3398a4f6621c2}{\index{zconf.\-lex.\-c@{zconf.\-lex.\-c}!yy\-\_\-init\-\_\-buffer@{yy\-\_\-init\-\_\-buffer}}
+\index{yy\-\_\-init\-\_\-buffer@{yy\-\_\-init\-\_\-buffer}!zconf.lex.c@{zconf.\-lex.\-c}}
+\subsubsection[{yy\-\_\-init\-\_\-buffer}]{\setlength{\rightskip}{0pt plus 5cm}\#define yy\-\_\-init\-\_\-buffer~zconf\-\_\-init\-\_\-buffer}}\label{zconf_8lex_8c_aa14efad9f9c24106a3e3398a4f6621c2}
+\hypertarget{zconf_8lex_8c_aacfdca45fa4beb8b06172525a53c424a}{\index{zconf.\-lex.\-c@{zconf.\-lex.\-c}!Y\-Y\-\_\-\-I\-N\-P\-U\-T@{Y\-Y\-\_\-\-I\-N\-P\-U\-T}}
+\index{Y\-Y\-\_\-\-I\-N\-P\-U\-T@{Y\-Y\-\_\-\-I\-N\-P\-U\-T}!zconf.lex.c@{zconf.\-lex.\-c}}
+\subsubsection[{Y\-Y\-\_\-\-I\-N\-P\-U\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\-Y\-\_\-\-I\-N\-P\-U\-T(
+\begin{DoxyParamCaption}
+\item[{}]{buf, }
+\item[{}]{result, }
+\item[{}]{max\-\_\-size}
+\end{DoxyParamCaption}
+)}}\label{zconf_8lex_8c_aacfdca45fa4beb8b06172525a53c424a}
+{\bfseries Value\-:}
+\begin{DoxyCode}
+errno=0; \hyperlink{zconf_8lex_8c_a8fdafe3be7e00ce3d4f0cb50a9a5eb39}{\(\backslash\)}
+\hyperlink{zconf_8lex_8c_a8fdafe3be7e00ce3d4f0cb50a9a5eb39}{    while} ( (result = read( fileno(\hyperlink{zconf_8lex_8c_aa6bdbfa61131d6a4b6edb9668ee68245}{zconfin}), (\textcolor{keywordtype}{char} *) buf, max\_size )) < 0 ) \(\backslash\)
+    \{ \hyperlink{zconf_8lex_8c_ad4a65b873df5c05570846b5413b41dfd}{\(\backslash\)}
+\hyperlink{zconf_8lex_8c_ad4a65b873df5c05570846b5413b41dfd}{        if}( errno != EINTR) \(\backslash\)
+        \{ \hyperlink{zconf_8lex_8c_ac0586b8b0b092d02f4ba7d45abe328f2}{\(\backslash\)}
+\hyperlink{zconf_8lex_8c_ac0586b8b0b092d02f4ba7d45abe328f2}{            YY\_FATAL\_ERROR}( \textcolor{stringliteral}{"input in flex scanner failed"} ); \(\backslash\)
+            break; \(\backslash\)
+        \} \(\backslash\)
+        errno=0; \(\backslash\)
+        clearerr(\hyperlink{zconf_8lex_8c_aa6bdbfa61131d6a4b6edb9668ee68245}{zconfin}); \(\backslash\)
+    \}\(\backslash\)
+\(\backslash\)
+\end{DoxyCode}
+\hypertarget{zconf_8lex_8c_a1ae16e642a197fa4948998525813c6f5}{\index{zconf.\-lex.\-c@{zconf.\-lex.\-c}!Y\-Y\-\_\-\-I\-N\-T\-\_\-\-A\-L\-I\-G\-N\-E\-D@{Y\-Y\-\_\-\-I\-N\-T\-\_\-\-A\-L\-I\-G\-N\-E\-D}}
+\index{Y\-Y\-\_\-\-I\-N\-T\-\_\-\-A\-L\-I\-G\-N\-E\-D@{Y\-Y\-\_\-\-I\-N\-T\-\_\-\-A\-L\-I\-G\-N\-E\-D}!zconf.lex.c@{zconf.\-lex.\-c}}
+\subsubsection[{Y\-Y\-\_\-\-I\-N\-T\-\_\-\-A\-L\-I\-G\-N\-E\-D}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\-Y\-\_\-\-I\-N\-T\-\_\-\-A\-L\-I\-G\-N\-E\-D~short int}}\label{zconf_8lex_8c_a1ae16e642a197fa4948998525813c6f5}
+\hypertarget{zconf_8lex_8c_a12e5f3a76911433480bca7f4edba6119}{\index{zconf.\-lex.\-c@{zconf.\-lex.\-c}!Y\-Y\-\_\-\-L\-E\-S\-S\-\_\-\-L\-I\-N\-E\-N\-O@{Y\-Y\-\_\-\-L\-E\-S\-S\-\_\-\-L\-I\-N\-E\-N\-O}}
+\index{Y\-Y\-\_\-\-L\-E\-S\-S\-\_\-\-L\-I\-N\-E\-N\-O@{Y\-Y\-\_\-\-L\-E\-S\-S\-\_\-\-L\-I\-N\-E\-N\-O}!zconf.lex.c@{zconf.\-lex.\-c}}
+\subsubsection[{Y\-Y\-\_\-\-L\-E\-S\-S\-\_\-\-L\-I\-N\-E\-N\-O}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\-Y\-\_\-\-L\-E\-S\-S\-\_\-\-L\-I\-N\-E\-N\-O(
+\begin{DoxyParamCaption}
+\item[{}]{n}
+\end{DoxyParamCaption}
+)}}\label{zconf_8lex_8c_a12e5f3a76911433480bca7f4edba6119}
+\hypertarget{zconf_8lex_8c_a039fc377fd4784139d8706ba0ae229fa}{\index{zconf.\-lex.\-c@{zconf.\-lex.\-c}!yy\-\_\-load\-\_\-buffer\-\_\-state@{yy\-\_\-load\-\_\-buffer\-\_\-state}}
+\index{yy\-\_\-load\-\_\-buffer\-\_\-state@{yy\-\_\-load\-\_\-buffer\-\_\-state}!zconf.lex.c@{zconf.\-lex.\-c}}
+\subsubsection[{yy\-\_\-load\-\_\-buffer\-\_\-state}]{\setlength{\rightskip}{0pt plus 5cm}\#define yy\-\_\-load\-\_\-buffer\-\_\-state~zconf\-\_\-load\-\_\-buffer\-\_\-state}}\label{zconf_8lex_8c_a039fc377fd4784139d8706ba0ae229fa}
+\hypertarget{zconf_8lex_8c_a68792d73820bc46a71d3d4e613f0b977}{\index{zconf.\-lex.\-c@{zconf.\-lex.\-c}!Y\-Y\-\_\-\-M\-O\-R\-E\-\_\-\-A\-D\-J@{Y\-Y\-\_\-\-M\-O\-R\-E\-\_\-\-A\-D\-J}}
+\index{Y\-Y\-\_\-\-M\-O\-R\-E\-\_\-\-A\-D\-J@{Y\-Y\-\_\-\-M\-O\-R\-E\-\_\-\-A\-D\-J}!zconf.lex.c@{zconf.\-lex.\-c}}
+\subsubsection[{Y\-Y\-\_\-\-M\-O\-R\-E\-\_\-\-A\-D\-J}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\-Y\-\_\-\-M\-O\-R\-E\-\_\-\-A\-D\-J~0}}\label{zconf_8lex_8c_a68792d73820bc46a71d3d4e613f0b977}
+\hypertarget{zconf_8lex_8c_ab7eb911e18655f2f78e63afe5a8a4a12}{\index{zconf.\-lex.\-c@{zconf.\-lex.\-c}!yy\-\_\-new\-\_\-buffer@{yy\-\_\-new\-\_\-buffer}}
+\index{yy\-\_\-new\-\_\-buffer@{yy\-\_\-new\-\_\-buffer}!zconf.lex.c@{zconf.\-lex.\-c}}
+\subsubsection[{yy\-\_\-new\-\_\-buffer}]{\setlength{\rightskip}{0pt plus 5cm}\#define yy\-\_\-new\-\_\-buffer~{\bf zconf\-\_\-create\-\_\-buffer}}}\label{zconf_8lex_8c_ab7eb911e18655f2f78e63afe5a8a4a12}
+\hypertarget{zconf_8lex_8c_a0406739e64fb5750cf995d2ae68ce69d}{\index{zconf.\-lex.\-c@{zconf.\-lex.\-c}!Y\-Y\-\_\-\-N\-E\-W\-\_\-\-F\-I\-L\-E@{Y\-Y\-\_\-\-N\-E\-W\-\_\-\-F\-I\-L\-E}}
+\index{Y\-Y\-\_\-\-N\-E\-W\-\_\-\-F\-I\-L\-E@{Y\-Y\-\_\-\-N\-E\-W\-\_\-\-F\-I\-L\-E}!zconf.lex.c@{zconf.\-lex.\-c}}
+\subsubsection[{Y\-Y\-\_\-\-N\-E\-W\-\_\-\-F\-I\-L\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\-Y\-\_\-\-N\-E\-W\-\_\-\-F\-I\-L\-E~{\bf zconfrestart}({\bf zconfin}  )}}\label{zconf_8lex_8c_a0406739e64fb5750cf995d2ae68ce69d}
+\hypertarget{zconf_8lex_8c_a85523a0c7d95c059d251b4e9829947aa}{\index{zconf.\-lex.\-c@{zconf.\-lex.\-c}!Y\-Y\-\_\-\-N\-O\-\_\-\-I\-N\-P\-U\-T@{Y\-Y\-\_\-\-N\-O\-\_\-\-I\-N\-P\-U\-T}}
+\index{Y\-Y\-\_\-\-N\-O\-\_\-\-I\-N\-P\-U\-T@{Y\-Y\-\_\-\-N\-O\-\_\-\-I\-N\-P\-U\-T}!zconf.lex.c@{zconf.\-lex.\-c}}
+\subsubsection[{Y\-Y\-\_\-\-N\-O\-\_\-\-I\-N\-P\-U\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\-Y\-\_\-\-N\-O\-\_\-\-I\-N\-P\-U\-T~1}}\label{zconf_8lex_8c_a85523a0c7d95c059d251b4e9829947aa}
+\hypertarget{zconf_8lex_8c_a8e0bcf8f8a5b613ea583347f8bc31cbf}{\index{zconf.\-lex.\-c@{zconf.\-lex.\-c}!Y\-Y\-\_\-\-N\-U\-L\-L@{Y\-Y\-\_\-\-N\-U\-L\-L}}
+\index{Y\-Y\-\_\-\-N\-U\-L\-L@{Y\-Y\-\_\-\-N\-U\-L\-L}!zconf.lex.c@{zconf.\-lex.\-c}}
+\subsubsection[{Y\-Y\-\_\-\-N\-U\-L\-L}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\-Y\-\_\-\-N\-U\-L\-L~0}}\label{zconf_8lex_8c_a8e0bcf8f8a5b613ea583347f8bc31cbf}
+\hypertarget{zconf_8lex_8c_ae558785bb896e090901c2b905f6790c6}{\index{zconf.\-lex.\-c@{zconf.\-lex.\-c}!Y\-Y\-\_\-\-N\-U\-M\-\_\-\-R\-U\-L\-E\-S@{Y\-Y\-\_\-\-N\-U\-M\-\_\-\-R\-U\-L\-E\-S}}
+\index{Y\-Y\-\_\-\-N\-U\-M\-\_\-\-R\-U\-L\-E\-S@{Y\-Y\-\_\-\-N\-U\-M\-\_\-\-R\-U\-L\-E\-S}!zconf.lex.c@{zconf.\-lex.\-c}}
+\subsubsection[{Y\-Y\-\_\-\-N\-U\-M\-\_\-\-R\-U\-L\-E\-S}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\-Y\-\_\-\-N\-U\-M\-\_\-\-R\-U\-L\-E\-S~33}}\label{zconf_8lex_8c_ae558785bb896e090901c2b905f6790c6}
+\hypertarget{zconf_8lex_8c_aab1491ceccb1c95c14320b2903773a1c}{\index{zconf.\-lex.\-c@{zconf.\-lex.\-c}!Y\-Y\-\_\-\-R\-E\-A\-D\-\_\-\-B\-U\-F\-\_\-\-S\-I\-Z\-E@{Y\-Y\-\_\-\-R\-E\-A\-D\-\_\-\-B\-U\-F\-\_\-\-S\-I\-Z\-E}}
+\index{Y\-Y\-\_\-\-R\-E\-A\-D\-\_\-\-B\-U\-F\-\_\-\-S\-I\-Z\-E@{Y\-Y\-\_\-\-R\-E\-A\-D\-\_\-\-B\-U\-F\-\_\-\-S\-I\-Z\-E}!zconf.lex.c@{zconf.\-lex.\-c}}
+\subsubsection[{Y\-Y\-\_\-\-R\-E\-A\-D\-\_\-\-B\-U\-F\-\_\-\-S\-I\-Z\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\-Y\-\_\-\-R\-E\-A\-D\-\_\-\-B\-U\-F\-\_\-\-S\-I\-Z\-E~8192}}\label{zconf_8lex_8c_aab1491ceccb1c95c14320b2903773a1c}
+\hypertarget{zconf_8lex_8c_a56858d18c7eda4f53664496ef566f651}{\index{zconf.\-lex.\-c@{zconf.\-lex.\-c}!Y\-Y\-\_\-\-R\-E\-S\-T\-O\-R\-E\-\_\-\-Y\-Y\-\_\-\-M\-O\-R\-E\-\_\-\-O\-F\-F\-S\-E\-T@{Y\-Y\-\_\-\-R\-E\-S\-T\-O\-R\-E\-\_\-\-Y\-Y\-\_\-\-M\-O\-R\-E\-\_\-\-O\-F\-F\-S\-E\-T}}
+\index{Y\-Y\-\_\-\-R\-E\-S\-T\-O\-R\-E\-\_\-\-Y\-Y\-\_\-\-M\-O\-R\-E\-\_\-\-O\-F\-F\-S\-E\-T@{Y\-Y\-\_\-\-R\-E\-S\-T\-O\-R\-E\-\_\-\-Y\-Y\-\_\-\-M\-O\-R\-E\-\_\-\-O\-F\-F\-S\-E\-T}!zconf.lex.c@{zconf.\-lex.\-c}}
+\subsubsection[{Y\-Y\-\_\-\-R\-E\-S\-T\-O\-R\-E\-\_\-\-Y\-Y\-\_\-\-M\-O\-R\-E\-\_\-\-O\-F\-F\-S\-E\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\-Y\-\_\-\-R\-E\-S\-T\-O\-R\-E\-\_\-\-Y\-Y\-\_\-\-M\-O\-R\-E\-\_\-\-O\-F\-F\-S\-E\-T}}\label{zconf_8lex_8c_a56858d18c7eda4f53664496ef566f651}
+\hypertarget{zconf_8lex_8c_a690504b662e4281515bf12722df178ba}{\index{zconf.\-lex.\-c@{zconf.\-lex.\-c}!Y\-Y\-\_\-\-R\-U\-L\-E\-\_\-\-S\-E\-T\-U\-P@{Y\-Y\-\_\-\-R\-U\-L\-E\-\_\-\-S\-E\-T\-U\-P}}
+\index{Y\-Y\-\_\-\-R\-U\-L\-E\-\_\-\-S\-E\-T\-U\-P@{Y\-Y\-\_\-\-R\-U\-L\-E\-\_\-\-S\-E\-T\-U\-P}!zconf.lex.c@{zconf.\-lex.\-c}}
+\subsubsection[{Y\-Y\-\_\-\-R\-U\-L\-E\-\_\-\-S\-E\-T\-U\-P}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\-Y\-\_\-\-R\-U\-L\-E\-\_\-\-S\-E\-T\-U\-P~{\bf Y\-Y\-\_\-\-U\-S\-E\-R\-\_\-\-A\-C\-T\-I\-O\-N}}}\label{zconf_8lex_8c_a690504b662e4281515bf12722df178ba}
+\hypertarget{zconf_8lex_8c_af1185350b7a92cf8aa5324c68850c8a6}{\index{zconf.\-lex.\-c@{zconf.\-lex.\-c}!Y\-Y\-\_\-\-S\-C\-\_\-\-T\-O\-\_\-\-U\-I@{Y\-Y\-\_\-\-S\-C\-\_\-\-T\-O\-\_\-\-U\-I}}
+\index{Y\-Y\-\_\-\-S\-C\-\_\-\-T\-O\-\_\-\-U\-I@{Y\-Y\-\_\-\-S\-C\-\_\-\-T\-O\-\_\-\-U\-I}!zconf.lex.c@{zconf.\-lex.\-c}}
+\subsubsection[{Y\-Y\-\_\-\-S\-C\-\_\-\-T\-O\-\_\-\-U\-I}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\-Y\-\_\-\-S\-C\-\_\-\-T\-O\-\_\-\-U\-I(
+\begin{DoxyParamCaption}
+\item[{}]{c}
+\end{DoxyParamCaption}
+)~((unsigned int) (unsigned char) c)}}\label{zconf_8lex_8c_af1185350b7a92cf8aa5324c68850c8a6}
+\hypertarget{zconf_8lex_8c_a12e30d13a76a94e78010db9996d39c50}{\index{zconf.\-lex.\-c@{zconf.\-lex.\-c}!yy\-\_\-set\-\_\-bol@{yy\-\_\-set\-\_\-bol}}
+\index{yy\-\_\-set\-\_\-bol@{yy\-\_\-set\-\_\-bol}!zconf.lex.c@{zconf.\-lex.\-c}}
+\subsubsection[{yy\-\_\-set\-\_\-bol}]{\setlength{\rightskip}{0pt plus 5cm}\#define yy\-\_\-set\-\_\-bol(
+\begin{DoxyParamCaption}
+\item[{}]{at\-\_\-bol}
+\end{DoxyParamCaption}
+)}}\label{zconf_8lex_8c_a12e30d13a76a94e78010db9996d39c50}
+{\bfseries Value\-:}
+\begin{DoxyCode}
+\{ \hyperlink{zconf_8lex_8c_ad4a65b873df5c05570846b5413b41dfd}{\(\backslash\)}
+\hyperlink{zconf_8lex_8c_ad4a65b873df5c05570846b5413b41dfd}{    if} ( ! \hyperlink{zconf_8lex_8c_aa093d500a6330d06d8e4760c494fac33}{YY\_CURRENT\_BUFFER} )\{\(\backslash\)
+        zconfensure\_buffer\_stack (); \hyperlink{zconf_8lex_8c_a817a6a24af62508b5a35f4bed5f56a2e}{\(\backslash\)}
+\hyperlink{zconf_8lex_8c_a817a6a24af62508b5a35f4bed5f56a2e}{        YY\_CURRENT\_BUFFER\_LVALUE} =    \hyperlink{zconf_8lex_8c_a80ba3493df6630505b927821ae7c6957}{\(\backslash\)}
+\hyperlink{zconf_8lex_8c_a80ba3493df6630505b927821ae7c6957}{            zconf\_create\_buffer}(\hyperlink{zconf_8lex_8c_aa6bdbfa61131d6a4b6edb9668ee68245}{zconfin},
+      \hyperlink{zconf_8lex_8c_ae7e51116e747d3390e7a6cfc6532834c}{YY\_BUF\_SIZE} ); \(\backslash\)
+    \} \hyperlink{zconf_8lex_8c_a817a6a24af62508b5a35f4bed5f56a2e}{\(\backslash\)}
+\hyperlink{zconf_8lex_8c_a817a6a24af62508b5a35f4bed5f56a2e}{    YY\_CURRENT\_BUFFER\_LVALUE}->yy\_at\_bol = at\_bol; \(\backslash\)
+    \}
+\end{DoxyCode}
+\hypertarget{zconf_8lex_8c_ac56eb96366c08862bf0efe5d83d1fc4c}{\index{zconf.\-lex.\-c@{zconf.\-lex.\-c}!yy\-\_\-set\-\_\-interactive@{yy\-\_\-set\-\_\-interactive}}
+\index{yy\-\_\-set\-\_\-interactive@{yy\-\_\-set\-\_\-interactive}!zconf.lex.c@{zconf.\-lex.\-c}}
+\subsubsection[{yy\-\_\-set\-\_\-interactive}]{\setlength{\rightskip}{0pt plus 5cm}\#define yy\-\_\-set\-\_\-interactive(
+\begin{DoxyParamCaption}
+\item[{}]{is\-\_\-interactive}
+\end{DoxyParamCaption}
+)}}\label{zconf_8lex_8c_ac56eb96366c08862bf0efe5d83d1fc4c}
+{\bfseries Value\-:}
+\begin{DoxyCode}
+\{ \hyperlink{zconf_8lex_8c_ad4a65b873df5c05570846b5413b41dfd}{\(\backslash\)}
+\hyperlink{zconf_8lex_8c_ad4a65b873df5c05570846b5413b41dfd}{    if} ( ! \hyperlink{zconf_8lex_8c_aa093d500a6330d06d8e4760c494fac33}{YY\_CURRENT\_BUFFER} )\{ \(\backslash\)
+        zconfensure\_buffer\_stack (); \hyperlink{zconf_8lex_8c_a817a6a24af62508b5a35f4bed5f56a2e}{\(\backslash\)}
+\hyperlink{zconf_8lex_8c_a817a6a24af62508b5a35f4bed5f56a2e}{        YY\_CURRENT\_BUFFER\_LVALUE} =    \hyperlink{zconf_8lex_8c_a80ba3493df6630505b927821ae7c6957}{\(\backslash\)}
+\hyperlink{zconf_8lex_8c_a80ba3493df6630505b927821ae7c6957}{            zconf\_create\_buffer}(\hyperlink{zconf_8lex_8c_aa6bdbfa61131d6a4b6edb9668ee68245}{zconfin},
+      \hyperlink{zconf_8lex_8c_ae7e51116e747d3390e7a6cfc6532834c}{YY\_BUF\_SIZE} ); \(\backslash\)
+    \} \hyperlink{zconf_8lex_8c_a817a6a24af62508b5a35f4bed5f56a2e}{\(\backslash\)}
+\hyperlink{zconf_8lex_8c_a817a6a24af62508b5a35f4bed5f56a2e}{    YY\_CURRENT\_BUFFER\_LVALUE}->yy\_is\_interactive = is\_interactive; \(\backslash\)
+    \}
+\end{DoxyCode}
+\hypertarget{zconf_8lex_8c_ae1ef5933028cbc587d31328e53d11a99}{\index{zconf.\-lex.\-c@{zconf.\-lex.\-c}!Y\-Y\-\_\-\-S\-K\-I\-P\-\_\-\-Y\-Y\-W\-R\-A\-P@{Y\-Y\-\_\-\-S\-K\-I\-P\-\_\-\-Y\-Y\-W\-R\-A\-P}}
+\index{Y\-Y\-\_\-\-S\-K\-I\-P\-\_\-\-Y\-Y\-W\-R\-A\-P@{Y\-Y\-\_\-\-S\-K\-I\-P\-\_\-\-Y\-Y\-W\-R\-A\-P}!zconf.lex.c@{zconf.\-lex.\-c}}
+\subsubsection[{Y\-Y\-\_\-\-S\-K\-I\-P\-\_\-\-Y\-Y\-W\-R\-A\-P}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\-Y\-\_\-\-S\-K\-I\-P\-\_\-\-Y\-Y\-W\-R\-A\-P}}\label{zconf_8lex_8c_ae1ef5933028cbc587d31328e53d11a99}
+\hypertarget{zconf_8lex_8c_a8e14785f9eab7a997d659b25af9584c5}{\index{zconf.\-lex.\-c@{zconf.\-lex.\-c}!Y\-Y\-\_\-\-S\-T\-A\-R\-T@{Y\-Y\-\_\-\-S\-T\-A\-R\-T}}
+\index{Y\-Y\-\_\-\-S\-T\-A\-R\-T@{Y\-Y\-\_\-\-S\-T\-A\-R\-T}!zconf.lex.c@{zconf.\-lex.\-c}}
+\subsubsection[{Y\-Y\-\_\-\-S\-T\-A\-R\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\-Y\-\_\-\-S\-T\-A\-R\-T~(((yy\-\_\-start) -\/ 1) / 2)}}\label{zconf_8lex_8c_a8e14785f9eab7a997d659b25af9584c5}
+\hypertarget{zconf_8lex_8c_a227e75c43b9e0cd41529974230be7e75}{\index{zconf.\-lex.\-c@{zconf.\-lex.\-c}!Y\-Y\-\_\-\-S\-T\-A\-R\-T\-\_\-\-S\-T\-A\-C\-K\-\_\-\-I\-N\-C\-R@{Y\-Y\-\_\-\-S\-T\-A\-R\-T\-\_\-\-S\-T\-A\-C\-K\-\_\-\-I\-N\-C\-R}}
+\index{Y\-Y\-\_\-\-S\-T\-A\-R\-T\-\_\-\-S\-T\-A\-C\-K\-\_\-\-I\-N\-C\-R@{Y\-Y\-\_\-\-S\-T\-A\-R\-T\-\_\-\-S\-T\-A\-C\-K\-\_\-\-I\-N\-C\-R}!zconf.lex.c@{zconf.\-lex.\-c}}
+\subsubsection[{Y\-Y\-\_\-\-S\-T\-A\-R\-T\-\_\-\-S\-T\-A\-C\-K\-\_\-\-I\-N\-C\-R}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\-Y\-\_\-\-S\-T\-A\-R\-T\-\_\-\-S\-T\-A\-C\-K\-\_\-\-I\-N\-C\-R~25}}\label{zconf_8lex_8c_a227e75c43b9e0cd41529974230be7e75}
+\hypertarget{zconf_8lex_8c_ac2f8b6fccdc516d96b02ac09a4dc01bd}{\index{zconf.\-lex.\-c@{zconf.\-lex.\-c}!Y\-Y\-\_\-\-S\-T\-A\-T\-E\-\_\-\-B\-U\-F\-\_\-\-S\-I\-Z\-E@{Y\-Y\-\_\-\-S\-T\-A\-T\-E\-\_\-\-B\-U\-F\-\_\-\-S\-I\-Z\-E}}
+\index{Y\-Y\-\_\-\-S\-T\-A\-T\-E\-\_\-\-B\-U\-F\-\_\-\-S\-I\-Z\-E@{Y\-Y\-\_\-\-S\-T\-A\-T\-E\-\_\-\-B\-U\-F\-\_\-\-S\-I\-Z\-E}!zconf.lex.c@{zconf.\-lex.\-c}}
+\subsubsection[{Y\-Y\-\_\-\-S\-T\-A\-T\-E\-\_\-\-B\-U\-F\-\_\-\-S\-I\-Z\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\-Y\-\_\-\-S\-T\-A\-T\-E\-\_\-\-B\-U\-F\-\_\-\-S\-I\-Z\-E~(({\bf Y\-Y\-\_\-\-B\-U\-F\-\_\-\-S\-I\-Z\-E} + 2) $\ast$ sizeof({\bf yy\-\_\-state\-\_\-type}))}}\label{zconf_8lex_8c_ac2f8b6fccdc516d96b02ac09a4dc01bd}
+\hypertarget{zconf_8lex_8c_ab3077e60914fc54dcc55ecae1ce9700b}{\index{zconf.\-lex.\-c@{zconf.\-lex.\-c}!Y\-Y\-\_\-\-S\-T\-A\-T\-E\-\_\-\-E\-O\-F@{Y\-Y\-\_\-\-S\-T\-A\-T\-E\-\_\-\-E\-O\-F}}
+\index{Y\-Y\-\_\-\-S\-T\-A\-T\-E\-\_\-\-E\-O\-F@{Y\-Y\-\_\-\-S\-T\-A\-T\-E\-\_\-\-E\-O\-F}!zconf.lex.c@{zconf.\-lex.\-c}}
+\subsubsection[{Y\-Y\-\_\-\-S\-T\-A\-T\-E\-\_\-\-E\-O\-F}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\-Y\-\_\-\-S\-T\-A\-T\-E\-\_\-\-E\-O\-F(
+\begin{DoxyParamCaption}
+\item[{}]{state}
+\end{DoxyParamCaption}
+)~({\bf Y\-Y\-\_\-\-E\-N\-D\-\_\-\-O\-F\-\_\-\-B\-U\-F\-F\-E\-R} + state + 1)}}\label{zconf_8lex_8c_ab3077e60914fc54dcc55ecae1ce9700b}
+\hypertarget{zconf_8lex_8c_a8aaa9e1fa7f13d6954d045ef973a9c84}{\index{zconf.\-lex.\-c@{zconf.\-lex.\-c}!Y\-Y\-\_\-\-S\-T\-R\-U\-C\-T\-\_\-\-Y\-Y\-\_\-\-B\-U\-F\-F\-E\-R\-\_\-\-S\-T\-A\-T\-E@{Y\-Y\-\_\-\-S\-T\-R\-U\-C\-T\-\_\-\-Y\-Y\-\_\-\-B\-U\-F\-F\-E\-R\-\_\-\-S\-T\-A\-T\-E}}
+\index{Y\-Y\-\_\-\-S\-T\-R\-U\-C\-T\-\_\-\-Y\-Y\-\_\-\-B\-U\-F\-F\-E\-R\-\_\-\-S\-T\-A\-T\-E@{Y\-Y\-\_\-\-S\-T\-R\-U\-C\-T\-\_\-\-Y\-Y\-\_\-\-B\-U\-F\-F\-E\-R\-\_\-\-S\-T\-A\-T\-E}!zconf.lex.c@{zconf.\-lex.\-c}}
+\subsubsection[{Y\-Y\-\_\-\-S\-T\-R\-U\-C\-T\-\_\-\-Y\-Y\-\_\-\-B\-U\-F\-F\-E\-R\-\_\-\-S\-T\-A\-T\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\-Y\-\_\-\-S\-T\-R\-U\-C\-T\-\_\-\-Y\-Y\-\_\-\-B\-U\-F\-F\-E\-R\-\_\-\-S\-T\-A\-T\-E}}\label{zconf_8lex_8c_a8aaa9e1fa7f13d6954d045ef973a9c84}
+\hypertarget{zconf_8lex_8c_a968d5b9e7e06a38bfca977b343d47d5c}{\index{zconf.\-lex.\-c@{zconf.\-lex.\-c}!yy\-\_\-switch\-\_\-to\-\_\-buffer@{yy\-\_\-switch\-\_\-to\-\_\-buffer}}
+\index{yy\-\_\-switch\-\_\-to\-\_\-buffer@{yy\-\_\-switch\-\_\-to\-\_\-buffer}!zconf.lex.c@{zconf.\-lex.\-c}}
+\subsubsection[{yy\-\_\-switch\-\_\-to\-\_\-buffer}]{\setlength{\rightskip}{0pt plus 5cm}\#define yy\-\_\-switch\-\_\-to\-\_\-buffer~{\bf zconf\-\_\-switch\-\_\-to\-\_\-buffer}}}\label{zconf_8lex_8c_a968d5b9e7e06a38bfca977b343d47d5c}
+\hypertarget{zconf_8lex_8c_aa79d63ed3ff8d2249baf1732a73089f5}{\index{zconf.\-lex.\-c@{zconf.\-lex.\-c}!Y\-Y\-\_\-\-T\-Y\-P\-E\-D\-E\-F\-\_\-\-Y\-Y\-\_\-\-B\-U\-F\-F\-E\-R\-\_\-\-S\-T\-A\-T\-E@{Y\-Y\-\_\-\-T\-Y\-P\-E\-D\-E\-F\-\_\-\-Y\-Y\-\_\-\-B\-U\-F\-F\-E\-R\-\_\-\-S\-T\-A\-T\-E}}
+\index{Y\-Y\-\_\-\-T\-Y\-P\-E\-D\-E\-F\-\_\-\-Y\-Y\-\_\-\-B\-U\-F\-F\-E\-R\-\_\-\-S\-T\-A\-T\-E@{Y\-Y\-\_\-\-T\-Y\-P\-E\-D\-E\-F\-\_\-\-Y\-Y\-\_\-\-B\-U\-F\-F\-E\-R\-\_\-\-S\-T\-A\-T\-E}!zconf.lex.c@{zconf.\-lex.\-c}}
+\subsubsection[{Y\-Y\-\_\-\-T\-Y\-P\-E\-D\-E\-F\-\_\-\-Y\-Y\-\_\-\-B\-U\-F\-F\-E\-R\-\_\-\-S\-T\-A\-T\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\-Y\-\_\-\-T\-Y\-P\-E\-D\-E\-F\-\_\-\-Y\-Y\-\_\-\-B\-U\-F\-F\-E\-R\-\_\-\-S\-T\-A\-T\-E}}\label{zconf_8lex_8c_aa79d63ed3ff8d2249baf1732a73089f5}
+\hypertarget{zconf_8lex_8c_ae0f2b0b5f04b2338367826b5670774f9}{\index{zconf.\-lex.\-c@{zconf.\-lex.\-c}!Y\-Y\-\_\-\-T\-Y\-P\-E\-D\-E\-F\-\_\-\-Y\-Y\-\_\-\-S\-I\-Z\-E\-\_\-\-T@{Y\-Y\-\_\-\-T\-Y\-P\-E\-D\-E\-F\-\_\-\-Y\-Y\-\_\-\-S\-I\-Z\-E\-\_\-\-T}}
+\index{Y\-Y\-\_\-\-T\-Y\-P\-E\-D\-E\-F\-\_\-\-Y\-Y\-\_\-\-S\-I\-Z\-E\-\_\-\-T@{Y\-Y\-\_\-\-T\-Y\-P\-E\-D\-E\-F\-\_\-\-Y\-Y\-\_\-\-S\-I\-Z\-E\-\_\-\-T}!zconf.lex.c@{zconf.\-lex.\-c}}
+\subsubsection[{Y\-Y\-\_\-\-T\-Y\-P\-E\-D\-E\-F\-\_\-\-Y\-Y\-\_\-\-S\-I\-Z\-E\-\_\-\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\-Y\-\_\-\-T\-Y\-P\-E\-D\-E\-F\-\_\-\-Y\-Y\-\_\-\-S\-I\-Z\-E\-\_\-\-T}}\label{zconf_8lex_8c_ae0f2b0b5f04b2338367826b5670774f9}
+\hypertarget{zconf_8lex_8c_a6198b2fcf96178b24ad4efff2a3debb0}{\index{zconf.\-lex.\-c@{zconf.\-lex.\-c}!Y\-Y\-\_\-\-U\-S\-E\-R\-\_\-\-A\-C\-T\-I\-O\-N@{Y\-Y\-\_\-\-U\-S\-E\-R\-\_\-\-A\-C\-T\-I\-O\-N}}
+\index{Y\-Y\-\_\-\-U\-S\-E\-R\-\_\-\-A\-C\-T\-I\-O\-N@{Y\-Y\-\_\-\-U\-S\-E\-R\-\_\-\-A\-C\-T\-I\-O\-N}!zconf.lex.c@{zconf.\-lex.\-c}}
+\subsubsection[{Y\-Y\-\_\-\-U\-S\-E\-R\-\_\-\-A\-C\-T\-I\-O\-N}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\-Y\-\_\-\-U\-S\-E\-R\-\_\-\-A\-C\-T\-I\-O\-N}}\label{zconf_8lex_8c_a6198b2fcf96178b24ad4efff2a3debb0}
+\hypertarget{zconf_8lex_8c_a803397ab738ee8630166680646a2d913}{\index{zconf.\-lex.\-c@{zconf.\-lex.\-c}!yyalloc@{yyalloc}}
+\index{yyalloc@{yyalloc}!zconf.lex.c@{zconf.\-lex.\-c}}
+\subsubsection[{yyalloc}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf yyalloc}~{\bf zconfalloc}}}\label{zconf_8lex_8c_a803397ab738ee8630166680646a2d913}
+\hypertarget{zconf_8lex_8c_aa2f1a918be586b44bf08126bde2d7cc9}{\index{zconf.\-lex.\-c@{zconf.\-lex.\-c}!yyconst@{yyconst}}
+\index{yyconst@{yyconst}!zconf.lex.c@{zconf.\-lex.\-c}}
+\subsubsection[{yyconst}]{\setlength{\rightskip}{0pt plus 5cm}\#define yyconst}}\label{zconf_8lex_8c_aa2f1a918be586b44bf08126bde2d7cc9}
+\hypertarget{zconf_8lex_8c_a4fa4368d47620ea80150b516e8884f6b}{\index{zconf.\-lex.\-c@{zconf.\-lex.\-c}!yyfree@{yyfree}}
+\index{yyfree@{yyfree}!zconf.lex.c@{zconf.\-lex.\-c}}
+\subsubsection[{yyfree}]{\setlength{\rightskip}{0pt plus 5cm}\#define yyfree~{\bf zconffree}}}\label{zconf_8lex_8c_a4fa4368d47620ea80150b516e8884f6b}
+\hypertarget{zconf_8lex_8c_aa789f4617e33fb99594cb04a3688a0c1}{\index{zconf.\-lex.\-c@{zconf.\-lex.\-c}!yyin@{yyin}}
+\index{yyin@{yyin}!zconf.lex.c@{zconf.\-lex.\-c}}
+\subsubsection[{yyin}]{\setlength{\rightskip}{0pt plus 5cm}\#define yyin~{\bf zconfin}}}\label{zconf_8lex_8c_aa789f4617e33fb99594cb04a3688a0c1}
+\hypertarget{zconf_8lex_8c_afa07a629486cb790560bb95713ec7794}{\index{zconf.\-lex.\-c@{zconf.\-lex.\-c}!yyleng@{yyleng}}
+\index{yyleng@{yyleng}!zconf.lex.c@{zconf.\-lex.\-c}}
+\subsubsection[{yyleng}]{\setlength{\rightskip}{0pt plus 5cm}\#define yyleng~{\bf zconfleng}}}\label{zconf_8lex_8c_afa07a629486cb790560bb95713ec7794}
+\hypertarget{zconf_8lex_8c_ae65cb72d09db0abdc4b8e8c4d533ab14}{\index{zconf.\-lex.\-c@{zconf.\-lex.\-c}!yyless@{yyless}}
+\index{yyless@{yyless}!zconf.lex.c@{zconf.\-lex.\-c}}
+\subsubsection[{yyless}]{\setlength{\rightskip}{0pt plus 5cm}\#define yyless(
+\begin{DoxyParamCaption}
+\item[{}]{n}
+\end{DoxyParamCaption}
+)}}\label{zconf_8lex_8c_ae65cb72d09db0abdc4b8e8c4d533ab14}
+{\bfseries Value\-:}
+\begin{DoxyCode}
+\textcolor{keywordflow}{do} \(\backslash\)
+        \{ \(\backslash\)
+        \textcolor{comment}{/* Undo effects of setting up zconftext. */} \(\backslash\)
+        int yyless\_macro\_arg = (n); \hyperlink{zconf_8lex_8c_a12e5f3a76911433480bca7f4edba6119}{\(\backslash\)}
+\hyperlink{zconf_8lex_8c_a12e5f3a76911433480bca7f4edba6119}{        YY\_LESS\_LINENO}(yyless\_macro\_arg);\(\backslash\)
+        *\hyperlink{zconf_8lex_8c_ab98daea4ec951dfa966b5ca0f8133d38}{yy\_cp} = (yy\_hold\_char); \hyperlink{zconf_8lex_8c_a56858d18c7eda4f53664496ef566f651}{\(\backslash\)}
+\hyperlink{zconf_8lex_8c_a56858d18c7eda4f53664496ef566f651}{        YY\_RESTORE\_YY\_MORE\_OFFSET} \(\backslash\)
+        (yy\_c\_buf\_p) = \hyperlink{zconf_8lex_8c_ab98daea4ec951dfa966b5ca0f8133d38}{yy\_cp} = \hyperlink{zconf_8lex_8c_a71cf769ce518e8687bf8999b278c65f4}{yy\_bp} + yyless\_macro\_arg - \hyperlink{zconf_8lex_8c_a68792d73820bc46a71d3d4e613f0b977}{YY\_MORE\_ADJ}; 
+      \hyperlink{zconf_8lex_8c_acc3486d769af4e4b2820346a0093cc79}{\(\backslash\)}
+\hyperlink{zconf_8lex_8c_acc3486d769af4e4b2820346a0093cc79}{        YY\_DO\_BEFORE\_ACTION}; \textcolor{comment}{/* set up zconftext again */} \(\backslash\)
+        \} \hyperlink{zconf_8lex_8c_a8fdafe3be7e00ce3d4f0cb50a9a5eb39}{\(\backslash\)}
+\hyperlink{zconf_8lex_8c_a8fdafe3be7e00ce3d4f0cb50a9a5eb39}{    while} ( 0 )
+\end{DoxyCode}
+\hypertarget{zconf_8lex_8c_ae65cb72d09db0abdc4b8e8c4d533ab14}{\index{zconf.\-lex.\-c@{zconf.\-lex.\-c}!yyless@{yyless}}
+\index{yyless@{yyless}!zconf.lex.c@{zconf.\-lex.\-c}}
+\subsubsection[{yyless}]{\setlength{\rightskip}{0pt plus 5cm}\#define yyless(
+\begin{DoxyParamCaption}
+\item[{}]{n}
+\end{DoxyParamCaption}
+)}}\label{zconf_8lex_8c_ae65cb72d09db0abdc4b8e8c4d533ab14}
+{\bfseries Value\-:}
+\begin{DoxyCode}
+\textcolor{keywordflow}{do} \(\backslash\)
+        \{ \(\backslash\)
+        \textcolor{comment}{/* Undo effects of setting up zconftext. */} \(\backslash\)
+        int yyless\_macro\_arg = (n); \hyperlink{zconf_8lex_8c_a12e5f3a76911433480bca7f4edba6119}{\(\backslash\)}
+\hyperlink{zconf_8lex_8c_a12e5f3a76911433480bca7f4edba6119}{        YY\_LESS\_LINENO}(yyless\_macro\_arg);\hyperlink{zconf_8lex_8c_a35c57269c2d2dff52f687a0a83bcc133}{\(\backslash\)}
+\hyperlink{zconf_8lex_8c_a35c57269c2d2dff52f687a0a83bcc133}{        zconftext}[\hyperlink{zconf_8lex_8c_ae2e0278627f45ce903fcf64d64458e41}{zconfleng}] = (yy\_hold\_char); \(\backslash\)
+        (yy\_c\_buf\_p) = \hyperlink{zconf_8lex_8c_a35c57269c2d2dff52f687a0a83bcc133}{zconftext} + yyless\_macro\_arg; \(\backslash\)
+        (yy\_hold\_char) = *(yy\_c\_buf\_p); \(\backslash\)
+        *(yy\_c\_buf\_p) = \textcolor{charliteral}{'\(\backslash\)0'}; \hyperlink{zconf_8lex_8c_ae2e0278627f45ce903fcf64d64458e41}{\(\backslash\)}
+\hyperlink{zconf_8lex_8c_ae2e0278627f45ce903fcf64d64458e41}{        zconfleng} = yyless\_macro\_arg; \(\backslash\)
+        \} \hyperlink{zconf_8lex_8c_a8fdafe3be7e00ce3d4f0cb50a9a5eb39}{\(\backslash\)}
+\hyperlink{zconf_8lex_8c_a8fdafe3be7e00ce3d4f0cb50a9a5eb39}{    while} ( 0 )
+\end{DoxyCode}
+\hypertarget{zconf_8lex_8c_a5611300548b2030d86b6ab9168132b88}{\index{zconf.\-lex.\-c@{zconf.\-lex.\-c}!yylex@{yylex}}
+\index{yylex@{yylex}!zconf.lex.c@{zconf.\-lex.\-c}}
+\subsubsection[{yylex}]{\setlength{\rightskip}{0pt plus 5cm}\#define yylex~{\bf zconflex}}}\label{zconf_8lex_8c_a5611300548b2030d86b6ab9168132b88}
+\hypertarget{zconf_8lex_8c_ad71cf0fddcfe4f61de0929105b33226c}{\index{zconf.\-lex.\-c@{zconf.\-lex.\-c}!yylineno@{yylineno}}
+\index{yylineno@{yylineno}!zconf.lex.c@{zconf.\-lex.\-c}}
+\subsubsection[{yylineno}]{\setlength{\rightskip}{0pt plus 5cm}\#define yylineno~{\bf zconflineno}}}\label{zconf_8lex_8c_ad71cf0fddcfe4f61de0929105b33226c}
+\hypertarget{zconf_8lex_8c_a745d37b5e002b2e5f93ad42ea7b554be}{\index{zconf.\-lex.\-c@{zconf.\-lex.\-c}!yymore@{yymore}}
+\index{yymore@{yymore}!zconf.lex.c@{zconf.\-lex.\-c}}
+\subsubsection[{yymore}]{\setlength{\rightskip}{0pt plus 5cm}\#define yymore(
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)~yymore\-\_\-used\-\_\-but\-\_\-not\-\_\-detected}}\label{zconf_8lex_8c_a745d37b5e002b2e5f93ad42ea7b554be}
+\hypertarget{zconf_8lex_8c_a4fd44867d448dcb6fc32ea004a15de54}{\index{zconf.\-lex.\-c@{zconf.\-lex.\-c}!yyout@{yyout}}
+\index{yyout@{yyout}!zconf.lex.c@{zconf.\-lex.\-c}}
+\subsubsection[{yyout}]{\setlength{\rightskip}{0pt plus 5cm}\#define yyout~{\bf zconfout}}}\label{zconf_8lex_8c_a4fd44867d448dcb6fc32ea004a15de54}
+\hypertarget{zconf_8lex_8c_ab1eba250555ca003eb39387bb1a41d39}{\index{zconf.\-lex.\-c@{zconf.\-lex.\-c}!yyrealloc@{yyrealloc}}
+\index{yyrealloc@{yyrealloc}!zconf.lex.c@{zconf.\-lex.\-c}}
+\subsubsection[{yyrealloc}]{\setlength{\rightskip}{0pt plus 5cm}\#define yyrealloc~{\bf zconfrealloc}}}\label{zconf_8lex_8c_ab1eba250555ca003eb39387bb1a41d39}
+\hypertarget{zconf_8lex_8c_a2259355ac49295f72feab070a34a9b11}{\index{zconf.\-lex.\-c@{zconf.\-lex.\-c}!yyrestart@{yyrestart}}
+\index{yyrestart@{yyrestart}!zconf.lex.c@{zconf.\-lex.\-c}}
+\subsubsection[{yyrestart}]{\setlength{\rightskip}{0pt plus 5cm}\#define yyrestart~{\bf zconfrestart}}}\label{zconf_8lex_8c_a2259355ac49295f72feab070a34a9b11}
+\hypertarget{zconf_8lex_8c_a32b5b960944f946b192d54f672569cd9}{\index{zconf.\-lex.\-c@{zconf.\-lex.\-c}!Y\-Y\-S\-T\-A\-T\-E@{Y\-Y\-S\-T\-A\-T\-E}}
+\index{Y\-Y\-S\-T\-A\-T\-E@{Y\-Y\-S\-T\-A\-T\-E}!zconf.lex.c@{zconf.\-lex.\-c}}
+\subsubsection[{Y\-Y\-S\-T\-A\-T\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\-Y\-S\-T\-A\-T\-E~{\bf Y\-Y\-\_\-\-S\-T\-A\-R\-T}}}\label{zconf_8lex_8c_a32b5b960944f946b192d54f672569cd9}
+\hypertarget{zconf_8lex_8c_a828cc83270f8f5bb1688e14dd4e28128}{\index{zconf.\-lex.\-c@{zconf.\-lex.\-c}!Y\-Y\-T\-A\-B\-L\-E\-S\-\_\-\-N\-A\-M\-E@{Y\-Y\-T\-A\-B\-L\-E\-S\-\_\-\-N\-A\-M\-E}}
+\index{Y\-Y\-T\-A\-B\-L\-E\-S\-\_\-\-N\-A\-M\-E@{Y\-Y\-T\-A\-B\-L\-E\-S\-\_\-\-N\-A\-M\-E}!zconf.lex.c@{zconf.\-lex.\-c}}
+\subsubsection[{Y\-Y\-T\-A\-B\-L\-E\-S\-\_\-\-N\-A\-M\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\-Y\-T\-A\-B\-L\-E\-S\-\_\-\-N\-A\-M\-E~\char`\"{}yytables\char`\"{}}}\label{zconf_8lex_8c_a828cc83270f8f5bb1688e14dd4e28128}
+\hypertarget{zconf_8lex_8c_ac3286b18a2e91b4571b97df96a118e84}{\index{zconf.\-lex.\-c@{zconf.\-lex.\-c}!yyterminate@{yyterminate}}
+\index{yyterminate@{yyterminate}!zconf.lex.c@{zconf.\-lex.\-c}}
+\subsubsection[{yyterminate}]{\setlength{\rightskip}{0pt plus 5cm}\#define yyterminate(
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)~return {\bf Y\-Y\-\_\-\-N\-U\-L\-L}}}\label{zconf_8lex_8c_ac3286b18a2e91b4571b97df96a118e84}
+\hypertarget{zconf_8lex_8c_a0d71f919dbec1ffd74b2460fa7e5ac28}{\index{zconf.\-lex.\-c@{zconf.\-lex.\-c}!yytext@{yytext}}
+\index{yytext@{yytext}!zconf.lex.c@{zconf.\-lex.\-c}}
+\subsubsection[{yytext}]{\setlength{\rightskip}{0pt plus 5cm}\#define yytext~{\bf zconftext}}}\label{zconf_8lex_8c_a0d71f919dbec1ffd74b2460fa7e5ac28}
+\hypertarget{zconf_8lex_8c_a790a191a93ef4d3b8c0bb43fd7480052}{\index{zconf.\-lex.\-c@{zconf.\-lex.\-c}!yytext\-\_\-ptr@{yytext\-\_\-ptr}}
+\index{yytext\-\_\-ptr@{yytext\-\_\-ptr}!zconf.lex.c@{zconf.\-lex.\-c}}
+\subsubsection[{yytext\-\_\-ptr}]{\setlength{\rightskip}{0pt plus 5cm}\#define yytext\-\_\-ptr~{\bf zconftext}}}\label{zconf_8lex_8c_a790a191a93ef4d3b8c0bb43fd7480052}
+\hypertarget{zconf_8lex_8c_a5be541efdb129f7cefb2437f52fe7359}{\index{zconf.\-lex.\-c@{zconf.\-lex.\-c}!yywrap@{yywrap}}
+\index{yywrap@{yywrap}!zconf.lex.c@{zconf.\-lex.\-c}}
+\subsubsection[{yywrap}]{\setlength{\rightskip}{0pt plus 5cm}\#define yywrap~{\bf zconfwrap}}}\label{zconf_8lex_8c_a5be541efdb129f7cefb2437f52fe7359}
+\hypertarget{zconf_8lex_8c_afc5a5bd09a5987231463932db6b25d0a}{\index{zconf.\-lex.\-c@{zconf.\-lex.\-c}!zconfwrap@{zconfwrap}}
+\index{zconfwrap@{zconfwrap}!zconf.lex.c@{zconf.\-lex.\-c}}
+\subsubsection[{zconfwrap}]{\setlength{\rightskip}{0pt plus 5cm}\#define zconfwrap(
+\begin{DoxyParamCaption}
+\item[{}]{n}
+\end{DoxyParamCaption}
+)~1}}\label{zconf_8lex_8c_afc5a5bd09a5987231463932db6b25d0a}
+
+
+\subsection{Typedef Documentation}
+\hypertarget{zconf_8lex_8c_a2e73b2c75126814585525fb2e9d51159}{\index{zconf.\-lex.\-c@{zconf.\-lex.\-c}!flex\-\_\-int16\-\_\-t@{flex\-\_\-int16\-\_\-t}}
+\index{flex\-\_\-int16\-\_\-t@{flex\-\_\-int16\-\_\-t}!zconf.lex.c@{zconf.\-lex.\-c}}
+\subsubsection[{flex\-\_\-int16\-\_\-t}]{\setlength{\rightskip}{0pt plus 5cm}typedef short int {\bf flex\-\_\-int16\-\_\-t}}}\label{zconf_8lex_8c_a2e73b2c75126814585525fb2e9d51159}
+\hypertarget{zconf_8lex_8c_a838ce943cf44ef7769480714fc6c3ba9}{\index{zconf.\-lex.\-c@{zconf.\-lex.\-c}!flex\-\_\-int32\-\_\-t@{flex\-\_\-int32\-\_\-t}}
+\index{flex\-\_\-int32\-\_\-t@{flex\-\_\-int32\-\_\-t}!zconf.lex.c@{zconf.\-lex.\-c}}
+\subsubsection[{flex\-\_\-int32\-\_\-t}]{\setlength{\rightskip}{0pt plus 5cm}typedef int {\bf flex\-\_\-int32\-\_\-t}}}\label{zconf_8lex_8c_a838ce943cf44ef7769480714fc6c3ba9}
+\hypertarget{zconf_8lex_8c_a7b0840dff4a2ef1702118aa12264b2a7}{\index{zconf.\-lex.\-c@{zconf.\-lex.\-c}!flex\-\_\-int8\-\_\-t@{flex\-\_\-int8\-\_\-t}}
+\index{flex\-\_\-int8\-\_\-t@{flex\-\_\-int8\-\_\-t}!zconf.lex.c@{zconf.\-lex.\-c}}
+\subsubsection[{flex\-\_\-int8\-\_\-t}]{\setlength{\rightskip}{0pt plus 5cm}typedef signed char {\bf flex\-\_\-int8\-\_\-t}}}\label{zconf_8lex_8c_a7b0840dff4a2ef1702118aa12264b2a7}
+\hypertarget{zconf_8lex_8c_ac50cdb9eefbef83a1cec89e3a7f6e1d2}{\index{zconf.\-lex.\-c@{zconf.\-lex.\-c}!flex\-\_\-uint16\-\_\-t@{flex\-\_\-uint16\-\_\-t}}
+\index{flex\-\_\-uint16\-\_\-t@{flex\-\_\-uint16\-\_\-t}!zconf.lex.c@{zconf.\-lex.\-c}}
+\subsubsection[{flex\-\_\-uint16\-\_\-t}]{\setlength{\rightskip}{0pt plus 5cm}typedef unsigned short int {\bf flex\-\_\-uint16\-\_\-t}}}\label{zconf_8lex_8c_ac50cdb9eefbef83a1cec89e3a7f6e1d2}
+\hypertarget{zconf_8lex_8c_a36869712de12820c73aae736762e8e88}{\index{zconf.\-lex.\-c@{zconf.\-lex.\-c}!flex\-\_\-uint32\-\_\-t@{flex\-\_\-uint32\-\_\-t}}
+\index{flex\-\_\-uint32\-\_\-t@{flex\-\_\-uint32\-\_\-t}!zconf.lex.c@{zconf.\-lex.\-c}}
+\subsubsection[{flex\-\_\-uint32\-\_\-t}]{\setlength{\rightskip}{0pt plus 5cm}typedef unsigned int {\bf flex\-\_\-uint32\-\_\-t}}}\label{zconf_8lex_8c_a36869712de12820c73aae736762e8e88}
+\hypertarget{zconf_8lex_8c_a0fac5ea484f64e75dbe6eba4aa61750c}{\index{zconf.\-lex.\-c@{zconf.\-lex.\-c}!flex\-\_\-uint8\-\_\-t@{flex\-\_\-uint8\-\_\-t}}
+\index{flex\-\_\-uint8\-\_\-t@{flex\-\_\-uint8\-\_\-t}!zconf.lex.c@{zconf.\-lex.\-c}}
+\subsubsection[{flex\-\_\-uint8\-\_\-t}]{\setlength{\rightskip}{0pt plus 5cm}typedef unsigned char {\bf flex\-\_\-uint8\-\_\-t}}}\label{zconf_8lex_8c_a0fac5ea484f64e75dbe6eba4aa61750c}
+\hypertarget{zconf_8lex_8c_a4e5bd2d129903df83f3d13effaf8f3e4}{\index{zconf.\-lex.\-c@{zconf.\-lex.\-c}!Y\-Y\-\_\-\-B\-U\-F\-F\-E\-R\-\_\-\-S\-T\-A\-T\-E@{Y\-Y\-\_\-\-B\-U\-F\-F\-E\-R\-\_\-\-S\-T\-A\-T\-E}}
+\index{Y\-Y\-\_\-\-B\-U\-F\-F\-E\-R\-\_\-\-S\-T\-A\-T\-E@{Y\-Y\-\_\-\-B\-U\-F\-F\-E\-R\-\_\-\-S\-T\-A\-T\-E}!zconf.lex.c@{zconf.\-lex.\-c}}
+\subsubsection[{Y\-Y\-\_\-\-B\-U\-F\-F\-E\-R\-\_\-\-S\-T\-A\-T\-E}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf yy\-\_\-buffer\-\_\-state}$\ast$ {\bf Y\-Y\-\_\-\-B\-U\-F\-F\-E\-R\-\_\-\-S\-T\-A\-T\-E}}}\label{zconf_8lex_8c_a4e5bd2d129903df83f3d13effaf8f3e4}
+\hypertarget{zconf_8lex_8c_a1f324b3cb0839eeb90145f0274e6946e}{\index{zconf.\-lex.\-c@{zconf.\-lex.\-c}!Y\-Y\-\_\-\-C\-H\-A\-R@{Y\-Y\-\_\-\-C\-H\-A\-R}}
+\index{Y\-Y\-\_\-\-C\-H\-A\-R@{Y\-Y\-\_\-\-C\-H\-A\-R}!zconf.lex.c@{zconf.\-lex.\-c}}
+\subsubsection[{Y\-Y\-\_\-\-C\-H\-A\-R}]{\setlength{\rightskip}{0pt plus 5cm}typedef unsigned char {\bf Y\-Y\-\_\-\-C\-H\-A\-R}}}\label{zconf_8lex_8c_a1f324b3cb0839eeb90145f0274e6946e}
+\hypertarget{zconf_8lex_8c_ad557845057f187eec4be07e2717d2afa}{\index{zconf.\-lex.\-c@{zconf.\-lex.\-c}!yy\-\_\-size\-\_\-t@{yy\-\_\-size\-\_\-t}}
+\index{yy\-\_\-size\-\_\-t@{yy\-\_\-size\-\_\-t}!zconf.lex.c@{zconf.\-lex.\-c}}
+\subsubsection[{yy\-\_\-size\-\_\-t}]{\setlength{\rightskip}{0pt plus 5cm}typedef size\-\_\-t {\bf yy\-\_\-size\-\_\-t}}}\label{zconf_8lex_8c_ad557845057f187eec4be07e2717d2afa}
+\hypertarget{zconf_8lex_8c_a9ba7c416f135b0f0c1f4addded4616b5}{\index{zconf.\-lex.\-c@{zconf.\-lex.\-c}!yy\-\_\-state\-\_\-type@{yy\-\_\-state\-\_\-type}}
+\index{yy\-\_\-state\-\_\-type@{yy\-\_\-state\-\_\-type}!zconf.lex.c@{zconf.\-lex.\-c}}
+\subsubsection[{yy\-\_\-state\-\_\-type}]{\setlength{\rightskip}{0pt plus 5cm}typedef int {\bf yy\-\_\-state\-\_\-type}}}\label{zconf_8lex_8c_a9ba7c416f135b0f0c1f4addded4616b5}
+
+
+\subsection{Function Documentation}
+\hypertarget{zconf_8lex_8c_ad4a65b873df5c05570846b5413b41dfd}{\index{zconf.\-lex.\-c@{zconf.\-lex.\-c}!if@{if}}
+\index{if@{if}!zconf.lex.c@{zconf.\-lex.\-c}}
+\subsubsection[{if}]{\setlength{\rightskip}{0pt plus 5cm}if (
+\begin{DoxyParamCaption}
+\item[{!}]{yy\-\_\-init}
+\end{DoxyParamCaption}
+)}}\label{zconf_8lex_8c_ad4a65b873df5c05570846b5413b41dfd}
+\hypertarget{zconf_8lex_8c_a8fdafe3be7e00ce3d4f0cb50a9a5eb39}{\index{zconf.\-lex.\-c@{zconf.\-lex.\-c}!while@{while}}
+\index{while@{while}!zconf.lex.c@{zconf.\-lex.\-c}}
+\subsubsection[{while}]{\setlength{\rightskip}{0pt plus 5cm}while (
+\begin{DoxyParamCaption}
+\item[{1}]{}
+\end{DoxyParamCaption}
+)}}\label{zconf_8lex_8c_a8fdafe3be7e00ce3d4f0cb50a9a5eb39}
+\hypertarget{zconf_8lex_8c_a80ba3493df6630505b927821ae7c6957}{\index{zconf.\-lex.\-c@{zconf.\-lex.\-c}!zconf\-\_\-create\-\_\-buffer@{zconf\-\_\-create\-\_\-buffer}}
+\index{zconf\-\_\-create\-\_\-buffer@{zconf\-\_\-create\-\_\-buffer}!zconf.lex.c@{zconf.\-lex.\-c}}
+\subsubsection[{zconf\-\_\-create\-\_\-buffer}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Y\-Y\-\_\-\-B\-U\-F\-F\-E\-R\-\_\-\-S\-T\-A\-T\-E} zconf\-\_\-create\-\_\-buffer (
+\begin{DoxyParamCaption}
+\item[{F\-I\-L\-E $\ast$}]{file, }
+\item[{int}]{size}
+\end{DoxyParamCaption}
+)}}\label{zconf_8lex_8c_a80ba3493df6630505b927821ae7c6957}
+Allocate and initialize an input buffer state. 
+\begin{DoxyParams}{Parameters}
+{\em file} & A readable stream. \\
+\hline
+{\em size} & The character buffer size in bytes. When in doubt, use {\ttfamily Y\-Y\-\_\-\-B\-U\-F\-\_\-\-S\-I\-Z\-E}.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the allocated buffer state. 
+\end{DoxyReturn}
+\hypertarget{zconf_8lex_8c_a4093904abf5c79bea332d5fbf7f43b19}{\index{zconf.\-lex.\-c@{zconf.\-lex.\-c}!zconf\-\_\-curname@{zconf\-\_\-curname}}
+\index{zconf\-\_\-curname@{zconf\-\_\-curname}!zconf.lex.c@{zconf.\-lex.\-c}}
+\subsubsection[{zconf\-\_\-curname}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ zconf\-\_\-curname (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{zconf_8lex_8c_a4093904abf5c79bea332d5fbf7f43b19}
+\hypertarget{zconf_8lex_8c_a04b6ddd2ec01b91dd73e80967175ce48}{\index{zconf.\-lex.\-c@{zconf.\-lex.\-c}!zconf\-\_\-delete\-\_\-buffer@{zconf\-\_\-delete\-\_\-buffer}}
+\index{zconf\-\_\-delete\-\_\-buffer@{zconf\-\_\-delete\-\_\-buffer}!zconf.lex.c@{zconf.\-lex.\-c}}
+\subsubsection[{zconf\-\_\-delete\-\_\-buffer}]{\setlength{\rightskip}{0pt plus 5cm}void zconf\-\_\-delete\-\_\-buffer (
+\begin{DoxyParamCaption}
+\item[{{\bf Y\-Y\-\_\-\-B\-U\-F\-F\-E\-R\-\_\-\-S\-T\-A\-T\-E}}]{b}
+\end{DoxyParamCaption}
+)}}\label{zconf_8lex_8c_a04b6ddd2ec01b91dd73e80967175ce48}
+Destroy the buffer. 
+\begin{DoxyParams}{Parameters}
+{\em b} & a buffer created with \hyperlink{zconf_8lex_8c_a80ba3493df6630505b927821ae7c6957}{zconf\-\_\-create\-\_\-buffer()} \\
+\hline
+\end{DoxyParams}
+\hypertarget{zconf_8lex_8c_a0817a4092d94ab0d5cc25fab0b3669fa}{\index{zconf.\-lex.\-c@{zconf.\-lex.\-c}!zconf\-\_\-flush\-\_\-buffer@{zconf\-\_\-flush\-\_\-buffer}}
+\index{zconf\-\_\-flush\-\_\-buffer@{zconf\-\_\-flush\-\_\-buffer}!zconf.lex.c@{zconf.\-lex.\-c}}
+\subsubsection[{zconf\-\_\-flush\-\_\-buffer}]{\setlength{\rightskip}{0pt plus 5cm}void zconf\-\_\-flush\-\_\-buffer (
+\begin{DoxyParamCaption}
+\item[{{\bf Y\-Y\-\_\-\-B\-U\-F\-F\-E\-R\-\_\-\-S\-T\-A\-T\-E}}]{b}
+\end{DoxyParamCaption}
+)}}\label{zconf_8lex_8c_a0817a4092d94ab0d5cc25fab0b3669fa}
+Discard all buffered characters. On the next scan, Y\-Y\-\_\-\-I\-N\-P\-U\-T will be called. 
+\begin{DoxyParams}{Parameters}
+{\em b} & the buffer state to be flushed, usually {\ttfamily Y\-Y\-\_\-\-C\-U\-R\-R\-E\-N\-T\-\_\-\-B\-U\-F\-F\-E\-R}. \\
+\hline
+\end{DoxyParams}
+\hypertarget{zconf_8lex_8c_af67f5971b3091780349654dd1bfaaca0}{\index{zconf.\-lex.\-c@{zconf.\-lex.\-c}!zconf\-\_\-fopen@{zconf\-\_\-fopen}}
+\index{zconf\-\_\-fopen@{zconf\-\_\-fopen}!zconf.lex.c@{zconf.\-lex.\-c}}
+\subsubsection[{zconf\-\_\-fopen}]{\setlength{\rightskip}{0pt plus 5cm}F\-I\-L\-E$\ast$ zconf\-\_\-fopen (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{name}
+\end{DoxyParamCaption}
+)}}\label{zconf_8lex_8c_af67f5971b3091780349654dd1bfaaca0}
+\hypertarget{zconf_8lex_8c_aebe9e072a2f47918a058f0afad35a805}{\index{zconf.\-lex.\-c@{zconf.\-lex.\-c}!zconf\-\_\-initscan@{zconf\-\_\-initscan}}
+\index{zconf\-\_\-initscan@{zconf\-\_\-initscan}!zconf.lex.c@{zconf.\-lex.\-c}}
+\subsubsection[{zconf\-\_\-initscan}]{\setlength{\rightskip}{0pt plus 5cm}void zconf\-\_\-initscan (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{name}
+\end{DoxyParamCaption}
+)}}\label{zconf_8lex_8c_aebe9e072a2f47918a058f0afad35a805}
+\hypertarget{zconf_8lex_8c_a292b6eed8598186692a8a5096cf1cabc}{\index{zconf.\-lex.\-c@{zconf.\-lex.\-c}!zconf\-\_\-lineno@{zconf\-\_\-lineno}}
+\index{zconf\-\_\-lineno@{zconf\-\_\-lineno}!zconf.lex.c@{zconf.\-lex.\-c}}
+\subsubsection[{zconf\-\_\-lineno}]{\setlength{\rightskip}{0pt plus 5cm}int zconf\-\_\-lineno (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{zconf_8lex_8c_a292b6eed8598186692a8a5096cf1cabc}
+\hypertarget{zconf_8lex_8c_a0bee3b65f4b371a9ee6f1c95d8f3257c}{\index{zconf.\-lex.\-c@{zconf.\-lex.\-c}!zconf\-\_\-nextfile@{zconf\-\_\-nextfile}}
+\index{zconf\-\_\-nextfile@{zconf\-\_\-nextfile}!zconf.lex.c@{zconf.\-lex.\-c}}
+\subsubsection[{zconf\-\_\-nextfile}]{\setlength{\rightskip}{0pt plus 5cm}void zconf\-\_\-nextfile (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{name}
+\end{DoxyParamCaption}
+)}}\label{zconf_8lex_8c_a0bee3b65f4b371a9ee6f1c95d8f3257c}
+\hypertarget{zconf_8lex_8c_a86cd0e34cfe9598162707812dd1294bf}{\index{zconf.\-lex.\-c@{zconf.\-lex.\-c}!zconf\-\_\-scan\-\_\-buffer@{zconf\-\_\-scan\-\_\-buffer}}
+\index{zconf\-\_\-scan\-\_\-buffer@{zconf\-\_\-scan\-\_\-buffer}!zconf.lex.c@{zconf.\-lex.\-c}}
+\subsubsection[{zconf\-\_\-scan\-\_\-buffer}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Y\-Y\-\_\-\-B\-U\-F\-F\-E\-R\-\_\-\-S\-T\-A\-T\-E} zconf\-\_\-scan\-\_\-buffer (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{base, }
+\item[{{\bf yy\-\_\-size\-\_\-t}}]{size}
+\end{DoxyParamCaption}
+)}}\label{zconf_8lex_8c_a86cd0e34cfe9598162707812dd1294bf}
+Setup the input buffer state to scan directly from a user-\/specified character buffer. 
+\begin{DoxyParams}{Parameters}
+{\em base} & the character buffer \\
+\hline
+{\em size} & the size in bytes of the character buffer\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the newly allocated buffer state object. 
+\end{DoxyReturn}
+\hypertarget{zconf_8lex_8c_a91ad5742a227b08b62c65661faaf2cb5}{\index{zconf.\-lex.\-c@{zconf.\-lex.\-c}!zconf\-\_\-scan\-\_\-bytes@{zconf\-\_\-scan\-\_\-bytes}}
+\index{zconf\-\_\-scan\-\_\-bytes@{zconf\-\_\-scan\-\_\-bytes}!zconf.lex.c@{zconf.\-lex.\-c}}
+\subsubsection[{zconf\-\_\-scan\-\_\-bytes}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Y\-Y\-\_\-\-B\-U\-F\-F\-E\-R\-\_\-\-S\-T\-A\-T\-E} zconf\-\_\-scan\-\_\-bytes (
+\begin{DoxyParamCaption}
+\item[{{\bf yyconst} char $\ast$}]{yybytes, }
+\item[{int}]{\-\_\-yybytes\-\_\-len}
+\end{DoxyParamCaption}
+)}}\label{zconf_8lex_8c_a91ad5742a227b08b62c65661faaf2cb5}
+Setup the input buffer state to scan the given bytes. The next call to \hyperlink{zconf_8lex_8c_afabee26479352018b42d112d4be577c3}{zconflex()} will scan from a {\itshape copy} of {\itshape bytes}. 
+\begin{DoxyParams}{Parameters}
+{\em bytes} & the byte buffer to scan \\
+\hline
+{\em len} & the number of bytes in the buffer pointed to by {\itshape bytes}.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the newly allocated buffer state object. 
+\end{DoxyReturn}
+\hypertarget{zconf_8lex_8c_adbcd2a5f80817706d7dd406ef2ec71fc}{\index{zconf.\-lex.\-c@{zconf.\-lex.\-c}!zconf\-\_\-scan\-\_\-string@{zconf\-\_\-scan\-\_\-string}}
+\index{zconf\-\_\-scan\-\_\-string@{zconf\-\_\-scan\-\_\-string}!zconf.lex.c@{zconf.\-lex.\-c}}
+\subsubsection[{zconf\-\_\-scan\-\_\-string}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Y\-Y\-\_\-\-B\-U\-F\-F\-E\-R\-\_\-\-S\-T\-A\-T\-E} zconf\-\_\-scan\-\_\-string (
+\begin{DoxyParamCaption}
+\item[{{\bf yyconst} char $\ast$}]{yystr}
+\end{DoxyParamCaption}
+)}}\label{zconf_8lex_8c_adbcd2a5f80817706d7dd406ef2ec71fc}
+Setup the input buffer state to scan a string. The next call to \hyperlink{zconf_8lex_8c_afabee26479352018b42d112d4be577c3}{zconflex()} will scan from a {\itshape copy} of {\itshape str}. 
+\begin{DoxyParams}{Parameters}
+{\em yystr} & a N\-U\-L-\/terminated string to scan\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the newly allocated buffer state object. 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+If you want to scan bytes that may contain N\-U\-L values, then use \hyperlink{zconf_8lex_8c_a91ad5742a227b08b62c65661faaf2cb5}{zconf\-\_\-scan\-\_\-bytes()} instead. 
+\end{DoxyNote}
+\hypertarget{zconf_8lex_8c_a21273ce5c169716660aa02e48976c42a}{\index{zconf.\-lex.\-c@{zconf.\-lex.\-c}!zconf\-\_\-starthelp@{zconf\-\_\-starthelp}}
+\index{zconf\-\_\-starthelp@{zconf\-\_\-starthelp}!zconf.lex.c@{zconf.\-lex.\-c}}
+\subsubsection[{zconf\-\_\-starthelp}]{\setlength{\rightskip}{0pt plus 5cm}void zconf\-\_\-starthelp (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{zconf_8lex_8c_a21273ce5c169716660aa02e48976c42a}
+\hypertarget{zconf_8lex_8c_a60a8e85217c4238d8f967ad8f6ff967b}{\index{zconf.\-lex.\-c@{zconf.\-lex.\-c}!zconf\-\_\-switch\-\_\-to\-\_\-buffer@{zconf\-\_\-switch\-\_\-to\-\_\-buffer}}
+\index{zconf\-\_\-switch\-\_\-to\-\_\-buffer@{zconf\-\_\-switch\-\_\-to\-\_\-buffer}!zconf.lex.c@{zconf.\-lex.\-c}}
+\subsubsection[{zconf\-\_\-switch\-\_\-to\-\_\-buffer}]{\setlength{\rightskip}{0pt plus 5cm}void zconf\-\_\-switch\-\_\-to\-\_\-buffer (
+\begin{DoxyParamCaption}
+\item[{{\bf Y\-Y\-\_\-\-B\-U\-F\-F\-E\-R\-\_\-\-S\-T\-A\-T\-E}}]{new\-\_\-buffer}
+\end{DoxyParamCaption}
+)}}\label{zconf_8lex_8c_a60a8e85217c4238d8f967ad8f6ff967b}
+Switch to a different input buffer. 
+\begin{DoxyParams}{Parameters}
+{\em new\-\_\-buffer} & The new input buffer. \\
+\hline
+\end{DoxyParams}
+\hypertarget{zconf_8lex_8c_ac10f25925a1f3da740ac5ee115ed0457}{\index{zconf.\-lex.\-c@{zconf.\-lex.\-c}!zconfalloc@{zconfalloc}}
+\index{zconfalloc@{zconfalloc}!zconf.lex.c@{zconf.\-lex.\-c}}
+\subsubsection[{zconfalloc}]{\setlength{\rightskip}{0pt plus 5cm}void $\ast$ zconfalloc (
+\begin{DoxyParamCaption}
+\item[{{\bf yy\-\_\-size\-\_\-t}}]{size}
+\end{DoxyParamCaption}
+)}}\label{zconf_8lex_8c_ac10f25925a1f3da740ac5ee115ed0457}
+\hypertarget{zconf_8lex_8c_af04f437491456e6088df33446c50e39d}{\index{zconf.\-lex.\-c@{zconf.\-lex.\-c}!zconffree@{zconffree}}
+\index{zconffree@{zconffree}!zconf.lex.c@{zconf.\-lex.\-c}}
+\subsubsection[{zconffree}]{\setlength{\rightskip}{0pt plus 5cm}void zconffree (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{ptr}
+\end{DoxyParamCaption}
+)}}\label{zconf_8lex_8c_af04f437491456e6088df33446c50e39d}
+\hypertarget{zconf_8lex_8c_aaad5221de4717876f04119e9500cecf2}{\index{zconf.\-lex.\-c@{zconf.\-lex.\-c}!zconfget\-\_\-debug@{zconfget\-\_\-debug}}
+\index{zconfget\-\_\-debug@{zconfget\-\_\-debug}!zconf.lex.c@{zconf.\-lex.\-c}}
+\subsubsection[{zconfget\-\_\-debug}]{\setlength{\rightskip}{0pt plus 5cm}int zconfget\-\_\-debug (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{zconf_8lex_8c_aaad5221de4717876f04119e9500cecf2}
+\hypertarget{zconf_8lex_8c_a26a60a262d22de4bcf74fa3eaad0a408}{\index{zconf.\-lex.\-c@{zconf.\-lex.\-c}!zconfget\-\_\-extra@{zconfget\-\_\-extra}}
+\index{zconfget\-\_\-extra@{zconfget\-\_\-extra}!zconf.lex.c@{zconf.\-lex.\-c}}
+\subsubsection[{zconfget\-\_\-extra}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Y\-Y\-\_\-\-E\-X\-T\-R\-A\-\_\-\-T\-Y\-P\-E} zconfget\-\_\-extra (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{zconf_8lex_8c_a26a60a262d22de4bcf74fa3eaad0a408}
+\hypertarget{zconf_8lex_8c_a19b2006777b8b31571d65522486c2aa7}{\index{zconf.\-lex.\-c@{zconf.\-lex.\-c}!zconfget\-\_\-in@{zconfget\-\_\-in}}
+\index{zconfget\-\_\-in@{zconfget\-\_\-in}!zconf.lex.c@{zconf.\-lex.\-c}}
+\subsubsection[{zconfget\-\_\-in}]{\setlength{\rightskip}{0pt plus 5cm}F\-I\-L\-E $\ast$ zconfget\-\_\-in (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{zconf_8lex_8c_a19b2006777b8b31571d65522486c2aa7}
+Get the input stream. \hypertarget{zconf_8lex_8c_aa72ed7ae069fe8fa44f037a0cd50ec66}{\index{zconf.\-lex.\-c@{zconf.\-lex.\-c}!zconfget\-\_\-leng@{zconfget\-\_\-leng}}
+\index{zconfget\-\_\-leng@{zconfget\-\_\-leng}!zconf.lex.c@{zconf.\-lex.\-c}}
+\subsubsection[{zconfget\-\_\-leng}]{\setlength{\rightskip}{0pt plus 5cm}int zconfget\-\_\-leng (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{zconf_8lex_8c_aa72ed7ae069fe8fa44f037a0cd50ec66}
+Get the length of the current token. \hypertarget{zconf_8lex_8c_a1b8da546b161fa9a00415b04fdb42203}{\index{zconf.\-lex.\-c@{zconf.\-lex.\-c}!zconfget\-\_\-lineno@{zconfget\-\_\-lineno}}
+\index{zconfget\-\_\-lineno@{zconfget\-\_\-lineno}!zconf.lex.c@{zconf.\-lex.\-c}}
+\subsubsection[{zconfget\-\_\-lineno}]{\setlength{\rightskip}{0pt plus 5cm}int zconfget\-\_\-lineno (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{zconf_8lex_8c_a1b8da546b161fa9a00415b04fdb42203}
+Get the current line number. \hypertarget{zconf_8lex_8c_af7b59304177e930bee2c09d2bc059ce4}{\index{zconf.\-lex.\-c@{zconf.\-lex.\-c}!zconfget\-\_\-out@{zconfget\-\_\-out}}
+\index{zconfget\-\_\-out@{zconfget\-\_\-out}!zconf.lex.c@{zconf.\-lex.\-c}}
+\subsubsection[{zconfget\-\_\-out}]{\setlength{\rightskip}{0pt plus 5cm}F\-I\-L\-E $\ast$ zconfget\-\_\-out (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{zconf_8lex_8c_af7b59304177e930bee2c09d2bc059ce4}
+Get the output stream. \hypertarget{zconf_8lex_8c_a8d7175dee466171364fb4d4646b10e4c}{\index{zconf.\-lex.\-c@{zconf.\-lex.\-c}!zconfget\-\_\-text@{zconfget\-\_\-text}}
+\index{zconfget\-\_\-text@{zconfget\-\_\-text}!zconf.lex.c@{zconf.\-lex.\-c}}
+\subsubsection[{zconfget\-\_\-text}]{\setlength{\rightskip}{0pt plus 5cm}char $\ast$ zconfget\-\_\-text (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{zconf_8lex_8c_a8d7175dee466171364fb4d4646b10e4c}
+Get the current token. \hypertarget{zconf_8lex_8c_afabee26479352018b42d112d4be577c3}{\index{zconf.\-lex.\-c@{zconf.\-lex.\-c}!zconflex@{zconflex}}
+\index{zconflex@{zconflex}!zconf.lex.c@{zconf.\-lex.\-c}}
+\subsubsection[{zconflex}]{\setlength{\rightskip}{0pt plus 5cm}int zconflex (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{zconf_8lex_8c_afabee26479352018b42d112d4be577c3}
+\hypertarget{zconf_8lex_8c_abcec42caaf5da3b0cd70536f6cfcc5b9}{\index{zconf.\-lex.\-c@{zconf.\-lex.\-c}!zconflex\-\_\-destroy@{zconflex\-\_\-destroy}}
+\index{zconflex\-\_\-destroy@{zconflex\-\_\-destroy}!zconf.lex.c@{zconf.\-lex.\-c}}
+\subsubsection[{zconflex\-\_\-destroy}]{\setlength{\rightskip}{0pt plus 5cm}int zconflex\-\_\-destroy (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{zconf_8lex_8c_abcec42caaf5da3b0cd70536f6cfcc5b9}
+\hypertarget{zconf_8lex_8c_a00079b9f3721b858e53abbfd7190ac2b}{\index{zconf.\-lex.\-c@{zconf.\-lex.\-c}!zconfpop\-\_\-buffer\-\_\-state@{zconfpop\-\_\-buffer\-\_\-state}}
+\index{zconfpop\-\_\-buffer\-\_\-state@{zconfpop\-\_\-buffer\-\_\-state}!zconf.lex.c@{zconf.\-lex.\-c}}
+\subsubsection[{zconfpop\-\_\-buffer\-\_\-state}]{\setlength{\rightskip}{0pt plus 5cm}void zconfpop\-\_\-buffer\-\_\-state (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{zconf_8lex_8c_a00079b9f3721b858e53abbfd7190ac2b}
+Removes and deletes the top of the stack, if present. The next element becomes the new top. \hypertarget{zconf_8lex_8c_aadb412536d91c5d458e25c95aa272e82}{\index{zconf.\-lex.\-c@{zconf.\-lex.\-c}!zconfpush\-\_\-buffer\-\_\-state@{zconfpush\-\_\-buffer\-\_\-state}}
+\index{zconfpush\-\_\-buffer\-\_\-state@{zconfpush\-\_\-buffer\-\_\-state}!zconf.lex.c@{zconf.\-lex.\-c}}
+\subsubsection[{zconfpush\-\_\-buffer\-\_\-state}]{\setlength{\rightskip}{0pt plus 5cm}void zconfpush\-\_\-buffer\-\_\-state (
+\begin{DoxyParamCaption}
+\item[{{\bf Y\-Y\-\_\-\-B\-U\-F\-F\-E\-R\-\_\-\-S\-T\-A\-T\-E}}]{new\-\_\-buffer}
+\end{DoxyParamCaption}
+)}}\label{zconf_8lex_8c_aadb412536d91c5d458e25c95aa272e82}
+Pushes the new state onto the stack. The new state becomes the current state. This function will allocate the stack if necessary. 
+\begin{DoxyParams}{Parameters}
+{\em new\-\_\-buffer} & The new state. \\
+\hline
+\end{DoxyParams}
+\hypertarget{zconf_8lex_8c_adb515f650a293ed52e06a5c56a41c2b4}{\index{zconf.\-lex.\-c@{zconf.\-lex.\-c}!zconfrealloc@{zconfrealloc}}
+\index{zconfrealloc@{zconfrealloc}!zconf.lex.c@{zconf.\-lex.\-c}}
+\subsubsection[{zconfrealloc}]{\setlength{\rightskip}{0pt plus 5cm}void $\ast$ zconfrealloc (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{ptr, }
+\item[{{\bf yy\-\_\-size\-\_\-t}}]{size}
+\end{DoxyParamCaption}
+)}}\label{zconf_8lex_8c_adb515f650a293ed52e06a5c56a41c2b4}
+\hypertarget{zconf_8lex_8c_a2e2075cea0cf737cad4ea2bbe96f6bfd}{\index{zconf.\-lex.\-c@{zconf.\-lex.\-c}!zconfrestart@{zconfrestart}}
+\index{zconfrestart@{zconfrestart}!zconf.lex.c@{zconf.\-lex.\-c}}
+\subsubsection[{zconfrestart}]{\setlength{\rightskip}{0pt plus 5cm}void zconfrestart (
+\begin{DoxyParamCaption}
+\item[{F\-I\-L\-E $\ast$}]{input\-\_\-file}
+\end{DoxyParamCaption}
+)}}\label{zconf_8lex_8c_a2e2075cea0cf737cad4ea2bbe96f6bfd}
+Immediately switch to a different input stream. 
+\begin{DoxyParams}{Parameters}
+{\em input\-\_\-file} & A readable stream.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+This function does not reset the start condition to {\ttfamily I\-N\-I\-T\-I\-A\-L} . 
+\end{DoxyNote}
+\hypertarget{zconf_8lex_8c_ab5a5fa5afe1756ebbac3f5a32ec091dd}{\index{zconf.\-lex.\-c@{zconf.\-lex.\-c}!zconfset\-\_\-debug@{zconfset\-\_\-debug}}
+\index{zconfset\-\_\-debug@{zconfset\-\_\-debug}!zconf.lex.c@{zconf.\-lex.\-c}}
+\subsubsection[{zconfset\-\_\-debug}]{\setlength{\rightskip}{0pt plus 5cm}void zconfset\-\_\-debug (
+\begin{DoxyParamCaption}
+\item[{int}]{debug\-\_\-flag}
+\end{DoxyParamCaption}
+)}}\label{zconf_8lex_8c_ab5a5fa5afe1756ebbac3f5a32ec091dd}
+\hypertarget{zconf_8lex_8c_a4c69642054f1b12a74bc3df4ad38db0a}{\index{zconf.\-lex.\-c@{zconf.\-lex.\-c}!zconfset\-\_\-extra@{zconfset\-\_\-extra}}
+\index{zconfset\-\_\-extra@{zconfset\-\_\-extra}!zconf.lex.c@{zconf.\-lex.\-c}}
+\subsubsection[{zconfset\-\_\-extra}]{\setlength{\rightskip}{0pt plus 5cm}void zconfset\-\_\-extra (
+\begin{DoxyParamCaption}
+\item[{{\bf Y\-Y\-\_\-\-E\-X\-T\-R\-A\-\_\-\-T\-Y\-P\-E}}]{user\-\_\-defined}
+\end{DoxyParamCaption}
+)}}\label{zconf_8lex_8c_a4c69642054f1b12a74bc3df4ad38db0a}
+\hypertarget{zconf_8lex_8c_a19416ea6acce2b292d64888f60304d8d}{\index{zconf.\-lex.\-c@{zconf.\-lex.\-c}!zconfset\-\_\-in@{zconfset\-\_\-in}}
+\index{zconfset\-\_\-in@{zconfset\-\_\-in}!zconf.lex.c@{zconf.\-lex.\-c}}
+\subsubsection[{zconfset\-\_\-in}]{\setlength{\rightskip}{0pt plus 5cm}void zconfset\-\_\-in (
+\begin{DoxyParamCaption}
+\item[{F\-I\-L\-E $\ast$}]{in\-\_\-str}
+\end{DoxyParamCaption}
+)}}\label{zconf_8lex_8c_a19416ea6acce2b292d64888f60304d8d}
+Set the input stream. This does not discard the current input buffer. 
+\begin{DoxyParams}{Parameters}
+{\em in\-\_\-str} & A readable stream.\\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{zconf_8lex_8c_a60a8e85217c4238d8f967ad8f6ff967b}{zconf\-\_\-switch\-\_\-to\-\_\-buffer} 
+\end{DoxySeeAlso}
+\hypertarget{zconf_8lex_8c_a7b0319f9e1694ffefcc745b880720292}{\index{zconf.\-lex.\-c@{zconf.\-lex.\-c}!zconfset\-\_\-lineno@{zconfset\-\_\-lineno}}
+\index{zconfset\-\_\-lineno@{zconfset\-\_\-lineno}!zconf.lex.c@{zconf.\-lex.\-c}}
+\subsubsection[{zconfset\-\_\-lineno}]{\setlength{\rightskip}{0pt plus 5cm}void zconfset\-\_\-lineno (
+\begin{DoxyParamCaption}
+\item[{int}]{line\-\_\-number}
+\end{DoxyParamCaption}
+)}}\label{zconf_8lex_8c_a7b0319f9e1694ffefcc745b880720292}
+Set the current line number. 
+\begin{DoxyParams}{Parameters}
+{\em line\-\_\-number} & \\
+\hline
+\end{DoxyParams}
+\hypertarget{zconf_8lex_8c_a8ceccd2b1e82507373f9d633d068823d}{\index{zconf.\-lex.\-c@{zconf.\-lex.\-c}!zconfset\-\_\-out@{zconfset\-\_\-out}}
+\index{zconfset\-\_\-out@{zconfset\-\_\-out}!zconf.lex.c@{zconf.\-lex.\-c}}
+\subsubsection[{zconfset\-\_\-out}]{\setlength{\rightskip}{0pt plus 5cm}void zconfset\-\_\-out (
+\begin{DoxyParamCaption}
+\item[{F\-I\-L\-E $\ast$}]{out\-\_\-str}
+\end{DoxyParamCaption}
+)}}\label{zconf_8lex_8c_a8ceccd2b1e82507373f9d633d068823d}
+
+
+\subsection{Variable Documentation}
+\hypertarget{zconf_8lex_8c_a95d313b3f845272bb81466be6b6b61d4}{\index{zconf.\-lex.\-c@{zconf.\-lex.\-c}!current\-\_\-buf@{current\-\_\-buf}}
+\index{current\-\_\-buf@{current\-\_\-buf}!zconf.lex.c@{zconf.\-lex.\-c}}
+\subsubsection[{current\-\_\-buf}]{\setlength{\rightskip}{0pt plus 5cm}struct {\bf buffer}$\ast$ current\-\_\-buf}}\label{zconf_8lex_8c_a95d313b3f845272bb81466be6b6b61d4}
+\hypertarget{zconf_8lex_8c_a213da43af7bbd0fe6affe3a2ad80c593}{\index{zconf.\-lex.\-c@{zconf.\-lex.\-c}!file@{file}}
+\index{file@{file}!zconf.lex.c@{zconf.\-lex.\-c}}
+\subsubsection[{file}]{\setlength{\rightskip}{0pt plus 5cm}struct {\bf file}$\ast$ {\bf file}}}\label{zconf_8lex_8c_a213da43af7bbd0fe6affe3a2ad80c593}
+\hypertarget{zconf_8lex_8c_acb559820d9ca11295b4500f179ef6392}{\index{zconf.\-lex.\-c@{zconf.\-lex.\-c}!i@{i}}
+\index{i@{i}!zconf.lex.c@{zconf.\-lex.\-c}}
+\subsubsection[{i}]{\setlength{\rightskip}{0pt plus 5cm}int i}}\label{zconf_8lex_8c_acb559820d9ca11295b4500f179ef6392}
+\hypertarget{zconf_8lex_8c_a501b314f49b3a9ff6e7be599d94686ee}{\index{zconf.\-lex.\-c@{zconf.\-lex.\-c}!lineno@{lineno}}
+\index{lineno@{lineno}!zconf.lex.c@{zconf.\-lex.\-c}}
+\subsubsection[{lineno}]{\setlength{\rightskip}{0pt plus 5cm}int lineno}}\label{zconf_8lex_8c_a501b314f49b3a9ff6e7be599d94686ee}
+\hypertarget{zconf_8lex_8c_aba03208f197d75b6e355ba9b2ae08ab5}{\index{zconf.\-lex.\-c@{zconf.\-lex.\-c}!str@{str}}
+\index{str@{str}!zconf.lex.c@{zconf.\-lex.\-c}}
+\subsubsection[{str}]{\setlength{\rightskip}{0pt plus 5cm}int str = 0}}\label{zconf_8lex_8c_aba03208f197d75b6e355ba9b2ae08ab5}
+\hypertarget{zconf_8lex_8c_aac33256e3de965a23b06010535745b5f}{\index{zconf.\-lex.\-c@{zconf.\-lex.\-c}!ts@{ts}}
+\index{ts@{ts}!zconf.lex.c@{zconf.\-lex.\-c}}
+\subsubsection[{ts}]{\setlength{\rightskip}{0pt plus 5cm}int ts}}\label{zconf_8lex_8c_aac33256e3de965a23b06010535745b5f}
+\hypertarget{zconf_8lex_8c_a7ffc8c947830757dd87ad202a6823edd}{\index{zconf.\-lex.\-c@{zconf.\-lex.\-c}!yy\-\_\-act@{yy\-\_\-act}}
+\index{yy\-\_\-act@{yy\-\_\-act}!zconf.lex.c@{zconf.\-lex.\-c}}
+\subsubsection[{yy\-\_\-act}]{\setlength{\rightskip}{0pt plus 5cm}register int yy\-\_\-act}}\label{zconf_8lex_8c_a7ffc8c947830757dd87ad202a6823edd}
+\hypertarget{zconf_8lex_8c_a71cf769ce518e8687bf8999b278c65f4}{\index{zconf.\-lex.\-c@{zconf.\-lex.\-c}!yy\-\_\-bp@{yy\-\_\-bp}}
+\index{yy\-\_\-bp@{yy\-\_\-bp}!zconf.lex.c@{zconf.\-lex.\-c}}
+\subsubsection[{yy\-\_\-bp}]{\setlength{\rightskip}{0pt plus 5cm}register char $\ast$ yy\-\_\-bp}}\label{zconf_8lex_8c_a71cf769ce518e8687bf8999b278c65f4}
+\hypertarget{zconf_8lex_8c_ab98daea4ec951dfa966b5ca0f8133d38}{\index{zconf.\-lex.\-c@{zconf.\-lex.\-c}!yy\-\_\-cp@{yy\-\_\-cp}}
+\index{yy\-\_\-cp@{yy\-\_\-cp}!zconf.lex.c@{zconf.\-lex.\-c}}
+\subsubsection[{yy\-\_\-cp}]{\setlength{\rightskip}{0pt plus 5cm}register char$\ast$ yy\-\_\-cp}}\label{zconf_8lex_8c_ab98daea4ec951dfa966b5ca0f8133d38}
+\hypertarget{zconf_8lex_8c_abcefb20c54ce0f92452cfbb9cf657670}{\index{zconf.\-lex.\-c@{zconf.\-lex.\-c}!Y\-Y\-\_\-\-D\-E\-C\-L@{Y\-Y\-\_\-\-D\-E\-C\-L}}
+\index{Y\-Y\-\_\-\-D\-E\-C\-L@{Y\-Y\-\_\-\-D\-E\-C\-L}!zconf.lex.c@{zconf.\-lex.\-c}}
+\subsubsection[{Y\-Y\-\_\-\-D\-E\-C\-L}]{\setlength{\rightskip}{0pt plus 5cm}Y\-Y\-\_\-\-D\-E\-C\-L}}\label{zconf_8lex_8c_abcefb20c54ce0f92452cfbb9cf657670}
+{\bfseries Initial value\-:}
+\begin{DoxyCode}
+\{
+    \textcolor{keyword}{register} \hyperlink{zconf_8lex_8c_a9ba7c416f135b0f0c1f4addded4616b5}{yy\_state\_type} yy\_current\_state
+\end{DoxyCode}
+The main scanner function which does all the work. \hypertarget{zconf_8lex_8c_a7782ffb23d97a32fa53e8ae772ea15d0}{\index{zconf.\-lex.\-c@{zconf.\-lex.\-c}!zconf\-\_\-flex\-\_\-debug@{zconf\-\_\-flex\-\_\-debug}}
+\index{zconf\-\_\-flex\-\_\-debug@{zconf\-\_\-flex\-\_\-debug}!zconf.lex.c@{zconf.\-lex.\-c}}
+\subsubsection[{zconf\-\_\-flex\-\_\-debug}]{\setlength{\rightskip}{0pt plus 5cm}int zconf\-\_\-flex\-\_\-debug = 0}}\label{zconf_8lex_8c_a7782ffb23d97a32fa53e8ae772ea15d0}
+\hypertarget{zconf_8lex_8c_aa6bdbfa61131d6a4b6edb9668ee68245}{\index{zconf.\-lex.\-c@{zconf.\-lex.\-c}!zconfin@{zconfin}}
+\index{zconfin@{zconfin}!zconf.lex.c@{zconf.\-lex.\-c}}
+\subsubsection[{zconfin}]{\setlength{\rightskip}{0pt plus 5cm}F\-I\-L\-E $\ast$ zconfin = (F\-I\-L\-E $\ast$) 0}}\label{zconf_8lex_8c_aa6bdbfa61131d6a4b6edb9668ee68245}
+\hypertarget{zconf_8lex_8c_ae2e0278627f45ce903fcf64d64458e41}{\index{zconf.\-lex.\-c@{zconf.\-lex.\-c}!zconfleng@{zconfleng}}
+\index{zconfleng@{zconfleng}!zconf.lex.c@{zconf.\-lex.\-c}}
+\subsubsection[{zconfleng}]{\setlength{\rightskip}{0pt plus 5cm}int zconfleng}}\label{zconf_8lex_8c_ae2e0278627f45ce903fcf64d64458e41}
+\hypertarget{zconf_8lex_8c_a7e294bd28ace210fbdac30bf6ca5320f}{\index{zconf.\-lex.\-c@{zconf.\-lex.\-c}!zconflineno@{zconflineno}}
+\index{zconflineno@{zconflineno}!zconf.lex.c@{zconf.\-lex.\-c}}
+\subsubsection[{zconflineno}]{\setlength{\rightskip}{0pt plus 5cm}int zconflineno = 1}}\label{zconf_8lex_8c_a7e294bd28ace210fbdac30bf6ca5320f}
+\hypertarget{zconf_8lex_8c_a5cd9e3e7f1b374a77f728c9722ab5084}{\index{zconf.\-lex.\-c@{zconf.\-lex.\-c}!zconfout@{zconfout}}
+\index{zconfout@{zconfout}!zconf.lex.c@{zconf.\-lex.\-c}}
+\subsubsection[{zconfout}]{\setlength{\rightskip}{0pt plus 5cm}F\-I\-L\-E $\ast$ zconfout = (F\-I\-L\-E $\ast$) 0}}\label{zconf_8lex_8c_a5cd9e3e7f1b374a77f728c9722ab5084}
+\hypertarget{zconf_8lex_8c_a35c57269c2d2dff52f687a0a83bcc133}{\index{zconf.\-lex.\-c@{zconf.\-lex.\-c}!zconftext@{zconftext}}
+\index{zconftext@{zconftext}!zconf.lex.c@{zconf.\-lex.\-c}}
+\subsubsection[{zconftext}]{\setlength{\rightskip}{0pt plus 5cm}char $\ast$ zconftext}}\label{zconf_8lex_8c_a35c57269c2d2dff52f687a0a83bcc133}
