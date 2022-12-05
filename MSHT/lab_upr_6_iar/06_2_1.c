@@ -1,0 +1,73 @@
+#include <stdint.h>
+#include "io430.h"
+
+#define TMP102ADDR 0x48 //Дефиниране на TMP102 адреса, Datasheet на TMP102 -> стр. 10
+
+// Тактов генератор DCO = 8MHz, Userguide -> стр. 104
+void init()
+{
+  CSCTL0_H = 0xA5;
+  CSCTL1 |= DCORSEL;    //DCORSEL = 1
+  CSCTL1 &= ~0x0E;      //Занули DCOFSEL  битовете
+  CSCTL1 |= DCOFSEL_3;  //Задай DCOFSEL битовете = 011b = 3h
+  CSCTL2 = 0x00;        /Занули всички битове от регистъра CSCTL2
+  CSCTL2 |= (SELA_1 | SELS_3 | SELM_3); //ACLK = VLOCLK; SMCLK = DCO; MCLK = DCO
+  CSCTL3 = 0x00;        //Занули всички битове от регистъра CSCTL3
+  CSCTL3 |= (DIVA_0 | DIVS_0 | DIVM_0); //Всички делители на тактовите сигнали ÷ 1
+}
+
+void init_I2C()
+{
+  //Превключи мултиплексора от P4.0 и P4.1 към I2C модула
+  P4SEL0 &= ~0x03;      //MSP430FR6989 Datasheet стр. 103
+  P4SEL1 |= 0x03;      //MSP430FR6989 Datasheet стр. 103
+  LCDCPCTL0 &= ~0x0C;   //S3(P4.0) = 0, S2(P4.1) = 0; MSP430FR6989 Userguide стр. 945
+
+  UCB1CTLW0 |= UCSWRST; //Задръж I2C модула в reset, докато се конфигурира
+  UCB1CTLW0 |= (UCMODE_3 | UCMST); //Избери режим I2C | роля - master
+  UCB1CTLW0 |= UCSSEL_3;        //Източник на тактов сигнал за I2C модула е SMCLK
+  UCB1BRW = 0x50;               //SMCLK / 80 = 100 kbps
+  UCB1I2CSA = TMP102ADDR;       //Укажи адреса на TMP102 датчика (slave устройството)
+  UCB1CTLW0 &= ~UCSWRST;        //Изведи модула от reset
+}
+
+void init_TMP102()
+{
+  UCB1CTLW0 |= (UCTXSTT |UCTR); //Генерирай start условие, режим предавател
+  __delay_cycles(500); //Изчакай предаването на start условието
+  UCB1TXBUF = 0x00; //Запиши данните, които ще се изпращат
+  while(!(UCB1IFG & UCTXIFG0)){ } //Изчакай данните от UCB1TXBUF да се изпратят
+  UCB1CTLW0 |= UCTXSTP; //Генерирай stop условие
+  __delay_cycles(1000); 
+}
+
+void main( void )
+{
+  uint8_t lsb;
+  uint16_t msb;
+  volatile uint16_t result;
+
+  WDTCTL = WDTPW | WDTHOLD;
+  PM5CTL0 &= ~LOCKLPM5;
+
+  init();
+  init_I2C();
+  init_TMP102();
+
+  while(1)
+  {  
+   UCB1CTLW0 &= ~UCTR; //Режим приемник, Userguide -> стр. 828
+
+   UCB1CTLW0 |= UCTXSTT;              //Генерирай start условие 
+   while(!(UCB1IFG & UCRXIFG0)){ }    //Изчакай първия байт да пристигне в UCB1RXBUF
+   lsb = UCB1RXBUF;                   //Запиши първия байт в променливата lsb
+   while(!(UCB1IFG & UCRXIFG0)){ }    //Изчакай втория байт да пристигне в UCB0RXBUF
+   msb = UCB1RXBUF;                   //Запиши втория байт в променливата msb
+   UCB1CTLW0 |= UCTXSTP;              //Генерирай stop условие   
+
+   result = (msb<<8) | lsb;           //Обедини младшата и старшата част на резултата в една променлива
+   result >>= 4;                      //Младшите 4 бита са винаги 0, затова ги премахни  
+   __delay_cycles(8000);              //Сложете точка на прекъсване тук, ако искате да прочетете резултата 
+                                      //като целочислена стойност
+  }
+}

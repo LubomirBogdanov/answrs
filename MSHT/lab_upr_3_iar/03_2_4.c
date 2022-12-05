@@ -1,0 +1,56 @@
+#include "io430.h"
+
+void main( void )
+{
+  unsigned long i;
+  WDTCTL = WDTPW | WDTHOLD;  // Stop watchdog timer to prevent time out reset
+  PM5CTL0 &= ~LOCKLPM5; //Изключи високоимпедансното състояние на GPIO
+
+  P8DIR |= 0x30; //Конфигурирай изводи PJ.0 и PJ.1 като изходи.
+  P8OUT &= ~0x30; //Инициализирай изводи P8.4 и P8.5 с лог. 0
+  P9DIR |= 0x40; //Конфигурирай извод P3.7 като изход.
+  P9OUT &= ~0x40; //Инициализирай извод P3.7 с лог. 0.
+
+  P1DIR &= ~0x02; //Конфигурирай извод P1.1 като вход, MSP430FR6989 Userguide -> стр. 386
+  P1REN |= 0x02; //Включи издърпващ резистор на извод P1.1, MSP430FR6989 Userguide -> стр. 387
+  P1OUT |= 0x02; //Свържи издърпващия резистор към захранване Vdd, MSP430FR6989 Userguide -> стр. 386
+
+  P1IES |= 0x02;//Избери прекъсване по падащ фронт, MSP430FR6989 Userguide -> стр. 388
+  P1IFG = 0x00;//Нулирай всички флагове на прекъсване за порта, MSP430FR6989 Userguide -> стр. 389
+  P1IE |= 0x02;//Разреши прекъсването от извод P1.1, MSP430FR6989 Userguide -> стр. 388
+
+  __enable_interrupt( ); //Разреши глобално прекъсванията към микропроцесора MSP430.
+
+  while(1)
+  {
+    P8OUT |= 0x10;  
+    P8OUT &= ~0x20;      
+    for(i = 0; i < 40000; i++){}
+    P8OUT &= ~0x10;  
+    P8OUT |= 0x20;      
+    for(i = 0; i < 40000; i++){}
+  }
+}
+
+#pragma vector=PORT1_VECTOR //Хендлер на прекъсване за GPIO модул 1.
+__interrupt void port1_handler(void)
+{
+  unsigned int interrupt_flag;
+  unsigned long i;
+
+  interrupt_flag = P1IFG; //Прочети регистъра с флаговете.
+
+  switch(interrupt_flag)
+  {
+  case 0x01: //Прекъсване от извод P1.0. 
+    break;
+  case 0x02: //Прекъсване от извод P1.1.   
+    P9OUT ^= 0x40; //Преобърни извод P9.6, чрез логически оператор от C 
+    break;
+  default: //Неразпознат източник на прекъсване.    
+    break;
+  }
+
+  for(i = 0; i < 30000; i++){ } //Закъснение срещу притрепване на контакта.
+  P1IFG = 0x00; //Нулирай флаговете на прекъсване. 
+}
