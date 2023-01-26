@@ -1,0 +1,21 @@
+#include <msp430.h> 
+#include "uartstdio.h"
+
+
+/**
+ * main.c
+ */
+int main(void)
+{
+	WDTCTL = WDTPW | WDTHOLD;	// stop watchdog timer
+	
+    UARTStdioInit( );
+    UARTprintf("\n\r************************\n\r");
+    UARTprintf("Starting Saturn server application ...\n\r");
+
+    while(1){
+        UARTprintf("Starting Saturn server application ...\n\r");
+    }
+
+	return 0;
+}

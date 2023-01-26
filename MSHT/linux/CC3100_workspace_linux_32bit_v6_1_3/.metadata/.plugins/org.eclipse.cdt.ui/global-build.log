@@ -1,0 +1,292 @@
+
+**** Build of configuration Debug for project websrv ****
+
+/home/lab1362-01/programs/ti/ccsv6/utils/bin/gmake -k -j 2 all -O 
+Building file: ../cli_uart.c
+Invoking: MSP430 Compiler
+"/home/lab1362-01/programs/ti/ccsv6/tools/compiler/ti-cgt-msp430_15.12.1.LTS/bin/cl430" -vmspx --data_model=restricted --use_hw_mpy=F5 --include_path="/home/lab1362-01/programs/ti/ccsv6/ccs_base/msp430/include" --include_path="/home/lab1362-01/Desktop/CC3100_workspace_linux_32bit_v6_1_3/websrv/common" --include_path="/home/lab1362-01/Desktop/CC3100_workspace_linux_32bit_v6_1_3/websrv/simplelink/include" --include_path="/home/lab1362-01/Desktop/CC3100_workspace_linux_32bit_v6_1_3/websrv" --include_path="/home/lab1362-01/programs/ti/ccsv6/tools/compiler/ti-cgt-msp430_15.12.1.LTS/include" --advice:power="all" --advice:hw_config=all -g --define=__MSP430FR6989__ --define=__CCS__ --define=_USE_CLI_ --define=_MPU_ENABLE --display_error_number --diag_warning=225 --diag_wrap=off --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU40 --printf_support=full --preproc_with_compile --preproc_dependency="cli_uart.d"  "../cli_uart.c"
+Finished building: ../cli_uart.c
+ 
+Building file: ../board.c
+Invoking: MSP430 Compiler
+"/home/lab1362-01/programs/ti/ccsv6/tools/compiler/ti-cgt-msp430_15.12.1.LTS/bin/cl430" -vmspx --data_model=restricted --use_hw_mpy=F5 --include_path="/home/lab1362-01/programs/ti/ccsv6/ccs_base/msp430/include" --include_path="/home/lab1362-01/Desktop/CC3100_workspace_linux_32bit_v6_1_3/websrv/common" --include_path="/home/lab1362-01/Desktop/CC3100_workspace_linux_32bit_v6_1_3/websrv/simplelink/include" --include_path="/home/lab1362-01/Desktop/CC3100_workspace_linux_32bit_v6_1_3/websrv" --include_path="/home/lab1362-01/programs/ti/ccsv6/tools/compiler/ti-cgt-msp430_15.12.1.LTS/include" --advice:power="all" --advice:hw_config=all -g --define=__MSP430FR6989__ --define=__CCS__ --define=_USE_CLI_ --define=_MPU_ENABLE --display_error_number --diag_warning=225 --diag_wrap=off --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU40 --printf_support=full --preproc_with_compile --preproc_dependency="board.d"  "../board.c"
+"../board.c", line 247: remark #1527-D: (ULP 2.1) Detected SW delay loop using __delay_cycles. Recommend using a timer module instead
+"../board.c", line 260: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+Finished building: ../board.c
+ 
+Building file: ../leds.c
+Invoking: MSP430 Compiler
+"/home/lab1362-01/programs/ti/ccsv6/tools/compiler/ti-cgt-msp430_15.12.1.LTS/bin/cl430" -vmspx --data_model=restricted --use_hw_mpy=F5 --include_path="/home/lab1362-01/programs/ti/ccsv6/ccs_base/msp430/include" --include_path="/home/lab1362-01/Desktop/CC3100_workspace_linux_32bit_v6_1_3/websrv/common" --include_path="/home/lab1362-01/Desktop/CC3100_workspace_linux_32bit_v6_1_3/websrv/simplelink/include" --include_path="/home/lab1362-01/Desktop/CC3100_workspace_linux_32bit_v6_1_3/websrv" --include_path="/home/lab1362-01/programs/ti/ccsv6/tools/compiler/ti-cgt-msp430_15.12.1.LTS/include" --advice:power="all" --advice:hw_config=all -g --define=__MSP430FR6989__ --define=__CCS__ --define=_USE_CLI_ --define=_MPU_ENABLE --display_error_number --diag_warning=225 --diag_wrap=off --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU40 --printf_support=full --preproc_with_compile --preproc_dependency="leds.d"  "../leds.c"
+"../leds.c", line 12: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../leds.c", line 12: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+Finished building: ../leds.c
+ 
+Building file: ../main.c
+Invoking: MSP430 Compiler
+"/home/lab1362-01/programs/ti/ccsv6/tools/compiler/ti-cgt-msp430_15.12.1.LTS/bin/cl430" -vmspx --data_model=restricted --use_hw_mpy=F5 --include_path="/home/lab1362-01/programs/ti/ccsv6/ccs_base/msp430/include" --include_path="/home/lab1362-01/Desktop/CC3100_workspace_linux_32bit_v6_1_3/websrv/common" --include_path="/home/lab1362-01/Desktop/CC3100_workspace_linux_32bit_v6_1_3/websrv/simplelink/include" --include_path="/home/lab1362-01/Desktop/CC3100_workspace_linux_32bit_v6_1_3/websrv" --include_path="/home/lab1362-01/programs/ti/ccsv6/tools/compiler/ti-cgt-msp430_15.12.1.LTS/include" --advice:power="all" --advice:hw_config=all -g --define=__MSP430FR6989__ --define=__CCS__ --define=_USE_CLI_ --define=_MPU_ENABLE --display_error_number --diag_warning=225 --diag_wrap=off --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU40 --printf_support=full --preproc_with_compile --preproc_dependency="main.d"  "../main.c"
+"../main.c", line 50: remark #1546-D: (ULP 15.1) Detected consecutive bitfield assigns. Recommend using bit mask instead
+"../main.c", line 58: remark #1546-D: (ULP 15.1) Detected consecutive bitfield assigns. Recommend using bit mask instead
+"../main.c", line 22: remark #1535-D: (ULP 8.1) variable "server_sock_addr_size" is used as a constant. Recommend declaring variable as either 'static const' or 'const'
+Finished building: ../main.c
+ 
+Building file: ../sensors.c
+Invoking: MSP430 Compiler
+"/home/lab1362-01/programs/ti/ccsv6/tools/compiler/ti-cgt-msp430_15.12.1.LTS/bin/cl430" -vmspx --data_model=restricted --use_hw_mpy=F5 --include_path="/home/lab1362-01/programs/ti/ccsv6/ccs_base/msp430/include" --include_path="/home/lab1362-01/Desktop/CC3100_workspace_linux_32bit_v6_1_3/websrv/common" --include_path="/home/lab1362-01/Desktop/CC3100_workspace_linux_32bit_v6_1_3/websrv/simplelink/include" --include_path="/home/lab1362-01/Desktop/CC3100_workspace_linux_32bit_v6_1_3/websrv" --include_path="/home/lab1362-01/programs/ti/ccsv6/tools/compiler/ti-cgt-msp430_15.12.1.LTS/include" --advice:power="all" --advice:hw_config=all -g --define=__MSP430FR6989__ --define=__CCS__ --define=_USE_CLI_ --define=_MPU_ENABLE --display_error_number --diag_warning=225 --diag_wrap=off --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU40 --printf_support=full --preproc_with_compile --preproc_dependency="sensors.d"  "../sensors.c"
+"../sensors.c", line 64: remark #1528-D: (ULP 3.1) Detected flag polling using ADC12BUSY. Recommend using an interrupt combined with enter LPMx and ISR
+"../sensors.c", line 70: warning #169-D: argument of type "uint8_t *" is incompatible with parameter of type "char *"
+"../sensors.c", line 70: remark #1532-D: (ULP 5.3) Detected sprintf() operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+Finished building: ../sensors.c
+ 
+Building file: ../spi.c
+Invoking: MSP430 Compiler
+"/home/lab1362-01/programs/ti/ccsv6/tools/compiler/ti-cgt-msp430_15.12.1.LTS/bin/cl430" -vmspx --data_model=restricted --use_hw_mpy=F5 --include_path="/home/lab1362-01/programs/ti/ccsv6/ccs_base/msp430/include" --include_path="/home/lab1362-01/Desktop/CC3100_workspace_linux_32bit_v6_1_3/websrv/common" --include_path="/home/lab1362-01/Desktop/CC3100_workspace_linux_32bit_v6_1_3/websrv/simplelink/include" --include_path="/home/lab1362-01/Desktop/CC3100_workspace_linux_32bit_v6_1_3/websrv" --include_path="/home/lab1362-01/programs/ti/ccsv6/tools/compiler/ti-cgt-msp430_15.12.1.LTS/include" --advice:power="all" --advice:hw_config=all -g --define=__MSP430FR6989__ --define=__CCS__ --define=_USE_CLI_ --define=_MPU_ENABLE --display_error_number --diag_warning=225 --diag_wrap=off --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU40 --printf_support=full --preproc_with_compile --preproc_dependency="spi.d"  "../spi.c"
+"../spi.c", line 129: remark #1528-D: (ULP 3.1) Detected flag polling using UCB0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../spi.c", line 131: remark #1528-D: (ULP 3.1) Detected flag polling using UCB0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../spi.c", line 159: remark #1528-D: (ULP 3.1) Detected flag polling using UCB0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../spi.c", line 161: remark #1528-D: (ULP 3.1) Detected flag polling using UCB0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../spi.c", line 157: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../spi.c", line 157: remark #1543-D: (ULP 12.2) Detected for loop with repetitive data transfer. Recommend using DMA
+"../spi.c", line 162: remark #2553-D: (ULP 14.1) Array index (involving "i") of type "int". Recommend using "unsigned int"
+Finished building: ../spi.c
+ 
+Building file: ../simple_link_func.c
+Invoking: MSP430 Compiler
+"/home/lab1362-01/programs/ti/ccsv6/tools/compiler/ti-cgt-msp430_15.12.1.LTS/bin/cl430" -vmspx --data_model=restricted --use_hw_mpy=F5 --include_path="/home/lab1362-01/programs/ti/ccsv6/ccs_base/msp430/include" --include_path="/home/lab1362-01/Desktop/CC3100_workspace_linux_32bit_v6_1_3/websrv/common" --include_path="/home/lab1362-01/Desktop/CC3100_workspace_linux_32bit_v6_1_3/websrv/simplelink/include" --include_path="/home/lab1362-01/Desktop/CC3100_workspace_linux_32bit_v6_1_3/websrv" --include_path="/home/lab1362-01/programs/ti/ccsv6/tools/compiler/ti-cgt-msp430_15.12.1.LTS/include" --advice:power="all" --advice:hw_config=all -g --define=__MSP430FR6989__ --define=__CCS__ --define=_USE_CLI_ --define=_MPU_ENABLE --display_error_number --diag_warning=225 --diag_wrap=off --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU40 --printf_support=full --preproc_with_compile --preproc_dependency="simple_link_func.d"  "../simple_link_func.c"
+"../simple_link_func.c", line 11: remark #1535-D: (ULP 8.1) variable "g_Station_Mask" is used as a constant. Recommend declaring variable as either 'static const' or 'const'
+Finished building: ../simple_link_func.c
+ 
+Building file: ../uart.c
+Invoking: MSP430 Compiler
+"/home/lab1362-01/programs/ti/ccsv6/tools/compiler/ti-cgt-msp430_15.12.1.LTS/bin/cl430" -vmspx --data_model=restricted --use_hw_mpy=F5 --include_path="/home/lab1362-01/programs/ti/ccsv6/ccs_base/msp430/include" --include_path="/home/lab1362-01/Desktop/CC3100_workspace_linux_32bit_v6_1_3/websrv/common" --include_path="/home/lab1362-01/Desktop/CC3100_workspace_linux_32bit_v6_1_3/websrv/simplelink/include" --include_path="/home/lab1362-01/Desktop/CC3100_workspace_linux_32bit_v6_1_3/websrv" --include_path="/home/lab1362-01/programs/ti/ccsv6/tools/compiler/ti-cgt-msp430_15.12.1.LTS/include" --advice:power="all" --advice:hw_config=all -g --define=__MSP430FR6989__ --define=__CCS__ --define=_USE_CLI_ --define=_MPU_ENABLE --display_error_number --diag_warning=225 --diag_wrap=off --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU40 --printf_support=full --preproc_with_compile --preproc_dependency="uart.d"  "../uart.c"
+"../uart.c", line 47: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../uart.c", line 55: remark #1528-D: (ULP 3.1) Detected flag polling using UCA0IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../uart.c", line 59: remark #1528-D: (ULP 3.1) Detected flag polling using UCBUSY. Recommend using an interrupt combined with enter LPMx and ISR
+Finished building: ../uart.c
+ 
+Building file: ../uartstdio.c
+Invoking: MSP430 Compiler
+"/home/lab1362-01/programs/ti/ccsv6/tools/compiler/ti-cgt-msp430_15.12.1.LTS/bin/cl430" -vmspx --data_model=restricted --use_hw_mpy=F5 --include_path="/home/lab1362-01/programs/ti/ccsv6/ccs_base/msp430/include" --include_path="/home/lab1362-01/Desktop/CC3100_workspace_linux_32bit_v6_1_3/websrv/common" --include_path="/home/lab1362-01/Desktop/CC3100_workspace_linux_32bit_v6_1_3/websrv/simplelink/include" --include_path="/home/lab1362-01/Desktop/CC3100_workspace_linux_32bit_v6_1_3/websrv" --include_path="/home/lab1362-01/programs/ti/ccsv6/tools/compiler/ti-cgt-msp430_15.12.1.LTS/include" --advice:power="all" --advice:hw_config=all -g --define=__MSP430FR6989__ --define=__CCS__ --define=_USE_CLI_ --define=_MPU_ENABLE --display_error_number --diag_warning=225 --diag_wrap=off --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU40 --printf_support=full --preproc_with_compile --preproc_dependency="uartstdio.d"  "../uartstdio.c"
+"../uartstdio.c", line 90: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../uartstdio.c", line 348: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../uartstdio.c", line 347: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+"../uartstdio.c", line 512: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../uartstdio.c", line 512: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+"../uartstdio.c", line 607: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+"../uartstdio.c", line 609: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../uartstdio.c", line 671: remark #1530-D: (ULP 5.1) Detected modulo operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../uartstdio.c", line 674: remark #1530-D: (ULP 5.1) Detected modulo operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../uartstdio.c", line 668: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../uartstdio.c", line 42: remark #1534-D: (ULP 7.1) Detected use of global variable "g_pcHex" within one function "UARTprintf". Recommend placing variable in the function locally
+"../uartstdio.c", line 43: remark #1534-D: (ULP 7.1) Detected use of global variable "g_pcHexUpper" within one function "UARTprintf". Recommend placing variable in the function locally
+Finished building: ../uartstdio.c
+ 
+Building file: ../common/jsmn.c
+Invoking: MSP430 Compiler
+"/home/lab1362-01/programs/ti/ccsv6/tools/compiler/ti-cgt-msp430_15.12.1.LTS/bin/cl430" -vmspx --data_model=restricted --use_hw_mpy=F5 --include_path="/home/lab1362-01/programs/ti/ccsv6/ccs_base/msp430/include" --include_path="/home/lab1362-01/Desktop/CC3100_workspace_linux_32bit_v6_1_3/websrv/common" --include_path="/home/lab1362-01/Desktop/CC3100_workspace_linux_32bit_v6_1_3/websrv/simplelink/include" --include_path="/home/lab1362-01/Desktop/CC3100_workspace_linux_32bit_v6_1_3/websrv" --include_path="/home/lab1362-01/programs/ti/ccsv6/tools/compiler/ti-cgt-msp430_15.12.1.LTS/include" --advice:power="all" --advice:hw_config=all -g --define=__MSP430FR6989__ --define=__CCS__ --define=_USE_CLI_ --define=_MPU_ENABLE --display_error_number --diag_warning=225 --diag_wrap=off --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU40 --printf_support=full --preproc_with_compile --preproc_dependency="common/jsmn.d" --obj_directory="common"  "../common/jsmn.c"
+"../common/jsmn.c", line 44: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../common/jsmn.c", line 95: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../common/jsmn.c", line 127: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../common/jsmn.c", line 127: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../common/jsmn.c", line 127: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../common/jsmn.c", line 160: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../common/jsmn.c", line 175: remark #2553-D: (ULP 14.1) Array index (involving "parser") of type "int". Recommend using "unsigned int"
+"../common/jsmn.c", line 235: remark #2553-D: (ULP 14.1) Array index (involving "parser") of type "int". Recommend using "unsigned int"
+"../common/jsmn.c", line 244: remark #2553-D: (ULP 14.1) Array index (involving "parser") of type "int". Recommend using "unsigned int"
+"../common/jsmn.c", line 245: remark #2553-D: (ULP 14.1) Array index (involving "parser") of type "int". Recommend using "unsigned int"
+"../common/jsmn.c", line 250: remark #2553-D: (ULP 14.1) Array index (involving "i") of type "int". Recommend using "unsigned int"
+"../common/jsmn.c", line 250: remark #2553-D: (ULP 14.1) Array index (involving "i") of type "int". Recommend using "unsigned int"
+"../common/jsmn.c", line 251: remark #2553-D: (ULP 14.1) Array index (involving "i") of type "int". Recommend using "unsigned int"
+"../common/jsmn.c", line 251: remark #2553-D: (ULP 14.1) Array index (involving "i") of type "int". Recommend using "unsigned int"
+"../common/jsmn.c", line 281: remark #2553-D: (ULP 14.1) Array index (involving "parser") of type "int". Recommend using "unsigned int"
+"../common/jsmn.c", line 294: remark #2553-D: (ULP 14.1) Array index (involving "i") of type "int". Recommend using "unsigned int"
+"../common/jsmn.c", line 294: remark #2553-D: (ULP 14.1) Array index (involving "i") of type "int". Recommend using "unsigned int"
+"../common/jsmn.c", line 175: remark #2553-D: (ULP 14.1) Array index (involving "parser") of type "int". Recommend using "unsigned int"
+"../common/jsmn.c", line 235: remark #2553-D: (ULP 14.1) Array index (involving "parser") of type "int". Recommend using "unsigned int"
+"../common/jsmn.c", line 244: remark #2553-D: (ULP 14.1) Array index (involving "parser") of type "int". Recommend using "unsigned int"
+"../common/jsmn.c", line 245: remark #2553-D: (ULP 14.1) Array index (involving "parser") of type "int". Recommend using "unsigned int"
+"../common/jsmn.c", line 250: remark #2553-D: (ULP 14.1) Array index (involving "i") of type "int". Recommend using "unsigned int"
+"../common/jsmn.c", line 250: remark #2553-D: (ULP 14.1) Array index (involving "i") of type "int". Recommend using "unsigned int"
+"../common/jsmn.c", line 251: remark #2553-D: (ULP 14.1) Array index (involving "i") of type "int". Recommend using "unsigned int"
+"../common/jsmn.c", line 251: remark #2553-D: (ULP 14.1) Array index (involving "i") of type "int". Recommend using "unsigned int"
+"../common/jsmn.c", line 281: remark #2553-D: (ULP 14.1) Array index (involving "parser") of type "int". Recommend using "unsigned int"
+Finished building: ../common/jsmn.c
+ 
+Building file: ../simplelink/source/device.c
+Invoking: MSP430 Compiler
+"/home/lab1362-01/programs/ti/ccsv6/tools/compiler/ti-cgt-msp430_15.12.1.LTS/bin/cl430" -vmspx --data_model=restricted --use_hw_mpy=F5 --include_path="/home/lab1362-01/programs/ti/ccsv6/ccs_base/msp430/include" --include_path="/home/lab1362-01/Desktop/CC3100_workspace_linux_32bit_v6_1_3/websrv/common" --include_path="/home/lab1362-01/Desktop/CC3100_workspace_linux_32bit_v6_1_3/websrv/simplelink/include" --include_path="/home/lab1362-01/Desktop/CC3100_workspace_linux_32bit_v6_1_3/websrv" --include_path="/home/lab1362-01/programs/ti/ccsv6/tools/compiler/ti-cgt-msp430_15.12.1.LTS/include" --advice:power="all" --advice:hw_config=all -g --define=__MSP430FR6989__ --define=__CCS__ --define=_USE_CLI_ --define=_MPU_ENABLE --display_error_number --diag_warning=225 --diag_wrap=off --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU40 --printf_support=full --preproc_with_compile --preproc_dependency="simplelink/source/device.d" --obj_directory="simplelink/source"  "../simplelink/source/device.c"
+"../simplelink/source/device.c", line 71: remark #2553-D: (ULP 14.1) Array index (involving "Status") of type "long". Recommend using "unsigned long"
+"../simplelink/source/device.c", line 230: remark #1534-D: (ULP 7.1) Detected use of global variable "_SlStopCmdCtrl" within one function "sl_Stop". Recommend placing variable in the function locally
+"../simplelink/source/device.c", line 313: remark #1534-D: (ULP 7.1) Detected use of global variable "_SlEventMaskSetCmdCtrl" within one function "sl_EventMaskSet". Recommend placing variable in the function locally
+"../simplelink/source/device.c", line 351: remark #1534-D: (ULP 7.1) Detected use of global variable "_SlEventMaskGetCmdCtrl" within one function "sl_EventMaskGet". Recommend placing variable in the function locally
+"../simplelink/source/device.c", line 391: remark #1534-D: (ULP 7.1) Detected use of global variable "_SlDeviceGetCmdCtrl" within one function "sl_DevGet". Recommend placing variable in the function locally
+"../simplelink/source/device.c", line 461: remark #1534-D: (ULP 7.1) Detected use of global variable "_SlDeviceSetCmdCtrl" within one function "sl_DevSet". Recommend placing variable in the function locally
+Finished building: ../simplelink/source/device.c
+ 
+Building file: ../simplelink/source/flowcont.c
+Invoking: MSP430 Compiler
+"/home/lab1362-01/programs/ti/ccsv6/tools/compiler/ti-cgt-msp430_15.12.1.LTS/bin/cl430" -vmspx --data_model=restricted --use_hw_mpy=F5 --include_path="/home/lab1362-01/programs/ti/ccsv6/ccs_base/msp430/include" --include_path="/home/lab1362-01/Desktop/CC3100_workspace_linux_32bit_v6_1_3/websrv/common" --include_path="/home/lab1362-01/Desktop/CC3100_workspace_linux_32bit_v6_1_3/websrv/simplelink/include" --include_path="/home/lab1362-01/Desktop/CC3100_workspace_linux_32bit_v6_1_3/websrv" --include_path="/home/lab1362-01/programs/ti/ccsv6/tools/compiler/ti-cgt-msp430_15.12.1.LTS/include" --advice:power="all" --advice:hw_config=all -g --define=__MSP430FR6989__ --define=__CCS__ --define=_USE_CLI_ --define=_MPU_ENABLE --display_error_number --diag_warning=225 --diag_wrap=off --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU40 --printf_support=full --preproc_with_compile --preproc_dependency="simplelink/source/flowcont.d" --obj_directory="simplelink/source"  "../simplelink/source/flowcont.c"
+Finished building: ../simplelink/source/flowcont.c
+ 
+Building file: ../simplelink/source/fs.c
+Invoking: MSP430 Compiler
+"/home/lab1362-01/programs/ti/ccsv6/tools/compiler/ti-cgt-msp430_15.12.1.LTS/bin/cl430" -vmspx --data_model=restricted --use_hw_mpy=F5 --include_path="/home/lab1362-01/programs/ti/ccsv6/ccs_base/msp430/include" --include_path="/home/lab1362-01/Desktop/CC3100_workspace_linux_32bit_v6_1_3/websrv/common" --include_path="/home/lab1362-01/Desktop/CC3100_workspace_linux_32bit_v6_1_3/websrv/simplelink/include" --include_path="/home/lab1362-01/Desktop/CC3100_workspace_linux_32bit_v6_1_3/websrv" --include_path="/home/lab1362-01/programs/ti/ccsv6/tools/compiler/ti-cgt-msp430_15.12.1.LTS/include" --advice:power="all" --advice:hw_config=all -g --define=__MSP430FR6989__ --define=__CCS__ --define=_USE_CLI_ --define=_MPU_ENABLE --display_error_number --diag_warning=225 --diag_wrap=off --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU40 --printf_support=full --preproc_with_compile --preproc_dependency="simplelink/source/fs.d" --obj_directory="simplelink/source"  "../simplelink/source/fs.c"
+"../simplelink/source/fs.c", line 81: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../simplelink/source/fs.c", line 86: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../simplelink/source/fs.c", line 87: remark #1530-D: (ULP 5.1) Detected modulo operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../simplelink/source/fs.c", line 80: remark #1535-D: (ULP 8.1) variable "granTable" is used as a constant. Recommend declaring variable as either 'static const' or 'const'
+"../simplelink/source/fs.c", line 129: remark #1546-D: (ULP 15.1) Detected consecutive bitfield assigns. Recommend using bit mask instead
+"../simplelink/source/fs.c", line 400: remark #1546-D: (ULP 15.1) Detected consecutive bitfield assigns. Recommend using bit mask instead
+"../simplelink/source/fs.c", line 446: remark #1546-D: (ULP 15.1) Detected consecutive bitfield assigns. Recommend using bit mask instead
+"../simplelink/source/fs.c", line 111: remark #1534-D: (ULP 7.1) Detected use of global variable "_SlFsOpenCmdCtrl" within one function "sl_FsOpen". Recommend placing variable in the function locally
+"../simplelink/source/fs.c", line 172: remark #1534-D: (ULP 7.1) Detected use of global variable "_SlFsCloseCmdCtrl" within one function "sl_FsClose". Recommend placing variable in the function locally
+"../simplelink/source/fs.c", line 227: remark #1534-D: (ULP 7.1) Detected use of global variable "_SlFsReadCmdCtrl" within one function "sl_FsRead". Recommend placing variable in the function locally
+"../simplelink/source/fs.c", line 303: remark #1534-D: (ULP 7.1) Detected use of global variable "_SlFsWriteCmdCtrl" within one function "sl_FsWrite". Recommend placing variable in the function locally
+"../simplelink/source/fs.c", line 383: remark #1534-D: (ULP 7.1) Detected use of global variable "_SlFsGetInfoCmdCtrl" within one function "sl_FsGetInfo". Recommend placing variable in the function locally
+"../simplelink/source/fs.c", line 430: remark #1534-D: (ULP 7.1) Detected use of global variable "_SlFsDeleteCmdCtrl" within one function "sl_FsDel". Recommend placing variable in the function locally
+Finished building: ../simplelink/source/fs.c
+ 
+Building file: ../simplelink/source/netapp.c
+Invoking: MSP430 Compiler
+"/home/lab1362-01/programs/ti/ccsv6/tools/compiler/ti-cgt-msp430_15.12.1.LTS/bin/cl430" -vmspx --data_model=restricted --use_hw_mpy=F5 --include_path="/home/lab1362-01/programs/ti/ccsv6/ccs_base/msp430/include" --include_path="/home/lab1362-01/Desktop/CC3100_workspace_linux_32bit_v6_1_3/websrv/common" --include_path="/home/lab1362-01/Desktop/CC3100_workspace_linux_32bit_v6_1_3/websrv/simplelink/include" --include_path="/home/lab1362-01/Desktop/CC3100_workspace_linux_32bit_v6_1_3/websrv" --include_path="/home/lab1362-01/programs/ti/ccsv6/tools/compiler/ti-cgt-msp430_15.12.1.LTS/include" --advice:power="all" --advice:hw_config=all -g --define=__MSP430FR6989__ --define=__CCS__ --define=_USE_CLI_ --define=_MPU_ENABLE --display_error_number --diag_warning=225 --diag_wrap=off --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU40 --printf_support=full --preproc_with_compile --preproc_dependency="simplelink/source/netapp.d" --obj_directory="simplelink/source"  "../simplelink/source/netapp.c"
+"../simplelink/source/netapp.c", line 417: remark #1542-D: (ULP 12.1) Detected memcpy() and recommend using DMA instead if greater than 100 words being transferred
+"../simplelink/source/netapp.c", line 426: remark #1542-D: (ULP 12.1) Detected memcpy() and recommend using DMA instead if greater than 100 words being transferred
+"../simplelink/source/netapp.c", line 842: remark #1542-D: (ULP 12.1) Detected memcpy() and recommend using DMA instead if greater than 100 words being transferred
+"../simplelink/source/netapp.c", line 936: remark #1542-D: (ULP 12.1) Detected memcpy() and recommend using DMA instead if greater than 100 words being transferred
+"../simplelink/source/netapp.c", line 1194: remark #1546-D: (ULP 15.1) Detected consecutive bitfield assigns. Recommend using bit mask instead
+"../simplelink/source/netapp.c", line 1200: remark #1542-D: (ULP 12.1) Detected memcpy() and recommend using DMA instead if greater than 100 words being transferred
+"../simplelink/source/netapp.c", line 1316: remark #1546-D: (ULP 15.1) Detected consecutive bitfield assigns. Recommend using bit mask instead
+"../simplelink/source/netapp.c", line 1316: remark #1546-D: (ULP 15.1) Detected consecutive bitfield assigns. Recommend using bit mask instead
+"../simplelink/source/netapp.c", line 89: remark #1534-D: (ULP 7.1) Detected use of global variable "_SlNetAppStartCtrl" within one function "sl_NetAppStart". Recommend placing variable in the function locally
+"../simplelink/source/netapp.c", line 117: remark #1534-D: (ULP 7.1) Detected use of global variable "_SlNetAppStopCtrl" within one function "sl_NetAppStop". Recommend placing variable in the function locally
+"../simplelink/source/netapp.c", line 161: remark #1534-D: (ULP 7.1) Detected use of global variable "_SlGetServiceListeCtrl" within one function "sl_NetAppGetServiceList". Recommend placing variable in the function locally
+"../simplelink/source/netapp.c", line 280: remark #1534-D: (ULP 7.1) Detected use of global variable "_SlRegisterServiceCtrl" within one function "sl_NetAppMDNSRegisterUnregisterService". Recommend placing variable in the function locally
+"../simplelink/source/netapp.c", line 629: remark #1534-D: (ULP 7.1) Detected use of global variable "_SlGetHostByServiceCtrl" within one function "sl_NetAppDnsGetHostByService". Recommend placing variable in the function locally
+"../simplelink/source/netapp.c", line 883: remark #1534-D: (ULP 7.1) Detected use of global variable "_SlGetHostByNameCtrl" within one function "sl_NetAppDnsGetHostByName". Recommend placing variable in the function locally
+"../simplelink/source/netapp.c", line 1138: remark #1534-D: (ULP 7.1) Detected use of global variable "_SlNetAppSetCmdCtrl" within one function "sl_NetAppSet". Recommend placing variable in the function locally
+"../simplelink/source/netapp.c", line 1221: remark #1534-D: (ULP 7.1) Detected use of global variable "_SlNetAppGetCmdCtrl" within one function "sl_NetAppGet". Recommend placing variable in the function locally
+Finished building: ../simplelink/source/netapp.c
+ 
+Building file: ../simplelink/source/netcfg.c
+Invoking: MSP430 Compiler
+"/home/lab1362-01/programs/ti/ccsv6/tools/compiler/ti-cgt-msp430_15.12.1.LTS/bin/cl430" -vmspx --data_model=restricted --use_hw_mpy=F5 --include_path="/home/lab1362-01/programs/ti/ccsv6/ccs_base/msp430/include" --include_path="/home/lab1362-01/Desktop/CC3100_workspace_linux_32bit_v6_1_3/websrv/common" --include_path="/home/lab1362-01/Desktop/CC3100_workspace_linux_32bit_v6_1_3/websrv/simplelink/include" --include_path="/home/lab1362-01/Desktop/CC3100_workspace_linux_32bit_v6_1_3/websrv" --include_path="/home/lab1362-01/programs/ti/ccsv6/tools/compiler/ti-cgt-msp430_15.12.1.LTS/include" --advice:power="all" --advice:hw_config=all -g --define=__MSP430FR6989__ --define=__CCS__ --define=_USE_CLI_ --define=_MPU_ENABLE --display_error_number --diag_warning=225 --diag_wrap=off --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU40 --printf_support=full --preproc_with_compile --preproc_dependency="simplelink/source/netcfg.d" --obj_directory="simplelink/source"  "../simplelink/source/netcfg.c"
+"../simplelink/source/netcfg.c", line 57: remark #1534-D: (ULP 7.1) Detected use of global variable "_SlNetCfgSetCmdCtrl" within one function "sl_NetCfgSet". Recommend placing variable in the function locally
+"../simplelink/source/netcfg.c", line 100: remark #1534-D: (ULP 7.1) Detected use of global variable "_SlNetCfgGetCmdCtrl" within one function "sl_NetCfgGet". Recommend placing variable in the function locally
+Finished building: ../simplelink/source/netcfg.c
+ 
+Building file: ../simplelink/source/driver.c
+Invoking: MSP430 Compiler
+"/home/lab1362-01/programs/ti/ccsv6/tools/compiler/ti-cgt-msp430_15.12.1.LTS/bin/cl430" -vmspx --data_model=restricted --use_hw_mpy=F5 --include_path="/home/lab1362-01/programs/ti/ccsv6/ccs_base/msp430/include" --include_path="/home/lab1362-01/Desktop/CC3100_workspace_linux_32bit_v6_1_3/websrv/common" --include_path="/home/lab1362-01/Desktop/CC3100_workspace_linux_32bit_v6_1_3/websrv/simplelink/include" --include_path="/home/lab1362-01/Desktop/CC3100_workspace_linux_32bit_v6_1_3/websrv" --include_path="/home/lab1362-01/programs/ti/ccsv6/tools/compiler/ti-cgt-msp430_15.12.1.LTS/include" --advice:power="all" --advice:hw_config=all -g --define=__MSP430FR6989__ --define=__CCS__ --define=_USE_CLI_ --define=_MPU_ENABLE --display_error_number --diag_warning=225 --diag_wrap=off --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU40 --printf_support=full --preproc_with_compile --preproc_dependency="simplelink/source/driver.d" --obj_directory="simplelink/source"  "../simplelink/source/driver.c"
+"../simplelink/source/driver.c", line 527: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../simplelink/source/driver.c", line 575: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../simplelink/source/driver.c", line 658: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+"../simplelink/source/driver.c", line 658: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+"../simplelink/source/driver.c", line 1124: remark #1542-D: (ULP 12.1) Detected memcpy() and recommend using DMA instead if greater than 100 words being transferred
+"../simplelink/source/driver.c", line 1186: remark #1542-D: (ULP 12.1) Detected memcpy() and recommend using DMA instead if greater than 100 words being transferred
+"../simplelink/source/driver.c", line 1124: remark #1542-D: (ULP 12.1) Detected memcpy() and recommend using DMA instead if greater than 100 words being transferred
+"../simplelink/source/driver.c", line 1186: remark #1542-D: (ULP 12.1) Detected memcpy() and recommend using DMA instead if greater than 100 words being transferred
+"../simplelink/source/driver.c", line 1243: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../simplelink/source/driver.c", line 1605: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../simplelink/source/driver.c", line 1571: remark #1535-D: (ULP 8.1) variable "SyncCnt" is used as a constant. Recommend declaring variable as either 'static const' or 'const'
+"../simplelink/source/driver.c", line 1573: remark #1535-D: (ULP 8.1) variable "TimeoutState" is used as a constant. Recommend declaring variable as either 'static const' or 'const'
+"../simplelink/source/driver.c", line 1701: remark #1546-D: (ULP 15.1) Detected consecutive bitfield assigns. Recommend using bit mask instead
+"../simplelink/source/driver.c", line 1702: remark #1546-D: (ULP 15.1) Detected consecutive bitfield assigns. Recommend using bit mask instead
+"../simplelink/source/driver.c", line 1955: remark #1545-D: (ULP 14.1) Array index of type "int". Recommend using "unsigned int"
+"../simplelink/source/driver.c", line 1959: remark #1545-D: (ULP 14.1) Array index of type "int". Recommend using "unsigned int"
+"../simplelink/source/driver.c", line 2109: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../simplelink/source/driver.c", line 404: remark #1534-D: (ULP 7.1) Detected use of global variable "g_H2NSyncPattern" within one function "_SlDrvMsgWrite". Recommend placing variable in the function locally
+"../simplelink/source/driver.c", line 407: remark #1534-D: (ULP 7.1) Detected use of global variable "g_H2NCnysPattern" within one function "_SlDrvRxHdrRead". Recommend placing variable in the function locally
+Finished building: ../simplelink/source/driver.c
+ 
+Building file: ../simplelink/source/nonos.c
+Invoking: MSP430 Compiler
+"/home/lab1362-01/programs/ti/ccsv6/tools/compiler/ti-cgt-msp430_15.12.1.LTS/bin/cl430" -vmspx --data_model=restricted --use_hw_mpy=F5 --include_path="/home/lab1362-01/programs/ti/ccsv6/ccs_base/msp430/include" --include_path="/home/lab1362-01/Desktop/CC3100_workspace_linux_32bit_v6_1_3/websrv/common" --include_path="/home/lab1362-01/Desktop/CC3100_workspace_linux_32bit_v6_1_3/websrv/simplelink/include" --include_path="/home/lab1362-01/Desktop/CC3100_workspace_linux_32bit_v6_1_3/websrv" --include_path="/home/lab1362-01/programs/ti/ccsv6/tools/compiler/ti-cgt-msp430_15.12.1.LTS/include" --advice:power="all" --advice:hw_config=all -g --define=__MSP430FR6989__ --define=__CCS__ --define=_USE_CLI_ --define=_MPU_ENABLE --display_error_number --diag_warning=225 --diag_wrap=off --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU40 --printf_support=full --preproc_with_compile --preproc_dependency="simplelink/source/nonos.d" --obj_directory="simplelink/source"  "../simplelink/source/nonos.c"
+"../simplelink/source/nonos.c", line 144: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../simplelink/source/nonos.c", line 171: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../simplelink/source/nonos.c", line 52: remark #1535-D: (ULP 8.1) variable "g__SlNonOsCB" is used as a constant. Recommend declaring variable as either 'static const' or 'const'
+Finished building: ../simplelink/source/nonos.c
+ 
+Building file: ../simplelink/source/spawn.c
+Invoking: MSP430 Compiler
+"/home/lab1362-01/programs/ti/ccsv6/tools/compiler/ti-cgt-msp430_15.12.1.LTS/bin/cl430" -vmspx --data_model=restricted --use_hw_mpy=F5 --include_path="/home/lab1362-01/programs/ti/ccsv6/ccs_base/msp430/include" --include_path="/home/lab1362-01/Desktop/CC3100_workspace_linux_32bit_v6_1_3/websrv/common" --include_path="/home/lab1362-01/Desktop/CC3100_workspace_linux_32bit_v6_1_3/websrv/simplelink/include" --include_path="/home/lab1362-01/Desktop/CC3100_workspace_linux_32bit_v6_1_3/websrv" --include_path="/home/lab1362-01/programs/ti/ccsv6/tools/compiler/ti-cgt-msp430_15.12.1.LTS/include" --advice:power="all" --advice:hw_config=all -g --define=__MSP430FR6989__ --define=__CCS__ --define=_USE_CLI_ --define=_MPU_ENABLE --display_error_number --diag_warning=225 --diag_wrap=off --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU40 --printf_support=full --preproc_with_compile --preproc_dependency="simplelink/source/spawn.d" --obj_directory="simplelink/source"  "../simplelink/source/spawn.c"
+Finished building: ../simplelink/source/spawn.c
+ 
+Building file: ../simplelink/source/socket.c
+Invoking: MSP430 Compiler
+"/home/lab1362-01/programs/ti/ccsv6/tools/compiler/ti-cgt-msp430_15.12.1.LTS/bin/cl430" -vmspx --data_model=restricted --use_hw_mpy=F5 --include_path="/home/lab1362-01/programs/ti/ccsv6/ccs_base/msp430/include" --include_path="/home/lab1362-01/Desktop/CC3100_workspace_linux_32bit_v6_1_3/websrv/common" --include_path="/home/lab1362-01/Desktop/CC3100_workspace_linux_32bit_v6_1_3/websrv/simplelink/include" --include_path="/home/lab1362-01/Desktop/CC3100_workspace_linux_32bit_v6_1_3/websrv" --include_path="/home/lab1362-01/programs/ti/ccsv6/tools/compiler/ti-cgt-msp430_15.12.1.LTS/include" --advice:power="all" --advice:hw_config=all -g --define=__MSP430FR6989__ --define=__CCS__ --define=_USE_CLI_ --define=_MPU_ENABLE --display_error_number --diag_warning=225 --diag_wrap=off --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU40 --printf_support=full --preproc_with_compile --preproc_dependency="simplelink/source/socket.d" --obj_directory="simplelink/source"  "../simplelink/source/socket.c"
+"../simplelink/source/socket.c", line 127: remark #2553-D: (ULP 14.1) Array index (involving "sd") of type "int". Recommend using "unsigned int"
+"../simplelink/source/socket.c", line 278: remark #1546-D: (ULP 15.1) Detected consecutive bitfield assigns. Recommend using bit mask instead
+"../simplelink/source/socket.c", line 283: remark #1546-D: (ULP 15.1) Detected consecutive bitfield assigns. Recommend using bit mask instead
+"../simplelink/source/socket.c", line 341: remark #1546-D: (ULP 15.1) Detected consecutive bitfield assigns. Recommend using bit mask instead
+"../simplelink/source/socket.c", line 346: remark #1546-D: (ULP 15.1) Detected consecutive bitfield assigns. Recommend using bit mask instead
+"../simplelink/source/socket.c", line 518: remark #1546-D: (ULP 15.1) Detected consecutive bitfield assigns. Recommend using bit mask instead
+"../simplelink/source/socket.c", line 523: remark #1546-D: (ULP 15.1) Detected consecutive bitfield assigns. Recommend using bit mask instead
+"../simplelink/source/socket.c", line 188: remark #1534-D: (ULP 7.1) Detected use of global variable "_SlSockSocketCmdCtrl" within one function "sl_Socket". Recommend placing variable in the function locally
+"../simplelink/source/socket.c", line 232: remark #1534-D: (ULP 7.1) Detected use of global variable "_SlSockCloseCmdCtrl" within one function "sl_Close". Recommend placing variable in the function locally
+"../simplelink/source/socket.c", line 401: remark #1534-D: (ULP 7.1) Detected use of global variable "_SlRecvfomCmdCtrl" within one function "sl_RecvFrom". Recommend placing variable in the function locally
+"../simplelink/source/socket.c", line 619: remark #1534-D: (ULP 7.1) Detected use of global variable "_SlSendCmdCtrl" within one function "sl_Send". Recommend placing variable in the function locally
+"../simplelink/source/socket.c", line 697: remark #1534-D: (ULP 7.1) Detected use of global variable "_SlListenCmdCtrl" within one function "sl_Listen". Recommend placing variable in the function locally
+"../simplelink/source/socket.c", line 734: remark #1534-D: (ULP 7.1) Detected use of global variable "_SlAcceptCmdCtrl" within one function "sl_Accept". Recommend placing variable in the function locally
+"../simplelink/source/socket.c", line 943: remark #1534-D: (ULP 7.1) Detected use of global variable "_SlRecvCmdCtrl" within one function "sl_Recv". Recommend placing variable in the function locally
+"../simplelink/source/socket.c", line 994: remark #1534-D: (ULP 7.1) Detected use of global variable "_SlSetSockOptCmdCtrl" within one function "sl_SetSockOpt". Recommend placing variable in the function locally
+"../simplelink/source/socket.c", line 1038: remark #1534-D: (ULP 7.1) Detected use of global variable "_SlGetSockOptCmdCtrl" within one function "sl_GetSockOpt". Recommend placing variable in the function locally
+"../simplelink/source/socket.c", line 1096: remark #1534-D: (ULP 7.1) Detected use of global variable "_SlSelectCmdCtrl" within one function "sl_Select". Recommend placing variable in the function locally
+Finished building: ../simplelink/source/socket.c
+ 
+Building file: ../simplelink/source/wlan.c
+Invoking: MSP430 Compiler
+"/home/lab1362-01/programs/ti/ccsv6/tools/compiler/ti-cgt-msp430_15.12.1.LTS/bin/cl430" -vmspx --data_model=restricted --use_hw_mpy=F5 --include_path="/home/lab1362-01/programs/ti/ccsv6/ccs_base/msp430/include" --include_path="/home/lab1362-01/Desktop/CC3100_workspace_linux_32bit_v6_1_3/websrv/common" --include_path="/home/lab1362-01/Desktop/CC3100_workspace_linux_32bit_v6_1_3/websrv/simplelink/include" --include_path="/home/lab1362-01/Desktop/CC3100_workspace_linux_32bit_v6_1_3/websrv" --include_path="/home/lab1362-01/programs/ti/ccsv6/tools/compiler/ti-cgt-msp430_15.12.1.LTS/include" --advice:power="all" --advice:hw_config=all -g --define=__MSP430FR6989__ --define=__CCS__ --define=_USE_CLI_ --define=_MPU_ENABLE --display_error_number --diag_warning=225 --diag_wrap=off --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU40 --printf_support=full --preproc_with_compile --preproc_dependency="simplelink/source/wlan.d" --obj_directory="simplelink/source"  "../simplelink/source/wlan.c"
+"../simplelink/source/wlan.c", line 85: remark #1546-D: (ULP 15.1) Detected consecutive bitfield assigns. Recommend using bit mask instead
+"../simplelink/source/wlan.c", line 105: remark #1542-D: (ULP 12.1) Detected memcpy() and recommend using DMA instead if greater than 100 words being transferred
+"../simplelink/source/wlan.c", line 121: remark #1542-D: (ULP 12.1) Detected memcpy() and recommend using DMA instead if greater than 100 words being transferred
+"../simplelink/source/wlan.c", line 143: remark #1542-D: (ULP 12.1) Detected memcpy() and recommend using DMA instead if greater than 100 words being transferred
+"../simplelink/source/wlan.c", line 155: remark #1542-D: (ULP 12.1) Detected memcpy() and recommend using DMA instead if greater than 100 words being transferred
+"../simplelink/source/wlan.c", line 168: remark #1542-D: (ULP 12.1) Detected memcpy() and recommend using DMA instead if greater than 100 words being transferred
+"../simplelink/source/wlan.c", line 186: remark #1542-D: (ULP 12.1) Detected memcpy() and recommend using DMA instead if greater than 100 words being transferred
+"../simplelink/source/wlan.c", line 354: remark #1546-D: (ULP 15.1) Detected consecutive bitfield assigns. Recommend using bit mask instead
+"../simplelink/source/wlan.c", line 385: remark #1542-D: (ULP 12.1) Detected memcpy() and recommend using DMA instead if greater than 100 words being transferred
+"../simplelink/source/wlan.c", line 410: remark #1542-D: (ULP 12.1) Detected memcpy() and recommend using DMA instead if greater than 100 words being transferred
+"../simplelink/source/wlan.c", line 431: remark #1542-D: (ULP 12.1) Detected memcpy() and recommend using DMA instead if greater than 100 words being transferred
+"../simplelink/source/wlan.c", line 445: remark #1542-D: (ULP 12.1) Detected memcpy() and recommend using DMA instead if greater than 100 words being transferred
+"../simplelink/source/wlan.c", line 461: remark #1542-D: (ULP 12.1) Detected memcpy() and recommend using DMA instead if greater than 100 words being transferred
+"../simplelink/source/wlan.c", line 487: remark #1542-D: (ULP 12.1) Detected memcpy() and recommend using DMA instead if greater than 100 words being transferred
+"../simplelink/source/wlan.c", line 553: remark #1542-D: (ULP 12.1) Detected memcpy() and recommend using DMA instead if greater than 100 words being transferred
+"../simplelink/source/wlan.c", line 559: remark #1542-D: (ULP 12.1) Detected memcpy() and recommend using DMA instead if greater than 100 words being transferred
+"../simplelink/source/wlan.c", line 571: remark #1542-D: (ULP 12.1) Detected memcpy() and recommend using DMA instead if greater than 100 words being transferred
+"../simplelink/source/wlan.c", line 705: remark #1537-D: (ULP 9.1) Function parameter FilterFlags (type "union SlrxFilterFlags_t") is being passed by value and should be passed by reference using pointer
+"../simplelink/source/wlan.c", line 931: remark #1542-D: (ULP 12.1) Detected memcpy() and recommend using DMA instead if greater than 100 words being transferred
+"../simplelink/source/wlan.c", line 932: remark #1542-D: (ULP 12.1) Detected memcpy() and recommend using DMA instead if greater than 100 words being transferred
+"../simplelink/source/wlan.c", line 933: remark #1542-D: (ULP 12.1) Detected memcpy() and recommend using DMA instead if greater than 100 words being transferred
+"../simplelink/source/wlan.c", line 238: remark #1534-D: (ULP 7.1) Detected use of global variable "_SlPolicySetCmdCtrl" within one function "sl_WlanPolicySet". Recommend placing variable in the function locally
+"../simplelink/source/wlan.c", line 281: remark #1534-D: (ULP 7.1) Detected use of global variable "_SlPolicyGetCmdCtrl" within one function "sl_WlanPolicyGet". Recommend placing variable in the function locally
+"../simplelink/source/wlan.c", line 526: remark #1534-D: (ULP 7.1) Detected use of global variable "_SlProfileGetCmdCtrl" within one function "sl_WlanProfileGet". Recommend placing variable in the function locally
+"../simplelink/source/wlan.c", line 589: remark #1534-D: (ULP 7.1) Detected use of global variable "_SlProfileDelCmdCtrl" within one function "sl_WlanProfileDel". Recommend placing variable in the function locally
+"../simplelink/source/wlan.c", line 625: remark #1534-D: (ULP 7.1) Detected use of global variable "_SlWlanGetNetworkListCtrl" within one function "sl_WlanGetNetworkList". Recommend placing variable in the function locally
+"../simplelink/source/wlan.c", line 694: remark #1534-D: (ULP 7.1) Detected use of global variable "_SlRxFilterAddtCmdCtrl" within one function "sl_WlanRxFilterAdd". Recommend placing variable in the function locally
+"../simplelink/source/wlan.c", line 741: remark #1534-D: (ULP 7.1) Detected use of global variable "_SlRxFilterSetCmdCtrl" within one function "sl_WlanRxFilterSet". Recommend placing variable in the function locally
+"../simplelink/source/wlan.c", line 779: remark #1534-D: (ULP 7.1) Detected use of global variable "_SlRxFilterGetCmdCtrl" within one function "sl_WlanRxFilterGet". Recommend placing variable in the function locally
+"../simplelink/source/wlan.c", line 902: remark #1534-D: (ULP 7.1) Detected use of global variable "_SlSmartConfigStartCmdCtrl" within one function "sl_WlanSmartConfigStart". Recommend placing variable in the function locally
+"../simplelink/source/wlan.c", line 955: remark #1534-D: (ULP 7.1) Detected use of global variable "_SlWlanSetModeCmdCtrl" within one function "sl_WlanSetMode". Recommend placing variable in the function locally
+"../simplelink/source/wlan.c", line 997: remark #1534-D: (ULP 7.1) Detected use of global variable "_SlWlanCfgSetCmdCtrl" within one function "sl_WlanSet". Recommend placing variable in the function locally
+"../simplelink/source/wlan.c", line 1039: remark #1534-D: (ULP 7.1) Detected use of global variable "_SlWlanCfgGetCmdCtrl" within one function "sl_WlanGet". Recommend placing variable in the function locally
+Finished building: ../simplelink/source/wlan.c
+ 
+Building target: websrv.out
+Invoking: MSP430 Linker
+"/home/lab1362-01/programs/ti/ccsv6/tools/compiler/ti-cgt-msp430_15.12.1.LTS/bin/cl430" -vmspx --data_model=restricted --use_hw_mpy=F5 --advice:power="all" --advice:hw_config=all -g --define=__MSP430FR6989__ --define=__CCS__ --define=_USE_CLI_ --define=_MPU_ENABLE --display_error_number --diag_warning=225 --diag_wrap=off --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU40 --printf_support=full -z -m"websrv.map" --stack_size=160 --heap_size=160 --cinit_hold_wdt=on -i"/home/lab1362-01/programs/ti/ccsv6/ccs_base/msp430/include" -i"/home/lab1362-01/programs/ti/ccsv6/ccs_base/msp430/lib/5xx_6xx_FRxx" -i"/home/lab1362-01/programs/ti/ccsv6/ccs_base/msp430/lib/FR59xx" -i"/home/lab1362-01/programs/ti/ccsv6/tools/compiler/ti-cgt-msp430_15.12.1.LTS/lib" -i"/home/lab1362-01/programs/ti/ccsv6/tools/compiler/ti-cgt-msp430_15.12.1.LTS/include" --reread_libs --priority --define=_MPU_ENABLE --display_error_number --diag_wrap=off --warn_sections --xml_link_info="websrv_linkInfo.xml" --use_hw_mpy=F5 --rom_model -o "websrv.out" "./board.obj" "./cli_uart.obj" "./leds.obj" "./main.obj" "./sensors.obj" "./simple_link_func.obj" "./spi.obj" "./uart.obj" "./uartstdio.obj" "./common/jsmn.obj" "./simplelink/source/device.obj" "./simplelink/source/driver.obj" "./simplelink/source/flowcont.obj" "./simplelink/source/fs.obj" "./simplelink/source/netapp.obj" "./simplelink/source/netcfg.obj" "./simplelink/source/nonos.obj" "./simplelink/source/socket.obj" "./simplelink/source/spawn.obj" "./simplelink/source/wlan.obj" "../lnk_msp430fr6989.cmd"  -llibmpu_init.a -llibmpu_init.a -llibmath.a -llibc.a 
+<Linking>
+remark #10372-D: (ULP 4.1) Detected uninitialized Port A in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port B in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port C in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port D in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port E in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+Finished building target: websrv.out
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project websrv ****
+
+/home/lab1362-01/programs/ti/ccsv6/utils/bin/gmake -k -j 2 all -O 
+gmake: Nothing to be done for 'all'.
+
+**** Build Finished ****

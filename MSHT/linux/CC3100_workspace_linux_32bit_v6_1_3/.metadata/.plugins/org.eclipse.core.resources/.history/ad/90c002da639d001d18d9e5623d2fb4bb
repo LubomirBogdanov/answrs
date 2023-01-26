@@ -1,0 +1,27 @@
+#include <msp430.h> 
+
+
+
+void initClk()
+{
+    CSCTL0_H = 0xA5;
+    CSCTL0_L = 0;
+    CSCTL1 = DCORSEL + DCOFSEL0 + DCOFSEL1;     /* Set DCO setting = 8MHz */
+    CSCTL2 = SELA_1 + SELS_3 + SELM_3;          /*set ACLK - VLO, the rest = MCLK = DCO*/
+    CSCTL3 = DIVA_0 + DIVS_0 + DIVM_0;          /* set all dividers to 0 */
+
+    /* Globally enable interrupts */
+    __bis_SR_register(GIE);
+}
+
+
+int main(void)
+{
+	WDTCTL = WDTPW | WDTHOLD;	// stop watchdog timer
+	
+	PM5CTL0 &= ~LOCKLPM5;
+
+	initClk();
+
+	return 0;
+}

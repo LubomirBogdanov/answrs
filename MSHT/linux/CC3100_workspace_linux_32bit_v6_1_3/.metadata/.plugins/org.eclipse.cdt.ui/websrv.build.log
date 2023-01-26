@@ -1,0 +1,7 @@
+
+**** Build of configuration Debug for project websrv ****
+
+/home/lab1362-01/programs/ti/ccsv6/utils/bin/gmake -k -j 2 all -O 
+gmake: Nothing to be done for 'all'.
+
+**** Build Finished ****

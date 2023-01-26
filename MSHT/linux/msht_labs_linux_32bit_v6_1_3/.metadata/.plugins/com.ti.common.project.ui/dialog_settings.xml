@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="org.eclipse.rtsc.project.ui.preferences.RTSCProductsPreferencePage">
+		<item value="/home/lab1362-01/ti/MSP430FR5xx_6xx" key="ToolsPreferencePage.BROWSE_FILTER"/>
+	</section>
+</section>
