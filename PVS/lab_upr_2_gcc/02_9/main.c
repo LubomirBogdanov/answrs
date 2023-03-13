@@ -27,9 +27,9 @@ int main(void){
 	uart_init(CONFIG_UART_BAUD_RATE);
 
 	for(i = 0; i < 10; i++){
-		asm volatile("vsqrt.f32 %P0,%P1"
-				: "=w" (my_sqrt[i])
-				  : "w" (my_fpu_array_1[i]) );
+		asm volatile("vsqrt.f32 %[dst],%[src]""
+				:[dst] "=w" (my_sqrt[i])
+				  :[src] "w" (my_fpu_array_1[i]) );
 
 
 		//		asm("mov %[dst], %[src]"
