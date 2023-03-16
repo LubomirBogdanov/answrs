@@ -10,6 +10,7 @@ volatile uint32_t *scb_cpacr = (volatile uint32_t *)0xE000ED88;
 
 extern double asm_rms(double dig3, double dig2, double dig1, double dig0);
 
+
 /*!
  * \brief The main entry of the application.
  * This function initializes a GPIO and a UART,
