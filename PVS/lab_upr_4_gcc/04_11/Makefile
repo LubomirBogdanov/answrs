@@ -1,7 +1,7 @@
 #Created on 1 Dec 2020 by Lubomir Bogdanov
 #This is an example and simple Makefile
 
-LD_DIRS = -L/home/lbogdanov/programs/gcc-arm-none-eabi-8-2018-q4-major/arm-none-eabi/lib/thumb/v7e-m+dp/hard -L/home/lbogdanov/programs/gcc-arm-none-eabi-8-2018-q4-major/lib/gcc/arm-none-eabi/8.2.1/thumb/v7e-m+dp/hard
+LD_DIRS = -L/home/lbogdanov/programs/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/lib/thumb/v7e-m+dp/hard -L/home/lbogdanov/programs/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+dp/hard
 CC_DIRS = -I./hal_lib/Inc -I./hal_lib/CMSIS/Device/ST/STM32F7xx/Include -I./hal_lib/BSP/STM32F769I-Discovery -I./hal_lib/CMSIS/Device/ST/STM32F7xx/Include -I./hal_lib/CMSIS/DSP/Include -I./hal_lib/CMSIS/Include -I./hal_lib/CMSIS/Device/ST/STM32F7xx/Include
 CC_DEFS = -DSTM32 -DSTM32F7 -DUSE_HAL_DRIVER -DSTM32F769NIHx -DDEBUG -DSTM32F769I_DISCO -D__FPU_PRESENT -DARM_MATH_CM7 -DSTM32F769xx
 
@@ -17,7 +17,7 @@ main.bin: main.axf
 	arm-none-eabi-objcopy -O binary ./debug/main.axf ./debug/main.bin
 
 main.axf: debug main.o sbrk.o startup.o standard_rms.o
-	arm-none-eabi-ld -nostartfiles --gc-sections ${LD_DIRS} -L./debug -Tscript.ld ./debug/main.o ./debug/sbrk.o ./debug/startup.o ./debug/standard_rms.o -o ./debug/main.axf -lm -lc -lmy_stm32 -lgcc 
+	arm-none-eabi-ld --gc-sections ${LD_DIRS} -L./debug -Tscript.ld ./debug/main.o ./debug/sbrk.o ./debug/startup.o ./debug/standard_rms.o -o ./debug/main.axf -lm -lc -lmy_stm32 -lgcc 
 
 debug:
 	mkdir -p debug

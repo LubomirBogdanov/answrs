@@ -1,0 +1,3 @@
+libstm32cube_fw_f7_v1_16_0.a
+
+file too large to upload to Github

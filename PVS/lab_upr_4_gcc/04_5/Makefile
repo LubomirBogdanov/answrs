@@ -1,7 +1,7 @@
 #Created on 29 Oct 2020 by Lubomir Bogdanov
 #This is an example and simple Makefile
 
-LD_DIRS = -L/home/lbogdanov/programs/gcc-arm-none-eabi-8-2018-q4-major/arm-none-eabi/lib/thumb/v7e-m+dp/hard -L/home/lbogdanov/programs/gcc-arm-none-eabi-8-2018-q4-major/lib/gcc/arm-none-eabi/8.2.1/thumb/v7e-m+dp/hard
+LD_DIRS = -L/home/lbogdanov/programs/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/lib/thumb/v7e-m+dp/hard -L/home/lbogdanov/programs/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+dp/hard
 
 all: main.bin list size
 
@@ -15,7 +15,7 @@ main.bin: main.axf
 	arm-none-eabi-objcopy -O binary ./debug/main.axf ./debug/main.bin
 
 main.axf: debug main.o sbrk.o startup.o standard_rms.o led.o uart.o printf.o button.o
-	arm-none-eabi-ld -nostartfiles ${LD_DIRS} -Tscript.ld ./debug/main.o ./debug/sbrk.o ./debug/led.o ./debug/uart.o ./debug/startup.o ./debug/printf.o ./debug/standard_rms.o ./debug/button.o -o ./debug/main.axf -lm -lc -lgcc
+	arm-none-eabi-ld ${LD_DIRS} -Tscript.ld ./debug/main.o ./debug/sbrk.o ./debug/led.o ./debug/uart.o ./debug/startup.o ./debug/printf.o ./debug/standard_rms.o ./debug/button.o -o ./debug/main.axf -lm -lc -lgcc
 
 debug:
 	mkdir -p debug
