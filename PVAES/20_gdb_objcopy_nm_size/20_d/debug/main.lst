@@ -1,0 +1,594 @@
+
+./debug/main.o:     file format elf32-microblazeel
+
+
+Disassembly of section .text:
+
+00000000 <my_func_3>:
+#include "sleep.h"
+#include "autoconf.h"
+
+extern float asm_rms(float dig3, float dig2, float dig1, float dig0);
+
+void my_func_3(void){
+   0:	3021ffcc 	addik	r1, r1, -52
+   4:	fa610030 	swi	r19, r1, 48
+   8:	12610000 	addk	r19, r1, r0
+   c:	10610000 	addk	r3, r1, r0
+  10:	10a30000 	addk	r5, r3, r0
+	volatile int a = 3, b = 30, c;
+  14:	30600003 	addik	r3, r0, 3
+  18:	f873000c 	swi	r3, r19, 12
+  1c:	3060001e 	addik	r3, r0, 30
+  20:	f8730010 	swi	r3, r19, 16
+	int arr[20];
+  24:	f801ee88 	swi	r0, r1, -4472
+  28:	30600050 	addik	r3, r0, 80
+  2c:	e8810000 	lwi	r4, r1, 0
+  30:	14630000 	rsubk	r3, r3, r0
+  34:	10211800 	addk	r1, r1, r3
+  38:	f8810000 	swi	r4, r1, 0
+  3c:	30610004 	addik	r3, r1, 4
+  40:	30630003 	addik	r3, r3, 3
+  44:	64630002 	bsrli	r3, r3, 2
+  48:	64630402 	bslli	r3, r3, 2
+  4c:	f8730008 	swi	r3, r19, 8
+
+	c = a + b;
+  50:	e893000c 	lwi	r4, r19, 12
+  54:	e8730010 	lwi	r3, r19, 16
+  58:	10641800 	addk	r3, r4, r3
+  5c:	f8730014 	swi	r3, r19, 20
+	
+	for(int i = 0; i < 30; i++){
+  60:	f8130004 	swi	r0, r19, 4
+  64:	b8000028 	bri	40		// 8c
+		arr[i] = 0x33;
+  68:	e8930008 	lwi	r4, r19, 8
+  6c:	e8730004 	lwi	r3, r19, 4
+  70:	64630402 	bslli	r3, r3, 2
+  74:	10641800 	addk	r3, r4, r3
+  78:	30800033 	addik	r4, r0, 51
+  7c:	f8830000 	swi	r4, r3, 0
+	for(int i = 0; i < 30; i++){
+  80:	e8730004 	lwi	r3, r19, 4
+  84:	30630001 	addik	r3, r3, 1
+  88:	f8730004 	swi	r3, r19, 4
+  8c:	e8930004 	lwi	r4, r19, 4
+  90:	3060001d 	addik	r3, r0, 29
+  94:	16441801 	cmp	r18, r4, r3
+  98:	bcb2ffd0 	bgei	r18, -48		// 68
+  9c:	ea410000 	lwi	r18, r1, 0
+  a0:	10250000 	addk	r1, r5, r0
+  a4:	fa410000 	swi	r18, r1, 0
+	}
+}
+  a8:	80000000 	or	r0, r0, r0
+  ac:	10330000 	addk	r1, r19, r0
+  b0:	ea610030 	lwi	r19, r1, 48
+  b4:	30210034 	addik	r1, r1, 52
+  b8:	b60f0008 	rtsd	r15, 8
+  bc:	80000000 	or	r0, r0, r0
+
+000000c0 <my_func_2>:
+
+void my_func_2(void){
+  c0:	3021ffec 	addik	r1, r1, -20
+  c4:	f9e10000 	swi	r15, r1, 0
+  c8:	fa610010 	swi	r19, r1, 16
+  cc:	12610000 	addk	r19, r1, r0
+  d0:	f801eed8 	swi	r0, r1, -4392
+	volatile int a = 2, b = 20, c;
+  d4:	30600002 	addik	r3, r0, 2
+  d8:	f8730004 	swi	r3, r19, 4
+  dc:	30600014 	addik	r3, r0, 20
+  e0:	f8730008 	swi	r3, r19, 8
+
+	c = a + b;
+  e4:	e8930004 	lwi	r4, r19, 4
+  e8:	e8730008 	lwi	r3, r19, 8
+  ec:	10641800 	addk	r3, r4, r3
+  f0:	f873000c 	swi	r3, r19, 12
+
+	my_func_3();
+  f4:	b9f4ff0c 	brlid	r15, -244	// 0 <my_func_3>
+  f8:	80000000 	or	r0, r0, r0
+}
+  fc:	80000000 	or	r0, r0, r0
+ 100:	e9e10000 	lwi	r15, r1, 0
+ 104:	10330000 	addk	r1, r19, r0
+ 108:	ea610010 	lwi	r19, r1, 16
+ 10c:	30210014 	addik	r1, r1, 20
+ 110:	b60f0008 	rtsd	r15, 8
+ 114:	80000000 	or	r0, r0, r0
+
+00000118 <my_func_1>:
+
+void my_func_1(void){
+ 118:	3021ffec 	addik	r1, r1, -20
+ 11c:	f9e10000 	swi	r15, r1, 0
+ 120:	fa610010 	swi	r19, r1, 16
+ 124:	12610000 	addk	r19, r1, r0
+ 128:	f801eed8 	swi	r0, r1, -4392
+	volatile int a = 1, b = 10, c;
+ 12c:	30600001 	addik	r3, r0, 1
+ 130:	f8730004 	swi	r3, r19, 4
+ 134:	3060000a 	addik	r3, r0, 10
+ 138:	f8730008 	swi	r3, r19, 8
+
+	c = a + b;
+ 13c:	e8930004 	lwi	r4, r19, 4
+ 140:	e8730008 	lwi	r3, r19, 8
+ 144:	10641800 	addk	r3, r4, r3
+ 148:	f873000c 	swi	r3, r19, 12
+
+	my_func_2();
+ 14c:	b9f4ff74 	brlid	r15, -140	// c0 <my_func_2>
+ 150:	80000000 	or	r0, r0, r0
+}
+ 154:	80000000 	or	r0, r0, r0
+ 158:	e9e10000 	lwi	r15, r1, 0
+ 15c:	10330000 	addk	r1, r19, r0
+ 160:	ea610010 	lwi	r19, r1, 16
+ 164:	30210014 	addik	r1, r1, 20
+ 168:	b60f0008 	rtsd	r15, 8
+ 16c:	80000000 	or	r0, r0, r0
+
+00000170 <main>:
+
+int main(void){
+ 170:	3021ffc4 	addik	r1, r1, -60
+ 174:	f9e10000 	swi	r15, r1, 0
+ 178:	fa610038 	swi	r19, r1, 56
+ 17c:	12610000 	addk	r19, r1, r0
+ 180:	f801eed8 	swi	r0, r1, -4392
+	float val3 = 4.002503;
+ 184:	b0004080 	imm	16512
+ 188:	30601481 	addik	r3, r0, 5249
+ 18c:	f873001c 	swi	r3, r19, 28
+	float val2 = 4.233456;
+ 190:	b0004087 	imm	16519
+ 194:	30607879 	addik	r3, r0, 30841
+ 198:	f8730020 	swi	r3, r19, 32
+	float val1 = 4.789317;
+ 19c:	b0004099 	imm	16537
+ 1a0:	30604216 	addik	r3, r0, 16918
+ 1a4:	f8730024 	swi	r3, r19, 36
+	float val0 = 4.220734;
+ 1a8:	b0004087 	imm	16519
+ 1ac:	30601041 	addik	r3, r0, 4161
+ 1b0:	f8730028 	swi	r3, r19, 40
+	float my_result;
+	//volatile int i;
+	
+    led_init();
+ 1b4:	b0000000 	imm	0
+ 1b8:	b9f40000 	brlid	r15, 0
+ 1bc:	80000000 	or	r0, r0, r0
+    uart_init();
+ 1c0:	b0000000 	imm	0
+ 1c4:	b9f40000 	brlid	r15, 0
+ 1c8:	80000000 	or	r0, r0, r0
+
+	my_result = asm_rms(val3, val2, val1, val0);
+ 1cc:	e9130028 	lwi	r8, r19, 40
+ 1d0:	e8f30024 	lwi	r7, r19, 36
+ 1d4:	e8d30020 	lwi	r6, r19, 32
+ 1d8:	e8b3001c 	lwi	r5, r19, 28
+ 1dc:	b0000000 	imm	0
+ 1e0:	b9f40000 	brlid	r15, 0
+ 1e4:	80000000 	or	r0, r0, r0
+ 1e8:	f873002c 	swi	r3, r19, 44
+
+	//Expected output: 4.321294158
+	printf("The result is --> %12.6f\n", my_result);
+ 1ec:	e8b3002c 	lwi	r5, r19, 44
+ 1f0:	b0000000 	imm	0
+ 1f4:	b9f40000 	brlid	r15, 0
+ 1f8:	80000000 	or	r0, r0, r0
+ 1fc:	10a40000 	addk	r5, r4, r0
+ 200:	10830000 	addk	r4, r3, r0
+ 204:	10c40000 	addk	r6, r4, r0
+ 208:	10e50000 	addk	r7, r5, r0
+ 20c:	b0000000 	imm	0
+ 210:	30a00000 	addik	r5, r0, 0
+ 214:	b0000000 	imm	0
+ 218:	b9f40000 	brlid	r15, 0
+ 21c:	80000000 	or	r0, r0, r0
+	
+	my_func_1();
+ 220:	b9f4fef8 	brlid	r15, -264	// 118 <my_func_1>
+ 224:	80000000 	or	r0, r0, r0
+
+	while (1){
+        	led_set();
+ 228:	b0000000 	imm	0
+ 22c:	b9f40000 	brlid	r15, 0
+ 230:	80000000 	or	r0, r0, r0
+        	//usleep(1000000);
+        	for(volatile int i = 0; i < 1000000; i++){ }
+ 234:	f8130030 	swi	r0, r19, 48
+ 238:	b8000010 	bri	16		// 248
+ 23c:	e8730030 	lwi	r3, r19, 48
+ 240:	30630001 	addik	r3, r3, 1
+ 244:	f8730030 	swi	r3, r19, 48
+ 248:	e8930030 	lwi	r4, r19, 48
+ 24c:	b000000f 	imm	15
+ 250:	3060423f 	addik	r3, r0, 16959
+ 254:	16441801 	cmp	r18, r4, r3
+ 258:	bcb2ffe4 	bgei	r18, -28		// 23c
+        	led_clear();        	
+ 25c:	b0000000 	imm	0
+ 260:	b9f40000 	brlid	r15, 0
+ 264:	80000000 	or	r0, r0, r0
+        	//usleep(1000000);
+        	for(volatile int i = 0; i < 1000000; i++){ }
+ 268:	f8130034 	swi	r0, r19, 52
+ 26c:	b8000010 	bri	16		// 27c
+ 270:	e8730034 	lwi	r3, r19, 52
+ 274:	30630001 	addik	r3, r3, 1
+ 278:	f8730034 	swi	r3, r19, 52
+ 27c:	e8930034 	lwi	r4, r19, 52
+ 280:	b000000f 	imm	15
+ 284:	3060423f 	addik	r3, r0, 16959
+ 288:	16441801 	cmp	r18, r4, r3
+ 28c:	bcb2ffe4 	bgei	r18, -28		// 270
+        	led_set();
+ 290:	b800ff98 	bri	-104		// 228
+
+Disassembly of section .rodata:
+
+00000000 <.rodata>:
+   0:	20656854 	addi	r3, r5, 26708
+   4:	75736572 		r11, r19, r12
+   8:	6920746c 	addli	r9, 29804
+   c:	2d2d2073 	rsubic	r9, r13, 8307
+  10:	3125203e 	addik	r9, r5, 8254
+  14:	66362e32 		r17, r22, r5
+  18:	Address 0x0000000000000018 is out of bounds.
+
+
+Disassembly of section .debug_frame:
+
+00000000 <.debug_frame>:
+void my_func_3(void){
+   0:	0000000c 		r0, r0, r0
+   4:	ffffffff 	sli	r31, r31, -1
+   8:	7f010003 		r24, r1, r0
+   c:	00010c0f 		r0, r1, r1
+  10:	00000024 		r0, r0, r0
+	...
+	volatile int a = 3, b = 30, c;
+  1c:	000000c0 		r0, r0, r0
+  20:	00000404 		r0, r0, r0
+	int arr[20];
+  24:	04340e00 	neg	r1, r20
+  28:	00000004 		r0, r0, r0
+  2c:	04040493 	neg	r0, r4
+  30:	0d000000 	rsubc	r8, r0, r0
+  34:	00000013 		r0, r0, r0
+  38:	00000024 		r0, r0, r0
+  3c:	
+Disassembly of section .debug_info:
+
+00000000 <.debug_info>:
+void my_func_3(void){
+   0:	00000250 		r0, r0, r0
+   4:	04010005 	neg	r0, r1
+   8:	
+Disassembly of section .debug_abbrev:
+
+00000000 <.debug_abbrev>:
+   0:	03003401 		r24, r0, r6
+   4:	01213a08 		r9, r1, r7
+   8:	0b390b3b 		r25, r25, r1
+   c:	18021349 		r0, r2, r2
+  10:	24020000 	rsubi	r0, r2, 0
+	volatile int a = 3, b = 30, c;
+  14:	3e0b0b00 	rsubikc	r16, r11, 2816
+  18:	000e030b 		r0, r14, r0
+  1c:	00050300 		r0, r5, r0
+  20:	00001349 		r0, r0, r2
+	int arr[20];
+  24:	03003404 		r24, r0, r6
+  28:	01213a0e 		r9, r1, r7
+  2c:	21390b3b 	addi	r9, r25, 2875
+  30:	02134908 		r16, r19, r9
+  34:	05000018 	neg	r8, r0
+  38:	193f002e 		r9, r31, r0
+  3c:	0b3a0e03 		r25, r26, r1
+  40:	21390b3b 	addi	r9, r25, 2875
+  44:	3c192706 	rsubikc	r0, r25, 9990
+  48:	06000019 	neg	r16, r0
+  4c:	193f012e 		r9, r31, r0
+	c = a + b;
+  50:	0b3a0e03 		r25, r26, r1
+  54:	0b390b3b 		r25, r25, r1
+  58:	13491927 		r26, r9, r3
+  5c:	1301193c 		r24, r1, r3
+	for(int i = 0; i < 30; i++){
+  60:	0b070000 	addc	r24, r7, r0
+  64:	12011101 		r16, r1, r2
+		arr[i] = 0x33;
+  68:	08000006 		r0, r0, r0
+  6c:	193f012e 		r9, r31, r0
+  70:	213a0e03 	addi	r9, r26, 3587
+  74:	390b3b01 	addikc	r8, r11, 15105
+  78:	19270621 		r9, r7, r0
+  7c:	06120111 	neg	r16, r18
+	for(int i = 0; i < 30; i++){
+  80:	197c1840 		r11, r28, r3
+  84:	00001301 		r0, r0, r2
+  88:	25011109 	rsubi	r8, r1, 4361
+  8c:	030b130e 		r24, r11, r2
+  90:	111f1b1f 		r8, r31, r3
+  94:	10061201 		r0, r6, r2
+  98:	0a000017 		r16, r0, r0
+  9c:	0b0b0024 		r24, r11, r0
+  a0:	08030b3e 		r0, r3, r1
+  a4:	350b0000 	rsubik	r8, r11, 0
+}
+  a8:	00134900 	addl	r0, r19, r9
+  ac:	00260c00 		r1, r6, r1
+  b0:	00001349 		r0, r0, r2
+  b4:	0b000f0d 		r24, r0, r1
+  b8:	0013490b 		r0, r19, r9
+  bc:	00180e00 		r0, r24, r1
+void my_func_2(void){
+  c0:	2e0f0000 	rsubic	r16, r15, 0
+  c4:	03193f01 		r24, r25, r7
+  c8:	3b0b3a0e 	addikc	r24, r11, 14862
+  cc:	270b390b 	rsubi	r24, r11, 14603
+  d0:	11134919 		r8, r19, r9
+	volatile int a = 2, b = 20, c;
+  d4:	40061201 		r0, r6, r2
+  d8:	01197c18 		r8, r25, r15
+  dc:	10000013 		r0, r0, r0
+  e0:	0111010b 		r8, r17, r0
+	c = a + b;
+  e4:	13010612 		r24, r1, r0
+  e8:	2e110000 	rsubic	r16, r17, 0
+  ec:	03193f01 		r24, r25, r7
+  f0:	3b0b3a0e 	addikc	r24, r11, 14862
+	my_func_3();
+  f4:	270b390b 	rsubi	r24, r11, 14603
+  f8:	12011119 		r16, r1, r2
+}
+  fc:	7a184006 		r16, r24, r8
+ 100:	00130119 		r0, r19, r0
+ 104:	01011200 		r8, r1, r2
+ 108:	00001349 		r0, r0, r2
+ 10c:	49002113 		r8, r0, r4
+ 110:	000b2f13 		r0, r11, r5
+	...
+
+Disassembly of section .debug_aranges:
+
+00000000 <.debug_aranges>:
+void my_func_3(void){
+   0:	0000001c 		r0, r0, r0
+   4:	00000002 		r0, r0, r0
+   8:	00040000 	add	r0, r4, r0
+	...
+	volatile int a = 3, b = 30, c;
+  14:	00000294 		r0, r0, r0
+	...
+
+Disassembly of section .debug_line:
+
+00000000 <.debug_line>:
+void my_func_3(void){
+   0:	00000279 		r0, r0, r0
+   4:	00040005 		r0, r4, r0
+   8:	00000045 		r0, r0, r0
+   c:	f6010101 	shi	r16, r1, 257
+  10:	01000df2 		r8, r0, r1
+	volatile int a = 3, b = 30, c;
+  14:	00010101 		r0, r1, r0
+  18:	00010000 	add	r0, r1, r0
+  1c:	01010100 	addl	r8, r1, r0
+  20:	0007041f 		r0, r7, r0
+	int arr[20];
+  24:	00570000 	add	r2, r23, r0
+  28:	003e0000 	add	r1, r30, r0
+  2c:	00420000 	add	r2, r2, r0
+  30:	01020000 	add	r8, r2, r0
+  34:	050b021f 	neg	r8, r11
+  38:	00000050 		r0, r0, r0
+  3c:	00005000 	add	r0, r0, r10
+  40:	00380000 	add	r1, r24, r0
+  44:	48020000 	idiv	r0, r2, r0
+  48:	03000000 	add	r24, r0, r0
+  4c:	
+Disassembly of section .debug_str:
+
+00000000 <.debug_str>:
+void my_func_3(void){
+   0:	616f6c66 	muli	r11, r15, 27750
+   4:	61760074 	muli	r11, r22, 116
+   8:	7500306c 		r8, r0, r6
+   c:	5f747261 		r27, r20, r14
+  10:	74696e69 		r3, r9, r13
+	volatile int a = 3, b = 30, c;
+  14:	64656c00 	bslefi	r3, r5, 48, 0
+  18:	7465735f 		r3, r5, r14
+  1c:	736e7500 		r27, r14, r14
+  20:	656e6769 	bslefi	r11, r14, 29, 41
+	int arr[20];
+  24:	68632064 	rsublic	r3, 8292
+  28:	6c007261 	tncget	r0, rfsl1
+  2c:	20676e6f 	addi	r3, r7, 28271
+  30:	69736e75 	andnli	r11, 28277
+  34:	64656e67 	bslefi	r3, r5, 57, 39
+  38:	746e6920 		r3, r14, r13
+  3c:	6f687300 	tncget	r27, rfsl0
+  40:	75207472 		r9, r0, r14
+  44:	6769736e 	bslefi	r27, r9, 13, 46
+  48:	2064656e 	addi	r3, r4, 25966
+  4c:	00746e69 		r3, r20, r13
+	c = a + b;
+  50:	316c6176 	addik	r11, r12, 24950
+  54:	6c617600 	tnecget	r3, rfsl0
+  58:	61760032 	muli	r11, r22, 50
+  5c:	6c00336c 	tcget	r0, rfsl12
+	for(int i = 0; i < 30; i++){
+  60:	635f6465 	muli	r26, r31, 25701
+  64:	7261656c 		r19, r1, r12
+		arr[i] = 0x33;
+  68:	5f796d00 		r27, r25, r13
+  6c:	636e7566 	muli	r27, r14, 30054
+  70:	6d00315f 	tcget	r8, rfsl15
+  74:	75665f79 		r11, r6, r11
+  78:	325f636e 	addik	r18, r31, 25454
+  7c:	5f796d00 		r27, r25, r13
+	for(int i = 0; i < 30; i++){
+  80:	636e7566 	muli	r27, r14, 30054
+  84:	6d00335f 	tcget	r8, rfsl15
+  88:	006e6961 		r3, r14, r13
+  8c:	5f64656c 		r27, r4, r12
+  90:	74696e69 		r3, r9, r13
+  94:	736e7500 		r27, r14, r14
+  98:	656e6769 	bslefi	r11, r14, 29, 41
+  9c:	6e692064 	cget	r19, rfsl4
+  a0:	6f6c0074 	get	r27, rfsl4
+  a4:	6c20676e 	necget	r1, rfsl14
+}
+  a8:	20676e6f 	addi	r3, r7, 28271
+  ac:	69736e75 	andnli	r11, 28277
+  b0:	64656e67 	bslefi	r3, r5, 57, 39
+  b4:	746e6920 		r3, r14, r13
+  b8:	554e4700 		r10, r14, r8
+  bc:	37314320 	rsubik	r25, r17, 17184
+void my_func_2(void){
+  c0:	2e313120 	rsubic	r17, r17, 12576
+  c4:	20302e32 	addi	r1, r16, 11826
+  c8:	61686d2d 	muli	r11, r8, 27949
+  cc:	662d6472 	bslefi	r17, r13, 17, 50
+  d0:	74616f6c 		r3, r1, r13
+	volatile int a = 2, b = 20, c;
+  d4:	786d2d20 		r3, r13, r5
+  d8:	6c662d6c 	ecaget	r3, rfsl12
+  dc:	2d74616f 	rsubic	r11, r20, 24943
+  e0:	766e6f63 		r19, r14, r13
+	c = a + b;
+  e4:	20747265 	addi	r3, r20, 29285
+  e8:	6c786d2d 	necaget	r3, rfsl13
+  ec:	6f6c662d 	necget	r27, rfsl13
+  f0:	732d7461 		r25, r13, r14
+	my_func_3();
+  f4:	20747271 	addi	r3, r20, 29297
+  f8:	696c6d2d 		r11, r12, r13
+}
+  fc:	656c7474 	bslefi	r11, r12, 17, 52
+ 100:	646e652d 	bslefi	r3, r14, 20, 45
+ 104:	206e6169 	addi	r3, r14, 24937
+ 108:	6c786d2d 	necaget	r3, rfsl13
+ 10c:	7261622d 		r19, r1, r12
+ 110:	2d6c6572 	rsubic	r11, r12, 25970
+ 114:	66696873 	bslefi	r19, r9, 33, 51
+void my_func_1(void){
+ 118:	6d2d2074 	cget	r9, rfsl4
+ 11c:	702d6c78 		r1, r13, r13
+ 120:	65747461 	bslefi	r11, r20, 17, 33
+ 124:	632d6e72 	muli	r25, r13, 28274
+ 128:	61706d6f 	muli	r11, r16, 28015
+	volatile int a = 1, b = 10, c;
+ 12c:	2d206572 	rsubic	r9, r0, 25970
+ 130:	7570636d 		r11, r16, r12
+ 134:	3131763d 	addik	r9, r17, 30269
+ 138:	2d20302e 	rsubic	r9, r0, 12334
+	c = a + b;
+ 13c:	2d6f6e6d 	rsubic	r11, r15, 28269
+ 140:	732d6c78 		r25, r13, r13
+ 144:	2d74666f 	rsubic	r11, r20, 26223
+ 148:	206c756d 	addi	r3, r12, 30061
+	my_func_2();
+ 14c:	2d20672d 	rsubic	r9, r0, 26413
+ 150:	2d20304f 	rsubic	r9, r0, 12367
+}
+ 154:	61747366 	muli	r11, r20, 29542
+ 158:	752d6b63 		r9, r13, r13
+ 15c:	65676173 	bslefi	r11, r7, 5, 51
+ 160:	63662d20 	muli	r27, r6, 11552
+ 164:	676c6c61 	bslefi	r27, r12, 49, 33
+ 168:	68706172 	orli	r3, 24946
+ 16c:	666e692d 	bslefi	r19, r14, 36, 45
+int main(void){
+ 170:	662d206f 	bslrli	r17, r13, 47
+ 174:	6c6c6163 	ncget	r3, rfsl3
+ 178:	70617267 		r3, r1, r14
+ 17c:	6e692d68 	ecaget	r19, rfsl8
+ 180:	733d6f66 		r25, r29, r13
+	float val3 = 4.002503;
+ 184:	662d2075 	bslrli	r17, r13, 53
+ 188:	6c6c6163 	ncget	r3, rfsl3
+ 18c:	70617267 		r3, r1, r14
+	float val2 = 4.233456;
+ 190:	6e692d68 	ecaget	r19, rfsl8
+ 194:	643d6f66 	bslefi	r1, r29, 61, 38
+ 198:	662d2061 	bslrli	r17, r13, 33
+	float val1 = 4.789317;
+ 19c:	63617473 	muli	r27, r1, 29811
+ 1a0:	68632d6b 	rsublic	r3, 11627
+ 1a4:	3d6b6365 	rsubikc	r11, r11, 25445
+	float val0 = 4.220734;
+ 1a8:	63657073 	muli	r27, r5, 28787
+ 1ac:	63696669 	muli	r27, r9, 26217
+ 1b0:	6e6f6c00 	necaget	r19, rfsl0
+    led_init();
+ 1b4:	6f6c2067 	cget	r27, rfsl7
+ 1b8:	6920676e 	addli	r9, 26478
+ 1bc:	6300746e 	muli	r24, r0, 29806
+    uart_init();
+ 1c0:	00726168 		r3, r18, r12
+ 1c4:	6e697270 	tncget	r19, rfsl0
+ 1c8:	005f6674 		r2, r31, r12
+	my_result = asm_rms(val3, val2, val1, val0);
+ 1cc:	5f6d7361 		r27, r13, r14
+ 1d0:	00736d72 		r3, r19, r13
+ 1d4:	726f6873 		r19, r15, r13
+ 1d8:	6e692074 	cget	r19, rfsl4
+ 1dc:	6f6c0074 	get	r27, rfsl4
+ 1e0:	6920676e 	addli	r9, 26478
+ 1e4:	6c00746e 	tnecget	r0, rfsl14
+ 1e8:	20676e6f 	addi	r3, r7, 28271
+	printf("The result is --> %12.6f\n", my_result);
+ 1ec:	62756f64 	muli	r19, r21, 28516
+ 1f0:	7300656c 		r24, r0, r12
+ 1f4:	656e6769 	bslefi	r11, r14, 29, 41
+ 1f8:	68632064 	rsublic	r3, 8292
+ 1fc:	6d007261 	tncget	r8, rfsl1
+ 200:	65725f79 	bsefi	r11, r18, 61, 57
+ 204:	746c7573 		r3, r12, r14
+	...
+
+Disassembly of section .debug_line_str:
+
+00000000 <.debug_line_str>:
+void my_func_3(void){
+   0:	74726175 		r3, r18, r12
+   4:	2f00682e 	rsubic	r24, r0, 26670
+   8:	656d6f68 	bslefi	r11, r13, 61, 40
+   c:	6f626c2f 	necaget	r27, rfsl15
+  10:	6e616467 	necget	r19, rfsl7
+	volatile int a = 3, b = 30, c;
+  14:	772f766f 		r25, r15, r14
+  18:	736b726f 		r27, r11, r14
+  1c:	65636170 	bslefi	r11, r3, 5, 48
+  20:	69782f73 		r11, r24, r5
+	int arr[20];
+  24:	786e696c 		r3, r14, r13
+  28:	726f775f 		r19, r15, r14
+  2c:	6170736b 	muli	r11, r16, 29547
+  30:	322f6563 	addik	r17, r15, 25955
+  34:	00645f30 		r3, r4, r11
+  38:	2e64656c 	rsubic	r19, r4, 25964
+  3c:	656c0068 	bsrli	r11, r12, 40
+  40:	72700064 		r19, r16, r0
+  44:	00746e69 		r3, r20, r13
+  48:	6e697270 	tncget	r19, rfsl0
+  4c:	00682e74 		r3, r8, r5
+	c = a + b;
+  50:	6e69616d 	ncget	r19, rfsl13
+  54:	7500632e 		r8, r0, r12
+  58:	00747261 		r3, r20, r14

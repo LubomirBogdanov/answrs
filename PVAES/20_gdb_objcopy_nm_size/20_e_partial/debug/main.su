@@ -1,0 +1,9 @@
+main.c:24:30:encode	8	static
+main.c:30:13:dump	44	static
+main.c:40:13:filename	32	static
+main.c:44:14:allocate	8	static
+main.c:49:13:dump_gcov_info	44	static
+main.c:67:6:my_func_3	132	dynamic,bounded
+main.c:83:6:my_func_2	20	static
+main.c:91:6:my_func_1	20	static
+main.c:99:5:main	60	static

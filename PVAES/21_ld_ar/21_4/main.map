@@ -1,0 +1,1048 @@
+Archive member included to satisfy reference by file (symbol)
+
+.//libxil.a(hw_exception_handler.o)
+                              /home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/crt0.o (_hw_exception_handler)
+.//libxil.a(microblaze_interrupt_handler.o)
+                              /home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/crt0.o (_interrupt_handler)
+.//libxil.a(microblaze_interrupts_g.o)
+                              .//libxil.a(microblaze_interrupt_handler.o) (MB_InterruptVectorTable)
+.//libxil.a(xintc_l.o)        .//libxil.a(microblaze_interrupts_g.o) (XIntc_DeviceInterruptHandler)
+.//libxil.a(xintc.o)          .//libxil.a(xintc_l.o) (XIntc_BitPosMask)
+.//libxil.a(xintc_g.o)        .//libxil.a(xintc_l.o) (XIntc_ConfigTable)
+.//libxil.a(xil_assert.o)     .//libxil.a(xintc.o) (Xil_Assert)
+/home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/libm.a(lib_a-w_pow.o)
+                              ./debug/standard_rms.o (pow)
+/home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/libm.a(lib_a-w_sqrt.o)
+                              ./debug/standard_rms.o (sqrt)
+/home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/libm.a(lib_a-e_pow.o)
+                              /home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/libm.a(lib_a-w_pow.o) (__ieee754_pow)
+/home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/libm.a(lib_a-e_sqrt.o)
+                              /home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/libm.a(lib_a-w_sqrt.o) (__ieee754_sqrt)
+/home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/libm.a(lib_a-math_err.o)
+                              /home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/libm.a(lib_a-e_pow.o) (__math_uflow)
+/home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/libm.a(lib_a-s_fabs.o)
+                              /home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/libm.a(lib_a-e_pow.o) (fabs)
+/home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/libm.a(lib_a-s_finite.o)
+                              /home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/libm.a(lib_a-w_pow.o) (finite)
+/home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/libm.a(lib_a-s_scalbn.o)
+                              /home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/libm.a(lib_a-e_pow.o) (scalbn)
+/home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/libgcc.a(_fixunsdfsi.o)
+                              ./debug/print.o (__fixunsdfsi)
+/home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/libgcc.a(_udivdi3.o)
+                              ./debug/print.o (__udivdi3)
+/home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/libgcc.a(_umoddi3.o)
+                              ./debug/print.o (__umoddi3)
+/home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/libgcc.a(_sf_to_df.o)
+                              ./debug/main.o (__extendsfdf2)
+/home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/libgcc.a(_addsub_df.o)
+                              ./debug/print.o (__adddf3)
+/home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/libgcc.a(_mul_df.o)
+                              ./debug/print.o (__muldf3)
+/home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/libgcc.a(_div_df.o)
+                              ./debug/print.o (__divdf3)
+/home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/libgcc.a(_eq_df.o)
+                              /home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/libm.a(lib_a-w_pow.o) (__eqdf2)
+/home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/libgcc.a(_ne_df.o)
+                              ./debug/print.o (__nedf2)
+/home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/libgcc.a(_gt_df.o)
+                              ./debug/print.o (__gtdf2)
+/home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/libgcc.a(_ge_df.o)
+                              ./debug/print.o (__gedf2)
+/home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/libgcc.a(_lt_df.o)
+                              ./debug/print.o (__ltdf2)
+/home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/libgcc.a(_le_df.o)
+                              /home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/libm.a(lib_a-math_err.o) (__ledf2)
+/home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/libgcc.a(_unord_df.o)
+                              /home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/libm.a(lib_a-w_pow.o) (__unorddf2)
+/home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/libgcc.a(_si_to_df.o)
+                              ./debug/print.o (__floatsidf)
+/home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/libgcc.a(_df_to_si.o)
+                              ./debug/print.o (__fixdfsi)
+/home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/libgcc.a(_make_df.o)
+                              /home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/libgcc.a(_sf_to_df.o) (__make_dp)
+/home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/libgcc.a(_df_to_sf.o)
+                              ./debug/standard_rms.o (__truncdfsf2)
+/home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/libgcc.a(_thenan_df.o)
+                              /home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/libgcc.a(_addsub_df.o) (__thenan_df)
+/home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/libgcc.a(_usi_to_df.o)
+                              ./debug/print.o (__floatunsidf)
+/home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/libgcc.a(divsi3.o)
+                              ./debug/print.o (__divsi3)
+/home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/libgcc.a(modsi3.o)
+                              ./debug/print.o (__modsi3)
+/home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/libgcc.a(udivsi3.o)
+                              ./debug/print.o (__udivsi3)
+/home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/libgcc.a(umodsi3.o)
+                              ./debug/print.o (__umodsi3)
+/home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/libgcc.a(_muldi3.o)
+                              /home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/libgcc.a(_mul_df.o) (__muldi3)
+/home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/libgcc.a(_clz.o)
+                              /home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/libgcc.a(_udivdi3.o) (__clz_tab)
+/home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/libgcc.a(_clzsi2.o)
+                              /home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/libgcc.a(_si_to_df.o) (__clzsi2)
+/home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/libgcc.a(_unpack_sf.o)
+                              /home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/libgcc.a(_sf_to_df.o) (__unpack_f)
+/home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/libgcc.a(_make_sf.o)
+                              /home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/libgcc.a(_df_to_sf.o) (__make_fp)
+/home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/libgcc.a(_pack_df.o)
+                              /home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/libgcc.a(_addsub_df.o) (__pack_d)
+/home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/libgcc.a(_unpack_df.o)
+                              /home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/libgcc.a(_addsub_df.o) (__unpack_d)
+/home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/libgcc.a(_fpcmp_parts_df.o)
+                              /home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/libgcc.a(_eq_df.o) (__fpcmp_parts_d)
+/home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/libgcc.a(_pack_sf.o)
+                              /home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/libgcc.a(_make_sf.o) (__pack_f)
+/home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/libgloss.a(_exception_handler.o)
+                              /home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/crt0.o (_exception_handler)
+/home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/libgloss.a(_program_clean.o)
+                              /home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/crtinit.o (_program_clean)
+/home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/libgloss.a(_program_init.o)
+                              /home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/crtinit.o (_program_init)
+.//libxil.a(errno.o)          /home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/libm.a(lib_a-w_pow.o) (__errno)
+.//libxil.a(xgpio.o)          ./debug/led.o (XGpio_SetDataDirection)
+.//libxil.a(xgpio_sinit.o)    ./debug/led.o (XGpio_Initialize)
+.//libxil.a(xil_sleepcommon.o)
+                              ./debug/main.o (usleep)
+.//libxil.a(microblaze_sleep.o)
+                              .//libxil.a(xil_sleepcommon.o) (usleep_MB)
+.//libxil.a(xgpio_g.o)        .//libxil.a(xgpio_sinit.o) (XGpio_ConfigTable)
+/home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/libc.a(lib_a-exit.o)
+                              /home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/crt0.o (exit)
+/home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/libc.a(lib_a-impure.o)
+                              /home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/libc.a(lib_a-exit.o) (_global_impure_ptr)
+/home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/libc.a(lib_a-__call_atexit.o)
+                              /home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/libc.a(lib_a-exit.o) (__call_exitprocs)
+
+Discarded input sections
+
+ .data          0x0000000000000000        0x0 /home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/crt0.o
+ .bss           0x0000000000000000        0x0 /home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/crt0.o
+ .text          0x0000000000000000        0x0 /home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/crti.o
+ .data          0x0000000000000000        0x0 /home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/crti.o
+ .bss           0x0000000000000000        0x0 /home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/crti.o
+ .data          0x0000000000000000        0x4 /home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/crtbegin.o
+ .data          0x0000000000000000        0x0 /home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/crtinit.o
+ .bss           0x0000000000000000        0x0 /home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/crtinit.o
+ .data          0x0000000000000000        0x0 .//libxil.a(hw_exception_handler.o)
+ .bss           0x0000000000000000        0x0 .//libxil.a(hw_exception_handler.o)
+ .text          0x0000000000000000        0x0 .//libxil.a(microblaze_interrupt_handler.o)
+ .data          0x0000000000000000        0x0 .//libxil.a(microblaze_interrupt_handler.o)
+ .bss           0x0000000000000000        0x0 .//libxil.a(microblaze_interrupt_handler.o)
+ .text.microblaze_register_handler
+                0x0000000000000000       0x14 .//libxil.a(microblaze_interrupt_handler.o)
+ .text          0x0000000000000000        0x0 .//libxil.a(microblaze_interrupts_g.o)
+ .data          0x0000000000000000        0x0 .//libxil.a(microblaze_interrupts_g.o)
+ .bss           0x0000000000000000        0x0 .//libxil.a(microblaze_interrupts_g.o)
+ .text          0x0000000000000000        0x0 .//libxil.a(xintc_l.o)
+ .data          0x0000000000000000        0x0 .//libxil.a(xintc_l.o)
+ .bss           0x0000000000000000        0x0 .//libxil.a(xintc_l.o)
+ .text.XIntc_LowLevelInterruptHandler
+                0x0000000000000000       0x20 .//libxil.a(xintc_l.o)
+ .text.XIntc_SetIntrSvcOption
+                0x0000000000000000       0x24 .//libxil.a(xintc_l.o)
+ .text.XIntc_RegisterHandler
+                0x0000000000000000       0xa4 .//libxil.a(xintc_l.o)
+ .text.XIntc_RegisterFastHandler
+                0x0000000000000000      0x198 .//libxil.a(xintc_l.o)
+ .text          0x0000000000000000        0x0 .//libxil.a(xintc.o)
+ .data          0x0000000000000000        0x0 .//libxil.a(xintc.o)
+ .bss           0x0000000000000000        0x0 .//libxil.a(xintc.o)
+ .rodata        0x0000000000000000        0x8 .//libxil.a(xintc.o)
+ .text.StubHandler
+                0x0000000000000000       0x50 .//libxil.a(xintc.o)
+ .text.XIntc_Initialize
+                0x0000000000000000      0x22c .//libxil.a(xintc.o)
+ .text.XIntc_Start
+                0x0000000000000000       0xf4 .//libxil.a(xintc.o)
+ .text.XIntc_Stop
+                0x0000000000000000       0x90 .//libxil.a(xintc.o)
+ .text.XIntc_Connect
+                0x0000000000000000       0xfc .//libxil.a(xintc.o)
+ .text.XIntc_Disconnect
+                0x0000000000000000       0xe8 .//libxil.a(xintc.o)
+ .text.XIntc_Enable
+                0x0000000000000000       0xd0 .//libxil.a(xintc.o)
+ .text.XIntc_Disable
+                0x0000000000000000       0xd4 .//libxil.a(xintc.o)
+ .text.XIntc_Acknowledge
+                0x0000000000000000       0xc8 .//libxil.a(xintc.o)
+ .text.XIntc_LookupConfig
+                0x0000000000000000       0x28 .//libxil.a(xintc.o)
+ .text.XIntc_ConnectFastHandler
+                0x0000000000000000      0x1d8 .//libxil.a(xintc.o)
+ .text.XIntc_SetNormalIntrMode
+                0x0000000000000000      0x240 .//libxil.a(xintc.o)
+ .text.XIntc_TriggerSwIntr
+                0x0000000000000000       0xfc .//libxil.a(xintc.o)
+ .bss.XIntc_BitPosMask
+                0x0000000000000000       0x80 .//libxil.a(xintc.o)
+ .debug_frame   0x0000000000000000      0x1d0 .//libxil.a(xintc.o)
+ .debug_info    0x0000000000000000     0x1336 .//libxil.a(xintc.o)
+ .debug_abbrev  0x0000000000000000      0x3b5 .//libxil.a(xintc.o)
+ .debug_loclists
+                0x0000000000000000      0xad2 .//libxil.a(xintc.o)
+ .debug_aranges
+                0x0000000000000000       0x80 .//libxil.a(xintc.o)
+ .debug_rnglists
+                0x0000000000000000      0x144 .//libxil.a(xintc.o)
+ .debug_line    0x0000000000000000     0x1fd6 .//libxil.a(xintc.o)
+ .debug_str     0x0000000000000000      0x4e4 .//libxil.a(xintc.o)
+ .debug_line_str
+                0x0000000000000000      0x1dd .//libxil.a(xintc.o)
+ .text          0x0000000000000000        0x0 .//libxil.a(xintc_g.o)
+ .data          0x0000000000000000        0x0 .//libxil.a(xintc_g.o)
+ .bss           0x0000000000000000        0x0 .//libxil.a(xintc_g.o)
+ .text          0x0000000000000000        0x0 .//libxil.a(xil_assert.o)
+ .data          0x0000000000000000        0x0 .//libxil.a(xil_assert.o)
+ .bss           0x0000000000000000        0x0 .//libxil.a(xil_assert.o)
+ .text.Xil_AssertSetCallback
+                0x0000000000000000       0x10 .//libxil.a(xil_assert.o)
+ .data          0x0000000000000000        0x0 ./debug/main.o
+ .bss           0x0000000000000000        0x0 ./debug/main.o
+ .data          0x0000000000000000        0x0 ./debug/led.o
+ .data          0x0000000000000000        0x0 ./debug/uart.o
+ .bss           0x0000000000000000        0x0 ./debug/uart.o
+ .data          0x0000000000000000        0x0 ./debug/print.o
+ .bss           0x0000000000000000        0x0 ./debug/print.o
+ .data          0x0000000000000000        0x0 ./debug/standard_rms.o
+ .bss           0x0000000000000000        0x0 ./debug/standard_rms.o
+ .data          0x0000000000000000        0x0 /home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/libm.a(lib_a-w_pow.o)
+ .bss           0x0000000000000000        0x0 /home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/libm.a(lib_a-w_pow.o)
+ .data          0x0000000000000000        0x0 /home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/libm.a(lib_a-w_sqrt.o)
+ .bss           0x0000000000000000        0x0 /home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/libm.a(lib_a-w_sqrt.o)
+ .data          0x0000000000000000        0x0 /home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/libm.a(lib_a-e_pow.o)
+ .bss           0x0000000000000000        0x0 /home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/libm.a(lib_a-e_pow.o)
+ .data          0x0000000000000000        0x0 /home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/libm.a(lib_a-e_sqrt.o)
+ .bss           0x0000000000000000        0x0 /home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/libm.a(lib_a-e_sqrt.o)
+ .data          0x0000000000000000        0x0 /home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/libm.a(lib_a-math_err.o)
+ .bss           0x0000000000000000        0x0 /home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/libm.a(lib_a-math_err.o)
+ .data          0x0000000000000000        0x0 /home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/libm.a(lib_a-s_fabs.o)
+ .bss           0x0000000000000000        0x0 /home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/libm.a(lib_a-s_fabs.o)
+ .data          0x0000000000000000        0x0 /home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/libm.a(lib_a-s_finite.o)
+ .bss           0x0000000000000000        0x0 /home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/libm.a(lib_a-s_finite.o)
+ .data          0x0000000000000000        0x0 /home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/libm.a(lib_a-s_scalbn.o)
+ .bss           0x0000000000000000        0x0 /home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/libm.a(lib_a-s_scalbn.o)
+ .data          0x0000000000000000        0x0 /home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/libgcc.a(_fixunsdfsi.o)
+ .bss           0x0000000000000000        0x0 /home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/libgcc.a(_fixunsdfsi.o)
+ .data          0x0000000000000000        0x0 /home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/libgcc.a(_udivdi3.o)
+ .bss           0x0000000000000000        0x0 /home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/libgcc.a(_udivdi3.o)
+ .eh_frame      0x0000000000000000       0x40 /home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/libgcc.a(_udivdi3.o)
+ .data          0x0000000000000000        0x0 /home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/libgcc.a(_umoddi3.o)
+ .bss           0x0000000000000000        0x0 /home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/libgcc.a(_umoddi3.o)
+ .eh_frame      0x0000000000000000       0x44 /home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/libgcc.a(_umoddi3.o)
+ .data          0x0000000000000000        0x0 /home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/libgcc.a(_sf_to_df.o)
+ .bss           0x0000000000000000        0x0 /home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/libgcc.a(_sf_to_df.o)
+ .data          0x0000000000000000        0x0 /home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/libgcc.a(_addsub_df.o)
+ .bss           0x0000000000000000        0x0 /home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/libgcc.a(_addsub_df.o)
+ .data          0x0000000000000000        0x0 /home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/libgcc.a(_mul_df.o)
+ .bss           0x0000000000000000        0x0 /home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/libgcc.a(_mul_df.o)
+ .data          0x0000000000000000        0x0 /home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/libgcc.a(_div_df.o)
+ .bss           0x0000000000000000        0x0 /home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/libgcc.a(_div_df.o)
+ .data          0x0000000000000000        0x0 /home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/libgcc.a(_eq_df.o)
+ .bss           0x0000000000000000        0x0 /home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/libgcc.a(_eq_df.o)
+ .data          0x0000000000000000        0x0 /home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/libgcc.a(_ne_df.o)
+ .bss           0x0000000000000000        0x0 /home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/libgcc.a(_ne_df.o)
+ .data          0x0000000000000000        0x0 /home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/libgcc.a(_gt_df.o)
+ .bss           0x0000000000000000        0x0 /home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/libgcc.a(_gt_df.o)
+ .data          0x0000000000000000        0x0 /home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/libgcc.a(_ge_df.o)
+ .bss           0x0000000000000000        0x0 /home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/libgcc.a(_ge_df.o)
+ .data          0x0000000000000000        0x0 /home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/libgcc.a(_lt_df.o)
+ .bss           0x0000000000000000        0x0 /home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/libgcc.a(_lt_df.o)
+ .data          0x0000000000000000        0x0 /home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/libgcc.a(_le_df.o)
+ .bss           0x0000000000000000        0x0 /home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/libgcc.a(_le_df.o)
+ .data          0x0000000000000000        0x0 /home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/libgcc.a(_unord_df.o)
+ .bss           0x0000000000000000        0x0 /home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/libgcc.a(_unord_df.o)
+ .data          0x0000000000000000        0x0 /home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/libgcc.a(_si_to_df.o)
+ .bss           0x0000000000000000        0x0 /home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/libgcc.a(_si_to_df.o)
+ .data          0x0000000000000000        0x0 /home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/libgcc.a(_df_to_si.o)
+ .bss           0x0000000000000000        0x0 /home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/libgcc.a(_df_to_si.o)
+ .data          0x0000000000000000        0x0 /home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/libgcc.a(_make_df.o)
+ .bss           0x0000000000000000        0x0 /home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/libgcc.a(_make_df.o)
+ .data          0x0000000000000000        0x0 /home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/libgcc.a(_df_to_sf.o)
+ .bss           0x0000000000000000        0x0 /home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/libgcc.a(_df_to_sf.o)
+ .text          0x0000000000000000        0x0 /home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/libgcc.a(_thenan_df.o)
+ .data          0x0000000000000000        0x0 /home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/libgcc.a(_thenan_df.o)
+ .bss           0x0000000000000000        0x0 /home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/libgcc.a(_thenan_df.o)
+ .data          0x0000000000000000        0x0 /home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/libgcc.a(_usi_to_df.o)
+ .bss           0x0000000000000000        0x0 /home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/libgcc.a(_usi_to_df.o)
+ .data          0x0000000000000000        0x0 /home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/libgcc.a(divsi3.o)
+ .bss           0x0000000000000000        0x0 /home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/libgcc.a(divsi3.o)
+ .data          0x0000000000000000        0x0 /home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/libgcc.a(modsi3.o)
+ .bss           0x0000000000000000        0x0 /home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/libgcc.a(modsi3.o)
+ .data          0x0000000000000000        0x0 /home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/libgcc.a(udivsi3.o)
+ .bss           0x0000000000000000        0x0 /home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/libgcc.a(udivsi3.o)
+ .data          0x0000000000000000        0x0 /home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/libgcc.a(umodsi3.o)
+ .bss           0x0000000000000000        0x0 /home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/libgcc.a(umodsi3.o)
+ .data          0x0000000000000000        0x0 /home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/libgcc.a(_muldi3.o)
+ .bss           0x0000000000000000        0x0 /home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/libgcc.a(_muldi3.o)
+ .text          0x0000000000000000        0x0 /home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/libgcc.a(_clz.o)
+ .data          0x0000000000000000        0x0 /home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/libgcc.a(_clz.o)
+ .bss           0x0000000000000000        0x0 /home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/libgcc.a(_clz.o)
+ .data          0x0000000000000000        0x0 /home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/libgcc.a(_clzsi2.o)
+ .bss           0x0000000000000000        0x0 /home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/libgcc.a(_clzsi2.o)
+ .data          0x0000000000000000        0x0 /home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/libgcc.a(_unpack_sf.o)
+ .bss           0x0000000000000000        0x0 /home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/libgcc.a(_unpack_sf.o)
+ .data          0x0000000000000000        0x0 /home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/libgcc.a(_make_sf.o)
+ .bss           0x0000000000000000        0x0 /home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/libgcc.a(_make_sf.o)
+ .data          0x0000000000000000        0x0 /home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/libgcc.a(_pack_df.o)
+ .bss           0x0000000000000000        0x0 /home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/libgcc.a(_pack_df.o)
+ .data          0x0000000000000000        0x0 /home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/libgcc.a(_unpack_df.o)
+ .bss           0x0000000000000000        0x0 /home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/libgcc.a(_unpack_df.o)
+ .data          0x0000000000000000        0x0 /home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/libgcc.a(_fpcmp_parts_df.o)
+ .bss           0x0000000000000000        0x0 /home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/libgcc.a(_fpcmp_parts_df.o)
+ .data          0x0000000000000000        0x0 /home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/libgcc.a(_pack_sf.o)
+ .bss           0x0000000000000000        0x0 /home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/libgcc.a(_pack_sf.o)
+ .data          0x0000000000000000        0x0 /home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/libgloss.a(_exception_handler.o)
+ .bss           0x0000000000000000        0x0 /home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/libgloss.a(_exception_handler.o)
+ .data          0x0000000000000000        0x0 /home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/libgloss.a(_program_clean.o)
+ .bss           0x0000000000000000        0x0 /home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/libgloss.a(_program_clean.o)
+ .data          0x0000000000000000        0x0 /home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/libgloss.a(_program_init.o)
+ .bss           0x0000000000000000        0x0 /home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/libgloss.a(_program_init.o)
+ .text          0x0000000000000000        0x0 .//libxil.a(errno.o)
+ .data          0x0000000000000000        0x0 .//libxil.a(errno.o)
+ .bss           0x0000000000000000        0x0 .//libxil.a(errno.o)
+ .text          0x0000000000000000        0x0 .//libxil.a(xgpio.o)
+ .data          0x0000000000000000        0x0 .//libxil.a(xgpio.o)
+ .bss           0x0000000000000000        0x0 .//libxil.a(xgpio.o)
+ .text.XGpio_GetDataDirection
+                0x0000000000000000       0xf8 .//libxil.a(xgpio.o)
+ .text.XGpio_DiscreteRead
+                0x0000000000000000       0xf8 .//libxil.a(xgpio.o)
+ .text          0x0000000000000000        0x0 .//libxil.a(xgpio_sinit.o)
+ .data          0x0000000000000000        0x0 .//libxil.a(xgpio_sinit.o)
+ .bss           0x0000000000000000        0x0 .//libxil.a(xgpio_sinit.o)
+ .text.XGpio_LookupConfig
+                0x0000000000000000       0x44 .//libxil.a(xgpio_sinit.o)
+ .text          0x0000000000000000        0x0 .//libxil.a(xil_sleepcommon.o)
+ .data          0x0000000000000000        0x0 .//libxil.a(xil_sleepcommon.o)
+ .bss           0x0000000000000000        0x0 .//libxil.a(xil_sleepcommon.o)
+ .text.sleep    0x0000000000000000       0x20 .//libxil.a(xil_sleepcommon.o)
+ .text          0x0000000000000000        0x0 .//libxil.a(microblaze_sleep.o)
+ .data          0x0000000000000000        0x0 .//libxil.a(microblaze_sleep.o)
+ .bss           0x0000000000000000        0x0 .//libxil.a(microblaze_sleep.o)
+ .text.Xil_SetMBFrequency
+                0x0000000000000000       0x20 .//libxil.a(microblaze_sleep.o)
+ .text.Xil_GetMBFrequency
+                0x0000000000000000       0x10 .//libxil.a(microblaze_sleep.o)
+ .text.sleep_MB
+                0x0000000000000000       0x30 .//libxil.a(microblaze_sleep.o)
+ .text.MB_Sleep
+                0x0000000000000000       0x3c .//libxil.a(microblaze_sleep.o)
+ .text          0x0000000000000000        0x0 .//libxil.a(xgpio_g.o)
+ .data          0x0000000000000000        0x0 .//libxil.a(xgpio_g.o)
+ .bss           0x0000000000000000        0x0 .//libxil.a(xgpio_g.o)
+ .data          0x0000000000000000        0x0 /home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/libc.a(lib_a-exit.o)
+ .bss           0x0000000000000000        0x0 /home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/libc.a(lib_a-exit.o)
+ .text          0x0000000000000000        0x0 /home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/libc.a(lib_a-impure.o)
+ .bss           0x0000000000000000        0x0 /home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/libc.a(lib_a-impure.o)
+ .data          0x0000000000000000        0x0 /home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/libc.a(lib_a-__call_atexit.o)
+ .bss           0x0000000000000000        0x0 /home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/libc.a(lib_a-__call_atexit.o)
+ .data          0x0000000000000000        0x4 /home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/crtend.o
+ .bss           0x0000000000000000        0x0 /home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/crtend.o
+ .eh_frame      0x0000000000000000        0x4 /home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/crtend.o
+ .text          0x0000000000000000        0x0 /home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/crtn.o
+ .data          0x0000000000000000        0x0 /home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/crtn.o
+ .bss           0x0000000000000000        0x0 /home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/crtn.o
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+microblaze_0_local_memory_ilmb_bram_if_cntlr_Mem_microblaze_0_local_memory_dlmb_bram_if_cntlr_Mem 0x0000000000000050 0x000000000000ffb0
+*default*        0x0000000000000000 0xffffffffffffffff
+
+Linker script and memory map
+
+LOAD /home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/crt0.o
+LOAD /home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/crti.o
+LOAD /home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/crtbegin.o
+LOAD /home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/crtinit.o
+                0x0000000000000400                _STACK_SIZE = DEFINED (_STACK_SIZE)?_STACK_SIZE:0x400
+                0x0000000000000800                _HEAP_SIZE = DEFINED (_HEAP_SIZE)?_HEAP_SIZE:0x800
+
+.vectors.reset  0x0000000000000000        0x8
+ *(.vectors.reset)
+ .vectors.reset
+                0x0000000000000000        0x8 /home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/crt0.o
+                0x0000000000000000                _start
+
+.vectors.sw_exception
+                0x0000000000000008        0x8
+ *(.vectors.sw_exception)
+ .vectors.sw_exception
+                0x0000000000000008        0x8 /home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/crt0.o
+
+.vectors.interrupt
+                0x0000000000000010        0x8
+ *(.vectors.interrupt)
+ .vectors.interrupt
+                0x0000000000000010        0x8 /home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/crt0.o
+
+.vectors.hw_exception
+                0x0000000000000020        0x8
+ *(.vectors.hw_exception)
+ .vectors.hw_exception
+                0x0000000000000020        0x8 /home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/crt0.o
+
+.text           0x0000000000000050     0x89bc
+ *(.text)
+ .text          0x0000000000000050       0x34 /home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/crt0.o
+                0x0000000000000050                _start1
+                0x0000000000000080                _exit
+ .text          0x0000000000000084      0x1b8 /home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/crtbegin.o
+ .text          0x000000000000023c       0xb0 /home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/crtinit.o
+                0x000000000000023c                _crtinit
+ .text          0x00000000000002ec        0x4 .//libxil.a(hw_exception_handler.o)
+                0x00000000000002ec                _hw_exception_handler
+ .text          0x00000000000002f0       0xf0 ./debug/main.o
+                0x00000000000002f0                main
+ .text          0x00000000000003e0      0x10c ./debug/led.o
+                0x00000000000003e0                led_init
+                0x000000000000045c                led_set
+                0x00000000000004a4                led_clear
+ .text          0x00000000000004ec      0x1a8 ./debug/uart.o
+                0x0000000000000558                uart_init
+                0x000000000000057c                uart_send
+                0x00000000000005f0                uart_receive
+                0x000000000000064c                _putchar
+ .text          0x0000000000000694     0x2df8 ./debug/print.o
+                0x00000000000031e8                printf_
+                0x0000000000003264                sprintf_
+                0x00000000000032dc                snprintf_
+                0x0000000000003354                vprintf_
+                0x00000000000033a8                vsnprintf_
+                0x0000000000003400                fctprintf
+ .text          0x000000000000348c      0x23c ./debug/standard_rms.o
+                0x000000000000348c                standard_rms
+ .text          0x00000000000036c8      0x1e8 /home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/libm.a(lib_a-w_pow.o)
+                0x00000000000036c8                pow
+ .text          0x00000000000038b0       0xc4 /home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/libm.a(lib_a-w_sqrt.o)
+                0x00000000000038b0                sqrt
+ .text          0x0000000000003974     0x1558 /home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/libm.a(lib_a-e_pow.o)
+                0x0000000000003974                __ieee754_pow
+ .text          0x0000000000004ecc      0x2c0 /home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/libm.a(lib_a-e_sqrt.o)
+                0x0000000000004ecc                __ieee754_sqrt
+ .text          0x000000000000518c      0x378 /home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/libm.a(lib_a-math_err.o)
+                0x0000000000005248                __math_uflow
+                0x0000000000005270                __math_may_uflow
+                0x0000000000005298                __math_oflow
+                0x00000000000052c0                __math_divzero
+                0x000000000000532c                __math_invalid
+                0x00000000000053d4                __math_check_uflow
+                0x0000000000005450                __math_check_oflow
+ .text          0x0000000000005504       0x18 /home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/libm.a(lib_a-s_fabs.o)
+                0x0000000000005504                fabs
+ .text          0x000000000000551c       0x18 /home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/libm.a(lib_a-s_finite.o)
+                0x000000000000551c                finite
+ .text          0x0000000000005534      0x208 /home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/libm.a(lib_a-s_scalbn.o)
+                0x0000000000005534                scalbn
+ .text          0x000000000000573c       0x98 /home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/libgcc.a(_fixunsdfsi.o)
+                0x000000000000573c                __fixunsdfsi
+ .text          0x00000000000057d4      0x6d4 /home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/libgcc.a(_udivdi3.o)
+                0x00000000000057d4                __udivdi3
+ .text          0x0000000000005ea8      0x6a8 /home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/libgcc.a(_umoddi3.o)
+                0x0000000000005ea8                __umoddi3
+ .text          0x0000000000006550       0x4c /home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/libgcc.a(_sf_to_df.o)
+                0x0000000000006550                __extendsfdf2
+ .text          0x000000000000659c      0x4bc /home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/libgcc.a(_addsub_df.o)
+                0x000000000000696c                __adddf3
+                0x00000000000069dc                __subdf3
+ .text          0x0000000000006a58      0x39c /home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/libgcc.a(_mul_df.o)
+                0x0000000000006a58                __muldf3
+ .text          0x0000000000006df4      0x238 /home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/libgcc.a(_div_df.o)
+                0x0000000000006df4                __divdf3
+ .text          0x000000000000702c       0x80 /home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/libgcc.a(_eq_df.o)
+                0x000000000000702c                __eqdf2
+ .text          0x00000000000070ac       0x80 /home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/libgcc.a(_ne_df.o)
+                0x00000000000070ac                __nedf2
+ .text          0x000000000000712c       0x90 /home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/libgcc.a(_gt_df.o)
+                0x000000000000712c                __gtdf2
+ .text          0x00000000000071bc       0x90 /home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/libgcc.a(_ge_df.o)
+                0x00000000000071bc                __gedf2
+ .text          0x000000000000724c       0x80 /home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/libgcc.a(_lt_df.o)
+                0x000000000000724c                __ltdf2
+ .text          0x00000000000072cc       0x80 /home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/libgcc.a(_le_df.o)
+                0x00000000000072cc                __ledf2
+ .text          0x000000000000734c       0x80 /home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/libgcc.a(_unord_df.o)
+                0x000000000000734c                __unorddf2
+ .text          0x00000000000073cc       0xe8 /home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/libgcc.a(_si_to_df.o)
+                0x00000000000073cc                __floatsidf
+ .text          0x00000000000074b4       0xe4 /home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/libgcc.a(_df_to_si.o)
+                0x00000000000074b4                __fixdfsi
+ .text          0x0000000000007598       0x38 /home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/libgcc.a(_make_df.o)
+                0x0000000000007598                __make_dp
+ .text          0x00000000000075d0       0x6c /home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/libgcc.a(_df_to_sf.o)
+                0x00000000000075d0                __truncdfsf2
+ .text          0x000000000000763c       0xa8 /home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/libgcc.a(_usi_to_df.o)
+                0x000000000000763c                __floatunsidf
+ .text          0x00000000000076e4       0x9c /home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/libgcc.a(divsi3.o)
+                0x00000000000076e4                __divsi3
+ .text          0x0000000000007780       0x9c /home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/libgcc.a(modsi3.o)
+                0x0000000000007780                __modsi3
+ .text          0x000000000000781c       0xa8 /home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/libgcc.a(udivsi3.o)
+                0x000000000000781c                __udivsi3
+ .text          0x00000000000078c4       0xbc /home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/libgcc.a(umodsi3.o)
+                0x00000000000078c4                __umodsi3
+ .text          0x0000000000007980       0x70 /home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/libgcc.a(_muldi3.o)
+                0x0000000000007980                __muldi3
+ .text          0x00000000000079f0       0x90 /home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/libgcc.a(_clzsi2.o)
+                0x00000000000079f0                __clzsi2
+ .text          0x0000000000007a80       0xc0 /home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/libgcc.a(_unpack_sf.o)
+                0x0000000000007a80                __unpack_f
+ .text          0x0000000000007b40       0x34 /home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/libgcc.a(_make_sf.o)
+                0x0000000000007b40                __make_fp
+ .text          0x0000000000007b74      0x314 /home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/libgcc.a(_pack_df.o)
+                0x0000000000007b74                __pack_d
+ .text          0x0000000000007e88      0x108 /home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/libgcc.a(_unpack_df.o)
+                0x0000000000007e88                __unpack_d
+ .text          0x0000000000007f90      0x138 /home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/libgcc.a(_fpcmp_parts_df.o)
+                0x0000000000007f90                __fpcmp_parts_d
+ .text          0x00000000000080c8      0x1a0 /home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/libgcc.a(_pack_sf.o)
+                0x00000000000080c8                __pack_f
+ .text          0x0000000000008268        0x4 /home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/libgloss.a(_exception_handler.o)
+                0x0000000000008268                _exception_handler
+ .text          0x000000000000826c        0x8 /home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/libgloss.a(_program_clean.o)
+                0x000000000000826c                _program_clean
+ .text          0x0000000000008274        0x8 /home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/libgloss.a(_program_init.o)
+                0x0000000000008274                _program_init
+ .text          0x000000000000827c       0x40 /home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/libc.a(lib_a-exit.o)
+                0x000000000000827c                exit
+ .text          0x00000000000082bc      0x154 /home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/libc.a(lib_a-__call_atexit.o)
+                0x00000000000082bc                __call_exitprocs
+ .text          0x0000000000008410       0x4c /home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/crtend.o
+ *(.text.*)
+ .text.__interrupt_handler
+                0x000000000000845c       0xa4 .//libxil.a(microblaze_interrupt_handler.o)
+                0x000000000000845c                _interrupt_handler
+                0x000000000000845c                __interrupt_handler
+ .text.XIntc_DeviceInterruptHandler
+                0x0000000000008500      0x164 .//libxil.a(xintc_l.o)
+                0x0000000000008500                XIntc_DeviceInterruptHandler
+ .text.Xil_Assert
+                0x0000000000008664       0x48 .//libxil.a(xil_assert.o)
+                0x0000000000008664                Xil_Assert
+ .text.XNullHandler
+                0x00000000000086ac        0x8 .//libxil.a(xil_assert.o)
+                0x00000000000086ac                XNullHandler
+ .text.__errno  0x00000000000086b4       0x10 .//libxil.a(errno.o)
+                0x00000000000086b4                __errno
+ .text.XGpio_CfgInitialize
+                0x00000000000086c4       0x6c .//libxil.a(xgpio.o)
+                0x00000000000086c4                XGpio_CfgInitialize
+ .text.XGpio_SetDataDirection
+                0x0000000000008730       0xdc .//libxil.a(xgpio.o)
+                0x0000000000008730                XGpio_SetDataDirection
+ .text.XGpio_DiscreteWrite
+                0x000000000000880c       0xdc .//libxil.a(xgpio.o)
+                0x000000000000880c                XGpio_DiscreteWrite
+ .text.XGpio_Initialize
+                0x00000000000088e8       0xc0 .//libxil.a(xgpio_sinit.o)
+                0x00000000000088e8                XGpio_Initialize
+ .text.usleep   0x00000000000089a8       0x20 .//libxil.a(xil_sleepcommon.o)
+                0x00000000000089a8                usleep
+ .text.usleep_MB
+                0x00000000000089c8       0x44 .//libxil.a(microblaze_sleep.o)
+                0x00000000000089c8                usleep_MB
+ *(.gnu.linkonce.t.*)
+
+.note.gnu.build-id
+ *(.note.gnu.build-id)
+
+.init           0x0000000000008a0c       0x3c
+ *(.init)
+ .init          0x0000000000008a0c       0x18 /home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/crti.o
+                0x0000000000008a0c                __init
+ .init          0x0000000000008a24        0xc /home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/crtbegin.o
+ .init          0x0000000000008a30        0xc /home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/crtend.o
+ .init          0x0000000000008a3c        0xc /home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/crtn.o
+
+.fini           0x0000000000008a48       0x20
+ *(.fini)
+ .fini          0x0000000000008a48        0x8 /home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/crti.o
+                0x0000000000008a48                __fini
+ .fini          0x0000000000008a50        0xc /home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/crtbegin.o
+ .fini          0x0000000000008a5c        0xc /home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/crtn.o
+
+.ctors          0x0000000000008a68        0x8
+                0x0000000000008a68                __CTOR_LIST__ = .
+                0x0000000000008a68                ___CTORS_LIST___ = .
+ *crtbegin.o(.ctors)
+ .ctors         0x0000000000008a68        0x4 /home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/crtbegin.o
+ *(EXCLUDE_FILE(*crtend.o) .ctors)
+ *(SORT_BY_NAME(.ctors.*))
+ *(.ctors)
+ .ctors         0x0000000000008a6c        0x4 /home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/crtend.o
+                0x0000000000008a70                __CTOR_END__ = .
+                0x0000000000008a70                ___CTORS_END___ = .
+
+.dtors          0x0000000000008a70        0x8
+                0x0000000000008a70                __DTOR_LIST__ = .
+                0x0000000000008a70                ___DTORS_LIST___ = .
+ *crtbegin.o(.dtors)
+ .dtors         0x0000000000008a70        0x4 /home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/crtbegin.o
+ *(EXCLUDE_FILE(*crtend.o) .dtors)
+ *(SORT_BY_NAME(.dtors.*))
+ *(.dtors)
+ .dtors         0x0000000000008a74        0x4 /home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/crtend.o
+                0x0000000000008a74                __DTOR_END__
+                [!provide]                        PROVIDE (__DTOR_END__ = .)
+                [!provide]                        PROVIDE (___DTORS_END___ = .)
+
+.rodata         0x0000000000008a78      0x378
+                0x0000000000008a78                __rodata_start = .
+ *(.rodata)
+ .rodata        0x0000000000008a78       0x1a ./debug/main.o
+ *fill*         0x0000000000008a92        0x2 
+ .rodata        0x0000000000008a94      0x224 ./debug/print.o
+ .rodata        0x0000000000008cb8        0x8 /home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/libm.a(lib_a-math_err.o)
+ .rodata        0x0000000000008cc0       0x14 /home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/libgcc.a(_thenan_df.o)
+                0x0000000000008cc0                __thenan_df
+ .rodata        0x0000000000008cd4      0x100 /home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/libgcc.a(_clz.o)
+                0x0000000000008cd4                __clz_tab
+ .rodata        0x0000000000008dd4        0x8 .//libxil.a(xgpio.o)
+ .rodata        0x0000000000008ddc        0xe .//libxil.a(xgpio_sinit.o)
+ *fill*         0x0000000000008dea        0x2 
+ .rodata        0x0000000000008dec        0x4 /home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/libc.a(lib_a-impure.o)
+                0x0000000000008dec                _global_impure_ptr
+ *(.rodata.*)
+ *(.gnu.linkonce.r.*)
+                0x0000000000008df0                __rodata_end = .
+
+.rela.dyn       0x0000000000008df0        0x0
+ .rela.text     0x0000000000008df0        0x0 /home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/crt0.o
+ .rela.vectors.sw_exception
+                0x0000000000008df0        0x0 /home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/crt0.o
+ .rela.data     0x0000000000008df0        0x0 /home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/crt0.o
+
+.sdata2         0x0000000000008df0        0x0
+                0x0000000000008df0                . = ALIGN (0x8)
+                0x0000000000008df0                __sdata2_start = .
+ *(.sdata2)
+ *(.sdata2.*)
+ *(.gnu.linkonce.s2.*)
+                0x0000000000008df0                . = ALIGN (0x8)
+                0x0000000000008df0                __sdata2_end = .
+
+.sbss2          0x0000000000008df0        0x0
+                0x0000000000008df0                __sbss2_start = .
+ *(.sbss2)
+ *(.sbss2.*)
+ *(.gnu.linkonce.sb2.*)
+                0x0000000000008df0                __sbss2_end = .
+
+.data           0x0000000000008df0      0x154
+                0x0000000000008df0                . = ALIGN (0x4)
+                0x0000000000008df0                __data_start = .
+ *(.data)
+ .data          0x0000000000008df0       0xf4 /home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/libc.a(lib_a-impure.o)
+                0x0000000000008df0                _impure_ptr
+ *(.data.*)
+ .data.MB_InterruptVectorTable
+                0x0000000000008ee4        0x8 .//libxil.a(microblaze_interrupts_g.o)
+                0x0000000000008ee4                MB_InterruptVectorTable
+ .data.XIntc_ConfigTable
+                0x0000000000008eec       0x30 .//libxil.a(xintc_g.o)
+                0x0000000000008eec                XIntc_ConfigTable
+ .data.Xil_AssertWait
+                0x0000000000008f1c        0x4 .//libxil.a(xil_assert.o)
+                0x0000000000008f1c                Xil_AssertWait
+ .data.MBFreq   0x0000000000008f20        0x4 .//libxil.a(microblaze_sleep.o)
+ .data.XGpio_ConfigTable
+                0x0000000000008f24       0x20 .//libxil.a(xgpio_g.o)
+                0x0000000000008f24                XGpio_ConfigTable
+ *(.gnu.linkonce.d.*)
+                0x0000000000008f44                __data_end = .
+
+.tm_clone_table
+                0x0000000000008f44        0x0
+ .tm_clone_table
+                0x0000000000008f44        0x0 /home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/crtbegin.o
+ .tm_clone_table
+                0x0000000000008f44        0x0 /home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/crtend.o
+
+.got
+ *(.got)
+
+.got1
+ *(.got1)
+
+.got2
+ *(.got2)
+
+.eh_frame       0x0000000000008f44        0x0
+ *(.eh_frame)
+ .eh_frame      0x0000000000008f44        0x0 /home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/crtbegin.o
+
+.jcr
+ *(.jcr)
+
+.gcc_except_table
+ *(.gcc_except_table)
+
+.sdata          0x0000000000008f44        0x4
+                0x0000000000008f48                . = ALIGN (0x8)
+ *fill*         0x0000000000008f44        0x4 
+                0x0000000000008f48                __sdata_start = .
+ *(.sdata)
+ *(.sdata.*)
+ *(.gnu.linkonce.s.*)
+                0x0000000000008f48                __sdata_end = .
+
+.sbss           0x0000000000008f48        0x0
+                0x0000000000008f48                . = ALIGN (0x4)
+                0x0000000000008f48                __sbss_start = .
+ *(.sbss)
+ *(.sbss.*)
+ *(.gnu.linkonce.sb.*)
+                0x0000000000008f48                . = ALIGN (0x8)
+                0x0000000000008f48                __sbss_end = .
+
+.tdata          0x0000000000008f48        0x0
+                0x0000000000008f48                __tdata_start = .
+ *(.tdata)
+ *(.tdata.*)
+ *(.gnu.linkonce.td.*)
+                0x0000000000008f48                __tdata_end = .
+
+.tbss           0x0000000000008f48        0x0
+                0x0000000000008f48                __tbss_start = .
+ *(.tbss)
+ *(.tbss.*)
+ *(.gnu.linkonce.tb.*)
+                0x0000000000008f48                __tbss_end = .
+
+.bss            0x0000000000008f48       0x38
+                0x0000000000008f48                . = ALIGN (0x4)
+                0x0000000000008f48                __bss_start = .
+ *(.bss)
+ .bss           0x0000000000008f48       0x20 /home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/crtbegin.o
+ .bss           0x0000000000008f68       0x10 ./debug/led.o
+                0x0000000000008f68                output
+ *(.bss.*)
+ .bss.Xil_AssertCallbackRoutine
+                0x0000000000008f78        0x4 .//libxil.a(xil_assert.o)
+ .bss.Xil_AssertStatus
+                0x0000000000008f7c        0x4 .//libxil.a(xil_assert.o)
+                0x0000000000008f7c                Xil_AssertStatus
+ *(.gnu.linkonce.b.*)
+ *(COMMON)
+                0x0000000000008f80                . = ALIGN (0x4)
+                0x0000000000008f80                __bss_end = .
+                0x0000000000008f48                _SDA_BASE_ = (__sdata_start + ((__sbss_end - __sdata_start) / 0x2))
+                0x0000000000008df0                _SDA2_BASE_ = (__sdata2_start + ((__sbss2_end - __sdata2_start) / 0x2))
+
+.heap           0x0000000000008f80      0x800
+                0x0000000000008f80                . = ALIGN (0x8)
+                0x0000000000008f80                _heap = .
+                0x0000000000008f80                _heap_start = .
+                0x0000000000009780                . = (. + _HEAP_SIZE)
+ *fill*         0x0000000000008f80      0x800 
+                0x0000000000009780                _heap_end = .
+
+.stack          0x0000000000009780      0x400
+                0x0000000000009780                _stack_end = .
+                0x0000000000009b80                . = (. + _STACK_SIZE)
+ *fill*         0x0000000000009780      0x400 
+                0x0000000000009b80                . = ALIGN (0x8)
+                0x0000000000009b80                _stack = .
+                0x0000000000009b80                __stack = _stack
+                0x0000000000009b80                _end = .
+LOAD .//libxil.a
+LOAD ./debug/main.o
+LOAD ./debug/led.o
+LOAD ./debug/uart.o
+LOAD ./debug/print.o
+LOAD ./debug/standard_rms.o
+LOAD /home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/libm.a
+LOAD /home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/libgcc.a
+START GROUP
+LOAD /home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/libgloss.a
+LOAD .//libxil.a
+LOAD /home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/libc.a
+LOAD /home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/libm.a
+END GROUP
+LOAD /home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/libgcc.a
+LOAD /home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/crtend.o
+LOAD /home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/crtn.o
+OUTPUT(./debug/main.elf elf32-microblazeel)
+
+.debug_line     0x0000000000000000     0x4222
+ .debug_line    0x0000000000000000       0x93 /home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/crt0.o
+ .debug_line    0x0000000000000093       0x6c /home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/crtinit.o
+ .debug_line    0x00000000000000ff       0x46 .//libxil.a(hw_exception_handler.o)
+ .debug_line    0x0000000000000145       0xe4 .//libxil.a(microblaze_interrupt_handler.o)
+ .debug_line    0x0000000000000229       0x4a .//libxil.a(microblaze_interrupts_g.o)
+ .debug_line    0x0000000000000273      0xbb1 .//libxil.a(xintc_l.o)
+ .debug_line    0x0000000000000e24       0x65 .//libxil.a(xintc_g.o)
+ .debug_line    0x0000000000000e89      0x152 .//libxil.a(xil_assert.o)
+ .debug_line    0x0000000000000fdb       0xfe ./debug/main.o
+ .debug_line    0x00000000000010d9       0xce ./debug/led.o
+ .debug_line    0x00000000000011a7      0x15b ./debug/uart.o
+ .debug_line    0x0000000000001302     0x1e80 ./debug/print.o
+ .debug_line    0x0000000000003182       0xd5 ./debug/standard_rms.o
+ .debug_line    0x0000000000003257       0x49 /home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/libgloss.a(_exception_handler.o)
+ .debug_line    0x00000000000032a0       0x4a /home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/libgloss.a(_program_clean.o)
+ .debug_line    0x00000000000032ea       0x4a /home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/libgloss.a(_program_init.o)
+ .debug_line    0x0000000000003334       0x85 .//libxil.a(errno.o)
+ .debug_line    0x00000000000033b9      0x84b .//libxil.a(xgpio.o)
+ .debug_line    0x0000000000003c04      0x2e6 .//libxil.a(xgpio_sinit.o)
+ .debug_line    0x0000000000003eea       0xcc .//libxil.a(xil_sleepcommon.o)
+ .debug_line    0x0000000000003fb6      0x20c .//libxil.a(microblaze_sleep.o)
+ .debug_line    0x00000000000041c2       0x60 .//libxil.a(xgpio_g.o)
+
+.debug_line_str
+                0x0000000000000000      0x6cc
+ .debug_line_str
+                0x0000000000000000       0x58 /home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/crt0.o
+                                         0xb0 (size before relaxing)
+ .debug_line_str
+                0x0000000000000058        0xa /home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/crtinit.o
+                                         0xb6 (size before relaxing)
+ .debug_line_str
+                0x0000000000000062       0xb3 .//libxil.a(hw_exception_handler.o)
+                                         0xca (size before relaxing)
+ .debug_line_str
+                0x0000000000000115       0x45 .//libxil.a(microblaze_interrupt_handler.o)
+                                         0xe1 (size before relaxing)
+ .debug_line_str
+                0x000000000000015a       0x1a .//libxil.a(microblaze_interrupts_g.o)
+                                         0xdc (size before relaxing)
+ .debug_line_str
+                0x0000000000000174      0x1c6 .//libxil.a(xintc_l.o)
+                                        0x1d2 (size before relaxing)
+ .debug_line_str
+                0x000000000000033a        0xa .//libxil.a(xintc_g.o)
+                                        0x1bf (size before relaxing)
+ .debug_line_str
+                0x0000000000000344       0x1a .//libxil.a(xil_assert.o)
+                                        0x1b1 (size before relaxing)
+ .debug_line_str
+                0x000000000000035e       0x64 ./debug/main.o
+                                         0x87 (size before relaxing)
+ .debug_line_str
+                0x00000000000003c2       0x43 ./debug/led.o
+                                        0x149 (size before relaxing)
+ .debug_line_str
+                0x0000000000000405       0x3d ./debug/uart.o
+                                        0x14c (size before relaxing)
+ .debug_line_str
+                0x0000000000000442       0xeb ./debug/print.o
+                                        0x1e2 (size before relaxing)
+ .debug_line_str
+                0x000000000000052d       0x7a ./debug/standard_rms.o
+                                         0xab (size before relaxing)
+ .debug_line_str
+                0x00000000000005a7       0x7a /home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/libgloss.a(_exception_handler.o)
+                                         0xcc (size before relaxing)
+ .debug_line_str
+                0x00000000000005a7       0x11 /home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/libgloss.a(_program_clean.o)
+                                         0xc4 (size before relaxing)
+ .debug_line_str
+                0x00000000000005b8       0x10 /home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/libgloss.a(_program_init.o)
+                                         0xc2 (size before relaxing)
+ .debug_line_str
+                0x00000000000005c8       0x1f .//libxil.a(errno.o)
+                                        0x1db (size before relaxing)
+ .debug_line_str
+                0x00000000000005e7       0x9e .//libxil.a(xgpio.o)
+                                        0x1c8 (size before relaxing)
+ .debug_line_str
+                0x0000000000000685       0x18 .//libxil.a(xgpio_sinit.o)
+                                        0x1cf (size before relaxing)
+ .debug_line_str
+                0x000000000000069d       0x12 .//libxil.a(xil_sleepcommon.o)
+                                        0x1b1 (size before relaxing)
+ .debug_line_str
+                0x00000000000006af       0x13 .//libxil.a(microblaze_sleep.o)
+                                        0x1aa (size before relaxing)
+ .debug_line_str
+                0x00000000000006c2        0xa .//libxil.a(xgpio_g.o)
+                                        0x1b4 (size before relaxing)
+
+.debug_info     0x0000000000000000     0x38c3
+ .debug_info    0x0000000000000000       0x23 /home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/crt0.o
+ .debug_info    0x0000000000000023       0x25 /home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/crtinit.o
+ .debug_info    0x0000000000000048       0x24 .//libxil.a(hw_exception_handler.o)
+ .debug_info    0x000000000000006c      0x127 .//libxil.a(microblaze_interrupt_handler.o)
+ .debug_info    0x0000000000000193       0xf8 .//libxil.a(microblaze_interrupts_g.o)
+ .debug_info    0x000000000000028b      0x956 .//libxil.a(xintc_l.o)
+ .debug_info    0x0000000000000be1      0x231 .//libxil.a(xintc_g.o)
+ .debug_info    0x0000000000000e12      0x1c1 .//libxil.a(xil_assert.o)
+ .debug_info    0x0000000000000fd3      0x16d ./debug/main.o
+ .debug_info    0x0000000000001140      0x1c0 ./debug/led.o
+ .debug_info    0x0000000000001300      0x1ec ./debug/uart.o
+ .debug_info    0x00000000000014ec      0xd3b ./debug/print.o
+ .debug_info    0x0000000000002227      0x119 ./debug/standard_rms.o
+ .debug_info    0x0000000000002340       0x24 /home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/libgloss.a(_exception_handler.o)
+ .debug_info    0x0000000000002364       0x24 /home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/libgloss.a(_program_clean.o)
+ .debug_info    0x0000000000002388       0x24 /home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/libgloss.a(_program_init.o)
+ .debug_info    0x00000000000023ac      0x828 .//libxil.a(errno.o)
+ .debug_info    0x0000000000002bd4      0x565 .//libxil.a(xgpio.o)
+ .debug_info    0x0000000000003139      0x313 .//libxil.a(xgpio_sinit.o)
+ .debug_info    0x000000000000344c      0x135 .//libxil.a(xil_sleepcommon.o)
+ .debug_info    0x0000000000003581      0x21f .//libxil.a(microblaze_sleep.o)
+ .debug_info    0x00000000000037a0      0x123 .//libxil.a(xgpio_g.o)
+
+.debug_abbrev   0x0000000000000000     0x1429
+ .debug_abbrev  0x0000000000000000       0x12 /home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/crt0.o
+ .debug_abbrev  0x0000000000000012       0x14 /home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/crtinit.o
+ .debug_abbrev  0x0000000000000026       0x14 .//libxil.a(hw_exception_handler.o)
+ .debug_abbrev  0x000000000000003a       0xe5 .//libxil.a(microblaze_interrupt_handler.o)
+ .debug_abbrev  0x000000000000011f       0xbd .//libxil.a(microblaze_interrupts_g.o)
+ .debug_abbrev  0x00000000000001dc      0x347 .//libxil.a(xintc_l.o)
+ .debug_abbrev  0x0000000000000523       0xef .//libxil.a(xintc_g.o)
+ .debug_abbrev  0x0000000000000612      0x112 .//libxil.a(xil_assert.o)
+ .debug_abbrev  0x0000000000000724       0xdb ./debug/main.o
+ .debug_abbrev  0x00000000000007ff       0xd7 ./debug/led.o
+ .debug_abbrev  0x00000000000008d6      0x100 ./debug/uart.o
+ .debug_abbrev  0x00000000000009d6      0x238 ./debug/print.o
+ .debug_abbrev  0x0000000000000c0e       0xa5 ./debug/standard_rms.o
+ .debug_abbrev  0x0000000000000cb3       0x14 /home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/libgloss.a(_exception_handler.o)
+ .debug_abbrev  0x0000000000000cc7       0x14 /home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/libgloss.a(_program_clean.o)
+ .debug_abbrev  0x0000000000000cdb       0x14 /home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/libgloss.a(_program_init.o)
+ .debug_abbrev  0x0000000000000cef      0x189 .//libxil.a(errno.o)
+ .debug_abbrev  0x0000000000000e78      0x191 .//libxil.a(xgpio.o)
+ .debug_abbrev  0x0000000000001009      0x1a0 .//libxil.a(xgpio_sinit.o)
+ .debug_abbrev  0x00000000000011a9       0xbe .//libxil.a(xil_sleepcommon.o)
+ .debug_abbrev  0x0000000000001267      0x138 .//libxil.a(microblaze_sleep.o)
+ .debug_abbrev  0x000000000000139f       0x8a .//libxil.a(xgpio_g.o)
+
+.debug_aranges  0x0000000000000000      0x350
+ .debug_aranges
+                0x0000000000000000       0x40 /home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/crt0.o
+ .debug_aranges
+                0x0000000000000040       0x20 /home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/crtinit.o
+ .debug_aranges
+                0x0000000000000060       0x20 .//libxil.a(hw_exception_handler.o)
+ .debug_aranges
+                0x0000000000000080       0x28 .//libxil.a(microblaze_interrupt_handler.o)
+ .debug_aranges
+                0x00000000000000a8       0x18 .//libxil.a(microblaze_interrupts_g.o)
+ .debug_aranges
+                0x00000000000000c0       0x40 .//libxil.a(xintc_l.o)
+ .debug_aranges
+                0x0000000000000100       0x18 .//libxil.a(xintc_g.o)
+ .debug_aranges
+                0x0000000000000118       0x30 .//libxil.a(xil_assert.o)
+ .debug_aranges
+                0x0000000000000148       0x20 ./debug/main.o
+ .debug_aranges
+                0x0000000000000168       0x20 ./debug/led.o
+ .debug_aranges
+                0x0000000000000188       0x20 ./debug/uart.o
+ .debug_aranges
+                0x00000000000001a8       0x20 ./debug/print.o
+ .debug_aranges
+                0x00000000000001c8       0x20 ./debug/standard_rms.o
+ .debug_aranges
+                0x00000000000001e8       0x20 /home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/libgloss.a(_exception_handler.o)
+ .debug_aranges
+                0x0000000000000208       0x20 /home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/libgloss.a(_program_clean.o)
+ .debug_aranges
+                0x0000000000000228       0x20 /home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/libgloss.a(_program_init.o)
+ .debug_aranges
+                0x0000000000000248       0x20 .//libxil.a(errno.o)
+ .debug_aranges
+                0x0000000000000268       0x40 .//libxil.a(xgpio.o)
+ .debug_aranges
+                0x00000000000002a8       0x28 .//libxil.a(xgpio_sinit.o)
+ .debug_aranges
+                0x00000000000002d0       0x28 .//libxil.a(xil_sleepcommon.o)
+ .debug_aranges
+                0x00000000000002f8       0x40 .//libxil.a(microblaze_sleep.o)
+ .debug_aranges
+                0x0000000000000338       0x18 .//libxil.a(xgpio_g.o)
+
+.debug_str      0x0000000000000000      0xdf3
+ .debug_str     0x0000000000000000       0x54 /home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/crt0.o
+ .debug_str     0x0000000000000054        0xa /home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/crtinit.o
+                                         0x57 (size before relaxing)
+ .debug_str     0x000000000000005e       0xb3 .//libxil.a(hw_exception_handler.o)
+                                         0xbf (size before relaxing)
+ .debug_str     0x0000000000000111      0x1e9 .//libxil.a(microblaze_interrupt_handler.o)
+                                        0x22a (size before relaxing)
+ .debug_str     0x00000000000002fa       0x1d .//libxil.a(microblaze_interrupts_g.o)
+                                        0x20f (size before relaxing)
+ .debug_str     0x0000000000000317      0x225 .//libxil.a(xintc_l.o)
+                                        0x455 (size before relaxing)
+ .debug_str     0x000000000000053c        0xd .//libxil.a(xintc_g.o)
+                                        0x2e1 (size before relaxing)
+ .debug_str     0x0000000000000549       0x96 .//libxil.a(xil_assert.o)
+                                        0x25e (size before relaxing)
+ .debug_str     0x00000000000005df      0x102 ./debug/main.o
+                                        0x19f (size before relaxing)
+ .debug_str     0x00000000000006e1       0x69 ./debug/led.o
+                                        0x205 (size before relaxing)
+ .debug_str     0x000000000000074a       0x2f ./debug/uart.o
+                                        0x1e0 (size before relaxing)
+ .debug_str     0x0000000000000779      0x176 ./debug/print.o
+                                        0x339 (size before relaxing)
+ .debug_str     0x00000000000008ef       0x19 ./debug/standard_rms.o
+                                        0x169 (size before relaxing)
+ .debug_str     0x0000000000000908       0x19 /home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/libgloss.a(_exception_handler.o)
+                                         0x62 (size before relaxing)
+ .debug_str     0x0000000000000908       0x11 /home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/libgloss.a(_program_clean.o)
+                                         0x5e (size before relaxing)
+ .debug_str     0x0000000000000919       0x10 /home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/libgloss.a(_program_init.o)
+                                         0x5d (size before relaxing)
+ .debug_str     0x0000000000000929      0x3b7 .//libxil.a(errno.o)
+                                        0x56a (size before relaxing)
+ .debug_str     0x0000000000000ce0       0x7b .//libxil.a(xgpio.o)
+                                        0x326 (size before relaxing)
+ .debug_str     0x0000000000000d5b       0x2f .//libxil.a(xgpio_sinit.o)
+                                        0x2c6 (size before relaxing)
+ .debug_str     0x0000000000000d8a       0x13 .//libxil.a(xil_sleepcommon.o)
+                                        0x1e2 (size before relaxing)
+ .debug_str     0x0000000000000d9d       0x56 .//libxil.a(microblaze_sleep.o)
+                                        0x22b (size before relaxing)
+ .debug_str     0x0000000000000df3      0x215 .//libxil.a(xgpio_g.o)
+
+.debug_rnglists
+                0x0000000000000000      0x238
+ .debug_rnglists
+                0x0000000000000000       0x2b /home/lbogdanov/programs/xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../microblazeeb-xilinx-elf/usr/lib/le/bs/p/m/fpd/crt0.o
+ .debug_rnglists
+                0x000000000000002b       0x1a .//libxil.a(microblaze_interrupt_handler.o)
+ .debug_rnglists
+                0x0000000000000045       0xd1 .//libxil.a(xintc_l.o)
+ .debug_rnglists
+                0x0000000000000116       0x1f .//libxil.a(xil_assert.o)
+ .debug_rnglists
+                0x0000000000000135       0x13 .//libxil.a(errno.o)
+ .debug_rnglists
+                0x0000000000000148       0x5f .//libxil.a(xgpio.o)
+ .debug_rnglists
+                0x00000000000001a7       0x29 .//libxil.a(xgpio_sinit.o)
+ .debug_rnglists
+                0x00000000000001d0       0x19 .//libxil.a(xil_sleepcommon.o)
+ .debug_rnglists
+                0x00000000000001e9       0x4f .//libxil.a(microblaze_sleep.o)
+
+.debug_frame    0x0000000000000000      0x8a0
+ .debug_frame   0x0000000000000000       0x64 .//libxil.a(microblaze_interrupt_handler.o)
+ .debug_frame   0x0000000000000064       0xc4 .//libxil.a(xintc_l.o)
+ .debug_frame   0x0000000000000128       0x58 .//libxil.a(xil_assert.o)
+ .debug_frame   0x0000000000000180       0x38 ./debug/main.o
+ .debug_frame   0x00000000000001b8       0x88 ./debug/led.o
+ .debug_frame   0x0000000000000240      0x100 ./debug/uart.o
+ .debug_frame   0x0000000000000340      0x364 ./debug/print.o
+ .debug_frame   0x00000000000006a4       0x3c ./debug/standard_rms.o
+ .debug_frame   0x00000000000006e0       0x20 .//libxil.a(errno.o)
+ .debug_frame   0x0000000000000700       0xb0 .//libxil.a(xgpio.o)
+ .debug_frame   0x00000000000007b0       0x40 .//libxil.a(xgpio_sinit.o)
+ .debug_frame   0x00000000000007f0       0x50 .//libxil.a(xil_sleepcommon.o)
+ .debug_frame   0x0000000000000840       0x60 .//libxil.a(microblaze_sleep.o)
+
+.debug_loclists
+                0x0000000000000000      0xa51
+ .debug_loclists
+                0x0000000000000000      0x3e4 .//libxil.a(xintc_l.o)
+ .debug_loclists
+                0x00000000000003e4       0x3c .//libxil.a(xil_assert.o)
+ .debug_loclists
+                0x0000000000000420      0x401 .//libxil.a(xgpio.o)
+ .debug_loclists
+                0x0000000000000821      0x10d .//libxil.a(xgpio_sinit.o)
+ .debug_loclists
+                0x000000000000092e       0x32 .//libxil.a(xil_sleepcommon.o)
+ .debug_loclists
+                0x0000000000000960       0xf1 .//libxil.a(microblaze_sleep.o)

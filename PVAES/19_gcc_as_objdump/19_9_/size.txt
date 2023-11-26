@@ -1,0 +1,4 @@
+-msoft-float
+text	   data	    bss	    dec	    hex	filename
+28428	    356	   3136	  31920	   7cb0	./debug/main.elf
+

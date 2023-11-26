@@ -1,0 +1,486 @@
+
+./debug/main.o:     file format elf32-microblazeel
+
+
+Disassembly of section .text:
+
+00000000 <main>:
+#include "uart.h"
+#include "print.h"
+#include "sleep.h"
+#include "autoconf.h"
+
+int main(void){   
+   0:	3021ff64 	addik	r1, r1, -156
+   4:	f9e10000 	swi	r15, r1, 0
+   8:	fa610098 	swi	r19, r1, 152
+   c:	12610000 	addk	r19, r1, r0
+   float my_fpu_array_1[10] = {1.345239, 1.774125, 57865.412737, 0.850072, 16.142938, 4958.284851, 927.674384, 404.404121, 312.500056, 311.658473};
+  10:	b0000000 	imm	0
+  14:	e9800024 	lwi	r12, r0, 36
+  18:	b0000000 	imm	0
+  1c:	e9600028 	lwi	r11, r0, 40
+  20:	b0000000 	imm	0
+  24:	e940002c 	lwi	r10, r0, 44
+  28:	b0000000 	imm	0
+  2c:	e9200030 	lwi	r9, r0, 48
+  30:	b0000000 	imm	0
+  34:	e9000034 	lwi	r8, r0, 52
+  38:	b0000000 	imm	0
+  3c:	e8e00038 	lwi	r7, r0, 56
+  40:	b0000000 	imm	0
+  44:	e8c0003c 	lwi	r6, r0, 60
+  48:	b0000000 	imm	0
+  4c:	e8a00040 	lwi	r5, r0, 64
+  50:	b0000000 	imm	0
+  54:	e8800044 	lwi	r4, r0, 68
+  58:	b0000000 	imm	0
+  5c:	e8600048 	lwi	r3, r0, 72
+  60:	f993001c 	swi	r12, r19, 28
+  64:	f9730020 	swi	r11, r19, 32
+  68:	f9530024 	swi	r10, r19, 36
+  6c:	f9330028 	swi	r9, r19, 40
+  70:	f913002c 	swi	r8, r19, 44
+  74:	f8f30030 	swi	r7, r19, 48
+  78:	f8d30034 	swi	r6, r19, 52
+  7c:	f8b30038 	swi	r5, r19, 56
+  80:	f893003c 	swi	r4, r19, 60
+  84:	f8730040 	swi	r3, r19, 64
+   float my_fpu_array_2[10] = {1.785993, 1.550390, 55000.328467, 0.851200, 19.372777, 4933.924562, 927.000993, 400.078463, 310.349112, 314.693125};
+  88:	b0000000 	imm	0
+  8c:	e980004c 	lwi	r12, r0, 76
+  90:	b0000000 	imm	0
+  94:	e9600050 	lwi	r11, r0, 80
+  98:	b0000000 	imm	0
+  9c:	e9400054 	lwi	r10, r0, 84
+  a0:	b0000000 	imm	0
+  a4:	e9200058 	lwi	r9, r0, 88
+  a8:	b0000000 	imm	0
+  ac:	e900005c 	lwi	r8, r0, 92
+  b0:	b0000000 	imm	0
+  b4:	e8e00060 	lwi	r7, r0, 96
+  b8:	b0000000 	imm	0
+  bc:	e8c00064 	lwi	r6, r0, 100
+  c0:	b0000000 	imm	0
+  c4:	e8a00068 	lwi	r5, r0, 104
+  c8:	b0000000 	imm	0
+  cc:	e880006c 	lwi	r4, r0, 108
+  d0:	b0000000 	imm	0
+  d4:	e8600070 	lwi	r3, r0, 112
+  d8:	f9930044 	swi	r12, r19, 68
+  dc:	f9730048 	swi	r11, r19, 72
+  e0:	f953004c 	swi	r10, r19, 76
+  e4:	f9330050 	swi	r9, r19, 80
+  e8:	f9130054 	swi	r8, r19, 84
+  ec:	f8f30058 	swi	r7, r19, 88
+  f0:	f8d3005c 	swi	r6, r19, 92
+  f4:	f8b30060 	swi	r5, r19, 96
+  f8:	f8930064 	swi	r4, r19, 100
+  fc:	f8730068 	swi	r3, r19, 104
+   float my_fpu_mean[10];
+   volatile int i;
+	
+   led_init();
+ 100:	b0000000 	imm	0
+ 104:	b9f40000 	brlid	r15, 0
+ 108:	80000000 	or	r0, r0, r0
+   uart_init();
+ 10c:	b0000000 	imm	0
+ 110:	b9f40000 	brlid	r15, 0
+ 114:	80000000 	or	r0, r0, r0
+   
+   for(i = 0; i < 10; i++){
+ 118:	f8130094 	swi	r0, r19, 148
+ 11c:	b8000064 	bri	100		// 180
+	my_fpu_mean[i] = (my_fpu_array_1[i] + my_fpu_array_2[i])/2;
+ 120:	e8730094 	lwi	r3, r19, 148
+ 124:	64630402 	bslli	r3, r3, 2
+ 128:	3093001c 	addik	r4, r19, 28
+ 12c:	10641800 	addk	r3, r4, r3
+ 130:	e8830000 	lwi	r4, r3, 0
+ 134:	e8730094 	lwi	r3, r19, 148
+ 138:	64630402 	bslli	r3, r3, 2
+ 13c:	30b3001c 	addik	r5, r19, 28
+ 140:	10651800 	addk	r3, r5, r3
+ 144:	30630028 	addik	r3, r3, 40
+ 148:	e8630000 	lwi	r3, r3, 0
+ 14c:	58a41800 	fadd	r5, r4, r3
+ 150:	e8730094 	lwi	r3, r19, 148
+ 154:	b0004000 	imm	16384
+ 158:	30800000 	addik	r4, r0, 0
+ 15c:	58842980 	fdiv	r4, r4, r5
+ 160:	64630402 	bslli	r3, r3, 2
+ 164:	30b3001c 	addik	r5, r19, 28
+ 168:	10651800 	addk	r3, r5, r3
+ 16c:	30630050 	addik	r3, r3, 80
+ 170:	f8830000 	swi	r4, r3, 0
+   for(i = 0; i < 10; i++){
+ 174:	e8730094 	lwi	r3, r19, 148
+ 178:	30630001 	addik	r3, r3, 1
+ 17c:	f8730094 	swi	r3, r19, 148
+ 180:	e8930094 	lwi	r4, r19, 148
+ 184:	30600009 	addik	r3, r0, 9
+ 188:	16441801 	cmp	r18, r4, r3
+ 18c:	bcb2ff94 	bgei	r18, -108		// 120
+   }
+
+   //Expected output:     
+   //1.565616, 1.662257,  56432.871094, 0.850636, 17.757858,  4946.104492,  927.337646,  402.241272, 311.424591, 313.175781,
+   printf("\nmy_fpu_mean[] = {");
+ 190:	b0000000 	imm	0
+ 194:	30a00000 	addik	r5, r0, 0
+ 198:	b0000000 	imm	0
+ 19c:	b9f40000 	brlid	r15, 0
+ 1a0:	80000000 	or	r0, r0, r0
+   for(i = 0; i < 10; i++){
+ 1a4:	f8130094 	swi	r0, r19, 148
+ 1a8:	b800005c 	bri	92		// 204
+	printf("%12.6f, ", my_fpu_mean[i]);
+ 1ac:	e8730094 	lwi	r3, r19, 148
+ 1b0:	64630402 	bslli	r3, r3, 2
+ 1b4:	3093001c 	addik	r4, r19, 28
+ 1b8:	10641800 	addk	r3, r4, r3
+ 1bc:	30630050 	addik	r3, r3, 80
+ 1c0:	e8630000 	lwi	r3, r3, 0
+ 1c4:	10a30000 	addk	r5, r3, r0
+ 1c8:	b0000000 	imm	0
+ 1cc:	b9f40000 	brlid	r15, 0
+ 1d0:	80000000 	or	r0, r0, r0
+ 1d4:	10a40000 	addk	r5, r4, r0
+ 1d8:	10830000 	addk	r4, r3, r0
+ 1dc:	10c40000 	addk	r6, r4, r0
+ 1e0:	10e50000 	addk	r7, r5, r0
+ 1e4:	b0000000 	imm	0
+ 1e8:	30a00014 	addik	r5, r0, 20
+ 1ec:	b0000000 	imm	0
+ 1f0:	b9f40000 	brlid	r15, 0
+ 1f4:	80000000 	or	r0, r0, r0
+   for(i = 0; i < 10; i++){
+ 1f8:	e8730094 	lwi	r3, r19, 148
+ 1fc:	30630001 	addik	r3, r3, 1
+ 200:	f8730094 	swi	r3, r19, 148
+ 204:	e8930094 	lwi	r4, r19, 148
+ 208:	30600009 	addik	r3, r0, 9
+ 20c:	16441801 	cmp	r18, r4, r3
+ 210:	bcb2ff9c 	bgei	r18, -100		// 1ac
+   }
+   printf("}\n");   
+ 214:	b0000000 	imm	0
+ 218:	30a00020 	addik	r5, r0, 32
+ 21c:	b0000000 	imm	0
+ 220:	b9f40000 	brlid	r15, 0
+ 224:	80000000 	or	r0, r0, r0
+
+    while(1){
+        led_set();
+ 228:	b0000000 	imm	0
+ 22c:	b9f40000 	brlid	r15, 0
+ 230:	80000000 	or	r0, r0, r0
+        usleep(1000000);
+ 234:	b000000f 	imm	15
+ 238:	30a04240 	addik	r5, r0, 16960
+ 23c:	b0000000 	imm	0
+ 240:	b9f40000 	brlid	r15, 0
+ 244:	80000000 	or	r0, r0, r0
+        led_clear();
+ 248:	b0000000 	imm	0
+ 24c:	b9f40000 	brlid	r15, 0
+ 250:	80000000 	or	r0, r0, r0
+        usleep(1000000);
+ 254:	b000000f 	imm	15
+ 258:	30a04240 	addik	r5, r0, 16960
+ 25c:	b0000000 	imm	0
+ 260:	b9f40000 	brlid	r15, 0
+ 264:	80000000 	or	r0, r0, r0
+        led_set();
+ 268:	b800ffc0 	bri	-64		// 228
+
+Disassembly of section .rodata:
+
+00000000 <.rodata>:
+   0:	5f796d0a 		r27, r25, r13
+   4:	5f757066 		r27, r21, r14
+   8:	6e61656d 	necget	r19, rfsl13
+   c:	3d205d5b 	rsubikc	r9, r0, 23899
+  10:	00007b20 		r0, r0, r15
+  14:	2e323125 	rsubic	r17, r18, 12581
+  18:	202c6636 	addi	r1, r12, 26166
+  1c:	
+Disassembly of section .debug_frame:
+
+00000000 <.debug_frame>:
+int main(void){   
+   0:	0000000c 		r0, r0, r0
+   4:	ffffffff 	sli	r31, r31, -1
+   8:	7f010003 		r24, r1, r0
+   c:	00010c0f 		r0, r1, r1
+   float my_fpu_array_1[10] = {1.345239, 1.774125, 57865.412737, 0.850072, 16.142938, 4958.284851, 927.674384, 404.404121, 312.500056, 311.658473};
+  10:	00000028 		r0, r0, r0
+	...
+  1c:	0000026c 		r0, r0, r0
+  20:	00000404 		r0, r0, r0
+  24:	019c0e00 		r12, r28, r1
+  28:	00000804 		r0, r0, r1
+  2c:	019c8f00 		r12, r28, r17
+  30:	04040493 	neg	r0, r4
+  34:	0d000000 	rsubc	r8, r0, r0
+  38:	00000013 		r0, r0, r0
+
+Disassembly of section .debug_info:
+
+00000000 <.debug_info>:
+int main(void){   
+   0:	00000140 		r0, r0, r0
+   4:	04010005 	neg	r0, r1
+   8:	
+Disassembly of section .debug_abbrev:
+
+00000000 <.debug_abbrev>:
+   0:	0b002401 		r24, r0, r4
+   4:	030b3e0b 		r24, r11, r7
+   8:	0200000e 		r16, r0, r0
+   c:	193f002e 		r9, r31, r0
+   float my_fpu_array_1[10] = {1.345239, 1.774125, 57865.412737, 0.850072, 16.142938, 4958.284851, 927.674384, 404.404121, 312.500056, 311.658473};
+  10:	0b3a0e03 		r25, r26, r1
+  14:	21390b3b 	addi	r9, r25, 2875
+  18:	3c192706 	rsubikc	r0, r25, 9990
+  1c:	03000019 		r24, r0, r0
+  20:	0e030034 		r16, r3, r0
+  24:	3b01213a 	addikc	r24, r1, 8506
+  28:	0a21390b 		r17, r1, r7
+  2c:	18021349 		r0, r2, r2
+  30:	05040000 	rsub	r8, r4, r0
+  34:	00134900 	addl	r0, r19, r9
+  38:	01110500 		r8, r17, r0
+  3c:	0b130e25 		r24, r19, r1
+  40:	1f1b1f03 		r24, r27, r3
+  44:	06120111 	neg	r16, r18
+  48:	00001710 		r0, r0, r2
+  4c:	0b002406 		r24, r0, r4
+  50:	030b3e0b 		r24, r11, r7
+  54:	07000008 	neg	r24, r0
+  58:	13490035 		r26, r9, r0
+  5c:	26080000 	rsubi	r16, r8, 0
+  60:	00134900 	addl	r0, r19, r9
+  64:	00160900 	addl	r0, r22, r1
+  68:	0b3a0e03 		r25, r26, r1
+  6c:	0b390b3b 		r25, r25, r1
+  70:	00001349 		r0, r0, r2
+  74:	0b000f0a 		r24, r0, r1
+  78:	0013490b 		r0, r19, r9
+  7c:	012e0b00 		r9, r14, r1
+  80:	0e03193f 		r16, r3, r3
+  84:	0b3b0b3a 		r25, r27, r1
+   float my_fpu_array_2[10] = {1.785993, 1.550390, 55000.328467, 0.851200, 19.372777, 4933.924562, 927.000993, 400.078463, 310.349112, 314.693125};
+  88:	19270b39 		r9, r7, r1
+  8c:	1301193c 		r24, r1, r3
+  90:	2e0c0000 	rsubic	r16, r12, 0
+  94:	03193f01 		r24, r25, r7
+  98:	3b0b3a0e 	addikc	r24, r11, 14862
+  9c:	270b390b 	rsubi	r24, r11, 14603
+  a0:	3c134919 	rsubikc	r0, r19, 18713
+  a4:	00130119 		r0, r19, r0
+  a8:	00180d00 		r0, r24, r1
+  ac:	2e0e0000 	rsubic	r16, r14, 0
+  b0:	03193f01 		r24, r25, r7
+  b4:	3b0b3a0e 	addikc	r24, r11, 14862
+  b8:	270b390b 	rsubi	r24, r11, 14603
+  bc:	11134919 		r8, r19, r9
+  c0:	40061201 		r0, r6, r2
+  c4:	01197c18 		r8, r25, r15
+  c8:	0f000013 		r24, r0, r0
+  cc:	08030034 		r0, r3, r0
+  d0:	0b3b0b3a 		r25, r27, r1
+  d4:	13490b39 		r26, r9, r1
+  d8:	00001802 		r0, r0, r3
+  dc:	49010110 		r8, r1, r0
+  e0:	00130113 		r0, r19, r0
+  e4:	00211100 	addl	r1, r1, r2
+  e8:	0b2f1349 		r25, r15, r2
+  ec:	Address 0x00000000000000ec is out of bounds.
+
+
+Disassembly of section .debug_aranges:
+
+00000000 <.debug_aranges>:
+int main(void){   
+   0:	0000001c 		r0, r0, r0
+   4:	00000002 		r0, r0, r0
+   8:	00040000 	add	r0, r4, r0
+	...
+   float my_fpu_array_1[10] = {1.345239, 1.774125, 57865.412737, 0.850072, 16.142938, 4958.284851, 927.674384, 404.404121, 312.500056, 311.658473};
+  14:	0000026c 		r0, r0, r0
+	...
+
+Disassembly of section .debug_line:
+
+00000000 <.debug_line>:
+int main(void){   
+   0:	00000199 		r0, r0, r0
+   4:	00040005 		r0, r4, r0
+   8:	00000053 		r0, r0, r0
+   c:	f6010101 	shi	r16, r1, 257
+   float my_fpu_array_1[10] = {1.345239, 1.774125, 57865.412737, 0.850072, 16.142938, 4958.284851, 927.674384, 404.404121, 312.500056, 311.658473};
+  10:	01000df2 		r8, r0, r1
+  14:	00010101 		r0, r1, r0
+  18:	00010000 	add	r0, r1, r0
+  1c:	01010100 	addl	r8, r1, r0
+  20:	0006051f 		r0, r6, r0
+  24:	00520000 	add	r2, r18, r0
+  28:	006e0000 	add	r3, r14, r0
+  2c:	005e0000 	add	r2, r30, r0
+  30:	
+Disassembly of section .debug_str:
+
+00000000 <.debug_str>:
+int main(void){   
+   0:	676e6f6c 	bslefi	r27, r14, 61, 44
+   4:	6e6f6c20 	necaget	r19, rfsl0
+   8:	6e692067 	cget	r19, rfsl7
+   c:	6e750074 	get	r19, rfsl4
+   float my_fpu_array_1[10] = {1.345239, 1.774125, 57865.412737, 0.850072, 16.142938, 4958.284851, 927.674384, 404.404121, 312.500056, 311.658473};
+  10:	6e676973 	ncaget	r19, rfsl3
+  14:	69206465 	addli	r9, 25701
+  18:	6d00746e 	tnecget	r8, rfsl14
+  1c:	006e6961 		r3, r14, r13
+  20:	20554e47 	addi	r2, r21, 20039
+  24:	20373143 	addi	r1, r23, 12611
+  28:	322e3131 	addik	r17, r14, 12593
+  2c:	2d20302e 	rsubic	r9, r0, 12334
+  30:	7261686d 		r19, r1, r13
+  34:	6c662d64 	ecaget	r3, rfsl4
+  38:	2074616f 	addi	r3, r20, 24943
+  3c:	6c786d2d 	necaget	r3, rfsl13
+  40:	6f6c662d 	necget	r27, rfsl13
+  44:	632d7461 	muli	r25, r13, 29793
+  48:	65766e6f 	bslefi	r11, r22, 57, 47
+  4c:	2d207472 	rsubic	r9, r0, 29810
+  50:	2d6c786d 	rsubic	r11, r12, 30829
+  54:	616f6c66 	muli	r11, r15, 27750
+  58:	71732d74 		r11, r19, r5
+  5c:	2d207472 	rsubic	r9, r0, 29810
+  60:	74696c6d 		r3, r9, r13
+  64:	2d656c74 	rsubic	r11, r5, 27764
+  68:	69646e65 	addlik	r11, 28261
+  6c:	2d206e61 	rsubic	r9, r0, 28257
+  70:	2d6c786d 	rsubic	r11, r12, 30829
+  74:	72726162 		r19, r18, r12
+  78:	732d6c65 		r25, r13, r13
+  7c:	74666968 		r3, r6, r13
+  80:	786d2d20 		r3, r13, r5
+  84:	61702d6c 	muli	r11, r16, 11628
+   float my_fpu_array_2[10] = {1.785993, 1.550390, 55000.328467, 0.851200, 19.372777, 4933.924562, 927.000993, 400.078463, 310.349112, 314.693125};
+  88:	72657474 		r19, r5, r14
+  8c:	6f632d6e 	ecaget	r27, rfsl14
+  90:	7261706d 		r19, r1, r14
+  94:	6d2d2065 	cget	r9, rfsl5
+  98:	3d757063 	rsubikc	r11, r21, 28771
+  9c:	2e313176 	rsubic	r17, r17, 12662
+  a0:	6d2d2030 	cget	r9, rfsl0
+  a4:	782d6f6e 		r1, r13, r13
+  a8:	6f732d6c 	ecaget	r27, rfsl12
+  ac:	6d2d7466 	tnecget	r9, rfsl6
+  b0:	2d206c75 	rsubic	r9, r0, 27765
+  b4:	4f2d2067 	eagetd	r25, r4
+  b8:	656c0030 	bsrli	r11, r12, 48
+  bc:	6e695f64 	tneaget	r19, rfsl4
+  c0:	6c007469 	tnecget	r0, rfsl9
+  c4:	20676e6f 	addi	r3, r7, 28271
+  c8:	69736e75 	andnli	r11, 28277
+  cc:	64656e67 	bslefi	r3, r5, 57, 39
+  d0:	746e6920 		r3, r14, r13
+  d4:	6e6f6c00 	necaget	r19, rfsl0
+  d8:	6f6c2067 	cget	r27, rfsl7
+  dc:	7520676e 		r9, r0, r12
+  e0:	6769736e 	bslefi	r27, r9, 13, 46
+  e4:	2064656e 	addi	r3, r4, 25966
+  e8:	00746e69 		r3, r20, r13
+  ec:	616f6c66 	muli	r11, r15, 27750
+  f0:	796d0074 		r11, r13, r0
+  f4:	7570665f 		r11, r16, r12
+  f8:	7272615f 		r19, r18, r12
+  fc:	315f7961 	addik	r10, r31, 31073
+   led_init();
+ 100:	5f796d00 		r27, r25, r13
+ 104:	5f757066 		r27, r21, r14
+ 108:	61727261 	muli	r11, r18, 29281
+   uart_init();
+ 10c:	00325f79 		r1, r18, r11
+ 110:	69736e75 	andnli	r11, 28277
+ 114:	64656e67 	bslefi	r3, r5, 57, 39
+   for(i = 0; i < 10; i++){
+ 118:	61686320 	muli	r11, r8, 25376
+ 11c:	73750072 		r27, r21, r0
+	my_fpu_mean[i] = (my_fpu_array_1[i] + my_fpu_array_2[i])/2;
+ 120:	7065656c 		r3, r5, r12
+ 124:	61686300 	muli	r11, r8, 25344
+ 128:	72700072 		r19, r16, r0
+ 12c:	66746e69 	bslefi	r19, r20, 57, 41
+ 130:	6175005f 	muli	r11, r21, 95
+ 134:	695f7472 		r10, r31, r14
+ 138:	0074696e 		r3, r20, r13
+ 13c:	665f796d 	bslefi	r18, r31, 37, 45
+ 140:	6d5f7570 	tnecget	r10, rfsl0
+ 144:	006e6165 		r3, r14, r12
+ 148:	676e6f6c 	bslefi	r27, r14, 61, 44
+ 14c:	746e6920 		r3, r14, r13
+ 150:	64656c00 	bslefi	r3, r5, 48, 0
+ 154:	656c635f 	bslefi	r11, r12, 13, 31
+ 158:	73007261 		r24, r0, r14
+ 15c:	74726f68 		r3, r18, r13
+ 160:	736e7520 		r27, r14, r14
+ 164:	656e6769 	bslefi	r11, r14, 29, 41
+ 168:	6e692064 	cget	r19, rfsl4
+ 16c:	69730074 	andnli	r11, 116
+ 170:	64656e67 	bslefi	r3, r5, 57, 39
+   for(i = 0; i < 10; i++){
+ 174:	61686320 	muli	r11, r8, 25376
+ 178:	6f6c0072 	get	r27, rfsl2
+ 17c:	6420676e 	bslefi	r1, r0, 29, 46
+ 180:	6c62756f 	tnecget	r3, rfsl15
+ 184:	4c550065 	eagetd	r2, r0
+ 188:	00474e4f 		r2, r7, r9
+ 18c:	726f6873 		r19, r15, r13
+   printf("\nmy_fpu_mean[] = {");
+ 190:	6e692074 	cget	r19, rfsl4
+ 194:	656c0074 	bsrli	r11, r12, 52
+ 198:	65735f64 	bsefi	r11, r19, 61, 36
+ 19c:	Address 0x000000000000019c is out of bounds.
+
+
+Disassembly of section .debug_line_str:
+
+00000000 <.debug_line_str>:
+int main(void){   
+   0:	6e697270 	tncget	r19, rfsl0
+   4:	682f0074 		r1, r15, r0
+   8:	2f656d6f 	rsubic	r27, r5, 28015
+   c:	676f626c 	bslefi	r27, r15, 9, 44
+   float my_fpu_array_1[10] = {1.345239, 1.774125, 57865.412737, 0.850072, 16.142938, 4958.284851, 927.674384, 404.404121, 312.500056, 311.658473};
+  10:	6f6e6164 	ncget	r27, rfsl4
+  14:	6f772f76 	ecaget	r27, rfsl6
+  18:	70736b72 		r3, r19, r13
+  1c:	73656361 		r27, r5, r12
+  20:	6c69782f 	tncaget	r3, rfsl15
+  24:	5f786e69 		r27, r24, r13
+  28:	6b726f77 	xorli	r27, 28535
+  2c:	63617073 	muli	r27, r1, 28787
+  30:	39312f65 	addikc	r9, r17, 12133
+  34:	0030315f 		r1, r16, r6
+  38:	2e64656c 	rsubic	r19, r4, 25964
+  3c:	69780068 		r11, r24, r0
+  40:	79745f6c 		r11, r20, r11
+  44:	2e736570 	rsubic	r19, r19, 25968
+  48:	72700068 		r19, r16, r0
+  4c:	2e746e69 	rsubic	r19, r20, 28265
+  50:	61750068 	muli	r11, r21, 104
+  54:	6d007472 	tnecget	r8, rfsl2
+  58:	2e6e6961 	rsubic	r19, r14, 26977
+  5c:	6e690063 	get	r19, rfsl3
+  60:	64756c63 	bslefi	r3, r21, 49, 35
+  64:	6c730065 	get	r3, rfsl5
+  68:	2e706565 	rsubic	r19, r16, 25957
+  6c:	656c0068 	bsrli	r11, r12, 40
+  70:	61750064 	muli	r11, r21, 100
+  74:	682e7472 		r1, r14, r14
+	...

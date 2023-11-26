@@ -1,0 +1,149 @@
+
+./debug/asm_rms.o:     file format elf32-microblazeel
+
+
+Disassembly of section .text:
+
+00000000 <divider>:
+   0:	40800000 	mul	r4, r0, r0
+
+00000004 <asm_rms>:
+	/*r8 - fourth (rightmost) parameter*/
+	/*r3 - return value*/
+	/*r0 - always zero*/
+
+asm_rms:
+	fmul	r5,r5,r5
+   4:	58a52900 	fmul	r5, r5, r5
+	fmul	r6,r6,r6
+   8:	58c63100 	fmul	r6, r6, r6
+	fmul	r7,r7,r7
+   c:	58e73900 	fmul	r7, r7, r7
+	fmul	r8,r8,r8
+  10:	59084100 	fmul	r8, r8, r8
+	fadd	r9,r5,r6
+  14:	59253000 	fadd	r9, r5, r6
+	fadd	r9,r9,r7
+  18:	59293800 	fadd	r9, r9, r7
+	fadd	r9,r9,r8
+  1c:	59294000 	fadd	r9, r9, r8
+  20:	b0000000 	imm	0
+	lwi	r10,r0,divider
+  24:	e9400000 	lwi	r10, r0, 0
+	fdiv	r9,r10,r9
+  28:	592a4980 	fdiv	r9, r10, r9
+	fsqrt	r9,r9
+  2c:	59290380 	fsqrt	r9, r9
+	add	r3,r0,r9
+  30:	00604800 	add	r3, r0, r9
+	rtsd 	r15,8 		/*Return to main*/
+  34:	b60f0008 	rtsd	r15, 8
+
+Disassembly of section .debug_line:
+
+00000000 <.debug_line>:
+   0:	00000042 		r0, r0, r0
+	fmul	r5,r5,r5
+   4:	00220003 		r1, r2, r0
+	fmul	r6,r6,r6
+   8:	01010000 	add	r8, r1, r0
+	fmul	r7,r7,r7
+   c:	000d0efb 		r0, r13, r1
+	fmul	r8,r8,r8
+  10:	01010101 		r8, r1, r0
+	fadd	r9,r5,r6
+  14:	01000000 	add	r8, r0, r0
+	fadd	r9,r9,r7
+  18:	2e010000 	rsubic	r16, r1, 0
+	fadd	r9,r9,r8
+  1c:	73610000 		r27, r1, r0
+  20:	6d725f6d 	tneaget	r11, rfsl13
+	lwi	r10,r0,divider
+  24:	00732e73 		r3, r19, r5
+	fdiv	r9,r10,r9
+  28:	00000001 		r0, r0, r0
+	fsqrt	r9,r9
+  2c:	04020500 	neg	r0, r2
+	add	r3,r0,r9
+  30:	03000000 	add	r24, r0, r0
+	rtsd 	r15,8 		/*Return to main*/
+  34:	4b4b010f 		r26, r11, r0
+  38:	4b4b4b4b 		r26, r11, r9
+  3c:	4b4b4b83 		r26, r11, r9
+  40:	0004024b 		r0, r4, r0
+  44:	Address 0x0000000000000044 is out of bounds.
+
+
+Disassembly of section .debug_info:
+
+00000000 <.debug_info>:
+   0:	00000022 		r0, r0, r0
+	fmul	r5,r5,r5
+   4:	00000002 		r0, r0, r0
+	fmul	r6,r6,r6
+   8:	01040000 	add	r8, r4, r0
+	...
+	fadd	r9,r5,r6
+  14:	00000038 		r0, r0, r0
+	fadd	r9,r9,r7
+  18:	
+Disassembly of section .debug_abbrev:
+
+00000000 <.debug_abbrev>:
+   0:	10001101 		r0, r0, r2
+	fmul	r5,r5,r5
+   4:	12011106 		r16, r1, r2
+	fmul	r6,r6,r6
+   8:	1b0e0301 		r24, r14, r0
+	fmul	r7,r7,r7
+   c:	130e250e 		r24, r14, r4
+	fmul	r8,r8,r8
+  10:	00000005 		r0, r0, r0
+
+Disassembly of section .debug_aranges:
+
+00000000 <.debug_aranges>:
+   0:	0000001c 		r0, r0, r0
+	fmul	r5,r5,r5
+   4:	00000002 		r0, r0, r0
+	fmul	r6,r6,r6
+   8:	00040000 	add	r0, r4, r0
+	...
+	fadd	r9,r5,r6
+  14:	00000038 		r0, r0, r0
+	...
+
+Disassembly of section .debug_str:
+
+00000000 <.debug_str>:
+   0:	73612f2e 		r27, r1, r5
+	fmul	r5,r5,r5
+   4:	6d725f6d 	tneaget	r11, rfsl13
+	fmul	r6,r6,r6
+   8:	00732e73 		r3, r19, r5
+	fmul	r7,r7,r7
+   c:	6d6f682f 	ncaget	r11, rfsl15
+	fmul	r8,r8,r8
+  10:	626c2f65 	muli	r19, r12, 12133
+	fadd	r9,r5,r6
+  14:	6164676f 	muli	r11, r4, 26479
+	fadd	r9,r9,r7
+  18:	2f766f6e 	rsubic	r27, r22, 28526
+	fadd	r9,r9,r8
+  1c:	6b726f77 	xorli	r27, 28535
+  20:	63617073 	muli	r27, r1, 28787
+	lwi	r10,r0,divider
+  24:	782f7365 		r1, r15, r14
+	fdiv	r9,r10,r9
+  28:	6e696c69 	necaget	r19, rfsl9
+	fsqrt	r9,r9
+  2c:	6f775f78 	tneaget	r27, rfsl8
+	add	r3,r0,r9
+  30:	70736b72 		r3, r19, r13
+	rtsd 	r15,8 		/*Return to main*/
+  34:	2f656361 	rsubic	r27, r5, 25441
+  38:	635f3032 	muli	r26, r31, 12338
+  3c:	554e4700 		r10, r14, r8
+  40:	20534120 	addi	r2, r19, 16672
+  44:	37332e32 	rsubik	r25, r19, 11826
+	...

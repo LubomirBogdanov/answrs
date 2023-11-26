@@ -1,0 +1,20 @@
+-O3
+text	   data	    bss	    dec	    hex	filename
+23744	    356	   3132	  27232	   6a60	./debug/main.elf
+
+-O2
+text	   data	    bss	    dec	    hex	filename
+22916	    356	   3136	  26408	   6728	./debug/main.elf
+
+-O1
+text	   data	    bss	    dec	    hex	filename
+23044	    356	   3136	  26536	   67a8	./debug/main.elf
+
+-O0
+text	   data	    bss	    dec	    hex	filename
+26076	    356	   3136	  29568	   7380	./debug/main.elf
+
+text	   data	    bss	    dec	    hex	filename
+21340	    356	   3136	  24832	   6100	./debug/main.elf
+
+

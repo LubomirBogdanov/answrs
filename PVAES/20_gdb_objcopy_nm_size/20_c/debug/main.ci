@@ -1,0 +1,26 @@
+graph: { title: "main.c"
+node: { title: "my_func_3" label: "my_func_3\nmain.c:9:6\n20 bytes (static)\n0 dynamic objects" }
+node: { title: "my_func_2" label: "my_func_2\nmain.c:15:6\n20 bytes (static)\n0 dynamic objects" }
+edge: { sourcename: "my_func_2" targetname: "my_func_3" label: "main.c:20:2" }
+node: { title: "my_func_1" label: "my_func_1\nmain.c:23:6\n20 bytes (static)\n0 dynamic objects" }
+edge: { sourcename: "my_func_1" targetname: "my_func_2" label: "main.c:28:2" }
+node: { title: "main" label: "main\nmain.c:31:5\n56 bytes (static)\n0 dynamic objects" }
+node: { title: "led_init" label: "led_init\n./led/led.h:7:6" shape : ellipse }
+edge: { sourcename: "main" targetname: "led_init" label: "main.c:39:5" }
+node: { title: "uart_init" label: "uart_init\n./uart/uart.h:62:6" shape : ellipse }
+edge: { sourcename: "main" targetname: "uart_init" label: "main.c:40:5" }
+node: { title: "asm_rms" label: "asm_rms\nmain.c:7:14" shape : ellipse }
+edge: { sourcename: "main" targetname: "asm_rms" label: "main.c:42:14" }
+node: { title: "__extendsfdf2" label: "__extendsfdf2\n<built-in>" shape : ellipse }
+edge: { sourcename: "main" targetname: "__extendsfdf2" }
+node: { title: "printf_" label: "printf_\n./print/print.h:61:5" shape : ellipse }
+edge: { sourcename: "main" targetname: "printf_" label: "main.c:45:2" }
+edge: { sourcename: "main" targetname: "my_func_1" label: "main.c:47:2" }
+node: { title: "led_set" label: "led_set\n./led/led.h:8:6" shape : ellipse }
+edge: { sourcename: "main" targetname: "led_set" label: "main.c:50:10" }
+node: { title: "usleep" label: "usleep\n./include/sleep.h:90:6" shape : ellipse }
+edge: { sourcename: "main" targetname: "usleep" label: "main.c:51:10" }
+node: { title: "led_clear" label: "led_clear\n./led/led.h:9:6" shape : ellipse }
+edge: { sourcename: "main" targetname: "led_clear" label: "main.c:52:10" }
+edge: { sourcename: "main" targetname: "usleep" label: "main.c:53:10" }
+}

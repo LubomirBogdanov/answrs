@@ -1,0 +1,58 @@
+
+./debug/main.o:     file format elf32-microblazeel
+
+
+Disassembly of section .rodata:
+
+00000000 <.rodata>:
+   0:	6c6c6548 	necget	r3, rfsl8
+   4:	57202c6f 		r25, r0, r5
+   8:	646c726f 	bslefi	r3, r12, 9, 47
+   c:	00000021 		r0, r0, r0
+  10:	0d0a7325 		r8, r10, r14
+  14:	
+Disassembly of section .text.startup:
+
+00000000 <main>:
+   0:	3021ffd8 	addik	r1, r1, -40
+   4:	f9e10000 	swi	r15, r1, 0
+   8:	fa61001c 	swi	r19, r1, 28
+   c:	fac10020 	swi	r22, r1, 32
+  10:	b0000000 	imm	0
+  14:	b9f40000 	brlid	r15, 0
+  18:	fae10024 	swi	r23, r1, 36
+  1c:	b0000000 	imm	0
+  20:	b9f40000 	brlid	r15, 0
+  24:	80000000 	or	r0, r0, r0
+  28:	b0000000 	imm	0
+  2c:	30c00000 	addik	r6, r0, 0
+  30:	b0000000 	imm	0
+  34:	30a00010 	addik	r5, r0, 16
+  38:	b0000000 	imm	0
+  3c:	32e00018 	addik	r23, r0, 24
+  40:	b000001e 	imm	30
+  44:	32608480 	addik	r19, r0, -31616
+  48:	b0000000 	imm	0
+  4c:	32c00024 	addik	r22, r0, 36
+  50:	b0000000 	imm	0
+  54:	b9f40000 	brlid	r15, 0
+  58:	80000000 	or	r0, r0, r0
+  5c:	b0000000 	imm	0
+  60:	b9f40000 	brlid	r15, 0
+  64:	10b70000 	addk	r5, r23, r0
+  68:	b0000000 	imm	0
+  6c:	b9f40000 	brlid	r15, 0
+  70:	80000000 	or	r0, r0, r0
+  74:	b0000000 	imm	0
+  78:	b9f40000 	brlid	r15, 0
+  7c:	10b30000 	addk	r5, r19, r0
+  80:	b0000000 	imm	0
+  84:	b9f40000 	brlid	r15, 0
+  88:	10b60000 	addk	r5, r22, r0
+  8c:	b0000000 	imm	0
+  90:	b9f40000 	brlid	r15, 0
+  94:	80000000 	or	r0, r0, r0
+  98:	b0000000 	imm	0
+  9c:	b9f40000 	brlid	r15, 0
+  a0:	10b30000 	addk	r5, r19, r0
+  a4:	b800ffb8 	bri	-72		// 5c

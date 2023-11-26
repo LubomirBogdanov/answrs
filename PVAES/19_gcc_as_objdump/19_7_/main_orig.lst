@@ -1,0 +1,335 @@
+
+./debug/main.o:     file format elf32-microblazeel
+
+
+Disassembly of section .text:
+
+00000000 <main>:
+ * predefined periods and also displays a 
+ * predefined start-up message
+ *
+ * \return None.
+*/
+int main(void){   
+   0:	3021ffe0 	addik	r1, r1, -32
+   4:	f9e10000 	swi	r15, r1, 0
+   8:	fa61001c 	swi	r19, r1, 28
+   c:	12610000 	addk	r19, r1, r0
+	
+   led_init();
+  10:	b0000000 	imm	0
+  14:	b9f40000 	brlid	r15, 0
+  18:	80000000 	or	r0, r0, r0
+   uart_init();
+  1c:	b0000000 	imm	0
+  20:	b9f40000 	brlid	r15, 0
+  24:	80000000 	or	r0, r0, r0
+   
+   printf("%s\n\r", CONFIG_PRINT_MESSAGE);
+  28:	b0000000 	imm	0
+  2c:	30c00000 	addik	r6, r0, 0
+  30:	b0000000 	imm	0
+  34:	30a00010 	addik	r5, r0, 16
+  38:	b0000000 	imm	0
+  3c:	b9f40000 	brlid	r15, 0
+  40:	80000000 	or	r0, r0, r0
+
+    while(1){
+        printf("led: 1\n\r");
+  44:	b0000000 	imm	0
+  48:	30a00018 	addik	r5, r0, 24
+  4c:	b0000000 	imm	0
+  50:	b9f40000 	brlid	r15, 0
+  54:	80000000 	or	r0, r0, r0
+        led_set();
+  58:	b0000000 	imm	0
+  5c:	b9f40000 	brlid	r15, 0
+  60:	80000000 	or	r0, r0, r0
+        usleep(LED_DELAY_US);
+  64:	b000001e 	imm	30
+  68:	30a08480 	addik	r5, r0, -31616
+  6c:	b0000000 	imm	0
+  70:	b9f40000 	brlid	r15, 0
+  74:	80000000 	or	r0, r0, r0
+        printf("led: 0\n\r");
+  78:	b0000000 	imm	0
+  7c:	30a00024 	addik	r5, r0, 36
+  80:	b0000000 	imm	0
+  84:	b9f40000 	brlid	r15, 0
+  88:	80000000 	or	r0, r0, r0
+        led_clear();
+  8c:	b0000000 	imm	0
+  90:	b9f40000 	brlid	r15, 0
+  94:	80000000 	or	r0, r0, r0
+        usleep(LED_DELAY_US);
+  98:	b000001e 	imm	30
+  9c:	30a08480 	addik	r5, r0, -31616
+  a0:	b0000000 	imm	0
+  a4:	b9f40000 	brlid	r15, 0
+  a8:	80000000 	or	r0, r0, r0
+        printf("led: 1\n\r");
+  ac:	b800ff98 	bri	-104		// 44
+
+Disassembly of section .rodata:
+
+00000000 <.rodata>:
+   0:	6c6c6548 	necget	r3, rfsl8
+   4:	57202c6f 		r25, r0, r5
+   8:	646c726f 	bslefi	r3, r12, 9, 47
+   c:	00000021 		r0, r0, r0
+  10:	0d0a7325 		r8, r10, r14
+  14:	
+Disassembly of section .debug_frame:
+
+00000000 <.debug_frame>:
+int main(void){   
+   0:	0000000c 		r0, r0, r0
+   4:	ffffffff 	sli	r31, r31, -1
+   8:	7f010003 		r24, r1, r0
+   c:	00010c0f 		r0, r1, r1
+   led_init();
+  10:	00000024 		r0, r0, r0
+	...
+   uart_init();
+  1c:	000000b0 		r0, r0, r0
+  20:	00000404 		r0, r0, r0
+  24:	04200e00 	neg	r1, r0
+   printf("%s\n\r", CONFIG_PRINT_MESSAGE);
+  28:	00000008 		r0, r0, r0
+  2c:	0493208f 	neg	r4, r19
+  30:	00000404 		r0, r0, r0
+  34:	00130d00 		r0, r19, r1
+
+Disassembly of section .debug_info:
+
+00000000 <.debug_info>:
+int main(void){   
+   0:	000000e9 		r0, r0, r0
+   4:	04010005 	neg	r0, r1
+   8:	
+Disassembly of section .debug_abbrev:
+
+00000000 <.debug_abbrev>:
+   0:	0b002401 		r24, r0, r4
+   4:	030b3e0b 		r24, r11, r7
+   8:	0200000e 		r16, r0, r0
+   c:	193f002e 		r9, r31, r0
+   led_init();
+  10:	0b3a0e03 		r25, r26, r1
+  14:	21390b3b 	addi	r9, r25, 2875
+  18:	3c192706 	rsubikc	r0, r25, 9990
+   uart_init();
+  1c:	03000019 		r24, r0, r0
+  20:	13490005 		r26, r9, r0
+  24:	11040000 	addk	r8, r4, r0
+   printf("%s\n\r", CONFIG_PRINT_MESSAGE);
+  28:	130e2501 		r24, r14, r4
+  2c:	1b1f030b 		r24, r31, r0
+  30:	1201111f 		r16, r1, r2
+  34:	00171006 		r0, r23, r2
+  38:	00240500 		r1, r4, r0
+  3c:	0b3e0b0b 		r25, r30, r1
+  40:	00000803 		r0, r0, r1
+        printf("led: 1\n\r");
+  44:	49002606 		r8, r0, r4
+  48:	07000013 	neg	r24, r0
+  4c:	0e030016 		r16, r3, r0
+  50:	0b3b0b3a 		r25, r27, r1
+  54:	13490b39 		r26, r9, r1
+        led_set();
+  58:	0f080000 	rsubc	r24, r8, r0
+  5c:	490b0b00 		r8, r11, r1
+  60:	09000013 		r8, r0, r0
+        usleep(LED_DELAY_US);
+  64:	193f012e 		r9, r31, r0
+  68:	0b3a0e03 		r25, r26, r1
+  6c:	0b390b3b 		r25, r25, r1
+  70:	193c1927 		r9, r28, r3
+  74:	00001301 		r0, r0, r2
+        printf("led: 0\n\r");
+  78:	3f012e0a 	rsubikc	r24, r1, 11786
+  7c:	3a0e0319 	addikc	r16, r14, 793
+  80:	390b3b0b 	addikc	r8, r11, 15115
+  84:	4919270b 		r8, r25, r4
+  88:	01193c13 		r8, r25, r7
+        led_clear();
+  8c:	0b000013 		r24, r0, r0
+  90:	00000018 		r0, r0, r0
+  94:	3f002e0c 	rsubikc	r24, r0, 11788
+        usleep(LED_DELAY_US);
+  98:	3a0e0319 	addikc	r16, r14, 793
+  9c:	390b3b0b 	addikc	r8, r11, 15115
+  a0:	4919270b 		r8, r25, r4
+  a4:	12011113 		r16, r1, r2
+  a8:	7c184006 		r0, r24, r8
+        printf("led: 1\n\r");
+  ac:	00000019 		r0, r0, r0
+
+Disassembly of section .debug_aranges:
+
+00000000 <.debug_aranges>:
+int main(void){   
+   0:	0000001c 		r0, r0, r0
+   4:	00000002 		r0, r0, r0
+   8:	00040000 	add	r0, r4, r0
+	...
+   led_init();
+  14:	000000b0 		r0, r0, r0
+	...
+
+Disassembly of section .debug_line:
+
+00000000 <.debug_line>:
+int main(void){   
+   0:	000000d7 		r0, r0, r0
+   4:	00040005 		r0, r4, r0
+   8:	00000053 		r0, r0, r0
+   c:	f6010101 	shi	r16, r1, 257
+   led_init();
+  10:	01000df2 		r8, r0, r1
+  14:	00010101 		r0, r1, r0
+  18:	00010000 	add	r0, r1, r0
+   uart_init();
+  1c:	01010100 	addl	r8, r1, r0
+  20:	0006051f 		r0, r6, r0
+  24:	00510000 	add	r2, r17, r0
+   printf("%s\n\r", CONFIG_PRINT_MESSAGE);
+  28:	006d0000 	add	r3, r13, r0
+  2c:	005d0000 	add	r2, r29, r0
+  30:	
+Disassembly of section .debug_str:
+
+00000000 <.debug_str>:
+int main(void){   
+   0:	676e6f6c 	bslefi	r27, r14, 61, 44
+   4:	6e6f6c20 	necaget	r19, rfsl0
+   8:	6e692067 	cget	r19, rfsl7
+   c:	6e750074 	get	r19, rfsl4
+   led_init();
+  10:	6e676973 	ncaget	r19, rfsl3
+  14:	69206465 	addli	r9, 25701
+  18:	6d00746e 	tnecget	r8, rfsl14
+   uart_init();
+  1c:	006e6961 		r3, r14, r13
+  20:	5f64656c 		r27, r4, r12
+  24:	74696e69 		r3, r9, r13
+   printf("%s\n\r", CONFIG_PRINT_MESSAGE);
+  28:	6e6f6c00 	necaget	r19, rfsl0
+  2c:	6e752067 	cget	r19, rfsl7
+  30:	6e676973 	ncaget	r19, rfsl3
+  34:	69206465 	addli	r9, 25701
+  38:	6c00746e 	tnecget	r0, rfsl14
+  3c:	20676e6f 	addi	r3, r7, 28271
+  40:	676e6f6c 	bslefi	r27, r14, 61, 44
+        printf("led: 1\n\r");
+  44:	736e7520 		r27, r14, r14
+  48:	656e6769 	bslefi	r11, r14, 29, 41
+  4c:	6e692064 	cget	r19, rfsl4
+  50:	6e750074 	get	r19, rfsl4
+  54:	6e676973 	ncaget	r19, rfsl3
+        led_set();
+  58:	63206465 	muli	r25, r0, 25701
+  5c:	00726168 		r3, r18, r12
+  60:	656c7375 	bslefi	r11, r12, 13, 53
+        usleep(LED_DELAY_US);
+  64:	63007065 	muli	r24, r0, 28773
+  68:	00726168 		r3, r18, r12
+  6c:	6e697270 	tncget	r19, rfsl0
+  70:	005f6674 		r2, r31, r12
+  74:	74726175 		r3, r18, r12
+        printf("led: 0\n\r");
+  78:	696e695f 		r11, r14, r13
+  7c:	6f6c0074 	get	r27, rfsl4
+  80:	6920676e 	addli	r9, 26478
+  84:	6c00746e 	tnecget	r0, rfsl14
+  88:	635f6465 	muli	r26, r31, 25701
+        led_clear();
+  8c:	7261656c 		r19, r1, r12
+  90:	6f687300 	tncget	r27, rfsl0
+  94:	75207472 		r9, r0, r14
+        usleep(LED_DELAY_US);
+  98:	6769736e 	bslefi	r27, r9, 13, 46
+  9c:	2064656e 	addi	r3, r4, 25966
+  a0:	00746e69 		r3, r20, r13
+  a4:	6e676973 	ncaget	r19, rfsl3
+  a8:	63206465 	muli	r25, r0, 25701
+        printf("led: 1\n\r");
+  ac:	00726168 		r3, r18, r12
+  b0:	676e6f6c 	bslefi	r27, r14, 61, 44
+  b4:	756f6420 		r11, r15, r12
+  b8:	00656c62 		r3, r5, r13
+  bc:	4e4f4c55 	aputd	r15, r9
+  c0:	68730047 	andnli	r3, 71
+  c4:	2074726f 	addi	r3, r20, 29295
+  c8:	00746e69 		r3, r20, r13
+  cc:	20554e47 	addi	r2, r21, 20039
+  d0:	20373143 	addi	r1, r23, 12611
+  d4:	322e3131 	addik	r17, r14, 12593
+  d8:	2d20302e 	rsubic	r9, r0, 12334
+  dc:	74696c6d 		r3, r9, r13
+  e0:	2d656c74 	rsubic	r11, r5, 27764
+  e4:	69646e65 	addlik	r11, 28261
+  e8:	2d206e61 	rsubic	r9, r0, 28257
+  ec:	2d6c786d 	rsubic	r11, r12, 30829
+  f0:	72726162 		r19, r18, r12
+  f4:	732d6c65 		r25, r13, r13
+  f8:	74666968 		r3, r6, r13
+  fc:	786d2d20 		r3, r13, r5
+ 100:	61702d6c 	muli	r11, r16, 11628
+ 104:	72657474 		r19, r5, r14
+ 108:	6f632d6e 	ecaget	r27, rfsl14
+ 10c:	7261706d 		r19, r1, r14
+ 110:	6d2d2065 	cget	r9, rfsl5
+ 114:	3d757063 	rsubikc	r11, r21, 28771
+ 118:	2e313176 	rsubic	r17, r17, 12662
+ 11c:	6d2d2030 	cget	r9, rfsl0
+ 120:	782d6f6e 		r1, r13, r13
+ 124:	6f732d6c 	ecaget	r27, rfsl12
+ 128:	6d2d7466 	tnecget	r9, rfsl6
+ 12c:	2d206c75 	rsubic	r9, r0, 27765
+ 130:	4f2d2067 	eagetd	r25, r4
+ 134:	656c0030 	bsrli	r11, r12, 48
+ 138:	65735f64 	bsefi	r11, r19, 61, 36
+ 13c:	Address 0x000000000000013c is out of bounds.
+
+
+Disassembly of section .debug_line_str:
+
+00000000 <.debug_line_str>:
+int main(void){   
+   0:	6e697270 	tncget	r19, rfsl0
+   4:	682f0074 		r1, r15, r0
+   8:	2f656d6f 	rsubic	r27, r5, 28015
+   c:	676f626c 	bslefi	r27, r15, 9, 44
+   led_init();
+  10:	6f6e6164 	ncget	r27, rfsl4
+  14:	6f772f76 	ecaget	r27, rfsl6
+  18:	70736b72 		r3, r19, r13
+   uart_init();
+  1c:	73656361 		r27, r5, r12
+  20:	6c69782f 	tncaget	r3, rfsl15
+  24:	5f786e69 		r27, r24, r13
+   printf("%s\n\r", CONFIG_PRINT_MESSAGE);
+  28:	6b726f77 	xorli	r27, 28535
+  2c:	63617073 	muli	r27, r1, 28787
+  30:	39312f65 	addikc	r9, r17, 12133
+  34:	6c00375f 	tecget	r0, rfsl15
+  38:	682e6465 		r1, r14, r12
+  3c:	6c697800 	tncaget	r3, rfsl0
+  40:	7079745f 		r3, r25, r14
+        printf("led: 1\n\r");
+  44:	682e7365 		r1, r14, r14
+  48:	69727000 	xorli	r11, 28672
+  4c:	682e746e 		r1, r14, r14
+  50:	72617500 		r19, r1, r14
+  54:	616d0074 	muli	r11, r13, 116
+        led_set();
+  58:	632e6e69 	muli	r25, r14, 28265
+  5c:	636e6900 	muli	r27, r14, 26880
+  60:	6564756c 	bslefi	r11, r4, 21, 44
+        usleep(LED_DELAY_US);
+  64:	656c7300 	bslefi	r11, r12, 12, 0
+  68:	682e7065 		r1, r14, r14
+  6c:	64656c00 	bslefi	r3, r5, 48, 0
+  70:	72617500 		r19, r1, r14
+  74:	00682e74 		r3, r8, r5

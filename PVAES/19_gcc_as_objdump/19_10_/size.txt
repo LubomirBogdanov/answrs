@@ -1,0 +1,3 @@
+-mhard-float -mxl-float-convert -mxl-float-sqrt
+text	   data	    bss	    dec	    hex	filename
+26876	    356	   3136	  30368	   76a0	./debug/main.elf
