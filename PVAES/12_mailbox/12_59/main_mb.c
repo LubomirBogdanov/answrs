@@ -23,7 +23,7 @@ void mailbox_interrupt_handler(void *){
 
 	XMbox_ClearInterrupt(&mailbox_0, XMB_IX_RTA);
 	//Clear the AXI interrupt controller's pending flag
-	XIntc_Acknowledge(&intc_0, XPAR_AXI_INTC_0_MAILBOX_0_INTERRUPT_0_INTR);
+	XIntc_Acknowledge(&intc_0, XPAR_MICROBLAZE_0_AXI_INTC_MAILBOX_0_INTERRUPT_0_INTR);
 
 	XMbox_Read(&mailbox_0, (u32 *)receive_buffer, 4, &bytes_receved);
 
@@ -49,9 +49,9 @@ int main(void){
 
 	XIntc_Initialize(&intc_0, XPAR_INTC_0_DEVICE_ID);
 	XIntc_SelfTest(&intc_0);
-	XIntc_Connect(&intc_0, XPAR_AXI_INTC_0_MAILBOX_0_INTERRUPT_0_INTR, (XInterruptHandler)mailbox_interrupt_handler, &mailbox_0);
+	XIntc_Connect(&intc_0, XPAR_MICROBLAZE_0_AXI_INTC_MAILBOX_0_INTERRUPT_0_INTR, (XInterruptHandler)mailbox_interrupt_handler, &mailbox_0);
 	XIntc_Start(&intc_0, XIN_REAL_MODE);
-	XIntc_Enable(&intc_0, XPAR_AXI_INTC_0_MAILBOX_0_INTERRUPT_0_INTR);
+	XIntc_Enable(&intc_0, XPAR_MICROBLAZE_0_AXI_INTC_MAILBOX_0_INTERRUPT_0_INTR);
 
 	Xil_ExceptionInit();
 	Xil_ExceptionEnable();
