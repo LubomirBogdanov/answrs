@@ -49,6 +49,7 @@
 #include "platform.h"
 #include "xil_printf.h"
 #include "xmutex.h"
+#include "sleep.h"
 
 int main(){
 	XMutex mutex_0;
@@ -64,6 +65,7 @@ int main(){
 		XMutex_Lock(&mutex_0, 0);
 		print("ARM Cortex A9\n\r");
 		XMutex_Unlock(&mutex_0, 0);
+		usleep(10);
 	}
 
 	cleanup_platform();
