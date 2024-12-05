@@ -26,6 +26,7 @@ void mailbox_interrupt_handler(void *){
 	XIntc_Acknowledge(&intc_0, XPAR_MICROBLAZE_0_AXI_INTC_MAILBOX_0_INTERRUPT_0_INTR);
 
 	XMbox_Read(&mailbox_0, (u32 *)receive_buffer, 4, &bytes_receved);
+	receive_buffer[4] = '\0';
 
 	XMbox_Flush(&mailbox_0);
 
