@@ -22,8 +22,6 @@ void init(void){
     FRAMCtl_configureWaitStateControl(FRAMCTL_ACCESS_TIME_CYCLES_1); //Needed for DCO = 16 MHz
 
     init_clock_system();
-
-    UARTStdioInit();
 }
 
 long double convert_temp(long double tempr_fahren){
