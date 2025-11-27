@@ -78,13 +78,12 @@ int main(int argc, char** argv)
         //-------------------------------------
 
         //Invoke the sensor reading function here
-        ???
+        sensors_get_data(data_sens_html_dynamic);
 
         html_size = strlen(index_sens_html);
         sl_Send(client_socket, index_sens_html, html_size, 0);
 
-        //Send the sensor data in HTML format here
-        sensors_get_data(data_sens_html_dynamic);
+        //Send the sensor data in HTML format here        
         html_size = strlen((const char *)data_sens_html_dynamic);
         sl_Send(client_socket, data_sens_html_dynamic, html_size, 0);
 
